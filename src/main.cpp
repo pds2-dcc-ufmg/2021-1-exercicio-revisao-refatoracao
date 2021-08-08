@@ -57,48 +57,30 @@ int main() {
                    {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   std::cout << "\n>> Relatório de Imóveis <<" << endl;
-
   double valorApartamentos = 0.0;
-  double valorCoberturas = 0.0;
-  double valorCasas = 0.0;
   double comissaoApartamentos = 0.0;
+  for (int i = 0; i < 3; ++i) {
+    apartamentos[i].print();
+    valorApartamentos += apartamentos[i].valor();
+    comissaoApartamentos += apartamentos[i].comissao();
+  }
+
+  double valorCoberturas = 0.0;
   double comissaoCoberturas = 0.0;
+  for (int i = 0; i < 3; ++i) {
+    coberturas[i].print();
+    valorCoberturas += coberturas[i].valor();
+    comissaoCoberturas += coberturas[i].comissao();
+  }
+
+  double valorCasas = 0.0;
   double comissaoCasas = 0.0;
-
-  apartamento1.print();
-  valorApartamentos += apartamento1.valor();
-  comissaoApartamentos += apartamento1.comissao();
-
-  apartamento2.print();
-  valorApartamentos += apartamento2.valor();
-  comissaoApartamentos += apartamento2.comissao();
-
-  apartamento3.print();
-  valorApartamentos += apartamento3.valor();
-  comissaoApartamentos += apartamento3.comissao();
-
-  cobertura1.print();
-  valorCoberturas += cobertura1.valor();
-  comissaoCoberturas += cobertura1.comissao();
-
-  cobertura2.print();
-  valorCoberturas += cobertura2.valor();
-  comissaoCoberturas += cobertura2.comissao();
-
-  cobertura3.print();
-  valorCoberturas += cobertura3.valor();
-  comissaoCoberturas += cobertura3.comissao();
-
-  casa1.print();
-  valorCasas += casa1.valor();
-  comissaoCasas += casa1.comissao();
-
-  casa2.print();
-  valorCasas += casa2.valor();
-  comissaoCasas += casa2.comissao();
-
+  for (int i = 0; i < 2; ++i) {
+    casas[i].print();
+    valorCasas += casas[i].valor();
+    comissaoCasas += casas[i].comissao();
+  }
   std::cout << "\n>> Resumo Geral <<" << endl;
-
   std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ "
             << fixed << setprecision(2) << valorApartamentos
