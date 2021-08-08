@@ -5,6 +5,7 @@ double Cobertura::pctComissao = 0.10;
 
 int Cobertura::getNumCob() { return Cobertura::numCob; }
 
+// Função que printa o relatório de uma cobertura
 void Cobertura::print() {
     std::cout << "[Cobertura]" << endl;
 

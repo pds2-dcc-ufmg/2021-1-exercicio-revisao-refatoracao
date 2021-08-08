@@ -8,13 +8,16 @@
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
 
-/**/
+/* 
+Função responsável por printar o resumo geral dos imóveis através da array de valores e comissoes
+*/
 void printResumoGeral(double* valores, double* comissoes) {
     string tiposImoveis[3] = {"Apartamentos", "Coberturas", "Casas"};
     int qntd[3] = {Apartamento::getNumApt(), Cobertura::getNumCob(), Casa::getNumCasa()};
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
+    // Itera pelos tipos de imóveis
     for(int i = 0; i < 3; i++) {
         std::cout << "\n>>" << tiposImoveis[i] << "<<\n"
                   << "\n Quantidade: " << qntd[i]
@@ -25,6 +28,7 @@ void printResumoGeral(double* valores, double* comissoes) {
 }
 
 int main() {
+    // Inicializa as strings utilizadas para cada cliente
     string inf[8][6] = { 
                             {"Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", "Belo Horizonte", "MG", "31365-570", "3196007958"},
                             {"Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas", "Belo Horizonte", "MG", "31870-290", "3197627067"},
@@ -36,11 +40,13 @@ int main() {
                             {"Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)", "Belo Horizonte", "MG", "30668-430", "3197317802"}
                         };
 
+    // Inicializa os clientes
     Cliente* cl[8];
     for(int i = 0; i < 8; i++) {
         cl[i] = new Cliente(inf[i][0], inf[i][1], inf[i][2], inf[i][3], inf[i][4], inf[i][5]);
     }
 
+    // Inicializa os imóveis
     Imovel* imoveis[8] = {  new Apartamento(55.4, 987.0, 2, 1, 0, "Tuoruars", cl[0]),
                             new Apartamento(74.5, 1540.0, 2, 1, 2, "Fyubyeis", cl[1]), 
                             new Apartamento(87.2, 2354.0, 3, 2, 2, "Kelia", cl[2]),
@@ -54,7 +60,8 @@ int main() {
 
     double valores[3] = {0, 0, 0};
     double comissoes[3] = {0, 0, 0};
-
+    
+    // Faz o print dos relatórios, calcula os valores e comissões dos imóveis
     int idx = 0;
     for(int i = 0; i < 8; i++) {
         imoveis[i]->print();

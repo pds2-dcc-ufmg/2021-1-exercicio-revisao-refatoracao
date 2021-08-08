@@ -6,11 +6,16 @@
 
 using namespace std;
 
+/*
+Classe responsável por representar um cliente
+*/
 class Cliente {
     private:
+        // Dados sobre o cliente
         string nome, endereco, cidade, uf, cep, telefone;
 
     public:
+        // Função responsável por printar um resumo dos dados do cliente
         void print();
 
         Cliente(string nome, 

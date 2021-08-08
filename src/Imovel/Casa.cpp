@@ -5,6 +5,7 @@ double Casa::pctComissao = 0.06;
 
 int Casa::getNumCasa() { return Casa::numCasa; }
 
+// Função que printa o relatório de uma casa
 void Casa::print()  {
     std::cout << "[Casa]" << endl;
 

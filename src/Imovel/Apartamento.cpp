@@ -5,6 +5,7 @@ double Apartamento::pctComissao = 0.04;
 
 int Apartamento::getNumApt() { return Apartamento::numApt; }
 
+// Função que printa o relatório de um apartamento
 void Apartamento::print() {
     std::cout << "[Apartamento]" << endl;
 

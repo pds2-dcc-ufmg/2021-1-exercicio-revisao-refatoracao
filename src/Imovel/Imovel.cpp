@@ -10,5 +10,7 @@ void Imovel::setValorM2(double valorM2) { this->valorM2 = valorM2; }
 void Imovel::setValor(double valor) { this->valor = valor; }
 void Imovel::setComissao(double comissao) { this->comissao = comissao; }
 
+// Função calcula valor do imóvel em função de sua área
 double Imovel::calcValor() { return area * valorM2; }
+// Função calcula comissão baseado em uma porcentagem definida da classe
 double Imovel::calcComissao(double pct) { return calcValor() * pct; }
