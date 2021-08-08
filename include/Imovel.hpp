@@ -8,7 +8,7 @@
 using namespace std;
 
 class Imovel {
-private:
+protected:
   string corretor;
   double area;
   unsigned numQuartos;
