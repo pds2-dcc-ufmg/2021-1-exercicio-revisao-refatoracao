@@ -14,9 +14,9 @@ public:
   string telefone;
 
   void print();
-  Cliente(const string _nome, const string _endereco, const string _cidade,
-          const string _unidadeFederativa, const string _codigoPostal,
-          const string _telefone)
+  Cliente(const string &_nome, const string &_endereco, const string &_cidade,
+          const string &_unidadeFederativa, const string &_codigoPostal,
+          const string &_telefone)
       : nome(_nome), endereco(_endereco), cidade(_cidade),
         unidadeFederativa(_unidadeFederativa), codigoPostal(_codigoPostal),
         telefone(_telefone) {}
