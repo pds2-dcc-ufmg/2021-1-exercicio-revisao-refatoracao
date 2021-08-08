@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20.5)
+project(main)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(${PROJECT_NAME} ./src/main.cpp ./src/Cliente.cpp)
+target_include_directories(main SYSTEM PRIVATE $ENV{INCLUDE} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
