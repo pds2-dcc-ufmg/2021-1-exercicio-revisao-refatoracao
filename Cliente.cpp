@@ -3,7 +3,7 @@
 #include "Cliente.hpp"
 
 void Cliente::print(){
-
+    // Implementação da função que imprime todos os dados do cliente
 	std::cout << "  Nome: " << NOME << endl
 		 << "  Telefone: " << telefone << endl
 		 << "  Endereço: " << endereco << endl
