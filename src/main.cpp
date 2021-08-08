@@ -9,71 +9,39 @@
 
 int main() {
 
-  Cliente cliente1;
-  cliente1.nome = "Xayso Sovon Ziahaka";
-  cliente1.endereco = "Rua Xangrilá - Braúnas";
-  cliente1.cidade = "Belo Horizonte";
-  cliente1.unidadeFederativa = "MG";
-  cliente1.codigoPostal = "31365-570";
-  cliente1.telefone = "3196007958";
-
-  Cliente cliente2;
-  cliente2.nome = "Minia Pasies Kituos";
-  cliente2.endereco = "Rua dos Jacobinos - Ouro Minas";
-  cliente2.cidade = "Belo Horizonte";
-  cliente2.unidadeFederativa = "MG";
-  cliente2.codigoPostal = "31870-290";
-  cliente2.telefone = "3197627067";
-
-  Cliente cliente3;
-  cliente3.nome = "Vuocue Leiur Baonauza";
-  cliente3.endereco = "Rua Orminda de Almeida - Tupi B";
-  cliente3.cidade = "Belo Horizonte";
-  cliente3.unidadeFederativa = "MG";
-  cliente3.codigoPostal = "31842-630";
-  cliente3.telefone = "3195949327";
-
-  Cliente cliente4;
-  cliente4.nome = "Zerer Huduy Fyogar";
-  cliente4.endereco = "Rua Taquaril - Jonas Veiga";
-  cliente4.cidade = "Belo Horizonte";
-  cliente4.unidadeFederativa = "MG";
-  cliente4.codigoPostal = "30285-422";
-  cliente4.telefone = "3198596327";
-
-  Cliente cliente5;
-  cliente5.nome = "Ceziel Mioti Pler";
-  cliente5.endereco = "Rua João Gualberto Costa - Serrano";
-  cliente5.cidade = "Belo Horizonte";
-  cliente5.unidadeFederativa = "MG";
-  cliente5.codigoPostal = "30882-747";
-  cliente5.telefone = "3196274465";
-
-  Cliente cliente6;
-  cliente6.nome = "Esxo Cilal Zyais";
-  cliente6.endereco =
-      "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-  cliente6.cidade = "Belo Horizonte";
-  cliente6.unidadeFederativa = "MG";
-  cliente6.codigoPostal = "31650-560";
-  cliente6.telefone = "3195004414";
-
-  Cliente cliente7;
-  cliente7.nome = "Leova Wikyecil Neaca";
-  cliente7.endereco = "Rua João Arantes - Cidade Nova";
-  cliente7.cidade = "Belo Horizonte";
-  cliente7.unidadeFederativa = "MG";
-  cliente7.codigoPostal = "31170-240";
-  cliente7.telefone = "3198461192";
-
-  Cliente cliente8;
-  cliente8.nome = "Teas Heimeu Pipe";
-  cliente8.endereco =
-      "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-  cliente8.cidade = "Belo Horizonte";
-  cliente8.unidadeFederativa = "MG";
-  cliente8.codigoPostal = "30668-430";
-  cliente8.telefone = "3197317802";
+  // Use um construtor para evitar repetições desnecessárias de settar cada
+  // membro de uma vez. Além do mais, isso facilita o encapsulamento nesse caso
+  // em particular, uma vez que nenhum "tipo" membro é acessado em outras partes
+  // do programa (eg, ninguém solicita o nome de algum cliente) então a
+  // princípio não há motivo pra fazer getters
+  //
+  // Esse construtor em particular tem o seguinte formato:
+  // { "NOME DO CLIENTE", "ENDEREÇO", "CIDADE", "UNIDADE FEDERATIVA",
+  //   "CÓDIGO POSTAL", "TELEFONE" }
+  //
+  // Nesse caso, com muitos dados, pode ser um pouco massante.
+  // Pensei em uma alternativa para isso: fazer a leitura a partir de um arquivo
+  // csv, que conteria todos os dados. No entanto, acho que isso é meio overkill
+  // para uma refatoração
+  Cliente clientes[8] = {
+      {"Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", "Belo Horizonte", "MG",
+       "31365-570", "3196007958"},
+      {"Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
+       "Belo Horizonte", "MG", "31870-290", "3197627067"},
+      {"Vuocue Leiur Baonauza", "Rua Orminda de Almeida - Tupi B",
+       "Belo Horizonte", "MG", "31842-630", "3195949327"},
+      {"Zerer Huduy Fyogar", "Rua Taquaril - Jonas Veiga", "Belo Horizonte",
+       "MG", "30285-422", "3198596327"},
+      {"Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano",
+       "Belo Horizonte", "MG", "30882-747", "3196274465"},
+      {"Esxo Cilal Zyais",
+       "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
+       "Belo Horizonte", "MG", "31650-560", "3195004414"},
+      {"Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova",
+       "Belo Horizonte", "MG", "31170-240", "3198461192"},
+      {"Teas Heimeu Pipe",
+       "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
+       "Belo Horizonte", "MG", "30668-430", "3197317802"}};
 
   int numApartamentos = 0;
   int numCasas = 0;
