@@ -6,10 +6,15 @@
 
 using namespace std;
 
-class Apartamento : public Imovel {
+// Este módulo implementa um apartamento.
+// OBS: Os itens são armazenados na memória.
+// Cada casa herda atributos e funções de imovel.
+// É definido e implementado no mesmo arquivo.
 
+class Apartamento : public Imovel {
+    // Funções públicas da classe do apartamento
     public: 
-    
+    // Função retorna valor do apartamento a partir da área e do valor do m2
     double valor() {
 
         double v = AREA * VALORm2;
@@ -17,17 +22,18 @@ class Apartamento : public Imovel {
         return v;
 
     }
-
+    // Função retorna valor da comissão do apartamento a partir da área e do valor do m2
+    // alterado por sua constante de comissão
     double comissao() {
 
         double c = AREA * VALORm2;
-
+        // 4% de comissão
         return c * 0.04;
         
     }
 
     void print() {
-
+        // Imprime dados do apartamento
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
         std::cout << "Area: " << AREA << endl
