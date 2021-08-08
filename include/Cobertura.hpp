@@ -8,6 +8,12 @@ using namespace std;
 class Cobertura : public Imovel {
 
 public:
+  Cobertura(const string &corretor, const double &area,
+            const unsigned &numQuartos, const unsigned &numBanheiros,
+            const unsigned &vagas, const double &valorPorArea,
+            const Cliente &vendedor)
+      : Imovel(corretor, area, numQuartos, numBanheiros, vagas, valorPorArea,
+               vendedor) {}
   double comissao() const override {
 
     double c = area * valorPorArea;

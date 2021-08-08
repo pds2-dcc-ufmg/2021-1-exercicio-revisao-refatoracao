@@ -43,76 +43,18 @@ int main() {
        "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
        "Belo Horizonte", "MG", "30668-430", "3197317802"}};
 
-  int numApartamentos = 0;
-  int numCasas = 0;
-  int numCoberturas = 0;
-
+  // O construtor de imóveis tem o seguinte formato:
+  // { "CORRETOR", "ÁREA", "NÚMERO DE QUARTOS", "NÚMERO DE BANHEIROS", "VAGAS",
+  // "VALOR POR ÁREA", "VENDEDOR"(cliente) }
   Apartamento apartamentos[3] = {
       {"Tuoruars", 55.4, 2, 1, 0, 987.0, clientes[0]},
       {"Fyubyeis", 74.5, 2, 1, 2, 1540.0, clientes[1]},
       {"Kelia", 87.2, 3, 2, 2, 2354.0, clientes[2]}};
-
-  // Cobertura
-  Cobertura cobertura1;
-  cobertura1.corretor = "Koci";
-  cobertura1.area = 120.1;
-  cobertura1.numQuartos = 3;
-  cobertura1.numBanheiros = 3;
-  cobertura1.vagas = 2;
-  cobertura1.valorPorArea = 3123.5;
-  cobertura1.valorComissao = cobertura1.comissao();
-  cobertura1.valorVenda = cobertura1.valor() + cobertura1.comissao();
-  cobertura1.vendedor = cliente4;
-  numCoberturas++;
-
-  Cobertura cobertura2;
-  cobertura2.corretor = "Wail";
-  cobertura2.area = 134.8;
-  cobertura2.numQuartos = 4;
-  cobertura2.numBanheiros = 3;
-  cobertura2.vagas = 3;
-  cobertura2.valorPorArea = 3578.2;
-  cobertura2.valorComissao = cobertura2.comissao();
-  cobertura2.valorVenda = cobertura2.valor() + cobertura2.comissao();
-  cobertura2.vendedor = cliente5;
-  numCoberturas++;
-
-  Cobertura cobertura3;
-  cobertura3.corretor = "Fival";
-  cobertura3.area = 180.0;
-  cobertura3.numQuartos = 4;
-  cobertura3.numBanheiros = 4;
-  cobertura3.vagas = 4;
-  cobertura3.valorPorArea = 4165.7;
-  cobertura3.valorComissao = cobertura3.comissao();
-  cobertura3.valorVenda = cobertura3.valor() + cobertura3.comissao();
-  cobertura3.vendedor = cliente6;
-  numCoberturas++;
-
-  // Casas
-  Casa casa1;
-  casa1.corretor = "Beydo";
-  casa1.area = 145.6;
-  casa1.numQuartos = 3;
-  casa1.numBanheiros = 3;
-  casa1.vagas = 2;
-  casa1.valorPorArea = 4023.6;
-  casa1.valorComissao = casa1.comissao();
-  casa1.valorVenda = casa1.valor() + casa1.comissao();
-  casa1.vendedor = cliente7;
-  numCasas++;
-
-  Casa casa2;
-  casa2.corretor = "Riuzi";
-  casa2.area = 245.0;
-  casa2.numQuartos = 5;
-  casa2.numBanheiros = 4;
-  casa2.vagas = 4;
-  casa2.valorPorArea = 4856.2;
-  casa2.valorComissao = casa2.comissao();
-  casa2.valorVenda = casa2.valor() + casa2.comissao();
-  casa2.vendedor = cliente8;
-  numCasas++;
+  Cobertura coberturas[3] = {{"Koci", 120.1, 3, 3, 2, 3123.5, clientes[3]},
+                             {"Wail", 134.8, 4, 3, 3, 3578.2, clientes[4]},
+                             {"Fival", 180.0, 4, 4, 4, 4165.7, clientes[5]}};
+  Casa casas[2] = {{"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
+                   {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
