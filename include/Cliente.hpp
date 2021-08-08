@@ -14,7 +14,7 @@ private:
   string telefone;
 
 public:
-  void print();
+  void print() const;
   Cliente(const string &_nome, const string &_endereco, const string &_cidade,
           const string &_unidadeFederativa, const string &_codigoPostal,
           const string &_telefone)

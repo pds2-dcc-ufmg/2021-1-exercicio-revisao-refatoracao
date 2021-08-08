@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-void Cliente::print() {
+void Cliente::print() const {
 
   cout << "  Nome: " << this->nome << endl
        << "  Telefone: " << this->telefone << endl
