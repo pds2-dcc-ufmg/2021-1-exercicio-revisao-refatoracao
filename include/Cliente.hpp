@@ -6,11 +6,11 @@ using namespace std;
 
 class Cliente {
 public:
-  string NOME;
+  string nome;
   string endereco;
-  string CIDADE;
-  string UF;
-  string cep;
+  string cidade;
+  string unidadeFederativa;
+  string codigoPostal;
   string telefone;
 
   void print();

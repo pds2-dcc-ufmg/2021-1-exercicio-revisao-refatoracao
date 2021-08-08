@@ -9,13 +9,13 @@ using namespace std;
 
 class Imovel {
 public:
-  double AREA;
-  int Q;
-  int B;
-  int V;
-  double VALORm2;
-  double Valor;
-  double C;
+  double area;
+  int numQuartos;
+  int numBanheiros;
+  int vagas;
+  double valorPorArea;
+  double valorVenda;
+  double valorComissao;
   Cliente vendedor;
   string corretor;
 
