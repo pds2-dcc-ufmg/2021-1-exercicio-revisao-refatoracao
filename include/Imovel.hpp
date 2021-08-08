@@ -15,9 +15,9 @@ private:
   unsigned numBanheiros;
   unsigned vagas;
   double valorPorArea;
-  double valorVenda;
-  double valorComissao;
   Cliente vendedor;
+  double valorComissao;
+  double valorVenda;
 
 public:
   void print() const;
