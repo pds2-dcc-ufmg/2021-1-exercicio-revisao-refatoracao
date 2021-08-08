@@ -1,45 +1,41 @@
 #ifndef CASA_HPP
 #define CASA_HPP
 
-#include "Imovel.hpp"
 #include "Cliente.hpp"
+#include "Imovel.hpp"
 
 using namespace std;
 
 class Casa : public Imovel {
 
-    public:
+public:
+  double valor() {
 
-    double valor() {
+    double v = AREA * VALORm2;
 
-        double v = AREA * VALORm2;
+    return v;
+  }
 
-        return v;
+  double comissao() {
 
-    }
+    double c = AREA * VALORm2;
 
-    double comissao() {
+    return c * 0.06;
+  }
 
-        double c = AREA * VALORm2;
+  void print() {
 
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
-
+    std::cout << "[Casa]" << endl;
+    Imovel::print();
+    std::cout << "Area: " << AREA << endl
+              << "  Quartos: " << Q << endl
+              << "  Banheiros: " << B << endl
+              << "  Vagas: " << V << endl
+              << "Taxa de Comissão: " << 6 << "%" << endl
+              << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
+              << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor
+              << endl;
+  }
 };
 
 #endif
