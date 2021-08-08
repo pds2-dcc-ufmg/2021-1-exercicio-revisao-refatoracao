@@ -9,14 +9,7 @@ using namespace std;
 class Casa : public Imovel {
 
 public:
-  double valor() {
-
-    double v = area * valorPorArea;
-
-    return v;
-  }
-
-  double comissao() {
+  double comissao() const override {
 
     double c = area * valorPorArea;
 
