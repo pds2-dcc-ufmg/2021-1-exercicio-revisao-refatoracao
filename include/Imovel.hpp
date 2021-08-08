@@ -23,7 +23,7 @@ protected:
 public:
   void print() const;
   double valor() const { return this->area * this->valorPorArea; }
-  virtual double comissao() const;
+  double comissao() const { return this->valor() * this->taxaComissao; }
 
   Imovel(const string &corretor, const double &area, const unsigned &numQuartos,
          const unsigned &numBanheiros, const unsigned &vagas,
