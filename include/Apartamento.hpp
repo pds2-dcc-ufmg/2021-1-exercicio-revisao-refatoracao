@@ -8,6 +8,9 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
+private:
+  static constexpr double TAXA_APARTAMENTO = 0.04;
+
 public:
   Apartamento(const string &corretor, const double &area,
               const unsigned &numQuartos, const unsigned &numBanheiros,

@@ -7,6 +7,9 @@ using namespace std;
 
 class Cobertura : public Imovel {
 
+private:
+  static constexpr double TAXA_COBERTURA = 0.10;
+
 public:
   Cobertura(const string &corretor, const double &area,
             const unsigned &numQuartos, const unsigned &numBanheiros,
