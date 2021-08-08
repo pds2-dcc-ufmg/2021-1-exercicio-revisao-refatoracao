@@ -8,7 +8,7 @@
 #include "Cliente.hpp"
 
 int main() {
-    
+    // Cadastro do cliente 1    
     Cliente cl1;
     cl1.NOME = "Xayso Sovon Ziahaka";
     cl1.endereco = "Rua Xangrilá - Braúnas";
