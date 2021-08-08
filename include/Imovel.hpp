@@ -19,12 +19,7 @@ public:
   Cliente vendedor;
   string corretor;
 
-  void print() {
-    cout << "[Vendedor]" << endl;
-    vendedor.print();
-    cout << "[Corretor]" << endl;
-    cout << "  " + corretor << endl;
-  }
+  void print() const;
 };
 
 #endif
