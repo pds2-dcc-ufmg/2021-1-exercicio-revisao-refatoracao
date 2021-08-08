@@ -34,6 +34,7 @@ public:
               << "Valor Comissão: R$ " << fixed << setprecision(2)
               << valorComissao << endl
               << "Valor de Venda: R$ " << fixed << setprecision(2) << valorVenda
+              << endl
               << endl;
   }
 };

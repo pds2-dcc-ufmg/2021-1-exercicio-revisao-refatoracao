@@ -68,42 +68,34 @@ int main() {
   apartamento1.print();
   valorApartamentos += apartamento1.valor();
   comissaoApartamentos += apartamento1.comissao();
-  std::cout << endl;
 
   apartamento2.print();
   valorApartamentos += apartamento2.valor();
   comissaoApartamentos += apartamento2.comissao();
-  std::cout << endl;
 
   apartamento3.print();
   valorApartamentos += apartamento3.valor();
   comissaoApartamentos += apartamento3.comissao();
-  std::cout << endl;
 
   cobertura1.print();
   valorCoberturas += cobertura1.valor();
   comissaoCoberturas += cobertura1.comissao();
-  std::cout << endl;
 
   cobertura2.print();
   valorCoberturas += cobertura2.valor();
   comissaoCoberturas += cobertura2.comissao();
-  std::cout << endl;
 
   cobertura3.print();
   valorCoberturas += cobertura3.valor();
   comissaoCoberturas += cobertura3.comissao();
-  std::cout << endl;
 
   casa1.print();
   valorCasas += casa1.valor();
   comissaoCasas += casa1.comissao();
-  std::cout << endl;
 
   casa2.print();
   valorCasas += casa2.valor();
   comissaoCasas += casa2.comissao();
-  std::cout << endl;
 
   std::cout << "\n>> Resumo Geral <<" << endl;
 
