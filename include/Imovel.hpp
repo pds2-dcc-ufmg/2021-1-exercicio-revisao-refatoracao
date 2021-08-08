@@ -18,6 +18,7 @@ protected:
   Cliente vendedor;
   double valorComissao;
   double valorVenda;
+  double taxaComissao;
 
 public:
   void print() const;

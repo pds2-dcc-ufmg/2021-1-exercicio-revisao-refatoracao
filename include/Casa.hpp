@@ -13,12 +13,8 @@ public:
        const unsigned &numBanheiros, const unsigned &vagas,
        const double &valorPorArea, const Cliente &vendedor)
       : Imovel(corretor, area, numQuartos, numBanheiros, vagas, valorPorArea,
-               vendedor) {}
-  double comissao() const override {
-
-    double c = area * valorPorArea;
-
-    return c * 0.06;
+               vendedor) {
+    this->taxaComissao = TAXA_CASA;
   }
 
   void print() {
