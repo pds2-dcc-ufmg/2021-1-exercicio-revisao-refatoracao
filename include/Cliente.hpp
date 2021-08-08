@@ -5,7 +5,7 @@
 using namespace std;
 
 class Cliente {
-public:
+private:
   string nome;
   string endereco;
   string cidade;
@@ -13,6 +13,7 @@ public:
   string codigoPostal;
   string telefone;
 
+public:
   void print();
   Cliente(const string &_nome, const string &_endereco, const string &_cidade,
           const string &_unidadeFederativa, const string &_codigoPostal,
