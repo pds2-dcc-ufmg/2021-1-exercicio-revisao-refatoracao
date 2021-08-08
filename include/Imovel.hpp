@@ -8,7 +8,7 @@
 using namespace std;
 
 class Imovel {
-public:
+private:
   string corretor;
   double area;
   unsigned numQuartos;
@@ -19,6 +19,7 @@ public:
   double valorComissao;
   Cliente vendedor;
 
+public:
   void print() const;
   double valor() const { return this->area * this->valorPorArea; }
   virtual double comissao() const;
