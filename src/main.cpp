@@ -47,41 +47,10 @@ int main() {
   int numCasas = 0;
   int numCoberturas = 0;
 
-  Apartamento apartamento1;
-  apartamento1.corretor = "Tuoruars";
-  apartamento1.area = 55.4;
-  apartamento1.numQuartos = 2;
-  apartamento1.numBanheiros = 1;
-  apartamento1.vagas = 0;
-  apartamento1.valorPorArea = 987.0;
-  apartamento1.valorComissao = apartamento1.comissao();
-  apartamento1.valorVenda = apartamento1.valor() + apartamento1.comissao();
-  apartamento1.vendedor = cliente1;
-  numApartamentos++;
-
-  Apartamento apartamento2;
-  apartamento2.corretor = "Fyubyeis";
-  apartamento2.area = 74.5;
-  apartamento2.numQuartos = 2;
-  apartamento2.numBanheiros = 1;
-  apartamento2.vagas = 2;
-  apartamento2.valorPorArea = 1540.0;
-  apartamento2.valorComissao = apartamento2.comissao();
-  apartamento2.valorVenda = apartamento2.valor() + apartamento2.comissao();
-  apartamento2.vendedor = cliente2;
-  numApartamentos++;
-
-  Apartamento apartamento3;
-  apartamento3.corretor = "Kelia";
-  apartamento3.area = 87.2;
-  apartamento3.numQuartos = 3;
-  apartamento3.numBanheiros = 2;
-  apartamento3.vagas = 2;
-  apartamento3.valorPorArea = 2354.0;
-  apartamento3.valorComissao = apartamento3.comissao();
-  apartamento3.valorVenda = apartamento3.valor() + apartamento3.comissao();
-  apartamento3.vendedor = cliente3;
-  numApartamentos++;
+  Apartamento apartamentos[3] = {
+      {"Tuoruars", 55.4, 2, 1, 0, 987.0, clientes[0]},
+      {"Fyubyeis", 74.5, 2, 1, 2, 1540.0, clientes[1]},
+      {"Kelia", 87.2, 3, 2, 2, 2354.0, clientes[2]}};
 
   // Cobertura
   Cobertura cobertura1;
