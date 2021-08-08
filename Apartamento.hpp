@@ -7,37 +7,32 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-
     public: 
-    
-    double valor() {
+        static constexpr int TAXA_COMISSAO = 4;
 
-        double v = AREA * VALORm2;
+        Apartamento(
+            string corretor,
+            double area,
+            int qtdQuarto,
+            int qtdBanheiro,
+            int qtdVaga,
+            double valorM2,
+            Cliente vendedor
+        ) : Imovel(
+            corretor,
+            area,
+            qtdQuarto,
+            qtdBanheiro,
+            qtdVaga,
+            valorM2,
+            TAXA_COMISSAO,
+            vendedor
+        ) {}
 
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+        void print() {
+            std::cout << "[Apartamento]" << endl;
+            Imovel::print();
+        }
 };
 
 #endif
