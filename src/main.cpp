@@ -7,6 +7,8 @@
 #include "Cliente.hpp"
 #include "Cobertura.hpp"
 #include "Imovel.hpp"
+void somaValores(const Imovel *imoveis, const int &tamanho, double *valor,
+                 double *comissao);
 
 int main() {
   static constexpr int numClientes = 8;
@@ -67,29 +69,22 @@ int main() {
                           {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   cout << "\n>> Relatório de Imóveis <<" << endl;
+
+  // Essa abordagem ainda não é ideal. "Funciona" para 3 subtipos de Imovel, mas
+  // para mais, ainda seria muito repetitiva
   double valorApartamentos = 0.0;
   double comissaoApartamentos = 0.0;
-  for (int i = 0; i < numApartamentos; ++i) {
-    apartamentos[i].print();
-    valorApartamentos += apartamentos[i].valor();
-    comissaoApartamentos += apartamentos[i].comissao();
-  }
+  somaValores(apartamentos, numApartamentos, &valorApartamentos,
+              &comissaoApartamentos);
 
   double valorCoberturas = 0.0;
   double comissaoCoberturas = 0.0;
-  for (int i = 0; i < numCoberturas; ++i) {
-    coberturas[i].print();
-    valorCoberturas += coberturas[i].valor();
-    comissaoCoberturas += coberturas[i].comissao();
-  }
+  somaValores(coberturas, numCoberturas, &valorCoberturas, &comissaoCoberturas);
 
   double valorCasas = 0.0;
   double comissaoCasas = 0.0;
-  for (int i = 0; i < numCasas; ++i) {
-    casas[i].print();
-    valorCasas += casas[i].valor();
-    comissaoCasas += casas[i].comissao();
-  }
+  somaValores(casas, numCasas, &valorCasas, &comissaoCasas);
+
   cout << "\n>> Resumo Geral <<" << endl
        << "\n>>Apartamentos<<\n"
        << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ " << fixed
@@ -103,4 +98,13 @@ int main() {
        << "\n Quantidade: " << numCasas << "\n Valor Total: R$ " << fixed
        << setprecision(precisao) << valorCasas << "\n Comissão Total: R$ "
        << fixed << setprecision(precisao) << comissaoCasas << endl;
+}
+
+void somaValores(const Imovel *imoveis, const int &tamanho, double *valor,
+                 double *comissao) {
+  for (int i = 0; i < tamanho; ++i) {
+    imoveis[i].print();
+    *valor += imoveis[i].valor();
+    *comissao += imoveis[i].comissao();
+  }
 }
