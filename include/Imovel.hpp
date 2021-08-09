@@ -23,12 +23,11 @@ class Imovel {
                 _valorMetroQuadrado(valorMetroQuadrado),
                 _vendedor(vendedor),
                 _corretor(corretor) {}
-
+        virtual ~Imovel() {}
         double calcularValorTotal();
-
         double calcularComissao();
-
         double calcularValorVenda();
+        void print();
 
     protected:
         double _area;
@@ -41,13 +40,7 @@ class Imovel {
         double _percentualComissao;
         Cliente _vendedor;
         string _corretor;
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            _vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + _corretor << endl;
-        }
+        string _nome;
 };
 
 #endif
