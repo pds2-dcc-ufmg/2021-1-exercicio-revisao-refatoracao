@@ -29,8 +29,10 @@ public:
         vendedor(vendedor) {}
 
   // Optei por implementar essas funções no header mesmo, por serem muito curtas
-  double valor() const { return this->area * this->valorPorArea; }
-  double comissao() const { return this->valor() * this->taxaComissao; }
+  double getValor() const { return this->area * this->valorPorArea; }
+  double getComissao() const { return this->getValor() * this->taxaComissao; }
+  double getVenda() const { return this->getComissao() + this->getValor(); }
+  string getTipo() const { return this->tipo; }
 
   void print() const;
 };
