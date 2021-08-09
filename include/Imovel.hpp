@@ -9,6 +9,16 @@ using namespace std;
 
 class Imovel {
     public:
+    Imovel(){}
+
+    double calcularValorTotal(){
+        return area * valorMetroQuadrado;
+    }
+
+ /*       return area * valorMetroQuadrado* percentualComissao;
+        
+    }*/
+
         double area;
         int numeroQuartos;
         int numeroBanheiros;
@@ -16,6 +26,7 @@ class Imovel {
         double valorMetroQuadrado;
         double valorVenda;
         double comissao;
+        double percentualComissao;
         Cliente vendedor;
         string corretor;
 

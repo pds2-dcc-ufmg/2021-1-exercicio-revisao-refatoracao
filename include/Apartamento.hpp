@@ -7,9 +7,12 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
+    public:
+    Apartamento() {
+        this->percentualComissao = 0.04;
+    }
     
-    double valor() {
+    double calcularValorTotal() {
 
         double v = area * valorMetroQuadrado;
 
@@ -21,7 +24,7 @@ class Apartamento : public Imovel {
 
         double c = area * valorMetroQuadrado;
 
-        return c * 0.04;
+        return c * percentualComissao;
         
     }
 

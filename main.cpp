@@ -85,7 +85,7 @@ int main() {
     ap1.numeroVagas = 0;
     ap1.valorMetroQuadrado = 987.0;
     ap1.comissao = ap1.calcularComissao();
-    ap1.valorVenda = ap1.valor() + ap1.calcularComissao();
+    ap1.valorVenda = ap1.calcularValorTotal() + ap1.calcularComissao();
     ap1.vendedor = cl1;
     qtdeA++;
 
@@ -97,7 +97,7 @@ int main() {
     ap2.numeroVagas = 2;
     ap2.valorMetroQuadrado = 1540.0;
     ap2.comissao = ap2.calcularComissao();
-    ap2.valorVenda = ap2.valor() + ap2.calcularComissao();
+    ap2.valorVenda = ap2.calcularValorTotal() + ap2.calcularComissao();
     ap2.vendedor = cl2;
     qtdeA++;
 
@@ -109,7 +109,7 @@ int main() {
     ap3.numeroVagas = 2;
     ap3.valorMetroQuadrado = 2354.0;
     ap3.comissao = ap3.calcularComissao();
-    ap3.valorVenda = ap3.valor() + ap3.calcularComissao();
+    ap3.valorVenda = ap3.calcularValorTotal() + ap3.calcularComissao();
     ap3.vendedor = cl3;
     qtdeA++;
 
@@ -159,7 +159,7 @@ int main() {
     ca1.numeroVagas = 2;
     ca1.valorMetroQuadrado = 4023.6;
     ca1.comissao = ca1.calcularComissao();
-    ca1.valorVenda = ca1.valor() + ca1.calcularComissao();
+    ca1.valorVenda = ca1.calcularValorTotal() + ca1.calcularComissao();
     ca1.vendedor = cl7;
     qtdeCa++;
 
@@ -171,7 +171,7 @@ int main() {
     ca2.numeroVagas = 4;
     ca2.valorMetroQuadrado = 4856.2;
     ca2.comissao = ca2.calcularComissao();
-    ca2.valorVenda = ca2.valor() + ca2.calcularComissao();
+    ca2.valorVenda = ca2.calcularValorTotal() + ca2.calcularComissao();
     ca2.vendedor = cl8;
     qtdeCa++;
 
@@ -185,17 +185,17 @@ int main() {
     double comissCa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
+    valorAp += ap1.calcularValorTotal();
     comissAp += ap1.calcularComissao();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
+    valorAp += ap2.calcularValorTotal();
     comissAp += ap2.calcularComissao();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
+    valorAp += ap3.calcularValorTotal();
     comissAp += ap3.calcularComissao();
     std::cout << endl;
 
@@ -215,12 +215,12 @@ int main() {
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
+    valorCa += ca1.calcularValorTotal();
     comissCa += ca1.calcularComissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
+    valorCa += ca2.calcularValorTotal();
     comissCa += ca2.calcularComissao();
     std::cout << endl;
 

@@ -8,6 +8,9 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
+    Cobertura(){
+        this->percentualComissao = 0.10;
+    }
 
     double valor() {
 
@@ -21,7 +24,7 @@ class Cobertura : public Imovel {
 
         double c = area * valorMetroQuadrado;
 
-        return c * 0.10;
+        return c * percentualComissao;
         
     }
 

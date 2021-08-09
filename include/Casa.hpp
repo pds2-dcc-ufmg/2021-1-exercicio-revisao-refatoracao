@@ -8,20 +8,15 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-
-    double valor() {
-
-        double v = area * valorMetroQuadrado;
-
-        return v;
-
-    }
+        Casa() {
+            this->percentualComissao = 0.06;
+        }
 
     double calcularComissao() {
 
         double c = area * valorMetroQuadrado;
 
-        return c * 0.06;
+        return c * percentualComissao;
         
     }
 
@@ -39,6 +34,8 @@ class Casa : public Imovel {
 
     }
 
+    
+        
 };
 
 #endif
