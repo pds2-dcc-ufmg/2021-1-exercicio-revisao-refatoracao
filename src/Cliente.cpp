@@ -3,7 +3,6 @@
 #include <string>
 
 void Cliente::print() const {
-
   cout << "  Nome: " << this->nome << endl
        << "  Telefone: " << this->telefone << endl
        << "  Endereço: " << this->endereco << endl
