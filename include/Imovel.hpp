@@ -7,9 +7,10 @@
 
 using namespace std;
 
+static constexpr unsigned precisao = 2;
+
 class Imovel {
 protected:
-  static constexpr unsigned precisao = 2;
   string corretor;
   double area;
   unsigned numQuartos;
