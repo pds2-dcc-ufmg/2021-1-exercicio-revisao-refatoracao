@@ -52,6 +52,8 @@ int main() {
   // O construtor de imóveis tem o seguinte formato:
   // { "CORRETOR", "ÁREA", "NÚMERO DE QUARTOS", "NÚMERO DE BANHEIROS", "VAGAS",
   // "VALOR POR ÁREA", "VENDEDOR"(cliente) }
+  //
+  // TODO: Bolar um jeito mais esperto de caminhar pelo vetor clientes
   Apartamento apartamentos[numApartamentos] = {
       {"Tuoruars", 55.4, 2, 1, 0, 987.0, clientes[0]},
       {"Fyubyeis", 74.5, 2, 1, 2, 1540.0, clientes[1]},
