@@ -2,7 +2,6 @@
 #define CASA_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
 
 using namespace std;
 
