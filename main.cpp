@@ -85,7 +85,7 @@ int main() {
     ap1.numeroVagas = 0;
     ap1.valorMetroQuadrado = 987.0;
     ap1.comissao = ap1.calcularComissao();
-    ap1.valorVenda = ap1.calcularValorTotal() + ap1.calcularComissao();
+    ap1.valorVenda = ap1.calcularValorVenda();
     ap1.vendedor = cl1;
     qtdeA++;
 
@@ -97,7 +97,7 @@ int main() {
     ap2.numeroVagas = 2;
     ap2.valorMetroQuadrado = 1540.0;
     ap2.comissao = ap2.calcularComissao();
-    ap2.valorVenda = ap2.calcularValorTotal() + ap2.calcularComissao();
+    ap2.valorVenda = ap2.calcularValorVenda();
     ap2.vendedor = cl2;
     qtdeA++;
 
@@ -109,7 +109,7 @@ int main() {
     ap3.numeroVagas = 2;
     ap3.valorMetroQuadrado = 2354.0;
     ap3.comissao = ap3.calcularComissao();
-    ap3.valorVenda = ap3.calcularValorTotal() + ap3.calcularComissao();
+    ap3.valorVenda = ap3.calcularValorVenda();
     ap3.vendedor = cl3;
     qtdeA++;
 
@@ -122,7 +122,7 @@ int main() {
     cb1.numeroVagas = 2;
     cb1.valorMetroQuadrado = 3123.5;
     cb1.comissao = cb1.calcularComissao();
-    cb1.valorVenda = cb1.valor() + cb1.calcularComissao();
+    cb1.valorVenda = cb1.calcularValorVenda();
     cb1.vendedor = cl4;
     qtdeCb++;
     
@@ -134,7 +134,7 @@ int main() {
     cb2.numeroVagas = 3;
     cb2.valorMetroQuadrado = 3578.2;
     cb2.comissao = cb2.calcularComissao();
-    cb2.valorVenda = cb2.valor() + cb2.calcularComissao();
+    cb2.valorVenda = cb2.calcularValorVenda();
     cb2.vendedor = cl5;
     qtdeCb++;
 
@@ -146,7 +146,7 @@ int main() {
     cb3.numeroVagas = 4;
     cb3.valorMetroQuadrado = 4165.7;
     cb3.comissao = cb3.calcularComissao();
-    cb3.valorVenda = cb3.valor() + cb3.calcularComissao();
+    cb3.valorVenda = cb3.calcularValorVenda();
     cb3.vendedor = cl6;
     qtdeCb++;
 
@@ -159,7 +159,7 @@ int main() {
     ca1.numeroVagas = 2;
     ca1.valorMetroQuadrado = 4023.6;
     ca1.comissao = ca1.calcularComissao();
-    ca1.valorVenda = ca1.calcularValorTotal() + ca1.calcularComissao();
+    ca1.valorVenda = ca1.calcularValorVenda();
     ca1.vendedor = cl7;
     qtdeCa++;
 
@@ -171,7 +171,7 @@ int main() {
     ca2.numeroVagas = 4;
     ca2.valorMetroQuadrado = 4856.2;
     ca2.comissao = ca2.calcularComissao();
-    ca2.valorVenda = ca2.calcularValorTotal() + ca2.calcularComissao();
+    ca2.valorVenda = ca2.calcularValorVenda();
     ca2.vendedor = cl8;
     qtdeCa++;
 
@@ -200,17 +200,17 @@ int main() {
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
+    valorCb += cb1.calcularValorTotal();
     comissCb += cb1.calcularComissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
+    valorCb += cb2.calcularValorTotal();
     comissCb += cb2.calcularComissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
+    valorCb += cb3.calcularValorTotal();
     comissCb += cb3.calcularComissao();
     std::cout << endl;
 

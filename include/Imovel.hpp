@@ -11,13 +11,17 @@ class Imovel {
     public:
     Imovel(){}
 
-    double calcularValorTotal(){
+    double calcularValorTotal() {
         return area * valorMetroQuadrado;
     }
 
- /*       return area * valorMetroQuadrado* percentualComissao;
-        
-    }*/
+    double calcularComissao() {
+        return area * valorMetroQuadrado * percentualComissao;
+    }
+
+    double calcularValorVenda() {
+        return this->calcularValorTotal()+this->calcularComissao();
+    }
 
         double area;
         int numeroQuartos;
