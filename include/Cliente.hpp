@@ -14,12 +14,12 @@ private:
   string telefone;
 
 public:
-  Cliente(const string &_nome, const string &_endereco, const string &_cidade,
-          const string &_unidadeFederativa, const string &_codigoPostal,
-          const string &_telefone)
-      : nome(_nome), endereco(_endereco), cidade(_cidade),
-        unidadeFederativa(_unidadeFederativa), codigoPostal(_codigoPostal),
-        telefone(_telefone) {}
+  Cliente(const string &nome, const string &endereco, const string &cidade,
+          const string &unidadeFederativa, const string &codigoPostal,
+          const string &telefone)
+      : nome(nome), endereco(endereco), cidade(cidade),
+        unidadeFederativa(unidadeFederativa), codigoPostal(codigoPostal),
+        telefone(telefone) {}
 
   void print() const;
 };
