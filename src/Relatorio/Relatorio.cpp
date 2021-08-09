@@ -1,5 +1,6 @@
 #include "Relatorio.hpp"
-relatorio::relatorio(Imovel *imoveis, const int &tamanho) {
+using namespace Relatorios;
+relatorio::relatorio(Imoveis::Imovel *imoveis, const int &tamanho) {
   this->imoveis = imoveis;
   this->tamanho = tamanho;
   this->imprimeSomaValores();

@@ -1,7 +1,7 @@
 #include "Cliente.hpp"
 #include <iostream>
 #include <string>
-
+namespace Clientes {
 void Cliente::print() const {
   cout << "  Nome: " << this->nome << endl
        << "  Telefone: " << this->telefone << endl
@@ -10,3 +10,4 @@ void Cliente::print() const {
        << "  Estado: " << this->unidadeFederativa << endl
        << "  CEP: " << this->codigoPostal << endl;
 }
+} // namespace Clientes

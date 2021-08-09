@@ -1,5 +1,6 @@
 #include "Imovel.hpp"
 
+namespace Imoveis {
 void Imovel::print() const {
   cout << "[" << this->tipo << "]" << endl;
   cout << "[Vendedor]" << endl;
@@ -18,3 +19,4 @@ void Imovel::print() const {
        << this->getVenda() << endl
        << endl;
 }
+} // namespace Imoveis

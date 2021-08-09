@@ -6,6 +6,7 @@
 
 using namespace std;
 
+namespace Imoveis {
 class Cobertura : public Imovel {
 
 private:
@@ -15,12 +16,13 @@ public:
   Cobertura(const string &corretor, const double &area,
             const unsigned &numQuartos, const unsigned &numBanheiros,
             const unsigned &vagas, const double &valorPorArea,
-            const Cliente &vendedor)
+            const Clientes::Cliente &vendedor)
       : Imovel(corretor, area, numQuartos, numBanheiros, vagas, valorPorArea,
                vendedor) {
     this->taxaComissao = TAXA_COBERTURA;
     this->tipo = "Cobertura";
   }
 };
+} // namespace Imoveis
 
 #endif

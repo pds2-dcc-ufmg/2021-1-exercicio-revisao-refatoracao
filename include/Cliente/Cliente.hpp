@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+namespace Clientes {
 class Cliente {
 private:
   string nome;
@@ -23,5 +24,5 @@ public:
 
   void print() const;
 };
-
+} // namespace Clientes
 #endif

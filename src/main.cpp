@@ -31,7 +31,7 @@ int main() {
   // Pensei em uma alternativa para isso: fazer a leitura a partir de um arquivo
   // csv, que conteria todos os dados. No entanto, acho que isso é meio overkill
   // para uma refatoração
-  Cliente clientes[numClientes] = {
+  Clientes::Cliente clientes[numClientes] = {
       {"Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", "Belo Horizonte", "MG",
        "31365-570", "3196007958"},
       {"Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
@@ -56,22 +56,24 @@ int main() {
   // "VALOR POR ÁREA", "VENDEDOR"(cliente) }
   //
   // TODO: Bolar um jeito mais esperto de caminhar pelo vetor clientes
-  Apartamento apartamentos[numApartamentos] = {
+  Imoveis::Apartamento apartamentos[numApartamentos] = {
       {"Tuoruars", 55.4, 2, 1, 0, 987.0, clientes[0]},
       {"Fyubyeis", 74.5, 2, 1, 2, 1540.0, clientes[1]},
       {"Kelia", 87.2, 3, 2, 2, 2354.0, clientes[2]}};
-  Cobertura coberturas[numCoberturas] = {
+  Imoveis::Cobertura coberturas[numCoberturas] = {
       {"Koci", 120.1, 3, 3, 2, 3123.5, clientes[3]},
       {"Wail", 134.8, 4, 3, 3, 3578.2, clientes[4]},
       {"Fival", 180.0, 4, 4, 4, 4165.7, clientes[5]}};
-  Casa casas[numCasas] = {{"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
-                          {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
+  Imoveis::Casa casas[numCasas] = {
+      {"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
+      {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   cout << "\n>> Relatório de Imóveis <<" << endl;
   // Simplifique a impressão do relatório usando uma classe
-  relatorio relatorios[numSubtiposImovel] = {{apartamentos, numApartamentos},
-                                             {coberturas, numCoberturas},
-                                             {casas, numCasas}};
+  Relatorios::relatorio relatorios[numSubtiposImovel] = {
+      {apartamentos, numApartamentos},
+      {coberturas, numCoberturas},
+      {casas, numCasas}};
   cout << "\n>> Resumo Geral <<" << endl;
   for (int i = 0; i < numSubtiposImovel; ++i) {
     relatorios[i].imprimeGeral();

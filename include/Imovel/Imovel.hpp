@@ -9,6 +9,7 @@ using namespace std;
 
 static constexpr unsigned precisao = 2;
 
+namespace Imoveis {
 class Imovel {
 protected:
   string corretor;
@@ -17,14 +18,14 @@ protected:
   unsigned numBanheiros;
   unsigned vagas;
   double valorPorArea;
-  Cliente vendedor;
+  Clientes::Cliente vendedor;
   double taxaComissao;
   string tipo;
 
 public:
   Imovel(const string &corretor, const double &area, const unsigned &numQuartos,
          const unsigned &numBanheiros, const unsigned &vagas,
-         const double &valorPorArea, const Cliente &vendedor)
+         const double &valorPorArea, const Clientes::Cliente &vendedor)
       : corretor(corretor), area(area), numQuartos(numQuartos),
         numBanheiros(numBanheiros), vagas(vagas), valorPorArea(valorPorArea),
         vendedor(vendedor) {}
@@ -37,5 +38,6 @@ public:
 
   void print() const;
 };
+} // namespace Imoveis
 
 #endif
