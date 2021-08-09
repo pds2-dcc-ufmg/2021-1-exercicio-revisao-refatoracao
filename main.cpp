@@ -9,69 +9,61 @@
 
 int main() {
     
-    Cliente cl1;
-    cl1.nome = "Xayso Sovon Ziahaka";
-    cl1.endereco = "Rua Xangrilá - Braúnas";
-    cl1.cidade = "Belo Horizonte";
-    cl1.uf = "MG";
-    cl1.cep = "31365-570";
-    cl1.telefone = "3196007958";
+    Cliente cl1 = Cliente ( "Xayso Sovon Ziahaka",
+                            "Rua Xangrilá - Braúnas",
+                            "Belo Horizonte",
+                            "MG",
+                            "31365-570",
+                            "3196007958");
     
-    Cliente cl2;
-    cl2.nome = "Minia Pasies Kituos";
-    cl2.endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2.cidade = "Belo Horizonte";
-    cl2.uf = "MG";
-    cl2.cep = "31870-290";
-    cl2.telefone = "3197627067";
+    Cliente cl2 = Cliente ( "Minia Pasies Kituos",
+                            "Rua dos Jacobinos - Ouro Minas",
+                            "Belo Horizonte",
+                            "MG",
+                            "31870-290",
+                            "3197627067");
     
-    Cliente cl3;
-    cl3.nome = "Vuocue Leiur Baonauza";
-    cl3.endereco = "Rua Orminda de Almeida - Tupi B";
-    cl3.cidade = "Belo Horizonte";
-    cl3.uf = "MG";
-    cl3.cep = "31842-630";
-    cl3.telefone = "3195949327";
+    Cliente cl3 = Cliente ( "Vuocue Leiur Baonauza",
+                            "Rua Orminda de Almeida - Tupi B",
+                            "Belo Horizonte",
+                            "MG",
+                            "31842-630",
+                            "3195949327");
     
-    Cliente cl4;
-    cl4.nome = "Zerer Huduy Fyogar";
-    cl4.endereco = "Rua Taquaril - Jonas Veiga";
-    cl4.cidade = "Belo Horizonte";
-    cl4.uf = "MG";
-    cl4.cep = "30285-422";
-    cl4.telefone = "3198596327";
+    Cliente cl4 = Cliente ( "Zerer Huduy Fyogar",
+                            "Rua Taquaril - Jonas Veiga",
+                            "Belo Horizonte",
+                            "MG",
+                            "30285-422",
+                            "3198596327");
     
-    Cliente cl5;
-    cl5.nome = "Ceziel Mioti Pler";
-    cl5.endereco = "Rua João Gualberto Costa - Serrano";
-    cl5.cidade = "Belo Horizonte";
-    cl5.uf = "MG";
-    cl5.cep = "30882-747";
-    cl5.telefone = "3196274465";
+    Cliente cl5 = Cliente ( "Ceziel Mioti Pler",
+                            "Rua João Gualberto Costa - Serrano",
+                            "Belo Horizonte",
+                            "MG",
+                            "30882-747",
+                            "3196274465");
     
-    Cliente cl6;
-    cl6.nome = "Esxo Cilal Zyais";
-    cl6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.cidade = "Belo Horizonte";
-    cl6.uf = "MG";
-    cl6.cep = "31650-560";
-    cl6.telefone = "3195004414";
+    Cliente cl6 = Cliente ( "Esxo Cilal Zyais",
+                            "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
+                            "Belo Horizonte",
+                            "MG",
+                            "31650-560",
+                            "3195004414");
+
+    Cliente cl7 = Cliente ( "Leova Wikyecil Neaca",
+                            "Rua João Arantes - Cidade Nova",
+                            "Belo Horizonte",
+                            "MG",
+                            "31170-240",
+                            "3198461192");
     
-    Cliente cl7;
-    cl7.nome = "Leova Wikyecil Neaca";
-    cl7.endereco = "Rua João Arantes - Cidade Nova";
-    cl7.cidade = "Belo Horizonte";
-    cl7.uf = "MG";
-    cl7.cep = "31170-240";
-    cl7.telefone = "3198461192";
-    
-    Cliente cl8;
-    cl8.nome = "Teas Heimeu Pipe";
-    cl8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.cidade = "Belo Horizonte";
-    cl8.uf = "MG";
-    cl8.cep = "30668-430";
-    cl8.telefone = "3197317802";
+    Cliente cl8 = Cliente ( "Teas Heimeu Pipe",
+                            "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
+                            "Belo Horizonte",
+                            "MG",
+                            "30668-430",
+                            "3197317802");
 
     int qtdeA = 0;
     int qtdeCa = 0;
