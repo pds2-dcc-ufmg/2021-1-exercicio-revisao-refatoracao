@@ -61,7 +61,7 @@ int main() {
   Casa casas[numCasas] = {{"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
                           {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
-  std::cout << "\n>> Relatório de Imóveis <<" << endl;
+  cout << "\n>> Relatório de Imóveis <<" << endl;
   double valorApartamentos = 0.0;
   double comissaoApartamentos = 0.0;
   for (int i = 0; i < numApartamentos; ++i) {
@@ -85,18 +85,17 @@ int main() {
     valorCasas += casas[i].valor();
     comissaoCasas += casas[i].comissao();
   }
-  std::cout << "\n>> Resumo Geral <<" << endl;
-  std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ "
-            << fixed << setprecision(2) << valorApartamentos
-            << "\n Comissão Total: R$" << comissaoApartamentos << endl
-            << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << numCoberturas << "\n Valor Total: R$ "
-            << fixed << setprecision(2) << valorCoberturas
-            << "\n Comissão Total: R$ " << fixed << setprecision(2)
-            << comissaoCoberturas << endl
-            << "\n>>Casas<<\n"
-            << "\n Quantidade: " << numCasas << "\n Valor Total: R$ " << fixed
-            << setprecision(2) << valorCasas << "\n Comissão Total: R$ "
-            << fixed << setprecision(2) << comissaoCasas << endl;
+  cout << "\n>> Resumo Geral <<" << endl
+       << "\n>>Apartamentos<<\n"
+       << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ " << fixed
+       << setprecision(2) << valorApartamentos << "\n Comissão Total: R$"
+       << comissaoApartamentos << endl
+       << "\n>>Coberturas<<\n"
+       << "\n Quantidade: " << numCoberturas << "\n Valor Total: R$ " << fixed
+       << setprecision(2) << valorCoberturas << "\n Comissão Total: R$ "
+       << fixed << setprecision(2) << comissaoCoberturas << endl
+       << "\n>>Casas<<\n"
+       << "\n Quantidade: " << numCasas << "\n Valor Total: R$ " << fixed
+       << setprecision(2) << valorCasas << "\n Comissão Total: R$ " << fixed
+       << setprecision(2) << comissaoCasas << endl;
 }
