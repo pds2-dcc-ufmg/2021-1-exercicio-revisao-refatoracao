@@ -7,16 +7,15 @@
 #include "Cliente.hpp"
 #include "Cobertura.hpp"
 #include "Imovel.hpp"
-void somaValores(const Imovel *imoveis, const int &tamanho, double *valor,
-                 double *comissao);
+#include "Relatorio.hpp"
 
 int main() {
   static constexpr int numClientes = 8;
   static constexpr int numApartamentos = 3;
   static constexpr int numCoberturas = 3;
   static constexpr int numCasas = 2;
+  static constexpr int numSubtiposImovel = 3;
   assert(numClientes == numApartamentos + numCoberturas + numCasas);
-  static constexpr int precisao = 2;
 
   // Use um construtor para evitar repetições desnecessárias de settar cada
   // membro de uma vez. Além do mais, isso facilita o encapsulamento nesse caso
@@ -69,42 +68,11 @@ int main() {
                           {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   cout << "\n>> Relatório de Imóveis <<" << endl;
-
-  // Essa abordagem ainda não é ideal. "Funciona" para 3 subtipos de Imovel, mas
-  // para mais, ainda seria muito repetitiva
-  double valorApartamentos = 0.0;
-  double comissaoApartamentos = 0.0;
-  somaValores(apartamentos, numApartamentos, &valorApartamentos,
-              &comissaoApartamentos);
-
-  double valorCoberturas = 0.0;
-  double comissaoCoberturas = 0.0;
-  somaValores(coberturas, numCoberturas, &valorCoberturas, &comissaoCoberturas);
-
-  double valorCasas = 0.0;
-  double comissaoCasas = 0.0;
-  somaValores(casas, numCasas, &valorCasas, &comissaoCasas);
-
-  cout << "\n>> Resumo Geral <<" << endl
-       << "\n>>Apartamentos<<\n"
-       << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ " << fixed
-       << setprecision(precisao) << valorApartamentos << "\n Comissão Total: R$"
-       << comissaoApartamentos << endl
-       << "\n>>Coberturas<<\n"
-       << "\n Quantidade: " << numCoberturas << "\n Valor Total: R$ " << fixed
-       << setprecision(precisao) << valorCoberturas << "\n Comissão Total: R$ "
-       << fixed << setprecision(precisao) << comissaoCoberturas << endl
-       << "\n>>Casas<<\n"
-       << "\n Quantidade: " << numCasas << "\n Valor Total: R$ " << fixed
-       << setprecision(precisao) << valorCasas << "\n Comissão Total: R$ "
-       << fixed << setprecision(precisao) << comissaoCasas << endl;
-}
-
-void somaValores(const Imovel *imoveis, const int &tamanho, double *valor,
-                 double *comissao) {
-  for (int i = 0; i < tamanho; ++i) {
-    imoveis[i].print();
-    *valor += imoveis[i].valor();
-    *comissao += imoveis[i].comissao();
+  relatorio relatorios[numSubtiposImovel] = {{apartamentos, numApartamentos},
+                                             {coberturas, numCoberturas},
+                                             {casas, numCasas}};
+  cout << "\n>> Resumo Geral <<" << endl;
+  for (int i = 0; i < numSubtiposImovel; ++i) {
+    relatorios[i].print();
   }
 }
