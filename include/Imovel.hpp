@@ -17,8 +17,6 @@ protected:
   unsigned vagas;
   double valorPorArea;
   Cliente vendedor;
-  double valorComissao;
-  double valorVenda;
   double taxaComissao;
   string tipo;
 
@@ -28,10 +26,7 @@ public:
          const double &valorPorArea, const Cliente &vendedor)
       : corretor(corretor), area(area), numQuartos(numQuartos),
         numBanheiros(numBanheiros), vagas(vagas), valorPorArea(valorPorArea),
-        vendedor(vendedor) {
-    this->valorComissao = this->comissao();
-    this->valorVenda = this->comissao() + this->valor();
-  }
+        vendedor(vendedor) {}
 
   // Optei por implementar essas funções no header mesmo, por serem muito curtas
   double valor() const { return this->area * this->valorPorArea; }
