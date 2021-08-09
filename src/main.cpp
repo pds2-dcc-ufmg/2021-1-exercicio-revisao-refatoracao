@@ -8,6 +8,10 @@
 #include "Imovel.hpp"
 
 int main() {
+  static constexpr int numClientes = 8;
+  static constexpr int numApartamentos = 3;
+  static constexpr int numCoberturas = 3;
+  static constexpr int numCasas = 2;
 
   // Use um construtor para evitar repetições desnecessárias de settar cada
   // membro de uma vez. Além do mais, isso facilita o encapsulamento nesse caso
@@ -23,7 +27,7 @@ int main() {
   // Pensei em uma alternativa para isso: fazer a leitura a partir de um arquivo
   // csv, que conteria todos os dados. No entanto, acho que isso é meio overkill
   // para uma refatoração
-  Cliente clientes[8] = {
+  Cliente clientes[numClientes] = {
       {"Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", "Belo Horizonte", "MG",
        "31365-570", "3196007958"},
       {"Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
@@ -46,20 +50,21 @@ int main() {
   // O construtor de imóveis tem o seguinte formato:
   // { "CORRETOR", "ÁREA", "NÚMERO DE QUARTOS", "NÚMERO DE BANHEIROS", "VAGAS",
   // "VALOR POR ÁREA", "VENDEDOR"(cliente) }
-  Apartamento apartamentos[3] = {
+  Apartamento apartamentos[numApartamentos] = {
       {"Tuoruars", 55.4, 2, 1, 0, 987.0, clientes[0]},
       {"Fyubyeis", 74.5, 2, 1, 2, 1540.0, clientes[1]},
       {"Kelia", 87.2, 3, 2, 2, 2354.0, clientes[2]}};
-  Cobertura coberturas[3] = {{"Koci", 120.1, 3, 3, 2, 3123.5, clientes[3]},
-                             {"Wail", 134.8, 4, 3, 3, 3578.2, clientes[4]},
-                             {"Fival", 180.0, 4, 4, 4, 4165.7, clientes[5]}};
-  Casa casas[2] = {{"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
-                   {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
+  Cobertura coberturas[numCoberturas] = {
+      {"Koci", 120.1, 3, 3, 2, 3123.5, clientes[3]},
+      {"Wail", 134.8, 4, 3, 3, 3578.2, clientes[4]},
+      {"Fival", 180.0, 4, 4, 4, 4165.7, clientes[5]}};
+  Casa casas[numCasas] = {{"Beydo", 145.6, 3, 3, 2, 4023.6, clientes[6]},
+                          {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   std::cout << "\n>> Relatório de Imóveis <<" << endl;
   double valorApartamentos = 0.0;
   double comissaoApartamentos = 0.0;
-  for (int i = 0; i < 3; ++i) {
+  for (int i = 0; i < numApartamentos; ++i) {
     apartamentos[i].print();
     valorApartamentos += apartamentos[i].valor();
     comissaoApartamentos += apartamentos[i].comissao();
@@ -67,7 +72,7 @@ int main() {
 
   double valorCoberturas = 0.0;
   double comissaoCoberturas = 0.0;
-  for (int i = 0; i < 3; ++i) {
+  for (int i = 0; i < numCoberturas; ++i) {
     coberturas[i].print();
     valorCoberturas += coberturas[i].valor();
     comissaoCoberturas += coberturas[i].comissao();
@@ -75,7 +80,7 @@ int main() {
 
   double valorCasas = 0.0;
   double comissaoCasas = 0.0;
-  for (int i = 0; i < 2; ++i) {
+  for (int i = 0; i < numCasas; ++i) {
     casas[i].print();
     valorCasas += casas[i].valor();
     comissaoCasas += casas[i].comissao();
