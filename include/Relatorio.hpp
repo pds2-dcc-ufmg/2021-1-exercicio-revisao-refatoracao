@@ -8,10 +8,14 @@ private:
   int tamanho;
   Imovel *imoveis;
 
+  // Para cada imóvel, o imprima e incremente o valor e a comissão
+  // É privada pois é chamada diretamente no construtor
   void imprimeSomaValores();
 
 public:
   relatorio(Imovel *imoveis, const int &tamanho);
-  void print() const;
+
+  // Imprima dados gerais sobre o array
+  void imprimeGeral() const;
 };
 #endif

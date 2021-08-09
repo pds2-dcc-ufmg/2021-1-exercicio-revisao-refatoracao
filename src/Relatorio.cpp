@@ -11,7 +11,7 @@ void relatorio::imprimeSomaValores() {
     this->comissao += imoveis[i].getComissao();
   }
 }
-void relatorio::print() const {
+void relatorio::imprimeGeral() const {
   cout << "\n>>" << this->imoveis->getTipo() << "s<<\n"
        << "\n Quantidade: " << this->tamanho << "\n Valor Total: R$ " << fixed
        << setprecision(precisao) << this->valor << "\n Comissão Total: R$"

@@ -68,11 +68,12 @@ int main() {
                           {"Riuzi", 245.0, 5, 4, 4, 4856.2, clientes[7]}};
 
   cout << "\n>> Relatório de Imóveis <<" << endl;
+  // Simplifique a impressão do relatório usando uma classe
   relatorio relatorios[numSubtiposImovel] = {{apartamentos, numApartamentos},
                                              {coberturas, numCoberturas},
                                              {casas, numCasas}};
   cout << "\n>> Resumo Geral <<" << endl;
   for (int i = 0; i < numSubtiposImovel; ++i) {
-    relatorios[i].print();
+    relatorios[i].imprimeGeral();
   }
 }
