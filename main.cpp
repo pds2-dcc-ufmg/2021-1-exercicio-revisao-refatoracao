@@ -77,102 +77,30 @@ int main() {
     int qtdeCa = 0;
     int qtdeCb = 0;
 
-    Apartamento ap1;
-    ap1.corretor = "Tuoruars";
-    ap1.area = 55.4;
-    ap1.numeroQuartos = 2;
-    ap1.numeroBanheiros = 1;
-    ap1.numeroVagas = 0;
-    ap1.valorMetroQuadrado = 987.0;
-    ap1.comissao = ap1.calcularComissao();
-    ap1.valorVenda = ap1.calcularValorVenda();
-    ap1.vendedor = cl1;
+    Apartamento ap1 = Apartamento(55.4, 2, 1, 0, 987.0, cl1, "Tuoruars");
     qtdeA++;
 
-    Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
-    ap2.area = 74.5;
-    ap2.numeroQuartos = 2;
-    ap2.numeroBanheiros = 1;
-    ap2.numeroVagas = 2;
-    ap2.valorMetroQuadrado = 1540.0;
-    ap2.comissao = ap2.calcularComissao();
-    ap2.valorVenda = ap2.calcularValorVenda();
-    ap2.vendedor = cl2;
+    Apartamento ap2 = Apartamento(74.5, 2, 1, 2, 1540.0, cl2, "Fyubyeis");
     qtdeA++;
 
-    Apartamento ap3;
-    ap3.corretor = "Kelia";
-    ap3.area = 87.2;
-    ap3.numeroQuartos = 3;
-    ap3.numeroBanheiros = 2;
-    ap3.numeroVagas = 2;
-    ap3.valorMetroQuadrado = 2354.0;
-    ap3.comissao = ap3.calcularComissao();
-    ap3.valorVenda = ap3.calcularValorVenda();
-    ap3.vendedor = cl3;
+    Apartamento ap3 = Apartamento(87.2, 3, 2, 2, 2354.0, cl3, "Kelia");
     qtdeA++;
 
     // Cobertura
-    Cobertura cb1;
-    cb1.corretor = "Koci";
-    cb1.area = 120.1;
-    cb1.numeroQuartos = 3;
-    cb1.numeroBanheiros = 3;
-    cb1.numeroVagas = 2;
-    cb1.valorMetroQuadrado = 3123.5;
-    cb1.comissao = cb1.calcularComissao();
-    cb1.valorVenda = cb1.calcularValorVenda();
-    cb1.vendedor = cl4;
+    Cobertura cb1 = Cobertura(120.1, 3, 3, 2, 3123.5, cl4, "Koci");
     qtdeCb++;
     
-    Cobertura cb2;
-    cb2.corretor = "Wail";
-    cb2.area = 134.8;
-    cb2.numeroQuartos = 4;
-    cb2.numeroBanheiros = 3;
-    cb2.numeroVagas = 3;
-    cb2.valorMetroQuadrado = 3578.2;
-    cb2.comissao = cb2.calcularComissao();
-    cb2.valorVenda = cb2.calcularValorVenda();
-    cb2.vendedor = cl5;
+    Cobertura cb2 = Cobertura(134.8, 4, 3, 3, 3578.2, cl5, "Wail");
     qtdeCb++;
 
-    Cobertura cb3;
-    cb3.corretor = "Fival";
-    cb3.area = 180.0;
-    cb3.numeroQuartos = 4;
-    cb3.numeroBanheiros = 4;
-    cb3.numeroVagas = 4;
-    cb3.valorMetroQuadrado = 4165.7;
-    cb3.comissao = cb3.calcularComissao();
-    cb3.valorVenda = cb3.calcularValorVenda();
-    cb3.vendedor = cl6;
+    Cobertura cb3 = Cobertura(180.0, 4, 4, 4, 4165.7, cl6, "Fival");
     qtdeCb++;
 
     // Casas
-    Casa ca1;
-    ca1.corretor = "Beydo";
-    ca1.area = 145.6;
-    ca1.numeroQuartos = 3;
-    ca1.numeroBanheiros = 3;
-    ca1.numeroVagas = 2;
-    ca1.valorMetroQuadrado = 4023.6;
-    ca1.comissao = ca1.calcularComissao();
-    ca1.valorVenda = ca1.calcularValorVenda();
-    ca1.vendedor = cl7;
+    Casa ca1 = Casa(145.6, 3, 3, 2, 4023.6, cl7, "Beydo");
     qtdeCa++;
 
-    Casa ca2;
-    ca2.corretor = "Riuzi";
-    ca2.area = 245.0;
-    ca2.numeroQuartos = 5;
-    ca2.numeroBanheiros = 4;
-    ca2.numeroVagas = 4;
-    ca2.valorMetroQuadrado = 4856.2;
-    ca2.comissao = ca2.calcularComissao();
-    ca2.valorVenda = ca2.calcularValorVenda();
-    ca2.vendedor = cl8;
+    Casa ca2 = Casa(245.0, 5, 4, 4, 4856.2, cl8, "Riuzi");
     qtdeCa++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;

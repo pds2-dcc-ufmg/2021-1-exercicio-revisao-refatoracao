@@ -9,36 +9,44 @@ using namespace std;
 
 class Imovel {
     public:
-    Imovel(){}
+        Imovel( double area,
+                int numeroQuartos,
+                int numeroBanheiros,
+                int numeroVagas,
+                double valorMetroQuadrado,
+                Cliente vendedor,
+                string corretor):
+                _area(area), 
+                _numeroQuartos(numeroQuartos),
+                _numeroBanheiros(numeroBanheiros),
+                _numeroVagas(numeroVagas),
+                _valorMetroQuadrado(valorMetroQuadrado),
+                _vendedor(vendedor),
+                _corretor(corretor) {}
 
-    double calcularValorTotal() {
-        return area * valorMetroQuadrado;
-    }
+        double calcularValorTotal();
 
-    double calcularComissao() {
-        return area * valorMetroQuadrado * percentualComissao;
-    }
+        double calcularComissao();
 
-    double calcularValorVenda() {
-        return this->calcularValorTotal()+this->calcularComissao();
-    }
+        double calcularValorVenda();
 
-        double area;
-        int numeroQuartos;
-        int numeroBanheiros;
-        int numeroVagas;
-        double valorMetroQuadrado;
-        double valorVenda;
-        double comissao;
-        double percentualComissao;
-        Cliente vendedor;
-        string corretor;
+    protected:
+        double _area;
+        int _numeroQuartos;
+        int _numeroBanheiros;
+        int _numeroVagas;
+        double _valorMetroQuadrado;
+        double _valorVenda;
+        double _comissao;
+        double _percentualComissao;
+        Cliente _vendedor;
+        string _corretor;
 
         void print() {
             cout << "[Vendedor]" << endl;
-            vendedor.print();
+            _vendedor.print();
             cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+            cout << "  " + _corretor << endl;
         }
 };
 
