@@ -19,6 +19,7 @@ protected:
   double valorComissao;
   double valorVenda;
   double taxaComissao;
+  string tipo;
 
 public:
   Imovel(const string &corretor, const double &area, const unsigned &numQuartos,
