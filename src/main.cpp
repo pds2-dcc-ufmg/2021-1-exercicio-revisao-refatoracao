@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <iomanip>
 #include <iostream>
 
@@ -12,6 +13,7 @@ int main() {
   static constexpr int numApartamentos = 3;
   static constexpr int numCoberturas = 3;
   static constexpr int numCasas = 2;
+  assert(numClientes == numApartamentos + numCoberturas + numCasas);
 
   // Use um construtor para evitar repetições desnecessárias de settar cada
   // membro de uma vez. Além do mais, isso facilita o encapsulamento nesse caso
