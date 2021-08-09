@@ -33,6 +33,7 @@ public:
     this->valorVenda = this->comissao() + this->valor();
   }
 
+  // Optei por implementar essas funções no header mesmo, por serem muito curtas
   double valor() const { return this->area * this->valorPorArea; }
   double comissao() const { return this->valor() * this->taxaComissao; }
 
