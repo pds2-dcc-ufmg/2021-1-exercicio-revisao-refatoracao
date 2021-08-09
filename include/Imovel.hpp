@@ -21,10 +21,6 @@ protected:
   double taxaComissao;
 
 public:
-  void print() const;
-  double valor() const { return this->area * this->valorPorArea; }
-  double comissao() const { return this->valor() * this->taxaComissao; }
-
   Imovel(const string &corretor, const double &area, const unsigned &numQuartos,
          const unsigned &numBanheiros, const unsigned &vagas,
          const double &valorPorArea, const Cliente &vendedor)
@@ -34,6 +30,11 @@ public:
     this->valorComissao = this->comissao();
     this->valorVenda = this->comissao() + this->valor();
   }
+
+  double valor() const { return this->area * this->valorPorArea; }
+  double comissao() const { return this->valor() * this->taxaComissao; }
+
+  void print() const;
 };
 
 #endif
