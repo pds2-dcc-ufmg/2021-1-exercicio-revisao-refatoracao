@@ -14,6 +14,7 @@ int main() {
   static constexpr int numCoberturas = 3;
   static constexpr int numCasas = 2;
   assert(numClientes == numApartamentos + numCoberturas + numCasas);
+  static constexpr int precisao = 2;
 
   // Use um construtor para evitar repetições desnecessárias de settar cada
   // membro de uma vez. Além do mais, isso facilita o encapsulamento nesse caso
@@ -92,14 +93,14 @@ int main() {
   cout << "\n>> Resumo Geral <<" << endl
        << "\n>>Apartamentos<<\n"
        << "\n Quantidade: " << numApartamentos << "\n Valor Total: R$ " << fixed
-       << setprecision(2) << valorApartamentos << "\n Comissão Total: R$"
+       << setprecision(precisao) << valorApartamentos << "\n Comissão Total: R$"
        << comissaoApartamentos << endl
        << "\n>>Coberturas<<\n"
        << "\n Quantidade: " << numCoberturas << "\n Valor Total: R$ " << fixed
-       << setprecision(2) << valorCoberturas << "\n Comissão Total: R$ "
-       << fixed << setprecision(2) << comissaoCoberturas << endl
+       << setprecision(precisao) << valorCoberturas << "\n Comissão Total: R$ "
+       << fixed << setprecision(precisao) << comissaoCoberturas << endl
        << "\n>>Casas<<\n"
        << "\n Quantidade: " << numCasas << "\n Valor Total: R$ " << fixed
-       << setprecision(2) << valorCasas << "\n Comissão Total: R$ " << fixed
-       << setprecision(2) << comissaoCasas << endl;
+       << setprecision(precisao) << valorCasas << "\n Comissão Total: R$ "
+       << fixed << setprecision(precisao) << comissaoCasas << endl;
 }

@@ -9,6 +9,7 @@ using namespace std;
 
 class Imovel {
 protected:
+  static constexpr unsigned precisao = 2;
   string corretor;
   double area;
   unsigned numQuartos;

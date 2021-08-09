@@ -11,9 +11,9 @@ void Imovel::print() const {
        << "  Banheiros: " << numBanheiros << endl
        << "  Vagas: " << vagas << endl
        << "Taxa de Comissão: " << (this->taxaComissao * 100) << "%" << endl
-       << "Valor Comissão: R$ " << fixed << setprecision(2) << valorComissao
-       << endl
-       << "Valor de Venda: R$ " << fixed << setprecision(2) << valorVenda
+       << "Valor Comissão: R$ " << fixed << setprecision(precisao)
+       << valorComissao << endl
+       << "Valor de Venda: R$ " << fixed << setprecision(precisao) << valorVenda
        << endl
        << endl;
 }
