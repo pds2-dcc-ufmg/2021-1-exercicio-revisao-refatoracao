@@ -21,7 +21,7 @@ class Imovel {
 
         void print() {
             cout << "[Vendedor]" << endl;
-            vendedor.print();
+            vendedor.Print();
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
         }
