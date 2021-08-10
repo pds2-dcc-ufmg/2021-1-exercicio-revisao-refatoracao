@@ -11,3 +11,9 @@ No **título** do seu Pull Request, informe o valor **MD5** obtido a partir da s
 
 Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
 Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+
+## Alterações Realizadas
+
+- Separação em diferentes diretórios
+- Criação do Makefile
+- Criação do .gitignore
