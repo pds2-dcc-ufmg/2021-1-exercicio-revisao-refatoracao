@@ -9,6 +9,7 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
+    double taxaComissao = 0.06;
 
     double calculaValorCasa() {
 
@@ -22,7 +23,7 @@ class Casa : public Imovel {
 
         double comissao = area * valorMetroQuadrado;
 
-        return comissao * 0.06;
+        return comissao * taxaComissao;
         
     }
 
@@ -34,7 +35,7 @@ class Casa : public Imovel {
                 << "  Quartos: " << quartos << endl
                 << "  Banheiros: " << banheiros << endl
                 << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
+                << "Taxa de Comissão: " << taxaComissao*100 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << valorMetroQuadrado << endl;
 

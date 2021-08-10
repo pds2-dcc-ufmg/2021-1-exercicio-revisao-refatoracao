@@ -6,9 +6,9 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
-    public:
 
+    public:
+    double taxaComissao = 0.10;
     double calculaValorCobertura() {
 
         double valorCobertura = area * valorMetroQuadrado;
@@ -21,7 +21,7 @@ class Cobertura : public Imovel {
 
         double comissao = area * valorMetroQuadrado;
 
-        return comissao * 0.10;
+        return comissao * taxaComissao;
         
     }
 
@@ -33,7 +33,7 @@ class Cobertura : public Imovel {
                 << "  Quartos: " << quartos << endl
                 << "  Banheiros: " << banheiros << endl
                 << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
+                << "Taxa de Comissão: " << taxaComissao*100 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << valorMetroQuadrado << endl;
     }
