@@ -3,3 +3,6 @@ build/
 
 # Executables files
 *.exe
+
+# VsCode files
+.vscode/

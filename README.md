@@ -17,3 +17,4 @@ Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração 
 - Separação em diferentes diretórios
 - Criação do Makefile
 - Criação do .gitignore
+- Separação dos arquivos de implementação
