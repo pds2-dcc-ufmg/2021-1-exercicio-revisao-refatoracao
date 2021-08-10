@@ -4,16 +4,16 @@
 #include <string>
 using namespace std;
 
-class Cliente {
+class Pessoa {
     public:
-        string NOME;
+        string nome;
         string endereco;
-        string CIDADE;
+        string cidade;
         string UF;
         string cep;
         string telefone;
 
-        void print();
+        void print() const;
 };
 
 #endif
