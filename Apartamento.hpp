@@ -7,7 +7,7 @@
 
 using namespace std;
 
-static constexpr double taxa_de_comissao_apartamento=0.04;
+static constexpr double taxa_de_comissao_apartamento = 0.04;
 
 class Apartamento : public Imovel {
 
