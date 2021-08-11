@@ -2,42 +2,21 @@
 #define APARTAMENTO_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
+#include "Pessoa.hpp"
+#include <string>
 
 using namespace std;
+
+static constexpr double taxa_de_comissao_apartamento = 0.04;
 
 class Apartamento : public Imovel {
 
     public: 
+
+    Apartamento(double _area, int _num_quartos, int _num_banheiros, int _num_vagas, double _valor_metro_quadrado, Pessoa _vendedor, string _corretor)
+    : Imovel("Apartamento",_area,_num_quartos,_num_banheiros,_num_vagas,_valor_metro_quadrado,_vendedor,_corretor,taxa_de_comissao_apartamento)
+    {}
     
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
 
 #endif
