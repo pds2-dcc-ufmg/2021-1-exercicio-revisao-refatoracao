@@ -1,4 +1,4 @@
-#ifndef APARTAMENTO_HPP
+  GNU nano 4.8                                                                Apartamento.hpp                                                                           #ifndef APARTAMENTO_HPP
 #define APARTAMENTO_HPP
 
 #include "Imovel.hpp"
@@ -8,9 +8,12 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-    public: 
+    public:
     double valor();
     double comissao();
 };
 
 #endif
+
+
+

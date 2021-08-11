@@ -1,16 +1,16 @@
 #include "Cobertura.hpp"
 
-double valor() {
+double Cobertura::valor() {
 
-   return double v = AREA * VALORm2;
+   return AREA * VALORm2;
 }
 
-double comissao() {
+double Cobertura::comissao() {
 
-    return valor() * TAXA_COMISSAO;
+    return valor() * TAXA_COMISSAO_COB;
 }
 
-void print() {
+void Cobertura::print() {
 
     std::cout << "[Cobertura]" << std::endl;
     Imovel::print();
@@ -22,5 +22,3 @@ void print() {
             << "Valor Comissão: R$ " << fixed << setprecision(2) << C << std::endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << std::endl;
 }
-
-

@@ -3,7 +3,7 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-#define TAXA_COMISSAO 0.06
+#define TAXA_COMISSAO_CAS 0.06
 
 using namespace std;
 

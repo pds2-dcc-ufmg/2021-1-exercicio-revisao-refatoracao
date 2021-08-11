@@ -9,11 +9,8 @@ using namespace std;
 
 class Imovel {
     public:
-        const double AREA,VALORm2;
-        double Valor, C; //valor do imovel, comissao
+        double AREA,VALORm2, Valor, C; //C: comissao
         int Q, B, V; //quartos, banheiros, vagas
-        int B;
-        int V;
         Cliente vendedor;
         string corretor;
 

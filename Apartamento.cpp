@@ -1,16 +1,16 @@
 #include "Apartamento.hpp"
 
-double valor() {
+double Apartamento::valor() {
 
     return AREA * VALORm2;
 }
 
-double comissao() {
+double Apartamento::comissao() {
 
-    return valor()*TAXA_COMISSAO; 
+    return valor()*TAXA_COMISSAO_APP; 
 }
 
-void print() {
+void Apartamento::print() {
 
     std::cout << "[Apartamento]" << endl;
     Imovel::print();
@@ -21,5 +21,4 @@ void print() {
             << "Taxa de Comissão: " << 4 << "%" << endl
             << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 }

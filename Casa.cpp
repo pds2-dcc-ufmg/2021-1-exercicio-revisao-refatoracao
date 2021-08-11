@@ -1,16 +1,16 @@
 #include "Casa.hpp"
 
-double valor() {
+double Casa::valor() {
 
     return AREA * VALORm2;
 }
 
-double comissao() {
+double Casa::comissao() {
 
-    return valor() * TAXA_COMISSAO;
+    return valor() * TAXA_COMISSAO_CAS;
 }
 
-void print() {
+void Casa::print() {
 
     std::cout << "[Casa]" << std:: endl;
     Imovel::print();

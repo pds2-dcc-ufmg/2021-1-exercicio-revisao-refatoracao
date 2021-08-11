@@ -3,11 +3,11 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-#define TAXA_COMISSAO 0.10
+#define TAXA_COMISSAO_COB 0.10
 
 using namespace std;
 
-class Casa : public Imovel {
+class Cobertura : public Imovel {
 
     public:
 
