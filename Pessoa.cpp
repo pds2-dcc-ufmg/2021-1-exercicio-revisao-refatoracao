@@ -2,15 +2,15 @@
 #include <string>
 #include "Pessoa.hpp"
 
-	Pessoa::Pessoa(string _nome, string _endereco, string _cidade, string _estado, string _cep, string _telefone)
-	{
+    Pessoa::Pessoa(string _nome, string _endereco, string _cidade, string _estado, string _cep, string _telefone)
+    {
 		this->nome = _nome;
 		this->endereco = _endereco;
 		this->cidade = _cidade;
 		this->estado = _estado;
 		this->cep = _cep;
 		this->telefone = _telefone;
-	}
+     }
 
     void Pessoa::imprime_dados()
     {
