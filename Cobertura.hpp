@@ -2,41 +2,20 @@
 #define COBERTURA_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
+#include "Pessoa.hpp"
+
 using namespace std;
+static constexpr double taxa_de_comissao_cobertura = 0.10;
 
 class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
+    Cobertura(double _area, int _num_quartos, int _num_banheiros, int _num_vagas, double _valor_metro_quadrado, Pessoa _vendedor, string _corretor)
+    : Imovel("Cobertura",_area,_num_quartos,_num_banheiros,_num_vagas,_valor_metro_quadrado,_vendedor,_corretor,taxa_de_comissao_cobertura)
+    {}
 
-        double v = AREA * VALORm2;
 
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
 
 #endif
