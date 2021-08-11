@@ -23,10 +23,10 @@
     }
 
     string Pessoa::get_nome() 
-    { 
-        return this->nome; 
-    }
-
+        { 
+                return this->nome; 
+        }
+ 
     string Pessoa::get_endereco() 
 	{ 
 		return this->endereco; 
