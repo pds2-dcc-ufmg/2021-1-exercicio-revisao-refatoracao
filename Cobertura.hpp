@@ -6,37 +6,23 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
-    public:
+public:
+    // Construtor
+    explicit Cobertura(std::string corretor, double area, int num_quartos, int num_banheiros, int num_vagas,
+        double valor_por_m2, Cliente vendedor) :
+        Imovel(area, 
+            num_quartos, 
+            num_banheiros,
+            num_vagas, 
+            valor_por_m2, 
+            vendedor,
+            corretor) {};
 
-    double valor() {
+    double comissao() const;
+    void PrintarDados() const;
 
-        double v = AREA * VALORm2;
+private:
 
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
 
 #endif
