@@ -9,21 +9,19 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
+        const double AREA,VALORm2;
+        double Valor, C; //valor do imovel, comissao
+        int Q, B, V; //quartos, banheiros, vagas
         int B;
         int V;
-        double VALORm2;
-        double Valor;
-        double C;
         Cliente vendedor;
         string corretor;
 
         void print() {
-            cout << "[Vendedor]" << endl;
+            std:: cout << "[Vendedor]" << std::endl;
             vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+            std::cout << "[Corretor]" << std::endl;
+            std::cout << "  " + corretor << std::endl;
         }
 };
 
