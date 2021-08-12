@@ -4,27 +4,33 @@
 #include <iostream>
 #include <iomanip>
 #include "Cliente.hpp"
+#include "DadosComodos.hpp"
+#include "DadosValorArea.hpp"
 
 using namespace std;
 
 class Imovel {
+    private:
+        Cliente &_vendedor;
+        DadosComodos _comodos;
+        DadosValorArea _dadosValorArea;
+        string _corretor , _tipo;
+    
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+        Imovel(Cliente &vendedor , string corretor , string tipo , DadosComodos omodos , DadosValorArea dadosValorArea);
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        void infoVenda();
+
+        void infoImovel();
+
+        void info();
+
+        double valor();
+
+        double comissao();
+
+        string getTipo();
+
 };
 
 #endif
