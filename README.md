@@ -19,3 +19,4 @@ Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração 
 - Criação do .gitignore
 - Separação dos arquivos de implementação
 - padronização da nomenclatura
+- Remoção dos números mágicos

@@ -11,6 +11,9 @@ class Cobertura : public Imovel {
         double valor();
         double comissao();
         void print();
+
+    private:
+        const double kTaxaComissao = 0.10;
 };
 
 #endif

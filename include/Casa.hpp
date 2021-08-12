@@ -13,6 +13,9 @@ class Casa : public Imovel {
         double comissao();
         void print();
 
+    private:
+        const double kTaxaComissao = 0.06;
+
 };
 
 #endif

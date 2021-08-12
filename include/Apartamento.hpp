@@ -12,6 +12,9 @@ class Apartamento : public Imovel {
         double valor();
         double comissao();
         void print();
+
+    private:
+        const double kTaxaComissao = 0.04;
 };
 
 #endif

@@ -10,9 +10,9 @@ double Casa::valor() {
 
 double Casa::comissao() {
 
-    double comissao = area * valor_por_metro_quadrado;
+    double comissao = kTaxaComissao * valor();
 
-    return comissao * 0.06;
+    return comissao;
     
 }
 
@@ -24,7 +24,7 @@ void Casa::print() {
             << "  Quartos: " << quartos << endl
             << "  Banheiros: " << banheiros << endl
             << "  Vagas: " << vagas << endl
-            << "Taxa de Comissão: " << 6 << "%" << endl
+            << "Taxa de Comissão: " << int(kTaxaComissao*100) << "%" << endl
             << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_da_comissao << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor_de_venda << endl;
 
