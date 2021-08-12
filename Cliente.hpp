@@ -4,6 +4,13 @@
 #include <string>
 using namespace std;
 
+/*
+ *  Mudanças neste segmento:
+ *      ---> Renomeação das variáveis
+ *      ---> Novo método adicionado: Construtor
+ *      ---> Renomeação da função print() , agora chamada info()
+ *          
+ */
 class Cliente {
     private:
         string _nome , _endereco , _cidade , _uf , _cep , _telefone;

@@ -8,16 +8,26 @@
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
 
+// Macros para os valores de comissão, que dependem do tipo de Imovel
 #define COMISSAO_CASA 0.06
 #define COMISSAO_COBERTURA 0.10
 #define COMISSAO_APARTAMENTO 0.04
 
 /*
-    Métodos Auxiliares para gerar os Relatórios e os Resumos , reduzindo os códigos duplicados
-    
-    ATENÇÃO!!!!!!! : o tipo T deve ser, exclusivamente, Imovel ou qualquer de seus subtipos , devido à chamada de getTipo()
-*/
+ *  Métodos Auxiliares para gerar os Relatórios e os Resumos , reduzindo os códigos duplicados
+ *   
+ *  ATENÇÃO!!!!!!! : o tipo T deve ser, exclusivamente, Imovel ou qualquer de seus subtipos , devido à chamada de getTipo()
+ * 
+ */
 
+/*
+ *  \method gerarResumo()
+ *  \brief  Responsável por gerar um resumo que contém informações sobre todos os elementos de um tipo T armazenados em lista
+ *  \params typename T ==> tipo dos elementos armazenados no vector lista ; 
+ *          vector<T> &lista ==> referência para vetor que contém Imóveis do tipo T;
+ *          double &valorTotal ==> referência para variável que armazena o valor total dos imóveis em lista ; 
+ *          double &comissaoTotal ==> referência para variável que armazena o valor da soma das comissões dos imóveis em lista    
+ */
 template<typename T>
 void gerarResumo(std::vector<T> &lista , double &valorTotal , double &comissaoTotal){
     std::cout << "\n>>" + lista[0].getTipo() + "<<\n" // NÃO É UMA BOA SOLUÇÃO ===> SUGESTÕES SÃO BEM-VINDAS!!!!
@@ -27,6 +37,14 @@ void gerarResumo(std::vector<T> &lista , double &valorTotal , double &comissaoTo
             << endl;
 }
 
+/*
+ *  \method gerarRelatorio()
+ *  \brief  Responsável por gerar um relatorio de cada um dos elementos em lista
+ *  \params typename T ==> tipo dos elementos armazenados no vector lista ; 
+ *          vector<T> &lista ==> referência para vetor que contém Imóveis do tipo T ;
+ *          double &valorTotal ==> referência para variável que armazena o valor total dos imóveis em lista ; 
+ *          double &comissaoTotal ==> referência para variável que armazena o valor da soma das comissões dos imóveis em lista    
+ */
 template<typename T>
 void gerarRelatorio(std::vector<T> &lista , double &valorTotal , double &comissaoTotal){
     for(T elemento : lista){
@@ -39,6 +57,12 @@ void gerarRelatorio(std::vector<T> &lista , double &valorTotal , double &comissa
 
 int main() {
     
+    /*
+     *  Mudanças neste segmento:
+     *      ---> Ao invés de se atribuir os valores a cada uma das características dos Clientes após sua construção , cada informação agora é passada ao construtor
+     *           no momento da declaração do objeto. Assim, além do código ficar mais organizado, o princípio do Encapsulamento agora é respeitado (veja as alterações
+     *           feitas na classe Cliente).
+     */
     Cliente cl1("Xayso Sovon Ziahaka","Rua Xangrilá - Braúnas","Belo Horizonte","MG","31365-570","3196007958");
     
     Cliente cl2("Minia Pasies Kituos","Rua dos Jacobinos - Ouro Minas","Belo Horizonte","MG","31870-290","3197627067");
@@ -55,9 +79,23 @@ int main() {
     
     Cliente cl8("Teas Heimeu Pipe","Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)","Belo Horizonte","MG","30668-430","3197317802");
 
+    
     /*
-        Lista de Apartamentos
-    */
+     *  Mudanças neste segmento:
+     *      ---> Alterei os comentários que indicam o início das Listas de Imóveis , tornando-os maiores, para ficar mais fácil perceber onde se iniciam as listas
+     *      ---> Para cada Lista, removi a variável que contava o número de objetos criados e inseri um vetor que armazena todos estes objetos. Assim , estamos
+     *           "catalogando" todos os Imóveis inseridos, o que é benéfico para nosso sistema, sem contar que podemos simplesmente chamar a função size() para
+     *           consultarmos a quantidade de elementos (o que fazíamos antes através das variáveis qtde)
+     *      ---> Assim como no caso da classe Cliente , agora são utilizados construtores , de forma a tornar o código mais limpo e obedecer ao princípio do 
+     *           Encapsulamento
+     *      ---> Pode-se perceber que temos dois objetos novos: DadosComodos e DadosValorAreea. Entrarei em mais detalhes sobre eles nos comentário sobre a classe
+     *           Imovel       
+     *           
+     */
+
+    /*
+     *   Lista de Apartamentos
+     */
 
     std::vector<Apartamento> listaAps;
 
@@ -71,8 +109,8 @@ int main() {
     listaAps.push_back(ap3);
 
     /*
-        Lista de Coberturas
-    */
+     *   Lista de Coberturas
+     */
 
     std::vector<Cobertura> listaCbs;
 
@@ -86,8 +124,8 @@ int main() {
     listaCbs.push_back(cb3);
 
     /* 
-        Lista de Casas
-    */
+     *   Lista de Casas
+     */
 
     std::vector<Casa> listaCas;
 
@@ -98,8 +136,15 @@ int main() {
     listaCas.push_back(ca2);
 
     /*
-        Processamento de Relatório de Imóveis
-    */
+     *  Mudanças neste segmento:
+     *      ---> Para os segmentos de Processamento de Relatório de Imóveis e Resumo Geral, simplismente substituí os comandos repetidos por funções
+     *           que executam aqueles exatos procedimentos, mas agora reduzimos significativamente a quantidade de códigos repetidos
+     *          
+     */
+
+    /*
+     *   Processamento de Relatório de Imóveis
+     */
 
     double valorTotalAp = 0.0 , valorTotalCb = 0.0 , valorTotalCa = 0.0;
     double comissaoTotalAp = 0.0 , comissaoTotalCb = 0.0 , comissaoTotalCa = 0.0;
@@ -113,8 +158,8 @@ int main() {
     gerarRelatorio<Casa>(listaCas , valorTotalCa , comissaoTotalCa);
 
     /*
-        Resumo Geral
-    */
+     *   Resumo Geral
+     */
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
