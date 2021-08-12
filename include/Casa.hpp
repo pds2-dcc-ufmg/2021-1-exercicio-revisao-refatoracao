@@ -9,7 +9,8 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-        Casa();
+        Casa(string corretor, double area, int quartos, int banheiros, int vagas, 
+             double  valor_por_metro_quadrado, Cliente vendedor);
         void print();
 
     private:

@@ -21,3 +21,4 @@ Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração 
 - padronização da nomenclatura
 - Remoção dos números mágicos
 - Extração da superclasse
+- Encapsulamento dos atributos das classes

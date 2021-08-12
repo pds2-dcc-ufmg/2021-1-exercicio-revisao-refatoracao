@@ -9,7 +9,8 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public:
-        Apartamento();
+        Apartamento(string corretor, double area, int quartos, int banheiros, int vagas, 
+                    double  valor_por_metro_quadrado, Cliente vendedor);
         void print();
 
     private:

@@ -9,22 +9,18 @@ using namespace std;
 
 class Imovel {
     public:
-        double area;
-        int quartos;
-        int banheiros;
-        int vagas;
-        double valor_por_metro_quadrado;
-        double Valor_de_venda;
-        double valor_da_comissao;
-        Cliente vendedor;
-        string corretor;
-
+        Imovel();
+        Imovel(string corretor, double area, int quartos, int banheiros, int vagas, 
+               double  valor_por_metro_quadrado, Cliente vendedor);
         void print();
         double valor();
         double comissao();
     
     protected:
-        double taxa_de_comissao;
+        double taxa_de_comissao_, area_, valor_por_metro_quadrado_, valor_de_venda_, valor_da_comissao_;
+        int quartos_, banheiros_, vagas_;
+        Cliente vendedor_;
+        string corretor_;
 };
 
 #endif

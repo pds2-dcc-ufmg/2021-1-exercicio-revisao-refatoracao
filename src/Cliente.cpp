@@ -2,13 +2,18 @@
 #include <string>
 #include "Cliente.hpp"
 
+Cliente::Cliente() {}
+
+Cliente::Cliente(string nome, string endereco, string cidade, string uf, string cep, string telefone):
+	nome_(nome), endereco_(endereco), cidade_(cidade), uf_(uf), cep_(cep), telefone_(telefone) {}
+
 void Cliente::print(){
 
-	std::cout << "  Nome: " << nome << endl
-		 << "  Telefone: " << telefone << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << cidade << endl
-		 << "  Estado: " << uf << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "  Nome: " << get_name() << endl
+		 << "  Telefone: " << get_phone() << endl
+		 << "  Endereço: " << get_address() << endl
+		 << "  Cidade: " << get_city() << endl
+		 << "  Estado: " << get_state() << endl
+		 << "  CEP: " << get_zip_code() << endl;
 
 }
