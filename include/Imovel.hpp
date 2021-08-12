@@ -21,6 +21,10 @@ class Imovel {
 
         void print();
         double valor();
+        double comissao();
+    
+    protected:
+        double taxa_de_comissao;
 };
 
 #endif

@@ -14,3 +14,11 @@ double Imovel::valor() {
     return valor_do_imovel;
 
 }
+
+double Imovel::comissao() {
+
+    double comissao = taxa_de_comissao * valor();
+
+    return comissao;
+    
+}

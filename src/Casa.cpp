@@ -1,11 +1,7 @@
 #include "Casa.hpp"
 
-double Casa::comissao() {
-
-    double comissao = kTaxaComissao * valor();
-
-    return comissao;
-    
+Casa::Casa() {
+    this->taxa_de_comissao = kTaxaComissao;
 }
 
 void Casa::print() {

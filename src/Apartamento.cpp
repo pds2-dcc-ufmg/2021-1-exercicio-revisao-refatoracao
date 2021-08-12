@@ -1,11 +1,7 @@
 #include "Apartamento.hpp"
 
-double Apartamento::comissao() {
-
-    double comissao = kTaxaComissao * valor();
-
-    return comissao;
-    
+Apartamento::Apartamento() {
+    this->taxa_de_comissao = kTaxaComissao;
 }
 
 void Apartamento::print() {

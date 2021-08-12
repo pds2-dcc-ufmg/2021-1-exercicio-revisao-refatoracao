@@ -1,11 +1,7 @@
 #include "Cobertura.hpp"
 
-double Cobertura::comissao() {
-
-    double comissao = kTaxaComissao * valor();
-
-    return comissao;
-    
+Cobertura::Cobertura() {
+    this->taxa_de_comissao = kTaxaComissao;
 }
 
 void Cobertura::print() {

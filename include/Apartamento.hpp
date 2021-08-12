@@ -9,7 +9,7 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public:
-        double comissao();
+        Apartamento();
         void print();
 
     private:

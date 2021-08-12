@@ -8,7 +8,7 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-        double comissao();
+        Cobertura();
         void print();
 
     private:
