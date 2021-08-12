@@ -13,7 +13,7 @@ double Cobertura::valor() {
 
 double Cobertura::comissao()  {
     double c = AREA * VALORm2;
-    return c * 0.10;
+    return c * Taxa_Comissao_Cobertura;
 }
 
 void Cobertura::print() {
@@ -23,7 +23,7 @@ void Cobertura::print() {
             << "  Quartos: " << Qtd_quartos << endl
             << "  Banheiros: " << Qtd_banheiros << endl
             << "  Vagas: " << Qtd_vagas << endl
-            << "Taxa de Comissão: " << 10 << "%" << endl
+            << "Taxa de Comissão: " << fixed << setprecision(0) << (Taxa_Comissao_Cobertura*100) << "%" << endl
             << "Valor Comissão: R$ " << fixed << setprecision(2) << Comissao_valor << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
 }

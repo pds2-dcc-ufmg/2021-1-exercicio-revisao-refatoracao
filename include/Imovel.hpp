@@ -30,11 +30,11 @@ class Imovel {
         void setCorretor(string _corretor);
         string getCorretor();
 
-        //Metódo que calcula a comissão do imóvel
+        //Método que calcula a comissão do imóvel
         virtual double comissao();
-        //Metódo que calcula o valor do imóvel
+        //Método que calcula o valor do imóvel
         virtual double valor();
-        //Metódo que escreve as informações do imóvel
+        //Método que escreve as informações do imóvel
         virtual void print();
 
     protected:
