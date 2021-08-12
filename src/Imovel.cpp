@@ -1,10 +1,17 @@
 #include "Imovel.hpp"
 
 void Imovel::print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+    cout << "[Vendedor]" << endl;
+    vendedor.print();
+    cout << "[Corretor]" << endl;
+    cout << "  " + corretor << endl;
+    cout << "Area: " << area << endl
+         << "  Quartos: " << quartos << endl
+         << "  Banheiros: " << banheiros << endl
+         << "  Vagas: " << vagas << endl
+         << "Taxa de Comissão: " << int(taxa_de_comissao*100) << "%" << endl
+         << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_da_comissao << endl
+         << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor_de_venda << endl;
 }
 
 double Imovel::valor() {
