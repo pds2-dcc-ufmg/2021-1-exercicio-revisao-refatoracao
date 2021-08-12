@@ -1,13 +1,5 @@
 #include "Apartamento.hpp"
 
-double Apartamento::valor() {
-
-    double valor_do_apartamento = area * valor_por_metro_quadrado;
-
-    return valor_do_apartamento;
-
-}
-
 double Apartamento::comissao() {
 
     double comissao = kTaxaComissao * valor();

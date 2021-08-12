@@ -20,3 +20,4 @@ Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração 
 - Separação dos arquivos de implementação
 - padronização da nomenclatura
 - Remoção dos números mágicos
+- Extração da superclasse

@@ -20,6 +20,7 @@ class Imovel {
         string corretor;
 
         void print();
+        double valor();
 };
 
 #endif

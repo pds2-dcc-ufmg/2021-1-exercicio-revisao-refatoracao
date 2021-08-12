@@ -1,13 +1,5 @@
 #include "Cobertura.hpp"
 
-double Cobertura::valor() {
-
-    double valor_da_cobertura = area * valor_por_metro_quadrado;
-
-    return valor_da_cobertura;
-
-}
-
 double Cobertura::comissao() {
 
     double comissao = kTaxaComissao * valor();

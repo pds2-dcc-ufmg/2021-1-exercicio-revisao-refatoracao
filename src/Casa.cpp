@@ -1,13 +1,5 @@
 #include "Casa.hpp"
 
-double Casa::valor() {
-
-    double valor_da_casa = area * valor_por_metro_quadrado;
-
-    return valor_da_casa;
-
-}
-
 double Casa::comissao() {
 
     double comissao = kTaxaComissao * valor();
