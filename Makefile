@@ -1,6 +1,6 @@
 CC     = g++
 CFLAGS = -std=c++11 -Wall
-TARGET = main.exe
+TARGET = main
 
 BUILD_DIR   = ./build
 SRC_DIR     = ./src

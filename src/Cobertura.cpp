@@ -2,17 +2,17 @@
 
 double Cobertura::valor() {
 
-    double v = AREA * VALORm2;
+    double valor_da_cobertura = area * valor_por_metro_quadrado;
 
-    return v;
+    return valor_da_cobertura;
 
 }
 
 double Cobertura::comissao() {
 
-    double c = AREA * VALORm2;
+    double comissao = area * valor_por_metro_quadrado;
 
-    return c * 0.10;
+    return comissao * 0.10;
     
 }
 
@@ -20,11 +20,11 @@ void Cobertura::print() {
 
     std::cout << "[Cobertura]" << endl;
     Imovel::print();
-    std::cout << "Area: " << AREA << endl
-            << "  Quartos: " << Q << endl
-            << "  Banheiros: " << B << endl
-            << "  Vagas: " << V << endl
+    std::cout << "Area: " << area << endl
+            << "  Quartos: " << quartos << endl
+            << "  Banheiros: " << banheiros << endl
+            << "  Vagas: " << vagas << endl
             << "Taxa de Comissão: " << 10 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_da_comissao << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor_de_venda << endl;
 }

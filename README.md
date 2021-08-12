@@ -18,3 +18,4 @@ Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração 
 - Criação do Makefile
 - Criação do .gitignore
 - Separação dos arquivos de implementação
+- padronização da nomenclatura

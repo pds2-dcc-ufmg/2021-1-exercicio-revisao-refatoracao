@@ -9,12 +9,9 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-    
-    double valor();
-
-    double comissao();
-
-    void print();
+        double valor();
+        double comissao();
+        void print();
 };
 
 #endif
