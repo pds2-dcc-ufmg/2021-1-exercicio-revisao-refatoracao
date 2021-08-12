@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 #include "Imovel.hpp"
 #include "Casa.hpp"
@@ -8,71 +9,27 @@
 #include "Cliente.hpp"
 
 int main() {
+    std::vector<Cliente> clientes = {
+            Cliente("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas",
+                    "Belo Horizonte", "MG", "31365-570", "3196007958"),
+            Cliente("Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
+                    "Belo Horizonte", "MG", "31870-290", "3197627067"),
+            Cliente("Vuocue Leiur Baonauza", "Rua Orminda de Almeida - Tupi B",
+                    "Belo Horizonte", "MG", "31842-630", "3195949327"),
+            Cliente("Zerer Huduy Fyogar", "Rua Taquaril - Jonas Veiga",
+                    "Belo Horizonte", "MG", "30285-422", "3198596327"),
+            Cliente("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano",
+                    "Belo Horizonte", "MG", "30882-747", "3196274465"),
+            Cliente("Esxo Cilal Zyais",
+                    "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
+                    "Belo Horizonte", "MG", "31650-560", "3195004414"),
+            Cliente("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova",
+                    "Belo Horizonte", "MG", "31170-240", "3198461192"),
+            Cliente("Teas Heimeu Pipe",
+                    "Rua Maria Pereira Damasceno - Ernesto do Nascimento (Barreiro)",
+            "Belo Horizonte", "MG", "30668-430", "3197317802")
+    };
     
-    Cliente cl1;
-    cl1.nome = "Xayso Sovon Ziahaka";
-    cl1.endereco = "Rua Xangrilá - Braúnas";
-    cl1.cidade = "Belo Horizonte";
-    cl1.uf = "MG";
-    cl1.cep = "31365-570";
-    cl1.telefone = "3196007958";
-    
-    Cliente cl2;
-    cl2.nome = "Minia Pasies Kituos";
-    cl2.endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2.cidade = "Belo Horizonte";
-    cl2.uf = "MG";
-    cl2.cep = "31870-290";
-    cl2.telefone = "3197627067";
-    
-    Cliente cl3;
-    cl3.nome = "Vuocue Leiur Baonauza";
-    cl3.endereco = "Rua Orminda de Almeida - Tupi B";
-    cl3.cidade = "Belo Horizonte";
-    cl3.uf = "MG";
-    cl3.cep = "31842-630";
-    cl3.telefone = "3195949327";
-    
-    Cliente cl4;
-    cl4.nome = "Zerer Huduy Fyogar";
-    cl4.endereco = "Rua Taquaril - Jonas Veiga";
-    cl4.cidade = "Belo Horizonte";
-    cl4.uf = "MG";
-    cl4.cep = "30285-422";
-    cl4.telefone = "3198596327";
-    
-    Cliente cl5;
-    cl5.nome = "Ceziel Mioti Pler";
-    cl5.endereco = "Rua João Gualberto Costa - Serrano";
-    cl5.cidade = "Belo Horizonte";
-    cl5.uf = "MG";
-    cl5.cep = "30882-747";
-    cl5.telefone = "3196274465";
-    
-    Cliente cl6;
-    cl6.nome = "Esxo Cilal Zyais";
-    cl6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.cidade = "Belo Horizonte";
-    cl6.uf = "MG";
-    cl6.cep = "31650-560";
-    cl6.telefone = "3195004414";
-    
-    Cliente cl7;
-    cl7.nome = "Leova Wikyecil Neaca";
-    cl7.endereco = "Rua João Arantes - Cidade Nova";
-    cl7.cidade = "Belo Horizonte";
-    cl7.uf = "MG";
-    cl7.cep = "31170-240";
-    cl7.telefone = "3198461192";
-    
-    Cliente cl8;
-    cl8.nome = "Teas Heimeu Pipe";
-    cl8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.cidade = "Belo Horizonte";
-    cl8.uf = "MG";
-    cl8.cep = "30668-430";
-    cl8.telefone = "3197317802";
-
     int qtdeA = 0;
     int qtdeCa = 0;
     int qtdeCb = 0;
@@ -86,7 +43,7 @@ int main() {
     ap1.VALORm2 = 987.0;
     ap1.C = ap1.comissao();
     ap1.Valor = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
+    ap1.vendedor = clientes[0];
     qtdeA++;
 
     Apartamento ap2;
@@ -98,7 +55,7 @@ int main() {
     ap2.VALORm2 = 1540.0;
     ap2.C = ap2.comissao();
     ap2.Valor = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
+    ap2.vendedor = clientes[1];
     qtdeA++;
 
     Apartamento ap3;
@@ -110,7 +67,7 @@ int main() {
     ap3.VALORm2 = 2354.0;
     ap3.C = ap3.comissao();
     ap3.Valor = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
+    ap3.vendedor = clientes[2];
     qtdeA++;
 
     // Cobertura
@@ -123,7 +80,7 @@ int main() {
     cb1.VALORm2 = 3123.5;
     cb1.C = cb1.comissao();
     cb1.Valor = cb1.valor() + cb1.comissao();
-    cb1.vendedor = cl4;
+    cb1.vendedor = clientes[3];
     qtdeCb++;
     
     Cobertura cb2;
@@ -135,7 +92,7 @@ int main() {
     cb2.VALORm2 = 3578.2;
     cb2.C = cb2.comissao();
     cb2.Valor = cb2.valor() + cb2.comissao();
-    cb2.vendedor = cl5;
+    cb2.vendedor = clientes[4];
     qtdeCb++;
 
     Cobertura cb3;
@@ -147,7 +104,7 @@ int main() {
     cb3.VALORm2 = 4165.7;
     cb3.C = cb3.comissao();
     cb3.Valor = cb3.valor() + cb3.comissao();
-    cb3.vendedor = cl6;
+    cb3.vendedor = clientes[5];
     qtdeCb++;
 
     // Casas
@@ -160,7 +117,7 @@ int main() {
     ca1.VALORm2 = 4023.6;
     ca1.C = ca1.comissao();
     ca1.Valor = ca1.valor() + ca1.comissao();
-    ca1.vendedor = cl7;
+    ca1.vendedor = clientes[6];
     qtdeCa++;
 
     Casa ca2;
@@ -172,7 +129,7 @@ int main() {
     ca2.VALORm2 = 4856.2;
     ca2.C = ca2.comissao();
     ca2.Valor = ca2.valor() + ca2.comissao();
-    ca2.vendedor = cl8;
+    ca2.vendedor = clientes[7];
     qtdeCa++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
