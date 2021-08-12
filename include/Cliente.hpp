@@ -7,7 +7,7 @@ using namespace std;
 class Cliente {
 
     public:
-        //Metódos get e set para as variáveis
+        //Métodos get e set para as variáveis
         void setNome(string nome);
         string getNome();
         void setEndereco(string Endereco);

@@ -10,7 +10,7 @@ using namespace std;
 class Imovel {
 
     public:
-        //Metódos get e set para as variáveis   
+        //Métodos get e set para as variáveis   
         void setArea(double Area);
         double getArea();
         void setQtd_quartos(int _Qtd_quartos);
