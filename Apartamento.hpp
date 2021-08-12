@@ -1,6 +1,6 @@
 #ifndef APARTAMENTO_HPP
 #define APARTAMENTO_HPP
-
+#define quatroporcento 0.04
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
@@ -22,7 +22,7 @@ class Apartamento : public Imovel {
 
         double c = AREA * VALORm2;
 
-        return c * 0.04;
+        return c * quatroporcento;
         
     }
 
@@ -31,9 +31,9 @@ class Apartamento : public Imovel {
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
         std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
+                << "  Quartos: " << QUARTOS << endl
+                << "  Banheiros: " << BANHEIROS << endl
+                << "  Vagas: " << VAGAS << endl
                 << "Taxa de Comissão: " << 4 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
