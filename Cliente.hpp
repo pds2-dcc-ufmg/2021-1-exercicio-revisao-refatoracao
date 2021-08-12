@@ -4,16 +4,24 @@
 #include <string>
 using namespace std;
 
-class Cliente {
-    public:
-        string NOME;
-        string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
+class Cliente
+{
+public:
+    //Construtor do cliente
+    Cliente(){};
+    Cliente(const char *nome, const char *end, const char *cid, const char *unifed, const char *cp, const char *tel);
+    
+    //Printa os dados do cliente
+    void print();
 
-        void print();
+private:
+    //Dados do cliente
+    string NOME;
+    string endereco;
+    string CIDADE;
+    string UF;
+    string cep;
+    string telefone;
 };
 
 #endif
