@@ -7,11 +7,11 @@ using namespace std;
 class Cliente {
     public:
         string NOME;
-        string endereco;
+        string ENDERECO;
         string CIDADE;
         string UF;
-        string cep;
-        string telefone;
+        string CEP;
+        string TELEFONE;
 
         void print();
 };
