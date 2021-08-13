@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 #include "Imovel.hpp"
 #include "Casa.hpp"
@@ -46,37 +47,47 @@ int main() {
     int quantidadeCasas = 0;
     int quantidadeCobertura = 0;
 
+    vector <Imovel*> todosImoveis;
+
     Apartamento ap1;
     ap1.set_imovel (55.4, 2, 1, 0, 987.0, cl1, "Tuoruars");
     quantidadeApartamento++;
+    todosImoveis.push_back(&ap1);
 
     Apartamento ap2;
     ap2.set_imovel (74.5, 2, 1, 2, 1540.0, cl2, "Fyubyeis");
     quantidadeApartamento++;
+    todosImoveis.push_back(&ap2);
 
     Apartamento ap3;
     ap3.set_imovel (87.2, 3, 2, 2, 2354.0, cl3, "Kelia");
     quantidadeApartamento++;
+    todosImoveis.push_back(&ap3);
 
     Cobertura cb1;
     cb1.set_imovel (120.1, 3, 3, 2, 3123.5, cl4, "Koci");
     quantidadeCobertura++;
-    
+    todosImoveis.push_back(&cb1);
+
     Cobertura cb2;
     cb2.set_imovel (134.8, 4, 3, 3, 3578.2, cl5, "Wail");
     quantidadeCobertura++;
+    todosImoveis.push_back(&cb2);
 
     Cobertura cb3;
     cb3.set_imovel (180.0, 4, 4, 4, 4165.7, cl6, "Fival");
     quantidadeCobertura++;
+    todosImoveis.push_back(&cb3);
 
     Casa ca1;
     ca1.set_imovel (145.6, 3, 3, 2, 4023.6, cl7, "Beydo");
     quantidadeCasas++;
+    todosImoveis.push_back(&ca1);
 
     Casa ca2;
     ca2.set_imovel(245.0, 5, 4, 4, 4856.2, cl8, "Riuzi");
     quantidadeCasas++;
+    todosImoveis.push_back(&ca2);
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -87,45 +98,27 @@ int main() {
     double comissaoTotalCoberturas = 0.0;
     double comissaoTotalCasas = 0.0;
     
-    ap1.print();
-    valorTotalAps += ap1.valor();
-    comissaoTotalAps += ap1.comissao();
-    std::cout << endl;
-
-    ap2.print();
-    valorTotalAps += ap2.valor();
-    comissaoTotalAps += ap2.comissao();
-    std::cout << endl;
-
-    ap3.print();
-    valorTotalAps += ap3.valor();
-    comissaoTotalAps += ap3.comissao();
-    std::cout << endl;
-
-    cb1.print();
-    valorTotalCoberturas += cb1.valor();
-    comissaoTotalCoberturas += cb1.comissao();
-    std::cout << endl;
-
-    cb2.print();
-    valorTotalCoberturas += cb2.valor();
-    comissaoTotalCoberturas += cb2.comissao();
-    std::cout << endl;
-
-    cb3.print();
-    valorTotalCoberturas += cb3.valor();
-    comissaoTotalCoberturas += cb3.comissao();
-    std::cout << endl;
-
-    ca1.print();
-    valorTotalCasas += ca1.valor();
-    comissaoTotalCasas += ca1.comissao();
-    std::cout << endl;
-
-    ca2.print();
-    valorTotalCasas += ca2.valor();
-    comissaoTotalCasas += ca2.comissao();
-    std::cout << endl;
+    //Laço para somar o valor total e a comissão total de cada tipo de imovel adicionado!
+    for(auto n: todosImoveis){
+        n->print();
+        if(n->tipoImovel() == "[Apartamento]"){
+            valorTotalAps += n->valor();
+            comissaoTotalAps += n->comissao();
+            std::cout << endl;
+            continue;  
+        }
+        if(n->tipoImovel() == "[Cobertura]"){
+            valorTotalCoberturas += n->valor();
+            comissaoTotalCoberturas += n->comissao();
+            std::cout << endl;
+            continue;
+        }
+        else{
+            valorTotalCasas += n->valor();
+            comissaoTotalCasas += n->comissao();
+            std::cout << endl;
+        }
+    }
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
