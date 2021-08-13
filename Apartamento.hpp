@@ -3,41 +3,26 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
+#include "ImovelProps.hpp"
 
 using namespace std;
 
 class Apartamento : public Imovel {
+  protected:
+    static int _somaQte;
+    static double _somaValor;
+    static double _somaComissao;
 
-    public: 
-    
-    double valor() {
+  public:
+    Apartamento (ImovelProps props);
 
-        double v = AREA * VALORm2;
+    void print ();
 
-        return v;
+    static int getSomaQte () { return _somaQte; }
+    static double getSomaValor () { return _somaValor; }
+    static double getSomaComissao () { return _somaComissao; }
 
-    }
+    double getTaxaComissao () const { return 0.04; }
 
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
-
 #endif

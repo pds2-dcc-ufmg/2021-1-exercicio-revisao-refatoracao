@@ -3,28 +3,28 @@
 
 #include <iostream>
 #include <iomanip>
+#include <vector>
 #include "Cliente.hpp"
+#include "ImovelProps.hpp"
 
 using namespace std;
 
 class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+  protected:
+    ImovelProps _props;
+    void printTituloImovel ();
+    void printImovel ();
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+  public:
+    Imovel(ImovelProps props) : _props(props) {};
+
+    virtual void print () {};
+
+    ImovelProps getProps () const { return _props; }
+
+    double getValor () const { return _props.area * _props.valorM2; }
+    virtual double getTaxaComissao () const { return 0.0; };
+    double getComissao () const { return getTaxaComissao() * getValor(); };
+    double getValorTotal () const { return getValor() + getComissao(); };
 };
-
 #endif
