@@ -6,7 +6,7 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
+
     public:
 
     double valor() {
@@ -22,7 +22,7 @@ class Cobertura : public Imovel {
         double c = AREA * VALORm2;
 
         return c * 0.10;
-        
+
     }
 
     void print() {
@@ -34,8 +34,8 @@ class Cobertura : public Imovel {
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
                 << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor Comissão: R$ " << FIXED << setprecision(2) << C << endl
+                << "Valor de Venda: R$ " << FIXED << setprecision(2) << Valor << endl;
     }
 };
 
