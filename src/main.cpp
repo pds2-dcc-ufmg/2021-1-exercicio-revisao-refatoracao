@@ -63,21 +63,24 @@ int main() {
      *           no momento da declaração do objeto. Assim, além do código ficar mais organizado, o princípio do Encapsulamento agora é respeitado (veja as alterações
      *           feitas na classe Cliente).
      */
-    Cliente cl1("Xayso Sovon Ziahaka","Rua Xangrilá - Braúnas","Belo Horizonte","MG","31365-570","3196007958");
+
+    std::vector<Cliente> listaClientes;
+
+    listaClientes.push_back(Cliente("Xayso Sovon Ziahaka","Rua Xangrilá - Braúnas","Belo Horizonte","MG","31365-570","3196007958"));
     
-    Cliente cl2("Minia Pasies Kituos","Rua dos Jacobinos - Ouro Minas","Belo Horizonte","MG","31870-290","3197627067");
+    listaClientes.push_back(Cliente("Minia Pasies Kituos","Rua dos Jacobinos - Ouro Minas","Belo Horizonte","MG","31870-290","3197627067"));
     
-    Cliente cl3("Vuocue Leiur Baonauza","Rua Orminda de Almeida - Tupi B","Belo Horizonte","MG","31842-630","3195949327");
+    listaClientes.push_back(Cliente("Vuocue Leiur Baonauza","Rua Orminda de Almeida - Tupi B","Belo Horizonte","MG","31842-630","3195949327"));
     
-    Cliente cl4("Zerer Huduy Fyogar","Rua Taquaril - Jonas Veiga","Belo Horizonte","MG","30285-422","3198596327");
+    listaClientes.push_back(Cliente("Zerer Huduy Fyogar","Rua Taquaril - Jonas Veiga","Belo Horizonte","MG","30285-422","3198596327"));
     
-    Cliente cl5("Ceziel Mioti Pler","Rua João Gualberto Costa - Serrano","Belo Horizonte","MG","30882-747","3196274465");
+    listaClientes.push_back(Cliente("Ceziel Mioti Pler","Rua João Gualberto Costa - Serrano","Belo Horizonte","MG","30882-747","3196274465"));
     
-    Cliente cl6("Esxo Cilal Zyais","Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)","Belo Horizonte","MG","31650-560","3195004414");
+    listaClientes.push_back(Cliente("Esxo Cilal Zyais","Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)","Belo Horizonte","MG","31650-560","3195004414"));
     
-    Cliente cl7("Leova Wikyecil Neaca","Rua João Arantes - Cidade Nova","Belo Horizonte","MG","31170-240","3198461192");
+    listaClientes.push_back(Cliente("Leova Wikyecil Neaca","Rua João Arantes - Cidade Nova","Belo Horizonte","MG","31170-240","3198461192"));
     
-    Cliente cl8("Teas Heimeu Pipe","Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)","Belo Horizonte","MG","30668-430","3197317802");
+    listaClientes.push_back(Cliente("Teas Heimeu Pipe","Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)","Belo Horizonte","MG","30668-430","3197317802"));
 
     
     /*
@@ -99,14 +102,11 @@ int main() {
 
     std::vector<Apartamento> listaAps;
 
-    Apartamento ap1(cl1 , "Tuoruars" , DadosComodos(2 , 1 , 0) , DadosValorArea(55.4 , 987.0 , COMISSAO_APARTAMENTO));
-    listaAps.push_back(ap1);
+    listaAps.push_back(Apartamento(listaClientes[0] , "Tuoruars" , DadosComodos(2 , 1 , 0) , DadosValorArea(55.4 , 987.0 , COMISSAO_APARTAMENTO)));
 
-    Apartamento ap2(cl2 , "Fyubyeis" , DadosComodos(2 , 1 , 2) , DadosValorArea(74.5 , 1540.0 , COMISSAO_APARTAMENTO));
-    listaAps.push_back(ap2);
+    listaAps.push_back(Apartamento(listaClientes[1] , "Fyubyeis" , DadosComodos(2 , 1 , 2) , DadosValorArea(74.5 , 1540.0 , COMISSAO_APARTAMENTO)));
 
-    Apartamento ap3(cl3 , "Kelia" , DadosComodos(3 , 2 , 2) , DadosValorArea(87.2 , 2354.0 , COMISSAO_APARTAMENTO));
-    listaAps.push_back(ap3);
+    listaAps.push_back(Apartamento(listaClientes[2] , "Kelia" , DadosComodos(3 , 2 , 2) , DadosValorArea(87.2 , 2354.0 , COMISSAO_APARTAMENTO)));
 
     /*
      *   Lista de Coberturas
@@ -114,14 +114,11 @@ int main() {
 
     std::vector<Cobertura> listaCbs;
 
-    Cobertura cb1(cl4 , "Koci" , DadosComodos(3 , 3 , 2) , DadosValorArea(120.1 , 3123.5 , COMISSAO_COBERTURA));
-    listaCbs.push_back(cb1);
+    listaCbs.push_back(Cobertura(listaClientes[3] , "Koci" , DadosComodos(3 , 3 , 2) , DadosValorArea(120.1 , 3123.5 , COMISSAO_COBERTURA)));
     
-    Cobertura cb2(cl5 , "Wail" , DadosComodos(4 , 3 , 3) , DadosValorArea(134.8 , 3578.2 , COMISSAO_COBERTURA));
-    listaCbs.push_back(cb2);
+    listaCbs.push_back(Cobertura(listaClientes[4] , "Wail" , DadosComodos(4 , 3 , 3) , DadosValorArea(134.8 , 3578.2 , COMISSAO_COBERTURA)));
 
-    Cobertura cb3(cl6 , "Fival" , DadosComodos(4 , 4 , 4) , DadosValorArea(180.0 , 4165.7 , COMISSAO_COBERTURA));
-    listaCbs.push_back(cb3);
+    listaCbs.push_back(Cobertura(listaClientes[5] , "Fival" , DadosComodos(4 , 4 , 4) , DadosValorArea(180.0 , 4165.7 , COMISSAO_COBERTURA)));
 
     /* 
      *   Lista de Casas
@@ -129,11 +126,9 @@ int main() {
 
     std::vector<Casa> listaCas;
 
-    Casa ca1(cl7 , "Beydo" , DadosComodos(3 , 3 , 2) , DadosValorArea(145.6 , 4023.6 , COMISSAO_CASA));
-    listaCas.push_back(ca1);
+    listaCas.push_back(Casa(listaClientes[6] , "Beydo" , DadosComodos(3 , 3 , 2) , DadosValorArea(145.6 , 4023.6 , COMISSAO_CASA)));
 
-    Casa ca2(cl8 , "Riuzi" , DadosComodos(5 , 4 , 4) , DadosValorArea(245.0 , 4856.2 , COMISSAO_CASA));
-    listaCas.push_back(ca2);
+    listaCas.push_back(Casa(listaClientes[7] , "Riuzi" , DadosComodos(5 , 4 , 4) , DadosValorArea(245.0 , 4856.2 , COMISSAO_CASA)));
 
     /*
      *  Mudanças neste segmento:
