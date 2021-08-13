@@ -16,6 +16,9 @@ class Imovel {
         double VALORm2;
         double Valor;
         double C;
+
+        // Atributo que todas as subclasses utilizam para calcular o valor da comissao
+        double taxa_comissao;
         Cliente vendedor;
         string corretor;
 
