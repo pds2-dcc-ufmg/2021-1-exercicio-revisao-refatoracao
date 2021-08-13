@@ -9,6 +9,7 @@
 
 int main() {
     
+    std::cout << "teste";
     Cliente cl1;
     cl1.NOME = "Xayso Sovon Ziahaka";
     cl1.endereco = "Rua Xangrilá - Braúnas";
