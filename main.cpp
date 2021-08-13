@@ -29,11 +29,11 @@ int main() {
     Cliente cl5;
     cl5.set_cliente ("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano", "Belo Horizonte", 
     "MG", "30882-747", "3196274465");
-    
+
     Cliente cl6;
     cl6.set_cliente ("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
     "Belo Horizonte", "MG", "31650-560", "3195004414");
-    
+
     Cliente cl7;
     cl7.set_cliente ("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova", "Belo Horizonte", 
     "MG", "31170-240", "3198461192");

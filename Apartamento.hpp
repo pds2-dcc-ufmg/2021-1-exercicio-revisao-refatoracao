@@ -6,7 +6,7 @@
 
 
 class Apartamento : public Imovel {
-    public:
+    public: 
         string tipoImovel();
         double taxaComissao();
 

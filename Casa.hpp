@@ -13,7 +13,6 @@ class Casa : public Imovel {
     private:
         const double TAXA_DE_COMISSAO = 6;
         const string TIPO_DE_IMOVEL = "[Casa]";
-
 };
 
 #endif
