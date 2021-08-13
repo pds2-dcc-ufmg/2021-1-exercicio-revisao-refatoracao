@@ -13,11 +13,11 @@ class Imovel {
         int Q;
         int B;
         int V;
-        double VALORm2;
-        double Valor;
+        double VALORM2;
+        double VALOR;
         double C;
-        Cliente vendedor;
-        string corretor;
+        Cliente VENDEDOR;
+        string CORRETOR;
 
         void print() {
             cout << "[Vendedor]" << endl;
