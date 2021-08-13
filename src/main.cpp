@@ -1,11 +1,11 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Imovel.hpp"
-#include "Casa.hpp"
-#include "Cobertura.hpp"
-#include "Apartamento.hpp"
-#include "Cliente.hpp"
+#include "./include/Modulo_Imoveis_hpp/Imovel.hpp"
+#include "./include/Modulo_Imoveis_hpp/Casa.hpp"
+#include "./include/Modulo_Imoveis_hpp/Cobertura.hpp"
+#include "./include/Modulo_Imoveis_hpp/Apartamento.hpp"
+#include "./include/Modulo_Imoveis_hpp/Cliente.hpp"
 
 int main() {
     
