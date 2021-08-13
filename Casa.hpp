@@ -12,7 +12,7 @@ class Casa : public Imovel {
 
     double valor() {
 
-        double v = AREA * VALORm2;
+        double v = AREA * VALORM2;
 
         return v;
 
@@ -20,10 +20,10 @@ class Casa : public Imovel {
 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = AREA * VALORM2;
 
         return c * 0.06;
-        
+
     }
 
     void print() {
