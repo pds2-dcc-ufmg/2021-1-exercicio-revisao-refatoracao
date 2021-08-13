@@ -2,7 +2,7 @@
 #define CASA_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
+#include "Pessoa.hpp"
 
 using namespace std;
 
@@ -10,35 +10,20 @@ class Casa : public Imovel {
 
     public:
 
-    double valor() {
+    Casa() {};
+    Casa (const char *corretor, 
+    double AREA, 
+    int Quartos, 
+    int banheiros, 
+    int Vagas,
+    double VALORm2, 
+    Pessoa vendedor);
 
-        double v = AREA * VALORm2;
+    double valorImovel() override;
 
-        return v;
+    double comissaoImovel() override;
 
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
+    void print();
 
 };
 
