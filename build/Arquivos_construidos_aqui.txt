@@ -1,0 +1,1 @@
+Os arquivos construidos separadamente durante a compilação serão armazenados nessa pasta "build". 
