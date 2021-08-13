@@ -8,11 +8,11 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
-    
+    public:
+
     double valor() {
 
-        double v = AREA * VALORm2;
+        double v = AREA * VALORM2;
 
         return v;
 
@@ -20,10 +20,10 @@ class Apartamento : public Imovel {
 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = AREA * VALORM2;
 
         return c * 0.04;
-        
+
     }
 
     void print() {
@@ -35,8 +35,8 @@ class Apartamento : public Imovel {
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
                 << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor Comissão: R$ " << FIXED << setprecision(2) << C << endl
+                << "Valor de Venda: R$ " << FIXED<< setprecision(2) << Valor << endl;
     }
 };
 
