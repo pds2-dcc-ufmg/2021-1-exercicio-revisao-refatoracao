@@ -9,7 +9,8 @@
 #include <string>
 
 int main() {
-    
+
+    // Clientes
     Cliente cl1(
         "Xayso Sovon Ziahaka",
         "Rua Xangrilá - Braúnas",
@@ -83,6 +84,7 @@ int main() {
         "3197317802"
     );
 
+    // Apartamentos
     Apartamento ap1(
         55.4,
         2,
@@ -112,8 +114,9 @@ int main() {
         cl3,
         "Kelia"
     );
+    const int qtde_aptos = 3;
 
-    // Cobertura
+    // Coberturas
     Cobertura cb1(
         120.1,
         3,
@@ -143,6 +146,7 @@ int main() {
         cl6,
         "Fival"
     );
+    const int qtde_coberturas = 3;
 
     // Casas
     Casa ca1(
@@ -164,19 +168,17 @@ int main() {
         cl8,
         "Riuzi"
     );
+    const int qtde_casas = 2;
 
-    int qtde_aptos = 3;
-    int qtde_coberturas = 3;
-    int qtde_casas = 2;
+    const double valor_aptos = ap1.valor()+ap2.valor()+ap3.valor();
+    const double comiss_aptos = ap1.comissao()+ap2.comissao()+ap3.comissao();
+    const double valor_cobs = cb1.valor()+cb2.valor()+cb3.valor();
+    const double comiss_cobs = cb1.comissao()+cb2.comissao()+cb3.comissao();
+    const double valor_casas = ca1.valor()+ca2.valor();
+    const double comiss_casas = ca1.comissao()+ca2.comissao();
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valor_aptos = ap1.valor()+ap2.valor()+ap3.valor();
-    double comiss_aptos = ap1.comissao()+ap2.comissao()+ap3.comissao();
-    double valor_cobs = cb1.valor()+cb2.valor()+cb3.valor();
-    double comiss_cobs = cb1.comissao()+cb2.comissao()+cb3.comissao();
-    double valor_casas = ca1.valor()+ca2.valor();
-    double comiss_casas = ca1.comissao()+ca2.comissao();
     
     ap1.print();
     std::cout << endl;
