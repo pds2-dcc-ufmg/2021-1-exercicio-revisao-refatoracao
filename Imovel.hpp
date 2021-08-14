@@ -16,6 +16,7 @@ class Imovel {
         double valor_m2;
         double valor_venda;
         double valor_comissao;
+        double taxa_comissao;
         Cliente vendedor;
         string corretor;
 
