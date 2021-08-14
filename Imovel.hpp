@@ -5,26 +5,33 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+using std::fixed;
+using std::setprecision;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+        string _corretor;
+        double _area;
+        int _quartos;
+        int _banheiros;
+        int _vagas;
+        double _valorm2;
+        double _comissao;
+        double _valor;
+        Cliente _vendedor;
+        double _porcComissao;
+        int _taxa;
+        
+        double valor();
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        double comissao();
+
+        void print();
+        
+        Imovel(string, double, int, int, int, double, Cliente);
 };
 
 #endif
