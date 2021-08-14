@@ -10,6 +10,24 @@ class Cobertura : public Imovel {
     public:
     const double taxa_comissao=0.10;
 
+    Cobertura(
+        double area,
+        int quartos,
+        int banheiros,
+        int vagas,
+        double valor_m2,
+        Cliente cliente,
+        string corretor
+    ):Imovel(
+        area,
+        quartos,
+        banheiros,
+        vagas,
+        valor_m2,
+        cliente,
+        corretor
+    ){}
+
     double valor() override {
 
         double val_total = area * valor_m2;

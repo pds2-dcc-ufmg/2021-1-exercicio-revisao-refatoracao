@@ -121,40 +121,37 @@ int main() {
     qtdeA++;
 
     // Cobertura
-    Cobertura cb1;
-    cb1.corretor = "Koci";
-    cb1.area = 120.1;
-    cb1.quartos = 3;
-    cb1.banheiros = 3;
-    cb1.vagas = 2;
-    cb1.valor_m2 = 3123.5;
-    cb1.comissao_imovel = cb1.comissao();
-    cb1.valor_total = cb1.valor() + cb1.comissao();
-    cb1.vendedor = cl4;
+    Cobertura cb1(
+        120.1,
+        3,
+        3,
+        2,
+        3123.5,
+        cl4,
+        "Koci"
+    );
     qtdeCb++;
     
-    Cobertura cb2;
-    cb2.corretor = "Wail";
-    cb2.area = 134.8;
-    cb2.quartos = 4;
-    cb2.banheiros = 3;
-    cb2.vagas = 3;
-    cb2.valor_m2 = 3578.2;
-    cb2.comissao_imovel = cb2.comissao();
-    cb2.valor_total = cb2.valor() + cb2.comissao();
-    cb2.vendedor = cl5;
+    Cobertura cb2(
+        134.8,
+        4,
+        3,
+        3,
+        3578.2,
+        cl5,
+        "Wail"
+    );
     qtdeCb++;
 
-    Cobertura cb3;
-    cb3.corretor = "Fival";
-    cb3.area = 180.0;
-    cb3.quartos = 4;
-    cb3.banheiros = 4;
-    cb3.vagas = 4;
-    cb3.valor_m2 = 4165.7;
-    cb3.comissao_imovel = cb3.comissao();
-    cb3.valor_total = cb3.valor() + cb3.comissao();
-    cb3.vendedor = cl6;
+    Cobertura cb3(
+        180.0,
+        4,
+        4,
+        4,
+        4165.7,
+        cl6,
+        "Fival"
+    );
     qtdeCb++;
 
     // Casas
