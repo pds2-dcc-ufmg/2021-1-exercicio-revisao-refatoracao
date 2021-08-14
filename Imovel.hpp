@@ -17,8 +17,7 @@ class Imovel {
             double valor_m2,
             Cliente vendedor,
             string corretor
-        ):
-            area(area),
+        ) : area(area),
             quartos(quartos),
             banheiros(banheiros),
             vagas(vagas),

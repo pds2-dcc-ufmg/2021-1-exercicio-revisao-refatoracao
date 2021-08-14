@@ -9,53 +9,53 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-    const double taxa_comissao=0.04;
-    Apartamento(
-        double area,
-        int quartos,
-        int banheiros,
-        int vagas,
-        double valor_m2,
-        Cliente vendedor,
-        string corretor
-    ):Imovel(
-        area,
-        quartos,
-        banheiros,
-        vagas,
-        valor_m2,
-        vendedor,
-        corretor
-    ){}
+        const double taxa_comissao=0.04;
+        Apartamento(
+            double area,
+            int quartos,
+            int banheiros,
+            int vagas,
+            double valor_m2,
+            Cliente vendedor,
+            string corretor
+        ):Imovel(
+            area,
+            quartos,
+            banheiros,
+            vagas,
+            valor_m2,
+            vendedor,
+            corretor
+        ){}
 
-    double valor() override {
+        double valor() override {
 
-        double valorTotal = area * valor_m2;
+            double valorTotal = area * valor_m2;
 
-        return valorTotal;
+            return valorTotal;
 
-    }
+        }
 
-    double comissao() override {
+        double comissao() override {
 
-        double resultado = area * valor_m2;
+            double resultado = area * valor_m2;
 
-        return resultado * taxa_comissao;
-        
-    }
+            return resultado * taxa_comissao;
+            
+        }
 
-    void print() {
+        void print() {
 
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << area << endl
-                << "  Quartos: " << quartos << endl
-                << "  Banheiros: " << banheiros << endl
-                << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << taxa_comissao*100 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao_imovel << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_total << endl;
-    }
+            std::cout << "[Apartamento]" << endl;
+            Imovel::print();
+            std::cout << "Area: " << area << endl
+                    << "  Quartos: " << quartos << endl
+                    << "  Banheiros: " << banheiros << endl
+                    << "  Vagas: " << vagas << endl
+                    << "Taxa de Comissão: " << taxa_comissao*100 << "%" << endl
+                    << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao_imovel << endl
+                    << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_total << endl;
+        }
 };
 
 #endif
