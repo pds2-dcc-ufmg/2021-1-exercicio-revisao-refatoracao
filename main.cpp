@@ -84,8 +84,8 @@ int main() {
     ap1.qtd_banheiros = 1;
     ap1.qtd_vagas = 0;
     ap1.valor_m2 = 987.0;
-    ap1.valor_comissao = ap1.comissao();
-    ap1.valor_venda = ap1.valor() + ap1.comissao();
+    ap1.valor_comissao = ap1.getComissao();
+    ap1.valor_venda = ap1.getValor() + ap1.getComissao();
     ap1.vendedor = cl1;
     qtdeA++;
 
@@ -96,8 +96,8 @@ int main() {
     ap2.qtd_banheiros = 1;
     ap2.qtd_vagas = 2;
     ap2.valor_m2 = 1540.0;
-    ap2.valor_comissao = ap2.comissao();
-    ap2.valor_venda = ap2.valor() + ap2.comissao();
+    ap2.valor_comissao = ap2.getComissao();
+    ap2.valor_venda = ap2.getValor() + ap2.getComissao();
     ap2.vendedor = cl2;
     qtdeA++;
 
@@ -108,8 +108,8 @@ int main() {
     ap3.qtd_banheiros = 2;
     ap3.qtd_vagas = 2;
     ap3.valor_m2 = 2354.0;
-    ap3.valor_comissao = ap3.comissao();
-    ap3.valor_venda = ap3.valor() + ap3.comissao();
+    ap3.valor_comissao = ap3.getComissao();
+    ap3.valor_venda = ap3.getValor() + ap3.getComissao();
     ap3.vendedor = cl3;
     qtdeA++;
 
@@ -121,8 +121,8 @@ int main() {
     cb1.qtd_banheiros = 3;
     cb1.qtd_vagas = 2;
     cb1.valor_m2 = 3123.5;
-    cb1.valor_comissao = cb1.comissao();
-    cb1.valor_venda = cb1.valor() + cb1.comissao();
+    cb1.valor_comissao = cb1.getComissao();
+    cb1.valor_venda = cb1.getValor() + cb1.getComissao();
     cb1.vendedor = cl4;
     qtdeCb++;
     
@@ -133,8 +133,8 @@ int main() {
     cb2.qtd_banheiros = 3;
     cb2.qtd_vagas = 3;
     cb2.valor_m2 = 3578.2;
-    cb2.valor_comissao = cb2.comissao();
-    cb2.valor_venda = cb2.valor() + cb2.comissao();
+    cb2.valor_comissao = cb2.getComissao();
+    cb2.valor_venda = cb2.getValor() + cb2.getComissao();
     cb2.vendedor = cl5;
     qtdeCb++;
 
@@ -145,8 +145,8 @@ int main() {
     cb3.qtd_banheiros = 4;
     cb3.qtd_vagas = 4;
     cb3.valor_m2 = 4165.7;
-    cb3.valor_comissao = cb3.comissao();
-    cb3.valor_venda = cb3.valor() + cb3.comissao();
+    cb3.valor_comissao = cb3.getComissao();
+    cb3.valor_venda = cb3.getValor() + cb3.getComissao();
     cb3.vendedor = cl6;
     qtdeCb++;
 
@@ -158,8 +158,8 @@ int main() {
     ca1.qtd_banheiros = 3;
     ca1.qtd_vagas = 2;
     ca1.valor_m2 = 4023.6;
-    ca1.valor_comissao = ca1.comissao();
-    ca1.valor_venda = ca1.valor() + ca1.comissao();
+    ca1.valor_comissao = ca1.getComissao();
+    ca1.valor_venda = ca1.getValor() + ca1.getComissao();
     ca1.vendedor = cl7;
     qtdeCa++;
 
@@ -170,8 +170,8 @@ int main() {
     ca2.qtd_banheiros = 4;
     ca2.qtd_vagas = 4;
     ca2.valor_m2 = 4856.2;
-    ca2.valor_comissao = ca2.comissao();
-    ca2.valor_venda = ca2.valor() + ca2.comissao();
+    ca2.valor_comissao = ca2.getComissao();
+    ca2.valor_venda = ca2.getValor() + ca2.getComissao();
     ca2.vendedor = cl8;
     qtdeCa++;
 
@@ -185,43 +185,43 @@ int main() {
     double comissCa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valorAp += ap1.getValor();
+    comissAp += ap1.getComissao();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valorAp += ap2.getValor();
+    comissAp += ap2.getComissao();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valorAp += ap3.getValor();
+    comissAp += ap3.getComissao();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valorCb += cb1.getValor();
+    comissCb += cb1.getComissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valorCb += cb2.getValor();
+    comissCb += cb2.getComissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valorCb += cb3.getValor();
+    comissCb += cb3.getComissao();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valorCa += ca1.getValor();
+    comissCa += ca1.getComissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valorCa += ca2.getValor();
+    comissCa += ca2.getComissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
