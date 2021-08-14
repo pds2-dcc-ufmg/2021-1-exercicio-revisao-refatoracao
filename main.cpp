@@ -177,8 +177,8 @@ int main() {
     const double valor_casas = ca1.valor()+ca2.valor();
     const double comiss_casas = ca1.comissao()+ca2.comissao();
 
-    std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
+    std::cout << "\n>> Relatório de Imóveis <<" << endl;
     
     ap1.print();
     std::cout << endl;
@@ -207,18 +207,18 @@ int main() {
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtde_aptos
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_aptos
-            << "\n Comissão Total: R$" << comiss_aptos
-            << endl
-            << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtde_coberturas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_cobs
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_cobs
-            << endl
-            << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtde_casas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_casas
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_casas
-            << endl;
+        << "\n Quantidade: " << qtde_aptos
+        << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_aptos
+        << "\n Comissão Total: R$" << comiss_aptos
+        << endl
+        << "\n>>Coberturas<<\n"
+        << "\n Quantidade: " << qtde_coberturas
+        << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_cobs
+        << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_cobs
+        << endl
+        << "\n>>Casas<<\n"
+        << "\n Quantidade: " << qtde_casas
+        << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_casas
+        << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_casas
+        << endl;
 }
