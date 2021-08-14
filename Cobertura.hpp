@@ -12,6 +12,8 @@ class Cobertura : public Imovel {
     
     public:
         void print();
+    
+         Cobertura(string, double, int, int, int, double, Cliente);
 };
 
 #endif
