@@ -22,7 +22,7 @@ class Cliente {
             string uf, 
             string cep,
             string telefone
-        ): nome(nome), endereco(endereco), cidade(cidade), uf(uf), cep(cep), telefone(telefone){}
+        );
         
         void print();
         
