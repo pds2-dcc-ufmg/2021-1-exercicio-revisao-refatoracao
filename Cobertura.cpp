@@ -7,3 +7,8 @@ Cobertura::Cobertura(string cor, double a, int q, int b, int vag, double valm2, 
     _porcComissao = 0.1;
     _taxa = 10;
 };
+
+void Cobertura::print() {
+    std::cout << "[Cobertura]" << endl;
+    Imovel::print();
+}
