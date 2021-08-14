@@ -13,15 +13,17 @@ using std::setprecision;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+        string _corretor;
+        double _area;
+        int _quartos;
+        int _banheiros;
+        int _vagas;
+        double _valorm2;
+        double _comissao;
+        double _valor;
+        Cliente _vendedor;
+        double _porcComissao;
+        int _taxa;
 
         void print() {
             cout << "[Vendedor]" << endl;
