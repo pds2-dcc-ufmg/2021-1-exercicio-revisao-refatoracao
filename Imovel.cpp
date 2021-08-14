@@ -8,7 +8,21 @@ Imovel::Imovel(string cor, double a, int q, int b, int vag, double valm2, Client
 
 double Imovel::valor() {
         return _area * _valorm2;
-    }
+}
 double Imovel::comissao(){
         return _area * _valorm2 * _porcComissao;
-    }
+}
+
+ void Imovel::print() {
+            cout << "[Vendedor]" << endl;
+            _vendedor.print();
+            cout << "[Corretor]" << endl;
+            cout << "  " + _corretor << endl;
+            cout << "Area: " << _area << endl
+                    << "  Quartos: " << _quartos << endl
+                    << "  Banheiros: " << _banheiros << endl
+                    << "  Vagas: " << _vagas << endl
+                    << "Taxa de Comissão: " << _taxa << "%" << endl
+                    << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao() <<  endl
+                    << "Valor de Venda: R$ " << fixed << setprecision(2) << _valor + comissao() << endl;
+ }
