@@ -5,13 +5,24 @@
 using namespace std;
 
 class Cliente {
-    public:
-        string NOME;
+    private:
+        string nome;
         string endereco;
-        string CIDADE;
-        string UF;
+        string cidade;
+        string estado;
         string cep;
         string telefone;
+
+    public:
+        Cliente(){};
+        Cliente(string nome, string endereco, string cidade, string estado, string cep, string telefone){
+            this->nome = nome;
+            this->endereco = endereco;
+            this->cidade = cidade;
+            this->estado = estado;
+            this->cep = cep;
+            this->telefone = telefone;
+        }
 
         void print();
 };
