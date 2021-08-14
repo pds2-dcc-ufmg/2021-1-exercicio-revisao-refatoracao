@@ -98,7 +98,7 @@ int main() {
     Casa ca2 = Casa("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
     qtdeCa++;
 
-    std::cout << "\n>> Relatório de Imóveis <<" << endl;
+    cout << "\n>> Relatório de Imóveis <<" << endl;
 
     double valorAp = 0.0;
     double valorCb = 0.0;
@@ -110,42 +110,42 @@ int main() {
     ap1.print();
     valorAp += ap1.valor();
     comissAp += ap1.comissao();
-    std::cout << endl;
+    cout << endl;
 
     ap2.print();
     valorAp += ap2.valor();
     comissAp += ap2.comissao();
-    std::cout << endl;
+    cout << endl;
 
     ap3.print();
     valorAp += ap3.valor();
     comissAp += ap3.comissao();
-    std::cout << endl;
+    cout << endl;
 
     cb1.print();
     valorCb += cb1.valor();
     comissCb += cb1.comissao();
-    std::cout << endl;
+    cout << endl;
 
     cb2.print();
     valorCb += cb2.valor();
     comissCb += cb2.comissao();
-    std::cout << endl;
+    cout << endl;
 
     cb3.print();
     valorCb += cb3.valor();
     comissCb += cb3.comissao();
-    std::cout << endl;
+    cout << endl;
 
     ca1.print();
     valorCa += ca1.valor();
     comissCa += ca1.comissao();
-    std::cout << endl;
+    cout << endl;
 
     ca2.print();
     valorCa += ca2.valor();
     comissCa += ca2.comissao();
-    std::cout << endl;
+    cout << endl;
 
     cout << "\n>> Resumo Geral <<" << endl;
 
