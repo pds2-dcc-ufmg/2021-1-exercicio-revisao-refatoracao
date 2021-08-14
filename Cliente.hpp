@@ -2,7 +2,10 @@
 #define CLIENTE_HPP
 
 #include <string>
-using namespace std;
+
+using std::string;
+using std::cout;
+using std::endl;
 
 class Cliente {
     public:
