@@ -30,6 +30,8 @@ class Imovel {
         double comissao();
 
         void print();
+        
+        Imovel(string, double, int, int, int, double, Cliente);
 };
 
 #endif
