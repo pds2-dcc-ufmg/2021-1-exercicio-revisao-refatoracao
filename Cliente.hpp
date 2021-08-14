@@ -6,6 +6,15 @@ using namespace std;
 
 class Cliente {
     public:
+        Cliente(
+            string nome,
+            string endereco,
+            string cidade,
+            string uf, 
+            string cep,
+            string telefone
+        ): nome(nome), endereco(endereco), cidade(cidade), uf(uf), cep(cep), telefone(telefone){}
+        Cliente(){};
         string nome;
         string endereco;
         string cidade;
