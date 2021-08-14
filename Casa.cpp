@@ -7,3 +7,8 @@ Casa::Casa(string cor, double a, int q, int b, int vag, double valm2,  Cliente v
     _porcComissao = 0.06;
     _taxa = 6;
 };
+
+void Casa::print() {
+    cout << "[Casa]" << endl;
+    Imovel::print();
+}
