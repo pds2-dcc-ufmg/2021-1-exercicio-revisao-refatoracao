@@ -12,6 +12,7 @@ class Apartamento : public Imovel {
 
     public: 
 
+        void print();
     
 };
 
