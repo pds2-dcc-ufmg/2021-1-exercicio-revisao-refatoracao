@@ -24,7 +24,13 @@ class Imovel {
         Cliente _vendedor;
         double _porcComissao;
         int _taxa;
+        
+        double valor();
 
+        double comissao();
+
+        void print();
+    
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
