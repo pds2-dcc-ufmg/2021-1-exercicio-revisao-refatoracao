@@ -67,7 +67,7 @@ int main() {
 
     Cliente cl7(
         "Leova Wikyecil Neaca",
-        "Rua João Arantes - cidade Nova",
+        "Rua João Arantes - Cidade Nova",
         "Belo Horizonte",
         "MG",
         "31170-240",

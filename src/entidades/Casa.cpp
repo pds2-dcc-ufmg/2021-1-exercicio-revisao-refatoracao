@@ -17,7 +17,7 @@ Casa::Casa(
     vagas,
     valor_m2,
     area * valor_m2*taxa_comissao,
-    area*valor_m2*(taxa_comissao+1),
+    area*valor_m2*taxa_comissao+area * valor_m2,
     vendedor,
     corretor
 ){}
