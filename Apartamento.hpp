@@ -9,10 +9,16 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-        Apartamento(){
+
+        Apartamento(string corretor, double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor) {
+            this->corretor = corretor;
+            this->area = area;
+            this->qtd_quartos = quartos;
+            this->qtd_banheiros = banheiros;
+            this->qtd_vagas = vagas;
+            this->valor_m2 = valor_m2;
+            this->vendedor = vendedor;
             this->taxa_comissao = 0.04;
-            this->valor_comissao = getComissao();
-            this->valor_venda = getValor() + valor_comissao;
         }
     
         void print() {

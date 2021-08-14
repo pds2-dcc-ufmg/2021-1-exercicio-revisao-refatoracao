@@ -35,8 +35,8 @@ class Imovel {
                 << "  Banheiros: " << qtd_banheiros << endl
                 << "  Vagas: " << qtd_vagas << endl
                 << "Taxa de Comissão: " << fixed << setprecision(0) << taxa_comissao*100 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_venda << endl;
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << this->getComissao() << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << this->getValor() + this->getComissao() << endl;
         }
 };
 
