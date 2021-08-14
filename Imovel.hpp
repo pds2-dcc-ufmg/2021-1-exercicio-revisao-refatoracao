@@ -8,7 +8,7 @@
 using namespace std;
 
 class Imovel {
-    public:
+    protected:
         double area;
         int qtd_quartos;
         int qtd_banheiros;
@@ -20,6 +20,7 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
+    public:
         double getValor() { return area * valor_m2; }
         double getComissao() { return area * valor_m2 * taxa_comissao; }
 

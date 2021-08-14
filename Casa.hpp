@@ -7,18 +7,18 @@
 using namespace std;
 
 class Casa : public Imovel {
-
+    
     public:
+        Casa(){
+            this->taxa_comissao = 0.06;
+            this->valor_comissao = getComissao();
+            this->valor_venda = getValor() + valor_comissao;
+        }
 
-    Casa() {
-        this->taxa_comissao = 0.06;
-    }
-
-    void print() {
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-    }
-
+        void print() {
+            std::cout << "[Casa]" << endl;
+            Imovel::print();
+        }
 };
 
 #endif
