@@ -8,34 +8,39 @@
 using namespace std;
 
 class Imovel {
-    public:
 
+    protected:
+    int Quartos;
+    int Banheiros;
+    int Vagas;
+    double Valorm2;
+    double ValorImovel;
+    double Area;
+    double Comissao;
+
+    public:
     int getQuartos();
-    int setQuartos(int quartos);
+    virtual void setQuartos(int quartos);
 
     int getBanheiros();
-    int setBanheiros(int banheiro);
+    virtual void setBanheiros(int banheiro);
 
     int getVagas();
-    int setVagas(int vaga);
-        
-        Cliente NomeCliente;
-        string Corretor;
+    virtual void setVagas(int vaga);
 
-        void print() {
+    virtual void setComissao(int comissao);
+        
+    Cliente infosCliente;
+    string Corretor;
+
+    void print() {
             cout << "[Vendedor]" << endl;
-            NomeCliente.print();
+            infosCliente.print();
             cout << "[Corretor]" << endl;
             cout << "  " + Corretor << endl;
         }
-    private:
-        int Quartos;
-        int Banheiros;
-        int Vagas;
-        double Valorm2;
-        double ValorImovel;
-        double Area;
-        double Comissao;
+
+    
 };
 
 #endif

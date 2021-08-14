@@ -9,69 +9,69 @@
 
 int main() {
     
-    Cliente cl1;
-    cl1.Nome = "Xayso Sovon Ziahaka";
-    cl1.Endereco = "Rua Xangrilá - Braúnas";
-    cl1.Cidade = "Belo Horizonte";
-    cl1.UF = "MG";
-    cl1.CEP = "31365-570";
-    cl1.Telefone = "3196007958";
+    Cliente cliente1;
+    cliente1.Nome = "Xayso Sovon Ziahaka";
+    cliente1.Endereco = "Rua Xangrilá - Braúnas";
+    cliente1.Cidade = "Belo Horizonte";
+    cliente1.UF = "MG";
+    cliente1.CEP = "31365-570";
+    cliente1.Telefone = "3196007958";
     
-    Cliente cl2;
-    cl2.Nome = "Minia Pasies Kituos";
-    cl2.Endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2.Cidade = "Belo Horizonte";
-    cl2.UF = "MG";
-    cl2.CEP = "31870-290";
-    cl2.Telefone = "3197627067";
+    Cliente cliente2;
+    cliente2.Nome = "Minia Pasies Kituos";
+    cliente2.Endereco = "Rua dos Jacobinos - Ouro Minas";
+    cliente2.Cidade = "Belo Horizonte";
+    cliente2.UF = "MG";
+    cliente2.CEP = "31870-290";
+    cliente2.Telefone = "3197627067";
     
-    Cliente cl3;
-    cl3.Nome = "Vuocue Leiur Baonauza";
-    cl3.Endereco = "Rua Orminda de Almeida - Tupi B";
-    cl3.Cidade = "Belo Horizonte";
-    cl3.UF = "MG";
-    cl3.CEP = "31842-630";
-    cl3.Telefone = "3195949327";
+    Cliente cliente3;
+    cliente3.Nome = "Vuocue Leiur Baonauza";
+    cliente3.Endereco = "Rua Orminda de Almeida - Tupi B";
+    cliente3.Cidade = "Belo Horizonte";
+    cliente3.UF = "MG";
+    cliente3.CEP = "31842-630";
+    cliente3.Telefone = "3195949327";
     
-    Cliente cl4;
-    cl4.Nome = "Zerer Huduy Fyogar";
-    cl4.Endereco = "Rua Taquaril - Jonas Veiga";
-    cl4.Cidade = "Belo Horizonte";
-    cl4.UF = "MG";
-    cl4.CEP = "30285-422";
-    cl4.Telefone = "3198596327";
+    Cliente cliente4;
+    cliente4.Nome = "Zerer Huduy Fyogar";
+    cliente4.Endereco = "Rua Taquaril - Jonas Veiga";
+    cliente4.Cidade = "Belo Horizonte";
+    cliente4.UF = "MG";
+    cliente4.CEP = "30285-422";
+    cliente4.Telefone = "3198596327";
     
-    Cliente cl5;
-    cl5.Nome = "Ceziel Mioti Pler";
-    cl5.Endereco = "Rua João Gualberto Costa - Serrano";
-    cl5.Cidade = "Belo Horizonte";
-    cl5.UF = "MG";
-    cl5.CEP = "30882-747";
-    cl5.Telefone = "3196274465";
+    Cliente cliente5;
+    cliente5.Nome = "Ceziel Mioti Pler";
+    cliente5.Endereco = "Rua João Gualberto Costa - Serrano";
+    cliente5.Cidade = "Belo Horizonte";
+    cliente5.UF = "MG";
+    cliente5.CEP = "30882-747";
+    cliente5.Telefone = "3196274465";
     
-    Cliente cl6;
-    cl6.Nome = "Esxo Cilal Zyais";
-    cl6.Endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.Cidade = "Belo Horizonte";
-    cl6.UF = "MG";
-    cl6.CEP = "31650-560";
-    cl6.Telefone = "3195004414";
+    Cliente cliente6;
+    cliente6.Nome = "Esxo Cilal Zyais";
+    cliente6.Endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
+    cliente6.Cidade = "Belo Horizonte";
+    cliente6.UF = "MG";
+    cliente6.CEP = "31650-560";
+    cliente6.Telefone = "3195004414";
     
-    Cliente cl7;
-    cl7.Nome = "Leova Wikyecil Neaca";
-    cl7.Endereco = "Rua João Arantes - Cidade Nova";
-    cl7.Cidade = "Belo Horizonte";
-    cl7.UF = "MG";
-    cl7.CEP = "31170-240";
-    cl7.Telefone = "3198461192";
+    Cliente cliente7;
+    cliente7.Nome = "Leova Wikyecil Neaca";
+    cliente7.Endereco = "Rua João Arantes - Cidade Nova";
+    cliente7.Cidade = "Belo Horizonte";
+    cliente7.UF = "MG";
+    cliente7.CEP = "31170-240";
+    cliente7.Telefone = "3198461192";
     
-    Cliente cl8;
-    cl8.Nome = "Teas Heimeu Pipe";
-    cl8.Endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.Cidade = "Belo Horizonte";
-    cl8.UF = "MG";
-    cl8.CEP = "30668-430";
-    cl8.Telefone = "3197317802";
+    Cliente cliente8;
+    cliente8.Nome = "Teas Heimeu Pipe";
+    cliente8.Endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
+    cliente8.Cidade = "Belo Horizonte";
+    cliente8.UF = "MG";
+    cliente8.CEP = "30668-430";
+    cliente8.Telefone = "3197317802";
 
     int qtdeA = 0;
     int qtdeCa = 0;
@@ -86,7 +86,7 @@ int main() {
     ap1.Valorm2 = 987.0;
     ap1.Comissao = ap1.comissao();
     ap1.ValorImovel = ap1.valor() + ap1.comissao();
-    ap1.NomeCliente = cl1;
+    ap1.infosCliente = cliente1;
     qtdeA++;
 
     Apartamento ap2;
@@ -98,7 +98,7 @@ int main() {
     ap2.Valorm2 = 1540.0;
     ap2.Comissao = ap2.comissao();
     ap2.ValorImovel = ap2.valor() + ap2.comissao();
-    ap2.NomeCliente = cl2;
+    ap2.infosCliente = cliente2;
     qtdeA++;
 
     Apartamento ap3;
@@ -110,7 +110,7 @@ int main() {
     ap3.Valorm2 = 2354.0;
     ap3.Comissao = ap3.comissao();
     ap3.ValorImovel = ap3.valor() + ap3.comissao();
-    ap3.NomeCliente = cl3;
+    ap3.infosCliente = cliente3;
     qtdeA++;
 
     // Cobertura
@@ -123,7 +123,7 @@ int main() {
     cb1.Valorm2 = 3123.5;
     cb1.Comissao = cb1.comissao();
     cb1.ValorImovel = cb1.valor() + cb1.comissao();
-    cb1.NomeCliente = cl4;
+    cb1.infosCliente = cliente4;
     qtdeCb++;
     
     Cobertura cb2;
@@ -135,7 +135,7 @@ int main() {
     cb2.Valorm2 = 3578.2;
     cb2.Comissao = cb2.comissao();
     cb2.ValorImovel = cb2.valor() + cb2.comissao();
-    cb2.NomeCliente = cl5;
+    cb2.infosCliente = cliente5;
     qtdeCb++;
 
     Cobertura cb3;
@@ -147,7 +147,7 @@ int main() {
     cb3.Valorm2 = 4165.7;
     cb3.Comissao = cb3.comissao();
     cb3.ValorImovel = cb3.valor() + cb3.comissao();
-    cb3.NomeCliente = cl6;
+    cb3.infosCliente = cliente6;
     qtdeCb++;
 
     // Casas
@@ -160,7 +160,7 @@ int main() {
     ca1.Valorm2 = 4023.6;
     ca1.Comissao = ca1.comissao();
     ca1.ValorImovel = ca1.valor() + ca1.comissao();
-    ca1.NomeCliente = cl7;
+    ca1.infosCliente = cliente7;
     qtdeCa++;
 
     Casa ca2;
@@ -172,7 +172,7 @@ int main() {
     ca2.Valorm2 = 4856.2;
     ca2.Comissao = ca2.comissao();
     ca2.ValorImovel = ca2.valor() + ca2.comissao();
-    ca2.NomeCliente = cl8;
+    ca2.infosCliente = cliente8;
     qtdeCa++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;

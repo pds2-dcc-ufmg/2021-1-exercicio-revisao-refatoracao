@@ -5,8 +5,8 @@
 
 Imovel::Imovel() {}
 
-int Imovel::setBanheiros (int value){
-    Banheiros = value;
+void Imovel::setBanheiros (int banheiro){
+    this -> Banheiros = banheiro;
 }
 int Imovel::getBanheiros (){
     return Banheiros;
