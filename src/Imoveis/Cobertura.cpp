@@ -6,8 +6,6 @@ Cobertura::Cobertura(){
     this->taxa_comissao = 0.10;
 }
 
-Cobertura::Cobertura(){}
-
 
 void Cobertura::print() {
     

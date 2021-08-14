@@ -2,6 +2,7 @@
 
 using namespace Imoveis;
 
+Imovel::Imovel(){}
 
 void Imovel::print() {
     cout << "[Vendedor]" << endl;

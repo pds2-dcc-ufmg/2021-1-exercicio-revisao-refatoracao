@@ -1,41 +1,37 @@
 CC=g++
 CFLAGS=-std=c++11 -Wall
+EXEC=exec
 
-BUILD = ./build
-SRC = ./src
-SRC_IMOVEIS = ./src/Imoveis
-INCLUDE_IMOVEIS = ./include/Imoveis
-SRC_CLIENTE = ./src/Cliente
-INCLUDE_CLIENTE = ./include/Cliente
-INCLUDE = ./include
-EXEC=execution
+SRC=./src
+SRC_CLIENTE=./src/Cliente
+SRC_INCLUDE=./src/Imoveis
+INCLUDE=./include
+BUILD=./build
 
+all: ${EXEC}
 
-all: ${EXEC} clean
+${EXEC}: ${BUILD}/main.o ${BUILD}/Cliente.o ${BUILD}/Imovel.o ${BUILD}/Cobertura.o ${BUILD}/Casa.o ${BUILD}/Apartamento.o
+	${CC} -o ${EXEC} ${BUILD}/*.o
 
+${BUILD}/Cliente.o: ${SRC_CLIENTE}/Cliente.cpp ${INCLUDE}/Cliente/Cliente.hpp
+	${CC} -I ${INCLUDE}/Cliente/ -c ${SRC_CLIENTE}/Cliente.cpp -o ${BUILD}/Cliente.o
 
-${BUILD}/Cliente.o:  ${INCLUDE_CLIENTE}/Cliente.hpp ${SRC_CLIENTE}/Cliente.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_CLIENTE} -c ${SRC_CLIENTE}/Cliente.cpp -o ${BUILD}/Cliente.o
+${BUILD}/Imovel.o: ${SRC_INCLUDE}/Imovel.cpp ${INCLUDE}/Imoveis/Imovel.hpp ${INCLUDE}/Cliente/Cliente.hpp
+	${CC} -I ${INCLUDE}/Imoveis/ -I ${INCLUDE}/Cliente/ -c ${SRC_INCLUDE}/Imovel.cpp -o ${BUILD}/Imovel.o
 
-${BUILD}/Apartamento.o:  ${INCLUDE_IMOVEIS}/Apartamento.hpp ${SRC_IMOVEIS}/Apartamento.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_IMOVEIS} -c ${SRC_IMOVEIS}/Apartamento.cpp -o ${BUILD}/Apartamento.o
+${BUILD}/Cobertura.o: ${SRC_INCLUDE}/Cobertura.cpp ${INCLUDE}/Imoveis/Cobertura.hpp ${INCLUDE}/Cliente/Cliente.hpp
+	${CC} -I ${INCLUDE}/Imoveis/ -I ${INCLUDE}/Cliente/ -c ${SRC_INCLUDE}/Cobertura.cpp -o ${BUILD}/Cobertura.o
 
-${BUILD}/Casa.o:  ${INCLUDE_IMOVEIS}/Casa.hpp ${SRC_IMOVEIS}/Casa.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_IMOVEIS} -c ${SRC_IMOVEIS}/Casa.cpp -o ${BUILD}/Casa.o
+${BUILD}/Casa.o: ${SRC_INCLUDE}/Casa.cpp ${INCLUDE}/Imoveis/Casa.hpp ${INCLUDE}/Cliente/Cliente.hpp
+	${CC} -I ${INCLUDE}/Imoveis/ -I ${INCLUDE}/Cliente/ -c ${SRC_INCLUDE}/Casa.cpp -o ${BUILD}/Casa.o
 
-${BUILD}/Cobertura.o:  ${INCLUDE_IMOVEIS}/Cobertura.hpp ${SRC_IMOVEIS}/Cobertura.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_IMOVEIS} -c ${SRC_IMOVEIS}/Cobertura.cpp -o ${BUILD}/Cobertura.o
-
-${BUILD}/Imovel.o:  ${INCLUDE_IMOVEIS}/Imovel.hpp ${SRC_IMOVEIS}/Imovel.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_IMOVEIS} ${INCLUDE_CLIENTE} -c ${SRC_IMOVEIS}/Imovel.cpp -o ${BUILD}/Imovel.o
-
-
-${BUILD}/main.o: ${SRC}/main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE}/Cliente ${INCLUDE}/Imoveis -c ${SRC}/main.cpp -o ${BUILD}/main.o
+${BUILD}/Apartamento.o: ${SRC_INCLUDE}/Apartamento.cpp ${INCLUDE}/Imoveis/Apartamento.hpp ${INCLUDE}/Cliente/Cliente.hpp
+	${CC} -I ${INCLUDE}/Imoveis/ -I ${INCLUDE}/Cliente/ -c ${SRC_INCLUDE}/Apartamento.cpp -o ${BUILD}/Apartamento.o
 
 
-${EXEC}: ${BUILD}/Cliente.o ${BUILD}/Apartamento.o ${BUILD}/Casa.o ${BUILD}/Cobertura.o ${BUILD}/Imovel.o ${BUILD}/main.o
-	${CC} ${CFLAGS} -o ./${EXEC} ${BUILD}/*.o
+
+${BUILD}/main.o: ${SRC}/main.cpp ${INCLUDE}/Cliente/*.hpp ${INCLUDE}/Imoveis/*.hpp
+	${CC} -I ${INCLUDE}/Imoveis/ -I ${INCLUDE}/Cliente/  -c ${SRC}/main.cpp -o ${BUILD}/main.o
 
 clean:
-	rm -f ${BUILD}/*
+	rm ${EXEC} ${BUILD}/*
