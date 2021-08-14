@@ -6,8 +6,6 @@
 
 using namespace std;
 
-//teste
-
 class Apartamento : public Imovel {
 
     public: 
