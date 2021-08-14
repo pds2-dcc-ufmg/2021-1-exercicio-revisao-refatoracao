@@ -7,3 +7,8 @@ Apartamento::Apartamento(string cor, double a, int q, int b, int vag, double val
     _porcComissao = 0.04;
     _taxa = 4;
 };
+
+void Apartamento::print() {
+            cout << "[Apartamento]" << endl;
+            Imovel::print();
+}
