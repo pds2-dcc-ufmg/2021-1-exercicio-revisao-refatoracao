@@ -13,10 +13,6 @@ namespace Imoveis {
         public:
             Casa();
 
-            double valor();
-
-            double comissao();
-
             void print();
     };
 

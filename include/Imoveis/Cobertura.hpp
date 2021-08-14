@@ -14,10 +14,6 @@ namespace Imoveis {
 
         Cobertura();
 
-        double valor();
-
-        double comissao();
-
         void print();
     };
 }

@@ -14,10 +14,6 @@ namespace Imoveis {
 
         Apartamento();
 
-        double valor();
-
-        double comissao();
-
         void print();
     };
 
