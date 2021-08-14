@@ -8,9 +8,9 @@ using namespace std;
 
 class Casa : public Imovel {
     public:
-        double valor();
-        double comissao();
-        void print();
+        double calculaValor();
+        double calculaComissao();
+        void imprimeInformacoes();
 };
 
 #endif

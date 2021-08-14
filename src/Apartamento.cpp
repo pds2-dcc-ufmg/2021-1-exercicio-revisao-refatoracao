@@ -1,23 +1,23 @@
 #include "Apartamento.hpp"
 
-double Apartamento::valor() {
-    double v = AREA * VALORm2;
+double Apartamento::calculaValor() {
+    double v = area * valorMetroQuadrado;
     return v;
 }
 
-double Apartamento::comissao() {
-    double c = AREA * VALORm2;
+double Apartamento::calculaComissao() {
+    double c = area * valorMetroQuadrado;
     return c * 0.04;  
 }
 
-void Apartamento::print() {
+void Apartamento::imprimeInformacoes() {
     std::cout << "[Apartamento]" << endl;
-    Imovel::print();
-    std::cout << "Area: " << AREA << endl
-            << "  Quartos: " << Q << endl
-            << "  Banheiros: " << B << endl
-            << "  Vagas: " << V << endl
+    Imovel::imprimeInformacoes();
+    std::cout << "Area: " << area << endl
+            << "  Quartos: " << numQuartos << endl
+            << "  Banheiros: " << numBanheiros << endl
+            << "  Vagas: " << numVagas << endl
             << "Taxa de Comissão: " << 4 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << valorComissao << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << valorVenda << endl;
 }
