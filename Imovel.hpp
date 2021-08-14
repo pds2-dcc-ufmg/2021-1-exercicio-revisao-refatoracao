@@ -7,24 +7,28 @@
 
 using namespace std;
 
+
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+        void set_imovel(double areaImovel,int numeroQuartos, int numeroBanheiros 
+        ,int numeroVagas, double valorM2,Cliente vendedor, string corretor);
+        virtual string tipoImovel()=0;
+        double valor();
+        double comissao();
+        virtual double taxaComissao()=0;
+        void print();
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+    protected:
+        double areaImovel_;
+        int numeroQuartos_;
+        int numeroBanheiros_;
+        int numeroVagas_;
+        double valorM2_;
+        double valorImovel_;
+        double valorComissao_;
+        Cliente vendedor_;
+        string corretor_;
+        const double TRASFORMAR_EM_PROCENTAGEM = 0.01;
 };
 
 #endif
