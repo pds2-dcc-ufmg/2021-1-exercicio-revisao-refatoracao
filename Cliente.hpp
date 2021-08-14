@@ -5,6 +5,15 @@
 using namespace std;
 
 class Cliente {
+
+    private:
+        string nome;
+        string endereco;
+        string cidade;
+        string uf;
+        string cep;
+        string telefone;
+
     public:
         Cliente(
             string nome,
@@ -15,14 +24,8 @@ class Cliente {
             string telefone
         ): nome(nome), endereco(endereco), cidade(cidade), uf(uf), cep(cep), telefone(telefone){}
         
-        string nome;
-        string endereco;
-        string cidade;
-        string uf;
-        string cep;
-        string telefone;
-
         void print();
+        
 };
 
 #endif

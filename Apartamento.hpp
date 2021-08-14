@@ -7,9 +7,10 @@
 using namespace std;
 
 class Apartamento : public Imovel {
+    private:
+        const double taxa_comissao=0.04;
 
     public: 
-        const double taxa_comissao=0.04;
         Apartamento(
             double area,
             int quartos,

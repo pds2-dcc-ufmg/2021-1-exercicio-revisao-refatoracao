@@ -6,10 +6,10 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
-    public:
+    private:
         const double taxa_comissao=0.10;
 
+    public:
         Cobertura(
             double area,
             int quartos,

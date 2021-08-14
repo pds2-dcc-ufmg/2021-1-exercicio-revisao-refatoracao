@@ -7,10 +7,10 @@
 using namespace std;
 
 class Casa : public Imovel {
-
-    public:
+    private:
         const double taxa_comissao=0.06;
 
+    public:
         Casa(
             double area,
             int quartos,
@@ -58,7 +58,6 @@ class Casa : public Imovel {
                     << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_total << endl;
 
         }
-
 };
 
 #endif
