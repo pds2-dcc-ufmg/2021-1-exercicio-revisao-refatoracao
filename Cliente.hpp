@@ -14,7 +14,7 @@ class Cliente {
             string cep,
             string telefone
         ): nome(nome), endereco(endereco), cidade(cidade), uf(uf), cep(cep), telefone(telefone){}
-        Cliente(){};
+        
         string nome;
         string endereco;
         string cidade;

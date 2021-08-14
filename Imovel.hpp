@@ -27,7 +27,7 @@ class Imovel {
             valor_total(valor()+comissao()),
             vendedor(vendedor),
             corretor(corretor){}
-        Imovel(){}
+        
         double area;
         int quartos;
         int banheiros;
