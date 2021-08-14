@@ -11,23 +11,6 @@ using std::endl;
 class Cobertura : public Imovel {
     
     public:
-
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
     void print() {
 
         std::cout << "[Cobertura]" << endl;
