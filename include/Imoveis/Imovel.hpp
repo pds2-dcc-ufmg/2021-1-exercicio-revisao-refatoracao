@@ -20,7 +20,6 @@ namespace Imoveis {
             double taxa_comissao;
 
         public:
-            Imovel(double area, double valor_m2, int q, int b, int v, string corretor, cliente::Cliente vendedor,double comissao);
             Imovel();
             
             double calcula_valor();

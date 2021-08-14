@@ -2,17 +2,6 @@
 
 using namespace Imoveis;
 
-Imovel::Imovel(double area, double valor_m2, int q, int b, int v, string corretor, cliente::Cliente vendedor, double comissao) {
-    this->_area = area;
-    this->_valor_m2 = valor_m2;
-    this->_comissao = comissao;
-    this->_valor = calcula_valor();
-    this->_Q = q;
-    this->_B = b;
-    this->_V = v;
-    this->_corretor = corretor;
-    this->_vendedor = vendedor;
-}
 
 void Imovel::print() {
     cout << "[Vendedor]" << endl;
