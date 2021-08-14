@@ -83,10 +83,6 @@ int main() {
         "3197317802"
     );
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
-
     Apartamento ap1(
         55.4,
         2,
@@ -96,7 +92,6 @@ int main() {
         cl1,
         "Tuoruars"
     );
-    qtdeA++;
 
     Apartamento ap2(
         74.5,
@@ -107,7 +102,6 @@ int main() {
         cl2,
         "Fyubyeis"
     );
-    qtdeA++;
 
     Apartamento ap3(
         87.2,
@@ -118,7 +112,6 @@ int main() {
         cl3,
         "Kelia"
     );
-    qtdeA++;
 
     // Cobertura
     Cobertura cb1(
@@ -130,7 +123,6 @@ int main() {
         cl4,
         "Koci"
     );
-    qtdeCb++;
     
     Cobertura cb2(
         134.8,
@@ -141,7 +133,6 @@ int main() {
         cl5,
         "Wail"
     );
-    qtdeCb++;
 
     Cobertura cb3(
         180.0,
@@ -152,7 +143,6 @@ int main() {
         cl6,
         "Fival"
     );
-    qtdeCb++;
 
     // Casas
     Casa ca1(
@@ -164,7 +154,6 @@ int main() {
         cl7,
         "Beydo"
     );
-    qtdeCa++;
 
     Casa ca2(
         245.0,
@@ -175,7 +164,10 @@ int main() {
         cl8,
         "Riuzi"
     );
-    qtdeCa++;
+
+    int qtde_aptos = 3;
+    int qtde_coberturas = 3;
+    int qtde_casas = 2;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -229,17 +221,17 @@ int main() {
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
+            << "\n Quantidade: " << qtde_aptos
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
             << "\n Comissão Total: R$" << comissAp
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
+            << "\n Quantidade: " << qtde_coberturas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
+            << "\n Quantidade: " << qtde_casas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
             << endl;
