@@ -7,6 +7,9 @@
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
 
+using std::cout;
+using std::endl;
+
 int main() {
     
      Cliente cl1 = Cliente("Xayso Sovon Ziahaka",
@@ -144,9 +147,9 @@ int main() {
     comissCa += ca2.comissao();
     std::cout << endl;
 
-    std::cout << "\n>> Resumo Geral <<" << endl;
+    cout << "\n>> Resumo Geral <<" << endl;
 
-    std::cout << "\n>>Apartamentos<<\n"
+    cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qtdeA
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
             << "\n Comissão Total: R$" << comissAp
