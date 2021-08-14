@@ -15,6 +15,8 @@ class Cliente {
         string _estado;
         string _cep;
         string _telefone;
+    
+        Cliente(string, string, string, string, string, string);
 
         void print();
 };
