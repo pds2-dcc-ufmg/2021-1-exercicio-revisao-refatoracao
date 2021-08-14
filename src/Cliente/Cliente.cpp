@@ -1,4 +1,4 @@
-#include "../include/Cliente/Cliente.hpp"
+#include "Cliente.hpp"
 
 using namespace cliente;
 
@@ -38,10 +38,10 @@ Cliente::Cliente(string nome, string endereco, string cidade, string uf, string 
 	
 void Cliente::print(){
 
-	std::cout << "  Nome: " << nome << endl
-		 << "  Telefone: " << telefone << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << cidade << endl
-		 << "  Estado: " << uf << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "  Nome: " << nome() << endl
+		 << "  Telefone: " << telefone() << endl
+		 << "  Endereço: " << endereco() << endl
+		 << "  Cidade: " << cidade() << endl
+		 << "  Estado: " << uf() << endl
+		 << "  CEP: " << cep() << endl;
 }

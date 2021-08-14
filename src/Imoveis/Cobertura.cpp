@@ -1,4 +1,4 @@
-#include "../include/Imoveis/Cobertura.hpp"
+#include "Cobertura.hpp"
 
 using namespace Imoveis;
 
