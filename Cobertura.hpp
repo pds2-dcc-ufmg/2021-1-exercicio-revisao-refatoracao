@@ -7,7 +7,7 @@ using namespace std;
 
 class Cobertura : public Imovel {
     private:
-        const double taxa_comissao=0.10;
+        static constexpr double taxa_comissao=0.10;
 
     public:
         Cobertura(
@@ -20,9 +20,9 @@ class Cobertura : public Imovel {
             string corretor
         );
 
-        double valor();
+        double valor() override;
 
-        double comissao();
+        double comissao() override;
 
         void print();
 };

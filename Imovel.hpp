@@ -19,13 +19,15 @@ class Imovel {
             int banheiros,
             int vagas,
             double valor_m2,
+            double comissao_imovel,
+            double valor_total,
             Cliente vendedor,
             string corretor
         );
         
-        virtual double comissao();
+        virtual double comissao()=0;
 
-        virtual double valor();
+        virtual double valor()=0;
         
         double area;
         int quartos;

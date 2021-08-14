@@ -8,7 +8,7 @@ using namespace std;
 
 class Casa : public Imovel {
     private:
-        const double taxa_comissao=0.06;
+        static constexpr double taxa_comissao=0.06;
 
     public:
         Casa(
@@ -21,9 +21,9 @@ class Casa : public Imovel {
             string corretor
         );
 
-        double valor();
+        double valor() override;
 
-        double comissao();
+        double comissao() override;
 
         void print();
 };

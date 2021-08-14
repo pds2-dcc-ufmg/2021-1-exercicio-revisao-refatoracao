@@ -14,6 +14,8 @@ Apartamento::Apartamento(
     banheiros,
     vagas,
     valor_m2,
+    area * valor_m2*taxa_comissao,
+    area*valor_m2*(taxa_comissao+1),
     vendedor,
     corretor
 ){}
@@ -35,7 +37,7 @@ void Apartamento::print() {
         << "  Quartos: " << quartos << endl
         << "  Banheiros: " << banheiros << endl
         << "  Vagas: " << vagas << endl
-        << "Taxa de Comissão: " << taxa_comissao*100 << "%" << endl
+        << "Taxa de Comissão: " << taxa_comissao*int(100) << "%" << endl
         << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao_imovel << endl
         << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_total << endl;
 }
