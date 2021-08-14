@@ -1,19 +1,17 @@
 #ifndef CLIENTE_HPP
 #define CLIENTE_HPP
-
 #include <string>
-using namespace std;
 
 class Cliente {
     public:
-        string NOME;
-        string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
+        std::string Nome;
+        std::string Endereco;
+        std::string Cidade;
+        std::string UF;
+        std::string CEP;
+        std::string Telefone;
 
-        void print();
+    void print();
 };
 
 #endif
