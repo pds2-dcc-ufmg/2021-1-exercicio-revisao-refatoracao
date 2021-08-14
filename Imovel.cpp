@@ -1,9 +1,9 @@
 #include "Imovel.hpp"
 
 Imovel::Imovel(){}
-
-Imovel::Imovel(double _area, int _numero_quartos, int _numero_banheiros, int _vagas, double _valorm2,
-               double _valor, double _comissao, Cliente _vendedor, string _corretor):
+ 
+Imovel::Imovel(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
+               double _valorm2, double _comissao, double _valor, Cliente _vendedor): 
 area(_area), numero_quartos(_numero_quartos), numero_banheiros(_numero_banheiros), vagas(_vagas), 
 valorm2(_valorm2), valor(_valor), comissao(_comissao), vendedor(_vendedor), corretor(_corretor){}
 

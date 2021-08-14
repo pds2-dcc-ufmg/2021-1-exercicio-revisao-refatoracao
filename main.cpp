@@ -19,51 +19,25 @@ int main() {
                                 "MG", "30285-422", "3198596327");
     Cliente *cl5 = new Cliente ("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano", "Belo Horizonte", 
                                 "MG", "30882-747", "3196274465");
-    Cliente *cl6 = new Cliente ("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)"
+    Cliente *cl6 = new Cliente ("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
                                 "Belo Horizonte", "MG", "31650-560", "3195004414");
-    Cliente *cl7 = new Cliente ("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova", "Belo Horizonte"
+    Cliente *cl7 = new Cliente ("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova", "Belo Horizonte",
                                 "MG", "31170-240", "3198461192");
     Cliente *cl8 = new Cliente ("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
-                                "MG", "30668-430", "3197317802");
+                                "Belo Horizonte", "MG", "30668-430", "3197317802");
+
 
     int qtdeA = 0;
     int qtdeCa = 0;
     int qtdeCb = 0;
 
-    Apartamento ap1;
-    ap1.corretor = "Tuoruars";
-    ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
-    ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
+    Apartamento *ap1 = new Apartamento ("Tuoruars", 55.4, 2, 1, 0, 987.0, ap1->comissao(), ap1->valor() + ap1->comissao(), *cl1);
     qtdeA++;
 
-    Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
-    ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
-    ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
+    Apartamento *ap2 = new Apartamento ("Fyubyeis", 74.5, 2, 1, 2, 1540.0, ap2->comissao(), ap2->valor() + ap2->comissao(), *cl2);
     qtdeA++;
 
-    Apartamento ap3;
-    ap3.corretor = "Kelia";
-    ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
-    ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
+    Apartamento *ap3 = new Apartamento ("Kelia", 87.2, 3, 2, 2, 2354.0, ap3->comissao(), ap3->valor() + ap3->comissao(), *cl3);
     qtdeA++;
 
     // Cobertura
@@ -203,4 +177,8 @@ int main() {
     delete cl6;
     delete cl7;
     delete cl8;
+
+    delete ap1;
+    delete ap2;
+    delete ap3;
 }

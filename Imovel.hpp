@@ -22,9 +22,9 @@ class Imovel {
 
     public:
         //imprime informacoes sobre vendedor e corretor
-        Imovel(double _area, int _numero_quartos, int _numero_banheiros, int _vagas, double _valorm2,
-               double _valor, double _comissao, Cliente _vendedor, string _corretor);
         Imovel();
+        Imovel(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
+               double _valorm2, double _comissao, double _valor, Cliente _vendedor);
         void print();
         void set_area(double _area);
         void set_numero_quartos(int _numero_quartos);
