@@ -155,28 +155,26 @@ int main() {
     qtdeCb++;
 
     // Casas
-    Casa ca1;
-    ca1.corretor = "Beydo";
-    ca1.area = 145.6;
-    ca1.quartos = 3;
-    ca1.banheiros = 3;
-    ca1.vagas = 2;
-    ca1.valor_m2 = 4023.6;
-    ca1.comissao_imovel = ca1.comissao();
-    ca1.valor_total = ca1.valor() + ca1.comissao();
-    ca1.vendedor = cl7;
+    Casa ca1(
+        145.6,
+        3,
+        3,
+        2,
+        4023.6,
+        cl7,
+        "Beydo"
+    );
     qtdeCa++;
 
-    Casa ca2;
-    ca2.corretor = "Riuzi";
-    ca2.area = 245.0;
-    ca2.quartos = 5;
-    ca2.banheiros = 4;
-    ca2.vagas = 4;
-    ca2.valor_m2 = 4856.2;
-    ca2.comissao_imovel = ca2.comissao();
-    ca2.valor_total = ca2.valor() + ca2.comissao();
-    ca2.vendedor = cl8;
+    Casa ca2(
+        245.0,
+        5,
+        4,
+        4,
+        4856.2,
+        cl8,
+        "Riuzi"
+    );
     qtdeCa++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;

@@ -11,6 +11,24 @@ class Casa : public Imovel {
     public:
     const double taxa_comissao=0.06;
 
+    Casa(
+        double area,
+        int quartos,
+        int banheiros,
+        int vagas,
+        double valor_m2,
+        Cliente cliente,
+        string corretor
+    ):Imovel(
+        area,
+        quartos,
+        banheiros,
+        vagas,
+        valor_m2,
+        cliente,
+        corretor
+    ){}
+
     double valor() override{
 
         double valor_casa = area * valor_m2;
