@@ -11,7 +11,7 @@ class Casa : public Imovel {
     public:
     const double taxa_comissao=0.06;
 
-    double valor() {
+    double valor() override{
 
         double valor_casa = area * valor_m2;
 
@@ -19,7 +19,7 @@ class Casa : public Imovel {
 
     }
 
-    double comissao() {
+    double comissao() override{
 
         double comissao_casa = area * valor_m2;
 

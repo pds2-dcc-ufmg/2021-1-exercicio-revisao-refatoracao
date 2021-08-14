@@ -18,9 +18,17 @@ class Apartamento : public Imovel {
         double valor_m2,
         Cliente cliente,
         string corretor
-    );
+    ):Imovel(
+        area,
+        quartos,
+        banheiros,
+        vagas,
+        valor_m2,
+        cliente,
+        corretor
+    ){}
 
-    double valor() {
+    double valor() override {
 
         double valorTotal = area * valor_m2;
 
@@ -28,7 +36,7 @@ class Apartamento : public Imovel {
 
     }
 
-    double comissao() {
+    double comissao() override {
 
         double resultado = area * valor_m2;
 

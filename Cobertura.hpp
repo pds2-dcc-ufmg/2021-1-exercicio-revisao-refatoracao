@@ -10,7 +10,7 @@ class Cobertura : public Imovel {
     public:
     const double taxa_comissao=0.10;
 
-    double valor() {
+    double valor() override {
 
         double val_total = area * valor_m2;
 
@@ -18,7 +18,7 @@ class Cobertura : public Imovel {
 
     }
 
-    double comissao() {
+    double comissao() override {
 
         double comissao_cobertura = area * valor_m2;
 

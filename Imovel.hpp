@@ -15,11 +15,18 @@ class Imovel {
             int banheiros,
             int vagas,
             double valor_m2,
-            double valor_total,
-            double comissao_imovel,
-            Cliente vendedor,
+            Cliente cliente,
             string corretor
-        );
+        ):
+            area(area),
+            quartos(quartos),
+            banheiros(banheiros),
+            vagas(vagas),
+            valor_m2(valor_m2),
+            comissao_imovel(comissao()),
+            valor_total(valor()+comissao()),
+            vendedor(cliente),
+            corretor(corretor){}
         Imovel(){}
         double area;
         int quartos;
@@ -30,6 +37,10 @@ class Imovel {
         double comissao_imovel;
         Cliente vendedor;
         string corretor;
+
+        virtual double comissao();
+
+        virtual double valor();
 
         void print() {
             cout << "[Vendedor]" << endl;
