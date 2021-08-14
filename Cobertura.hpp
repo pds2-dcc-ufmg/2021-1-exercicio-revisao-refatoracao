@@ -3,7 +3,10 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-using namespace std;
+
+using std::string;
+using std::cout;
+using std::endl;
 
 class Cobertura : public Imovel {
     
