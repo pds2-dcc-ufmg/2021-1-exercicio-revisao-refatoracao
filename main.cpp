@@ -1,5 +1,16 @@
+/* 
+-------------------------------------------------------------------------
+Uma imobiliária oferece um portifólio de imóveis para venda. 
+Cada imóvel tem seu valor avaliado pela sua metragem e 
+valor por metro quadrado estimado, sendo que o valor final inclui a comissão do corretor. 
+A taxa de corretagem neste exercício é determinada pelo tipo do imóvel: 
+apartamento, casa ou cobertura.  
+------------------------------------------------------------------------
+*/
+
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 #include "Imovel.hpp"
 #include "Casa.hpp"
@@ -8,70 +19,80 @@
 #include "Cliente.hpp"
 
 int main() {
-    
+
+    std::vector<Cliente> VetorClientes;
+
     Cliente cliente1;
-    cliente1.Nome = "Xayso Sovon Ziahaka";
-    cliente1.Endereco = "Rua Xangrilá - Braúnas";
-    cliente1.Cidade = "Belo Horizonte";
-    cliente1.UF = "MG";
-    cliente1.CEP = "31365-570";
-    cliente1.Telefone = "3196007958";
+    cliente1.setNome("Xayso Sovon Ziahaka");
+    cliente1.setEndereco("Rua Xangrilá - Braúnas");
+    cliente1.setCidade("Belo Horizonte");
+    cliente1.setUF("MG");
+    cliente1.setCEP("31365-570");
+    cliente1.setTelefone("3196007958");
+    VetorClientes.push_back(cliente1);
     
     Cliente cliente2;
-    cliente2.Nome = "Minia Pasies Kituos";
-    cliente2.Endereco = "Rua dos Jacobinos - Ouro Minas";
-    cliente2.Cidade = "Belo Horizonte";
-    cliente2.UF = "MG";
-    cliente2.CEP = "31870-290";
-    cliente2.Telefone = "3197627067";
+    cliente2.setNome("Minia Pasies Kituos");
+    cliente2.setEndereco("Rua dos Jacobinos - Ouro Minas");
+    cliente2.setCidade("Belo Horizonte");
+    cliente2.setUF("MG");
+    cliente2.setCEP("31870-290");
+    cliente2.setTelefone("3197627067");
+    VetorClientes.push_back(cliente2);
     
     Cliente cliente3;
-    cliente3.Nome = "Vuocue Leiur Baonauza";
-    cliente3.Endereco = "Rua Orminda de Almeida - Tupi B";
-    cliente3.Cidade = "Belo Horizonte";
-    cliente3.UF = "MG";
-    cliente3.CEP = "31842-630";
-    cliente3.Telefone = "3195949327";
+    cliente3.setNome("Vuocue Leiur Baonauza");
+    cliente3.setEndereco("Rua Orminda de Almeida - Tupi B");
+    cliente3.setCidade("Belo Horizonte");
+    cliente3.setUF("MG");
+    cliente3.setCEP("31842-630");
+    cliente3.setTelefone("3195949327");
+    VetorClientes.push_back(cliente3);
     
     Cliente cliente4;
-    cliente4.Nome = "Zerer Huduy Fyogar";
-    cliente4.Endereco = "Rua Taquaril - Jonas Veiga";
-    cliente4.Cidade = "Belo Horizonte";
-    cliente4.UF = "MG";
-    cliente4.CEP = "30285-422";
-    cliente4.Telefone = "3198596327";
+    cliente4.setNome("Zerer Huduy Fyogar");
+    cliente4.setEndereco("Rua Taquaril - Jonas Veiga");
+    cliente4.setCidade("Belo Horizonte");
+    cliente4.setUF("MG");
+    cliente4.setCEP("30285-422");
+    cliente4.setTelefone("3198596327");
+    VetorClientes.push_back(cliente4);
     
     Cliente cliente5;
-    cliente5.Nome = "Ceziel Mioti Pler";
-    cliente5.Endereco = "Rua João Gualberto Costa - Serrano";
-    cliente5.Cidade = "Belo Horizonte";
-    cliente5.UF = "MG";
-    cliente5.CEP = "30882-747";
-    cliente5.Telefone = "3196274465";
+    cliente5.setNome("Ceziel Mioti Pler");
+    cliente5.setEndereco("Rua João Gualberto Costa - Serrano");
+    cliente5.setCidade("Belo Horizonte");
+    cliente5.setUF("MG");
+    cliente5.setCEP("30882-747");
+    cliente5.setTelefone("3196274465");
+    VetorClientes.push_back(cliente5);
     
     Cliente cliente6;
-    cliente6.Nome = "Esxo Cilal Zyais";
-    cliente6.Endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cliente6.Cidade = "Belo Horizonte";
-    cliente6.UF = "MG";
-    cliente6.CEP = "31650-560";
-    cliente6.Telefone = "3195004414";
+    cliente6.setNome("Esxo Cilal Zyais");
+    cliente6.setEndereco("Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)");
+    cliente6.setCidade("Belo Horizonte");
+    cliente6.setUF("MG");
+    cliente6.setCEP("31650-560");
+    cliente6.setTelefone("3195004414");
+    VetorClientes.push_back(cliente6);
     
     Cliente cliente7;
-    cliente7.Nome = "Leova Wikyecil Neaca";
-    cliente7.Endereco = "Rua João Arantes - Cidade Nova";
-    cliente7.Cidade = "Belo Horizonte";
-    cliente7.UF = "MG";
-    cliente7.CEP = "31170-240";
-    cliente7.Telefone = "3198461192";
+    cliente7.setNome("Leova Wikyecil Neaca");
+    cliente7.setEndereco("Rua João Arantes - Cidade Nova");
+    cliente7.setCidade("Belo Horizonte");
+    cliente7.setUF("MG");
+    cliente7.setCEP("31170-240");
+    cliente7.setTelefone("3198461192");
+    VetorClientes.push_back(cliente7);
     
     Cliente cliente8;
-    cliente8.Nome = "Teas Heimeu Pipe";
-    cliente8.Endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cliente8.Cidade = "Belo Horizonte";
-    cliente8.UF = "MG";
-    cliente8.CEP = "30668-430";
-    cliente8.Telefone = "3197317802";
+    cliente8.setNome("Teas Heimeu Pipe");
+    cliente8.setEndereco("Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)");
+    cliente8.setCidade("Belo Horizonte");
+    cliente8.setUF("MG");
+    cliente8.setCEP("30668-430");
+    cliente8.setTelefone("3197317802");
+    VetorClientes.push_back(cliente8);
 
     int qtdeA = 0;
     int qtdeCa = 0;

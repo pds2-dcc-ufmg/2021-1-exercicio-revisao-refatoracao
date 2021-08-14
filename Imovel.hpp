@@ -34,11 +34,11 @@ class Imovel {
     string Corretor;
 
     void print() {
-            cout << "[Vendedor]" << endl;
-            infosCliente.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + Corretor << endl;
-        }
+        cout << "[Vendedor]" << endl;
+        infosCliente.print();
+        cout << "[Corretor]" << endl;
+        cout << "  " + Corretor << endl;
+    }
 
     
 };

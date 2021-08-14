@@ -46,6 +46,10 @@ std::string Cliente::getTelefone(){
 	return Telefone;
 }
 
+void Cliente::adicionar(Cliente cl) {
+	VetorClientes.push_back(cl);
+}
+
 void Cliente::print(){
 	std::cout 
 		<< "  Nome: " << getNome() << std::endl
