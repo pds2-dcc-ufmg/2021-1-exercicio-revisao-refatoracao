@@ -1,3 +1,4 @@
+
 #ifndef IMOVEL_HPP
 #define IMOVEL_HPP
 
@@ -8,23 +9,20 @@
 using namespace std;
 
 class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
+    private:
+        double area;
+        int Q;//?
+        int B;//?
+        int V;//?
+        double valorm2;
+        double valor;
+        double C;//?
         Cliente vendedor;
         string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+    public:
+        //imprime informacoes sobre vendedor e corretor
+        void print();
 };
 
 #endif

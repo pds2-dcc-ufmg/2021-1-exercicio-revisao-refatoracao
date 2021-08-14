@@ -194,4 +194,13 @@ int main() {
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
             << endl;
+
+    delete cl1;
+    delete cl2;
+    delete cl3;
+    delete cl4;
+    delete cl5;
+    delete cl6;
+    delete cl7;
+    delete cl8;
 }

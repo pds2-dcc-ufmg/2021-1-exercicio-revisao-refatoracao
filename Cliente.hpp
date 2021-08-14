@@ -14,9 +14,12 @@ class Cliente {
         string telefone;
 
     public:
+        //este metodo imprime os atrubutos da classe Cliente
         void print();
+        
         Cliente();
         Cliente(string _nome, string _endereco, string _cidade, string _uf, string _cep, string _telefone);
+
         void set_nome(string _nome);
         void set_endereco(string _endereco);
         void set_cidade(string _cidade);
