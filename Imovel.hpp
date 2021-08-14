@@ -30,13 +30,6 @@ class Imovel {
         double comissao();
 
         void print();
-    
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
 };
 
 #endif
