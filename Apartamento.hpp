@@ -11,9 +11,9 @@ using std::endl;
 class Apartamento : public Imovel {
 
     public: 
-
         void print();
     
+        Apartamento(string, double, int, int, int, double, Cliente);
 };
 
 #endif
