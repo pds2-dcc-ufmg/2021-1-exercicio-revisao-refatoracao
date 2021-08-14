@@ -9,11 +9,10 @@ using std::cout;
 using std::endl;
 
 class Casa : public Imovel {
-
     public:
-
-    void print();
+        Casa(string, double, int, int, int, double, Cliente);
     
+        void print();
 };
 
 #endif
