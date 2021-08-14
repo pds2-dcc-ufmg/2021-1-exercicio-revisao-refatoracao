@@ -16,7 +16,7 @@ class Cobertura : public Imovel {
         int banheiros,
         int vagas,
         double valor_m2,
-        Cliente cliente,
+        Cliente vendedor,
         string corretor
     ):Imovel(
         area,
@@ -24,7 +24,7 @@ class Cobertura : public Imovel {
         banheiros,
         vagas,
         valor_m2,
-        cliente,
+        vendedor,
         corretor
     ){}
 

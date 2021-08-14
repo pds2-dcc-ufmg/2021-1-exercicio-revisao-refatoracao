@@ -15,7 +15,7 @@ class Imovel {
             int banheiros,
             int vagas,
             double valor_m2,
-            Cliente cliente,
+            Cliente vendedor,
             string corretor
         ):
             area(area),
@@ -25,7 +25,7 @@ class Imovel {
             valor_m2(valor_m2),
             comissao_imovel(comissao()),
             valor_total(valor()+comissao()),
-            vendedor(cliente),
+            vendedor(vendedor),
             corretor(corretor){}
         Imovel(){}
         double area;
