@@ -87,40 +87,37 @@ int main() {
     int qtdeCa = 0;
     int qtdeCb = 0;
 
-    Apartamento ap1;
-    ap1.corretor = "Tuoruars";
-    ap1.area = 55.4;
-    ap1.quartos = 2;
-    ap1.banheiros = 1;
-    ap1.vagas = 0;
-    ap1.valor_m2 = 987.0;
-    ap1.comissao_imovel = ap1.comissao();
-    ap1.valor_total = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
+    Apartamento ap1(
+        55.4,
+        2,
+        1,
+        0,
+        987.0,
+        cl1,
+        "Tuoruars"
+    );
     qtdeA++;
 
-    Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
-    ap2.area = 74.5;
-    ap2.quartos = 2;
-    ap2.banheiros = 1;
-    ap2.vagas = 2;
-    ap2.valor_m2 = 1540.0;
-    ap2.comissao_imovel = ap2.comissao();
-    ap2.valor_total = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
+    Apartamento ap2(
+        74.5,
+        2,
+        1,
+        2,
+        1540.0,
+        cl2,
+        "Fyubyeis"
+    );
     qtdeA++;
 
-    Apartamento ap3;
-    ap3.corretor = "Kelia";
-    ap3.area = 87.2;
-    ap3.quartos = 3;
-    ap3.banheiros = 2;
-    ap3.vagas = 2;
-    ap3.valor_m2 = 2354.0;
-    ap3.comissao_imovel = ap3.comissao();
-    ap3.valor_total = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
+    Apartamento ap3(
+        87.2,
+        3,
+        2,
+        2,
+        2354.0,
+        cl3,
+        "Kelia"
+    );
     qtdeA++;
 
     // Cobertura

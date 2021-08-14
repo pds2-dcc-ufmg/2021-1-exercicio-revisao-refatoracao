@@ -10,6 +10,16 @@ class Apartamento : public Imovel {
 
     public: 
     const double taxa_comissao=0.04;
+    Apartamento(
+        double area,
+        int quartos,
+        int banheiros,
+        int vagas,
+        double valor_m2,
+        Cliente cliente,
+        string corretor
+    );
+
     double valor() {
 
         double valorTotal = area * valor_m2;
