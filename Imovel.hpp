@@ -5,7 +5,11 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+using std::fixed;
+using std::setprecision;
 
 class Imovel {
     public:
