@@ -5,3 +5,10 @@ Imovel::Imovel(string cor, double a, int q, int b, int vag, double valm2, Client
     _comissao = comissao();
     _valor = valor() + comissao();
 };
+
+double Imovel::valor() {
+        return _area * _valorm2;
+    }
+double Imovel::comissao(){
+        return _area * _valorm2 * _porcComissao;
+    }
