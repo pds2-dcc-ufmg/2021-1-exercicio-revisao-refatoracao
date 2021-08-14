@@ -37,7 +37,7 @@ void Cobertura::print() {
         << "  Quartos: " << quartos << endl
         << "  Banheiros: " << banheiros << endl
         << "  Vagas: " << vagas << endl
-        << "Taxa de Comissão: " << taxa_comissao*int(100) << "%" << endl
+        << "Taxa de Comissão: " << int(taxa_comissao*100) << "%" << endl
         << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao_imovel << endl
         << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_total << endl;
 }
