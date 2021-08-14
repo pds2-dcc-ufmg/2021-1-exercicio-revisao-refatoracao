@@ -7,6 +7,10 @@
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
 
+using namespace Pessoa;
+using namespace Imovel;
+
+
 int main() {
     
     Cliente cl1 = Cliente("Xayso Sovon Ziahaka", 
