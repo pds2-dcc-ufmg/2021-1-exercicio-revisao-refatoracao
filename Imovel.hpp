@@ -24,13 +24,16 @@ class Imovel {
         double perc_comissao;
 
     public:
-        //imprime informacoes sobre vendedor e corretor
         Imovel();
-        Imovel(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
-               double _valorm2, double _comissao, double _valor, Cliente _vendedor);
+        Imovel(string _corretor, double _area, int _numero_quartos, 
+               int _numero_banheiros, int _vagas, double _valorm2, Cliente _vendedor, double _perc_comissao);
+
+        //calcula valor do apartamento com base em sua area e valorm2
         double calc_valor();
+
+        //calcula a comissao do vendedor com base no valor do apartamento e porcentagem definida
         double calc_comissao();
-        void print();
+
         void set_area(double _area);
         void set_numero_quartos(int _numero_quartos);
         void set_numero_banheiros(int _numero_banheiros);
@@ -39,6 +42,7 @@ class Imovel {
         void set_valor(double _valor);
         void set_comissao(double _comissao);
         void set_corretor(string _corretor);
+        void set_perc_comissao(double _perc_comissao);
         Cliente get_vendedor();
         double get_area();
         int get_numero_quartos();
@@ -48,6 +52,7 @@ class Imovel {
         double get_valor();
         double get_comissao();
         string get_corretor();
+        double get_perc_comissao();
 };
 
 #endif

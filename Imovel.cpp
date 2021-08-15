@@ -1,25 +1,21 @@
 #include "Imovel.hpp"
 
 Imovel::Imovel(){}
- 
-Imovel::Imovel(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
-               double _valorm2, double _comissao, double _valor, Cliente _vendedor): 
-area(_area), numero_quartos(_numero_quartos), numero_banheiros(_numero_banheiros), vagas(_vagas), 
-valorm2(_valorm2), valor(_valor), comissao(_comissao), vendedor(_vendedor), corretor(_corretor){}
 
-void Imovel::print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+Imovel::Imovel(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, 
+               int _vagas, double _valorm2, Cliente _vendedor, double _perc_comissao): 
+area(_area), numero_quartos(_numero_quartos), numero_banheiros(_numero_banheiros), vagas(_vagas), 
+valorm2(_valorm2), vendedor(_vendedor), corretor(_corretor), perc_comissao(_perc_comissao){
+    comissao = this->calc_comissao(); 
+    valor = this->calc_valor() + comissao;
 }
 
 double Imovel::calc_valor() {
-    return get_area() * get_valorm2();
+    return area * valorm2;
 }
 
 double Imovel::calc_comissao() {
-    return calc_valor() * perc_comissao;
+    return area * valorm2 * perc_comissao;
 }
 
 void Imovel::set_area(double _area){
@@ -52,6 +48,10 @@ void Imovel::set_comissao(double _comissao){
 
 void Imovel::set_corretor(string _corretor){
     corretor = _corretor;
+}
+
+void Imovel::set_perc_comissao(double _perc_comissao){
+    perc_comissao = _perc_comissao;
 }
 
 Cliente Imovel::get_vendedor(){
@@ -88,4 +88,8 @@ double Imovel::get_comissao(){
 
 string Imovel::get_corretor(){
     return corretor;
+}
+
+double Imovel::get_perc_comissao(){
+    return perc_comissao;
 }
