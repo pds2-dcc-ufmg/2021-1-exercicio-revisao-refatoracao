@@ -66,46 +66,18 @@ int main() {
     double comissAp = 0.0;
     double comissCb = 0.0;
     double comissCa = 0.0;
-    
-    ap1.print();
-    valorAp += ap1.calcular_valor();
-    comissAp += ap1.calcular_comissao();
-    std::cout << endl;
 
-    ap2.print();
-    valorAp += ap2.calcular_valor();
-    comissAp += ap2.calcular_comissao();
-    std::cout << endl;
+    atualizar_valores<Apartamento>(ap1, &valorAp, &comissAp);
+    atualizar_valores<Apartamento>(ap2, &valorAp, &comissAp);
+    atualizar_valores<Apartamento>(ap3, &valorAp, &comissAp);
 
-    ap3.print();
-    valorAp += ap3.calcular_valor();
-    comissAp += ap3.calcular_comissao();
-    std::cout << endl;
+    atualizar_valores<Cobertura>(cb1, &valorCb, &comissCb);
+    atualizar_valores<Cobertura>(cb2, &valorCb, &comissCb);
+    atualizar_valores<Cobertura>(cb3, &valorCb, &comissCb);
 
-    cb1.print();
-    valorCb += cb1.calcular_valor();
-    comissCb += cb1.calcular_comissao();
-    std::cout << endl;
+    atualizar_valores<Casa>(ca1, &valorCa, &comissCa);
+    atualizar_valores<Casa>(ca2, &valorCa, &comissCa);
 
-    cb2.print();
-    valorCb += cb2.calcular_valor();
-    comissCb += cb2.calcular_comissao();
-    std::cout << endl;
-
-    cb3.print();
-    valorCb += cb3.calcular_valor();
-    comissCb += cb3.calcular_comissao();
-    std::cout << endl;
-
-    ca1.print();
-    valorCa += ca1.calcular_valor();
-    comissCa += ca1.calcular_comissao();
-    std::cout << endl;
-
-    ca2.print();
-    valorCa += ca2.calcular_valor();
-    comissCa += ca2.calcular_comissao();
-    std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 

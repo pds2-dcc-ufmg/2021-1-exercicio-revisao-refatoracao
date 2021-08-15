@@ -25,6 +25,13 @@ T criar_imovel(string corretor, double area, int qtd_quartos, int qtd_banheiros,
     return imovel;
 }
 
+template<class W>
+void atualizar_valores(W imovel, double *valor_imovel, double *comissao_imovel){
+    imovel.print();
+    *valor_imovel += imovel.calcular_valor();
+    *comissao_imovel += imovel.calcular_comissao();
+    std::cout << endl;
 
+}
 
 #endif
