@@ -2,8 +2,8 @@
 -> Alterei nomes das variáveis e de métodos, colocando todos em letra minúscula no padrao "nome" ou "nome_variavel" e 
 alterei nomes para que ficassem mais expressivos.
 -> Criei arquivos ".cpp" para as classes que ainda não possuíam.
--> Criei pastas "build", "src" e "include" para melhor organizazção
--> Criei getters e setters para as variáveis e as tornei privadas ou protected(no caso de "Imovel").
+-> Criei pastas "build", "src" e "include" para melhor organizazção.
+-> Criei getters e setters para as variáveis e as tornei privadas ou protected (no caso de "Imovel").
 -> Criei e declarei virtual o método que calcula a comissão na classe "Imovel".
 -> Removi das classes que herdam "Imovel" o método que calcula o valor, e o coloquei na classe "Imovel".
 -> Utilizei o método que calcula o valor no método que calcula a comissão.
