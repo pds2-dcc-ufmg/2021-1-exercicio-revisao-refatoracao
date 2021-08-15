@@ -185,42 +185,42 @@ int main() {
     double comissCb = 0.0;
     double comissCa = 0.0;
     
-    ap1.print();
+    ap1.operator<<(ap1);
     valorAp += ap1.calcula_valor();
     comissAp += ap1.calcula_comissao();
     std::cout << endl;
 
-    ap2.print();
+    ap2.operator<<(ap2);
     valorAp += ap2.calcula_valor();
     comissAp += ap2.calcula_comissao();
     std::cout << endl;
 
-    ap3.print();
+    ap3.operator<<(ap3);
     valorAp += ap3.calcula_valor();
     comissAp += ap3.calcula_comissao();
     std::cout << endl;
 
-    cb1.print();
+    cb1.operator<<(cb1);
     valorCb += cb1.calcula_valor();
     comissCb += cb1.calcula_comissao();
     std::cout << endl;
 
-    cb2.print();
+    cb2.operator<<(cb2);
     valorCb += cb2.calcula_valor();
     comissCb += cb2.calcula_comissao();
     std::cout << endl;
 
-    cb3.print();
+    cb3.operator<<(cb3);
     valorCb += cb3.calcula_valor();
     comissCb += cb3.calcula_comissao();
     std::cout << endl;
 
-    ca1.print();
+    ca1.operator<<(ca1);
     valorCa += ca1.calcula_valor();
     comissCa += ca1.calcula_comissao();
     std::cout << endl;
 
-    ca2.print();
+    ca2.operator<<(ca2);
     valorCa += ca2.calcula_valor();
     comissCa += ca2.calcula_comissao();
     std::cout << endl;

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include "Cliente.hpp"
 
 using namespace std;
@@ -14,18 +15,19 @@ namespace Imoveis {
             int _Q, _B, _V;
             double _area, _valor_m2, _valor, _comissao;
             string _corretor;
-            cliente::Cliente _vendedor;
             
-            // Atributo que todas as subclasses utilizam para calcular o valor da comissao
-            double taxa_comissao;
 
         public:
             Imovel();
             
+            cliente::Cliente _vendedor;
+            // Atributo que todas as subclasses utilizam para calcular o valor da comissao
+            double taxa_comissao;
+            string tipo_imovel;
             double calcula_valor();
             double calcula_comissao();
             
-            void print();
+            ostream& operator << (Imovel imovel);
             
             void set_area(double area);
             void set_Q(int Q);
@@ -45,7 +47,6 @@ namespace Imoveis {
             double get_valor();
             double get_comissao();
             string get_corretor();
-            cliente::Cliente get_vendedor();
     };
 }
 

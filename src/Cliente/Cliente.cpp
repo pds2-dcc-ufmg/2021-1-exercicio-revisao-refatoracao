@@ -4,6 +4,8 @@ using namespace cliente;
 
 Cliente::Cliente(){}
 
+// Construtor
+
 Cliente::Cliente(string nome, string endereco, string cidade, string uf, string cep, string telefone){
 	this->_nome = nome;
 	this->_endereco = endereco;
@@ -12,6 +14,8 @@ Cliente::Cliente(string nome, string endereco, string cidade, string uf, string 
 	this->_cep = cep;
 	this->_telefone = telefone;
 }
+
+	// Getters
 
 	string Cliente::nome(){
 		return this->_nome;
@@ -36,12 +40,15 @@ Cliente::Cliente(string nome, string endereco, string cidade, string uf, string 
 		return this->_telefone;
 	}
 	
-void Cliente::print(){
+// O método print() retorna uma string com as informações do objeto
 
-	std::cout << "  Nome: " << nome() << endl
-		 << "  Telefone: " << telefone() << endl
-		 << "  Endereço: " << endereco() << endl
-		 << "  Cidade: " << cidade() << endl
-		 << "  Estado: " << uf() << endl
-		 << "  CEP: " << cep() << endl;
+string& Cliente::print(){
+	string out = string("Nome: ") += nome() +=
+			   string("Telefone: ") += telefone() += string("\n") +=
+			   string("Endereço: ") += endereco() += string("\n") +=
+			   string("Cidade: ") += cidade() += string("\n") +=
+			   string("Estado: ") += uf() += string("\n") +=
+			   string("CEP: ") += cep() += string("\n");			   
+
+	return out;
 }

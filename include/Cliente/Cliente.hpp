@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ namespace cliente {
             
             string telefone();
             
-            void print();
+            string& print();
     };
 }
 #endif

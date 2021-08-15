@@ -1,15 +1,28 @@
 #include "Imovel.hpp"
 
 using namespace Imoveis;
+using namespace cliente;
 
 Imovel::Imovel(){}
 
-void Imovel::print() {
-    cout << "[Vendedor]" << endl;
-    _vendedor.print();
-    cout << "[Corretor]" << endl;
-    cout << "  " + _corretor << endl;
+ostream& operator << (ostream &out, Imovel imovel) { 
+    int porcentagem_comissao = imovel.taxa_comissao * 100;
+    out << "[Vendedor]" << endl
+        << imovel._vendedor.print() << endl
+        << "[Corretor]" << endl
+        << "  " + imovel.get_corretor() << endl  
+        << imovel.tipo_imovel << endl
+        << "area: " << imovel.get_area() << endl
+        << "  Quartos: " << imovel.get_Q() << endl
+        << "  Banheiros: " << imovel.get_B() << endl
+        << "  Vagas: " << imovel.get_V() << endl
+        << "Taxa de Comissão: " << porcentagem_comissao << "%" << endl
+        << "valor Comissão: R$ " << fixed << setprecision(2) << imovel.get_comissao() << endl
+        << "valor de Venda: R$ " << fixed << setprecision(2) << imovel.get_valor() << endl;
+
+    return out;
 }
+
 
 double Imovel::calcula_valor() {
     double v = _area * _valor_m2;
@@ -73,7 +86,4 @@ double Imovel::get_comissao(){
 }
 string Imovel::get_corretor(){
     return this-> _corretor;
-}
-cliente::Cliente Imovel::get_vendedor(){
-    return this-> _vendedor;
 }
