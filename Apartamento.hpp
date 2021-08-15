@@ -4,6 +4,8 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
+#define TAXA_COMISSAO 0.04
+
 using namespace std;
 
 class Apartamento : public Imovel {
@@ -22,7 +24,7 @@ class Apartamento : public Imovel {
 
         double c = area * valor_m2;
 
-        return c * 0.04;
+        return c * TAXA_COMISSAO;
         
     }
 
