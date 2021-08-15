@@ -3,6 +3,9 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
+
+#define COMISSAO_COBERTURA 0.10
+
 using namespace std;
 
 class Cobertura : public Imovel {
@@ -21,7 +24,7 @@ class Cobertura : public Imovel {
 
         double c = area * valor_m2;
 
-        return c * 0.10;
+        return c * COMISSAO_COBERTURA;
         
     }
 
