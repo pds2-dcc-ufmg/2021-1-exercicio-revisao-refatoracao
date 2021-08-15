@@ -4,16 +4,17 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
-
 namespace Imoveis {
 
     class Casa : public Imovel {
 
         public:
-            Casa();
+            Casa(
+            std::string corretor, 
+            double area, int quartos, 
+            int banheiros, int vagas, 
+            double valor_m2, cliente::Cliente vendedor);
 
-            void print();
     };
 
 }

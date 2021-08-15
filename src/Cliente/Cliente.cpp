@@ -17,38 +17,60 @@ Cliente::Cliente(string nome, string endereco, string cidade, string uf, string 
 
 	// Getters
 
-	string Cliente::nome(){
+	string Cliente::get_nome(){
 		return this->_nome;
 	}
-	string Cliente::endereco(){
+	string Cliente::get_endereco(){
 		return this->_nome;
 	}
 	
-	string Cliente::cidade(){
+	string Cliente::get_cidade(){
 		return this->_cidade;
 	}
 	
-	string Cliente::uf(){
+	string Cliente::get_uf(){
 		return this->_uf;
 	}
 	
-	string Cliente::cep(){
+	string Cliente::get_cep(){
 		return this->_cep;
 	}
 	
-	string Cliente::telefone(){
+	string Cliente::get_telefone(){
 		return this->_telefone;
 	}
 	
 // O método print() retorna uma string com as informações do objeto
 
-string& Cliente::print(){
-	string out = string("Nome: ") += nome() +=
-			   string("Telefone: ") += telefone() += string("\n") +=
-			   string("Endereço: ") += endereco() += string("\n") +=
-			   string("Cidade: ") += cidade() += string("\n") +=
-			   string("Estado: ") += uf() += string("\n") +=
-			   string("CEP: ") += cep() += string("\n");			   
+string Cliente::print(){
+	string s_nome, s_telefone, s_endereco, s_cidade, s_uf, s_cep;
+	s_nome = get_nome();
+	s_telefone = get_telefone();
+	s_endereco = get_endereco();
+	s_cidade = get_cidade();
+	s_uf = get_uf();
+	s_cep = get_cep();
+
+	// Concatenando strings
+	
+	string out("Nome: ");
+	out.append(s_nome);
+	out.append("\n");
+	out.append("Telefone: ");
+	out.append(s_telefone);
+	out.append("\n"); 
+	out.append("Endereço: ");
+	out.append(s_endereco);
+	out.append("\n");
+	out.append("Cidade: "); 
+	out.append(s_cidade); 
+	out.append("\n"); 
+	out.append("Estado: "); 
+	out.append(s_uf); 
+	out.append("\n"); 
+	out.append("CEP: "); 
+	out.append(s_cep); 
+	out.append("\n");			   
 
 	return out;
 }

@@ -21,20 +21,22 @@ namespace cliente {
             Cliente(string nome, string endereco, string cidade, string uf, string cep, string telefone);
 
             Cliente();
-            
-            string nome();
 
-            string endereco();
+            // Getters
             
-            string cidade();
+            string get_nome();
+
+            string get_endereco();
             
-            string uf();
+            string get_cidade();
             
-            string cep();
+            string get_uf();
             
-            string telefone();
+            string get_cep();
             
-            string& print();
+            string get_telefone();
+            
+            string print();
     };
 }
 #endif

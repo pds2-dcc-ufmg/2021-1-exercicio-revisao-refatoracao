@@ -4,7 +4,6 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
 
 namespace Imoveis {
 
@@ -12,9 +11,11 @@ namespace Imoveis {
         
         public:
 
-        Cobertura();
+            Cobertura(std::string corretor, 
+                      double area, int quartos, 
+                      int banheiros, int vagas, 
+                      double valor_m2, cliente::Cliente vendedor);
 
-        void print();
     };
 }
 
