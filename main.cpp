@@ -6,9 +6,13 @@
 #include "Cobertura.hpp"
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
-#define PORCENTAGEM_COMISSAO_APARTAMENTO 0.04
-#define PORCENTAGEM_COMISSAO_CASA 0.06
-#define PORCENTAGEM_COMISSAO_COBERTURA 0.10
+
+ void totais(Imovel X, double& valorX, double& comissX){
+    X.print();
+    valorX += X.calc_valor();
+    comissX += X.calc_comissao();
+    std::cout << endl;
+}
 
 int main() {
     
@@ -35,92 +39,70 @@ int main() {
     int qtdeCoberturas = 0;
 
     //Apartamentos
-    Apartamento *ap1 = new Apartamento ("Tuoruars", 55.4, 2, 1, 0, 987.0, ap1->calc_comissao(), ap1->calc_valor() + ap1->calc_comissao(), *cl1);
+    Apartamento *ap1 = new Apartamento ("Tuoruars", 55.4, 2, 1, 0, 987.0, ap1->calc_comissao(),
+                                        ap1->calc_valor() + ap1->calc_comissao(), *cl1);
     qtdeApartamentos++;
-    Apartamento *ap2 = new Apartamento ("Fyubyeis", 74.5, 2, 1, 2, 1540.0, ap2->calc_comissao(), ap2->calc_valor() + ap2->calc_comissao(), *cl2);
+    Apartamento *ap2 = new Apartamento ("Fyubyeis", 74.5, 2, 1, 2, 1540.0, ap2->calc_comissao(),
+                                        ap2->calc_valor() + ap2->calc_comissao(), *cl2);
     qtdeApartamentos++;
-    Apartamento *ap3 = new Apartamento ("Kelia", 87.2, 3, 2, 2, 2354.0, ap3->calc_comissao(), ap3->calc_valor() + ap3->calc_comissao(), *cl3);
+    Apartamento *ap3 = new Apartamento ("Kelia", 87.2, 3, 2, 2, 2354.0, ap3->calc_comissao(),
+                                        ap3->calc_valor() + ap3->calc_comissao(), *cl3);
     qtdeApartamentos++;
 
     // Coberturas
-    Cobertura *cb1 = new Cobertura ("Koci", 120.1, 3, 3, 2, 3123.5, cb1->calc_comissao(), cb1->calc_valor() + cb1->calc_comissao(), *cl4);
+    Cobertura *cb1 = new Cobertura ("Koci", 120.1, 3, 3, 2, 3123.5, cb1->calc_comissao(),
+                                    cb1->calc_valor() + cb1->calc_comissao(), *cl4);
     qtdeCoberturas++;
-    Cobertura *cb2 = new Cobertura ("Wail", 134.8, 4, 3, 3, 3578.2, cb2->calc_comissao(), cb2->calc_valor() + cb2->calc_comissao(), *cl5);
+    Cobertura *cb2 = new Cobertura ("Wail", 134.8, 4, 3, 3, 3578.2, cb2->calc_comissao(),
+                                    cb2->calc_valor() + cb2->calc_comissao(), *cl5);
     qtdeCoberturas++;
-    Cobertura *cb3 = new Cobertura ("Fival", 180.0, 4, 4, 4, 4165.7, cb3->calc_comissao(), cb3->calc_valor() + cb3->calc_comissao(), *cl6);
+    Cobertura *cb3 = new Cobertura ("Fival", 180.0, 4, 4, 4, 4165.7, cb3->calc_comissao(),
+                                    cb3->calc_valor() + cb3->calc_comissao(), *cl6);
     qtdeCoberturas++;
 
     // Casas
-    Casa *ca1 = new Casa ("Beydo", 145.6, 3, 3, 2, 4023.6, ca1->calc_comissao(), ca1->calc_valor() + ca1->calc_comissao(), *cl7);
+    Casa *ca1 = new Casa ("Beydo", 145.6, 3, 3, 2, 4023.6, ca1->calc_comissao(),
+                          ca1->calc_valor() + ca1->calc_comissao(), *cl7);
     qtdeCasas++;
-    Casa *ca2 = new Casa ("Riuzi", 245.0, 5, 4, 4, 4856.2, ca2->calc_comissao(), ca2->calc_valor() + ca2->calc_comissao(), *cl8);
+    Casa *ca2 = new Casa ("Riuzi", 245.0, 5, 4, 4, 4856.2, ca2->calc_comissao(),
+                          ca2->calc_valor() + ca2->calc_comissao(), *cl8);
     qtdeCasas++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
-    
-    ap1->print();
-    valorAp += ap1->calc_valor();
-    comissAp += ap1->calc_comissao();
-    std::cout << endl;
+    double total_valor_aps = 0.0;
+    double total_comiss_aps = 0.0;
+    totais(*ap1, total_valor_aps, total_comiss_aps);
+    totais(*ap2, total_valor_aps, total_comiss_aps);
+    totais(*ap3, total_valor_aps, total_comiss_aps);
 
-    ap2->print();
-    valorAp += ap2->calc_valor();
-    comissAp += ap2->calc_comissao();
-    std::cout << endl;
+    double total_valor_coberturas = 0.0;
+    double total_comiss_coberturas = 0.0;
+    totais(*cb1, total_valor_coberturas, total_comiss_coberturas);
+    totais(*cb2, total_valor_coberturas, total_comiss_coberturas);
+    totais(*cb3, total_valor_coberturas, total_comiss_coberturas);
 
-    ap3->print();
-    valorAp += ap3->calc_valor();
-    comissAp += ap3->calc_comissao();
-    std::cout << endl;
-
-    cb1->print();
-    valorCb += cb1->calc_valor();
-    comissCb += cb1->calc_comissao();
-    std::cout << endl;
-
-    cb2->print();
-    valorCb += cb2->calc_valor();
-    comissCb += cb2->calc_comissao();
-    std::cout << endl;
-
-    cb3->print();
-    valorCb += cb3->calc_valor();
-    comissCb += cb3->calc_comissao();
-    std::cout << endl;
-
-    ca1->print();
-    valorCa += ca1->calc_valor();
-    comissCa += ca1->calc_comissao();
-    std::cout << endl;
-
-    ca2->print();
-    valorCa += ca2->calc_valor();
-    comissCa += ca2->calc_comissao();
-    std::cout << endl;
+    double total_valor_casas = 0.0;
+    double total_comiss_casas = 0.0;
+    totais(*ca1, total_valor_casas, total_comiss_casas);
+    totais(*ca2, total_valor_casas, total_comiss_casas);
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qtdeApartamentos
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << total_valor_aps
+            << "\n Comissão Total: R$" << total_comiss_aps
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << qtdeCoberturas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << total_valor_coberturas
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << total_comiss_coberturas
             << endl
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << qtdeCasas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << total_valor_casas
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << total_comiss_casas
             << endl;
 
     delete cl1;
