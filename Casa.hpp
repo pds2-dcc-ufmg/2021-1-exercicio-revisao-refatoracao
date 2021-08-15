@@ -18,7 +18,7 @@ class Casa : public Imovel {
 
         /** \brief método que calcula a comissão que receberá o corretor responsável pela venda de casas.
          */
-        double comissao();
+        double comissao() override;
 
         void print() override;
 };

@@ -18,7 +18,7 @@ class Cobertura : public Imovel {
 
         /** \brief método que calcula a comissão que receberá o corretor responsável pela venda de coberturas.
          */
-        double comissao();
+        double comissao() override;
 
         void print() override;
 };

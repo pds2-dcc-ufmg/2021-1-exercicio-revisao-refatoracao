@@ -13,7 +13,7 @@ void Imovel::imovel(double AreaImovel, int quarto, int banheiro, int vagas_dispo
     VagasDisponiveis = vagas_disponiveis;
 }
 
-virtual void Imovel::print(){
+void Imovel::print(){
     std::cout << "[Vendedor]" << std::endl;
     Vendedor.print();
     std::cout << "[Corretor]" << "\n"

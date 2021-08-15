@@ -4,7 +4,7 @@ double Apartamento::comissao(){
     return AreaDoImovel * ValorMetroQuadrado * porcentagem;
 }
 
-void Apartamento::print() override {
+void Apartamento::print(){
     std::cout << "[Apartamento]" << std::endl;
     Imovel::print();
     std::cout << "Taxa de Comissão: " << std::fixed << std::setprecision(0) << porcentagem * 100 << "%" << "\n"

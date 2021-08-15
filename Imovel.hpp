@@ -41,6 +41,11 @@ class Imovel {
          */
         virtual void print();
 
+        /** \brief método que calcula a comissão que receberá o corretor responsável pela venda de determinado tipo
+         *de imóvel.
+         */
+        virtual double comissao() = 0;
+
         double ValorDoImovel();
 };
 

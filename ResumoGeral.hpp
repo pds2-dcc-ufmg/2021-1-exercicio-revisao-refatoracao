@@ -19,7 +19,7 @@
  *
  *os outros parâmetros são equivalentes quanto a sua definição.
  */
-class ResumoGeral : public Imovel{
+class ResumoGeral{
 
     protected:
 
