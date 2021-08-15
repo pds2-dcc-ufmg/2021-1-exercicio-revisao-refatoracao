@@ -9,85 +9,45 @@
 
 int main() {
     
-    Cliente cliente1;
-    cliente1.nome = "Xayso Sovon Ziahaka";
-    cliente1.endereco = "Rua Xangrilá - Braúnas";
-    cliente1.cidade = "Belo Horizonte";
-    cliente1.UF = "MG";
-    cliente1.CEP = "31365-570";
-    cliente1.telefone = "3196007958";
+    Cliente cliente1("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", 
+                    "Belo Horizonte", "MG", "31365-570", "3196007958");
     
-    Cliente cliente2;
-    cliente2.nome = "Minia Pasies Kituos";
-    cliente2.endereco = "Rua dos Jacobinos - Ouro Minas";
-    cliente2.cidade = "Belo Horizonte";
-    cliente2.UF = "MG";
-    cliente2.CEP = "31870-290";
-    cliente2.telefone = "3197627067";
+    Cliente cliente2("Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
+                    "Belo Horizonte", "MG", "31870-290", "3197627067");
     
-    Cliente cliente3;
-    cliente3.nome = "Vuocue Leiur Baonauza";
-    cliente3.endereco = "Rua Orminda de Almeida - Tupi B";
-    cliente3.cidade = "Belo Horizonte";
-    cliente3.UF = "MG";
-    cliente3.CEP = "31842-630";
-    cliente3.telefone = "3195949327";
+    Cliente cliente3("Vuocue Leiur Baonauza", "Rua Orminda de Almeida - Tupi B", 
+                    "Belo Horizonte", "MG", "31842-630", "3195949327");
+
+    Cliente cliente4("Zerer Huduy Fyogar", "Rua Taquaril - Jonas Veiga", 
+                    "Belo Horizonte", "MG", "30285-422", "3198596327");
+
+    Cliente cliente5("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano", 
+                    "Belo Horizonte", "MG", "30882-747", "3196274465");
+
+    Cliente cliente6("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)", 
+                    "Belo Horizonte", "MG", "31650-560", "3195004414");
     
-    Cliente cliente4;
-    cliente4.nome = "Zerer Huduy Fyogar";
-    cliente4.endereco = "Rua Taquaril - Jonas Veiga";
-    cliente4.cidade = "Belo Horizonte";
-    cliente4.UF = "MG";
-    cliente4.CEP = "30285-422";
-    cliente4.telefone = "3198596327";
+    Cliente cliente7("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova", 
+                    "Belo Horizonte", "MG", "31170-240", "3198461192");
     
-    Cliente cliente5;
-    cliente5.nome = "Ceziel Mioti Pler";
-    cliente5.endereco = "Rua João Gualberto Costa - Serrano";
-    cliente5.cidade = "Belo Horizonte";
-    cliente5.UF = "MG";
-    cliente5.CEP = "30882-747";
-    cliente5.telefone = "3196274465";
-    
-    Cliente cliente6;
-    cliente6.nome = "Esxo Cilal Zyais";
-    cliente6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cliente6.cidade = "Belo Horizonte";
-    cliente6.UF = "MG";
-    cliente6.CEP = "31650-560";
-    cliente6.telefone = "3195004414";
-    
-    Cliente cliente7;
-    cliente7.nome = "Leova Wikyecil Neaca";
-    cliente7.endereco = "Rua João Arantes - Cidade Nova";
-    cliente7.cidade = "Belo Horizonte";
-    cliente7.UF = "MG";
-    cliente7.CEP = "31170-240";
-    cliente7.telefone = "3198461192";
-    
-    Cliente cliente8;
-    cliente8.nome = "Teas Heimeu Pipe";
-    cliente8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cliente8.cidade = "Belo Horizonte";
-    cliente8.UF = "MG";
-    cliente8.CEP = "30668-430";
-    cliente8.telefone = "3197317802";
+    Cliente cliente8("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)", 
+                    "Belo Horizonte", "MG", "30668-430", "3197317802");
 
     int quantidadeApartamentos = 0;
     int quantidadeCasas = 0;
     int quantidadeCoberturas = 0;
 
-    Apartamento apartamento1;
-    apartamento1.corretor = "Tuoruars";
-    apartamento1.area = 55.4;
-    apartamento1.quartos = 2;
-    apartamento1.banheiros = 1;
-    apartamento1.vagas = 0;
-    apartamento1.valorMetroQuadrado = 987.0;
-    apartamento1.comissao = apartamento1.calculaComissao();
-    apartamento1.valorVenda = apartamento1.calculaValorApartamento() + apartamento1.calculaComissao();
-    apartamento1.vendedor = cliente1;
-    quantidadeApartamentos++;
+    Apartamento apartamento1(55.4, 2, 1, 0, 987.0, 0.0, 0.0, cliente1, "Tuoruars");
+    // apartamento1.corretor = "Tuoruars";
+    // apartamento1.area = 55.4;
+    // apartamento1.quartos = 2;
+    // apartamento1.banheiros = 1;
+    // apartamento1.vagas = 0;
+    // apartamento1.valorMetroQuadrado = 987.0;
+    // apartamento1.comissao = apartamento1.calculaComissao();
+    // apartamento1.valorVenda = apartamento1.calculaValorApartamento() + apartamento1.calculaComissao();
+    // apartamento1.vendedor = cliente1;
+    // quantidadeApartamentos++;
 
     Apartamento apartamento2;
     apartamento2.corretor = "Fyubyeis";

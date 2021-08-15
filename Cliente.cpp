@@ -12,3 +12,13 @@ void Cliente::print(){
 		 << "  CEP: " << CEP << endl;
 
 }
+
+Cliente::Cliente(string nome, string endereco, string cidade, 
+				string UF, string CEP, string telefone){
+	this->nome = nome;
+	this->endereco = endereco;
+	this->cidade = cidade;
+	this->UF = UF;
+	this->CEP = CEP;
+	this->telefone = telefone;
+}
