@@ -6,6 +6,9 @@
 #include "Cobertura.hpp"
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
+#define PORCENTAGEM_COMISSAO_APARTAMENTO 0.04
+#define PORCENTAGEM_COMISSAO_CASA 0.06
+#define PORCENTAGEM_COMISSAO_COBERTURA 0.10
 
 int main() {
     
@@ -27,80 +30,31 @@ int main() {
                                 "Belo Horizonte", "MG", "30668-430", "3197317802");
 
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
+    int qtdeApartamentos = 0;
+    int qtdeCasas = 0;
+    int qtdeCoberturas = 0;
 
-    Apartamento *ap1 = new Apartamento ("Tuoruars", 55.4, 2, 1, 0, 987.0, ap1->comissao(), ap1->valor() + ap1->comissao(), *cl1);
-    qtdeA++;
+    //Apartamentos
+    Apartamento *ap1 = new Apartamento ("Tuoruars", 55.4, 2, 1, 0, 987.0, ap1->calc_comissao(), ap1->calc_valor() + ap1->calc_comissao(), *cl1);
+    qtdeApartamentos++;
+    Apartamento *ap2 = new Apartamento ("Fyubyeis", 74.5, 2, 1, 2, 1540.0, ap2->calc_comissao(), ap2->calc_valor() + ap2->calc_comissao(), *cl2);
+    qtdeApartamentos++;
+    Apartamento *ap3 = new Apartamento ("Kelia", 87.2, 3, 2, 2, 2354.0, ap3->calc_comissao(), ap3->calc_valor() + ap3->calc_comissao(), *cl3);
+    qtdeApartamentos++;
 
-    Apartamento *ap2 = new Apartamento ("Fyubyeis", 74.5, 2, 1, 2, 1540.0, ap2->comissao(), ap2->valor() + ap2->comissao(), *cl2);
-    qtdeA++;
-
-    Apartamento *ap3 = new Apartamento ("Kelia", 87.2, 3, 2, 2, 2354.0, ap3->comissao(), ap3->valor() + ap3->comissao(), *cl3);
-    qtdeA++;
-
-    // Cobertura
-    Cobertura cb1;
-    cb1.corretor = "Koci";
-    cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
-    cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
-    cb1.Valor = cb1.valor() + cb1.comissao();
-    cb1.vendedor = cl4;
-    qtdeCb++;
-    
-    Cobertura cb2;
-    cb2.corretor = "Wail";
-    cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
-    cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
-    cb2.Valor = cb2.valor() + cb2.comissao();
-    cb2.vendedor = cl5;
-    qtdeCb++;
-
-    Cobertura cb3;
-    cb3.corretor = "Fival";
-    cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
-    cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
-    cb3.Valor = cb3.valor() + cb3.comissao();
-    cb3.vendedor = cl6;
-    qtdeCb++;
+    // Coberturas
+    Cobertura *cb1 = new Cobertura ("Koci", 120.1, 3, 3, 2, 3123.5, cb1->calc_comissao(), cb1->calc_valor() + cb1->calc_comissao(), *cl4);
+    qtdeCoberturas++;
+    Cobertura *cb2 = new Cobertura ("Wail", 134.8, 4, 3, 3, 3578.2, cb2->calc_comissao(), cb2->calc_valor() + cb2->calc_comissao(), *cl5);
+    qtdeCoberturas++;
+    Cobertura *cb3 = new Cobertura ("Fival", 180.0, 4, 4, 4, 4165.7, cb3->calc_comissao(), cb3->calc_valor() + cb3->calc_comissao(), *cl6);
+    qtdeCoberturas++;
 
     // Casas
-    Casa ca1;
-    ca1.corretor = "Beydo";
-    ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
-    ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
-    ca1.Valor = ca1.valor() + ca1.comissao();
-    ca1.vendedor = cl7;
-    qtdeCa++;
-
-    Casa ca2;
-    ca2.corretor = "Riuzi";
-    ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
-    ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
-    ca2.Valor = ca2.valor() + ca2.comissao();
-    ca2.vendedor = cl8;
-    qtdeCa++;
+    Casa *ca1 = new Casa ("Beydo", 145.6, 3, 3, 2, 4023.6, ca1->calc_comissao(), ca1->calc_valor() + ca1->calc_comissao(), *cl7);
+    qtdeCasas++;
+    Casa *ca2 = new Casa ("Riuzi", 245.0, 5, 4, 4, 4856.2, ca2->calc_comissao(), ca2->calc_valor() + ca2->calc_comissao(), *cl8);
+    qtdeCasas++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -111,60 +65,60 @@ int main() {
     double comissCb = 0.0;
     double comissCa = 0.0;
     
-    ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    ap1->print();
+    valorAp += ap1->calc_valor();
+    comissAp += ap1->calc_comissao();
     std::cout << endl;
 
-    ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    ap2->print();
+    valorAp += ap2->calc_valor();
+    comissAp += ap2->calc_comissao();
     std::cout << endl;
 
-    ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    ap3->print();
+    valorAp += ap3->calc_valor();
+    comissAp += ap3->calc_comissao();
     std::cout << endl;
 
-    cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    cb1->print();
+    valorCb += cb1->calc_valor();
+    comissCb += cb1->calc_comissao();
     std::cout << endl;
 
-    cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    cb2->print();
+    valorCb += cb2->calc_valor();
+    comissCb += cb2->calc_comissao();
     std::cout << endl;
 
-    cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    cb3->print();
+    valorCb += cb3->calc_valor();
+    comissCb += cb3->calc_comissao();
     std::cout << endl;
 
-    ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    ca1->print();
+    valorCa += ca1->calc_valor();
+    comissCa += ca1->calc_comissao();
     std::cout << endl;
 
-    ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    ca2->print();
+    valorCa += ca2->calc_valor();
+    comissCa += ca2->calc_comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
+            << "\n Quantidade: " << qtdeApartamentos
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
             << "\n Comissão Total: R$" << comissAp
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
+            << "\n Quantidade: " << qtdeCoberturas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
+            << "\n Quantidade: " << qtdeCasas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
             << endl;
@@ -181,4 +135,13 @@ int main() {
     delete ap1;
     delete ap2;
     delete ap3;
+
+    
+    delete cb1;
+    delete cb2;
+    delete cb3;
+
+    
+    delete ca1;
+    delete ca2;
 }

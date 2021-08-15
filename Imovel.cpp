@@ -7,12 +7,19 @@ Imovel::Imovel(string _corretor, double _area, int _numero_quartos, int _numero_
 area(_area), numero_quartos(_numero_quartos), numero_banheiros(_numero_banheiros), vagas(_vagas), 
 valorm2(_valorm2), valor(_valor), comissao(_comissao), vendedor(_vendedor), corretor(_corretor){}
 
-
 void Imovel::print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
+}
+
+double Imovel::calc_valor() {
+    return get_area() * get_valorm2();
+}
+
+double Imovel::calc_comissao() {
+    return calc_valor() * perc_comissao;
 }
 
 void Imovel::set_area(double _area){

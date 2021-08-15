@@ -1,16 +1,15 @@
-#include "Apartamento.hpp"
+#include "Cobertura.hpp"
 
-Apartamento::Apartamento(){}
+Cobertura::Cobertura(){}
 
-Apartamento::Apartamento(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
+Cobertura::Cobertura(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
                          double _valorm2, double _comissao, double _valor, Cliente _vendedor):
 Imovel(_corretor, _area, _numero_quartos, _numero_banheiros, _vagas, _valorm2, _comissao, _valor,  _vendedor){
-    perc_comissao=0.04;
+    perc_comissao=0.10;
 }
 
-
-void Apartamento::print() {
-    std::cout << "[Apartamento]" << endl;
+void Cobertura::print() {
+    std::cout << "[Cobertura]" << endl;
     Imovel::print();
     std::cout << "Area: " << get_area() << endl
                 << "Quartos: " << get_numero_quartos() << endl

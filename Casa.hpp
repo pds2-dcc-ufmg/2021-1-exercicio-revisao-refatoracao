@@ -3,15 +3,16 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-#define PORCENTAGEM_COMISSAO 0.06
+
 
 using namespace std;
 
 class Casa : public Imovel {
 
     public:
-        double valor();
-        double comissao();
+        Casa();
+        Casa(string _corretor, double _area, int _numero_quartos, int _numero_banheiros, int _vagas, 
+                    double _valorm2, double _comissao, double _valor, Cliente _vendedor);
         void print();
 
 };
