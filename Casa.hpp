@@ -4,6 +4,8 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
+#define COMISSAO_CASA 0.06
+
 using namespace std;
 
 class Casa : public Imovel {
@@ -22,7 +24,7 @@ class Casa : public Imovel {
 
         double c = area * valor_m2;
 
-        return c * 0.06;
+        return c * COMISSAO_CASA;
         
     }
 
