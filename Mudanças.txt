@@ -1,14 +1,16 @@
 -> Retirei espaços desnecessários ao longo do código.
 -> Alterei nomes das variáveis e de métodos, colocando todos em letra minúscula no padrao "nome" ou "nome_variavel" e 
 alterei nomes para que ficassem mais expressivos.
--> Criei arquivos .cpp para as classes que ainda não possuíam.
--> Criei getters e setters para as variáveis e as tornei privadas ou protected(no caso de Imovel).
--> Criei e declarei virtual o método que calcula a comissão na classe Imovel.
--> Removi das classes que herdam Imovel o método que calcula o valor, e o coloquei na classe Imovel.
+-> Criei arquivos ".cpp" para as classes que ainda não possuíam.
+-> Criei pastas "build", "src" e "include" para melhor organizazção
+-> Criei getters e setters para as variáveis e as tornei privadas ou protected(no caso de "Imovel").
+-> Criei e declarei virtual o método que calcula a comissão na classe "Imovel".
+-> Removi das classes que herdam "Imovel" o método que calcula o valor, e o coloquei na classe "Imovel".
 -> Utilizei o método que calcula o valor no método que calcula a comissão.
--> Removi a parte comum do método print das classes que herdam Imóvel e a coloquei em Imovel.
+-> Removi a parte comum do método "print" das classes que herdam "Imovel" e a coloquei em "Imovel".
 -> Utilizei os getters e setters na função main.
 -> Removi comentários desnecessários.
--> Criei bibliotecas com funções para criar Clientes e Imoveis.
--> Implementei um template para criar Imoveis, haja vista que um imovel pode ser uma casa, apartamento ou cobertura.
--> 
+-> Criei bibliotecas com funções para criar clientes e imoveis.
+-> Implementei um template para criar imoveis, haja vista que um imovel pode ser uma casa, apartamento ou cobertura.
+-> Implementei um template para imprimir as informações do imovel e atualizar o valor total.
+-> Criei um makefile para compilar cada parte do projeto separadamente.

@@ -67,6 +67,7 @@ int main() {
     double comissCb = 0.0;
     double comissCa = 0.0;
 
+    // imprime as informações do imóvel e atualiza o valor total acumulado do tipo de imovel
     atualizar_valores<Apartamento>(ap1, &valorAp, &comissAp);
     atualizar_valores<Apartamento>(ap2, &valorAp, &comissAp);
     atualizar_valores<Apartamento>(ap3, &valorAp, &comissAp);

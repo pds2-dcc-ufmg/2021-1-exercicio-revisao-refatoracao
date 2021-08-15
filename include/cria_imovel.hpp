@@ -31,7 +31,6 @@ void atualizar_valores(W imovel, double *valor_imovel, double *comissao_imovel){
     *valor_imovel += imovel.calcular_valor();
     *comissao_imovel += imovel.calcular_comissao();
     std::cout << endl;
-
 }
 
 #endif

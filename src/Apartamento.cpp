@@ -6,5 +6,5 @@ double Apartamento::calcular_comissao(){
 
 void Apartamento::print() {
     std::cout << "[Apartamento]" << endl;
-    Imovel::print();
+    Imovel::print(4);
 }

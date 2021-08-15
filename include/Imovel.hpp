@@ -13,7 +13,7 @@ class Imovel {
 
         virtual double calcular_comissao();
 
-        void print();
+        void print(double taxa_comissao);
 
         void set_area(double area);
 

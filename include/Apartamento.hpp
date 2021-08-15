@@ -9,7 +9,7 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public:
-        double calcular_comissao()override;
+        double calcular_comissao() override;
 
         void print();
 };

@@ -27,9 +27,6 @@ ${BUILD_DIR}/Imovel.o: ${INCLUDE_DIR}/Imovel.hpp ${INCLUDE_DIR}/Cliente.hpp ${SR
 ${BUILD_DIR}/cria_cliente.o: ${INCLUDE_DIR}/cria_cliente.hpp ${SRC_DIR}/cria_cliente.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/cria_cliente.cpp -o ${BUILD_DIR}/cria_cliente.o 
 
-# ${BUILD_DIR}/cria_imovel.o: ${INCLUDE_DIR}/Imovel.hpp  ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/Casa.hpp ${INCLUDE_DIR}/Cobertura.hpp ${INCLUDE_DIR}/Apartamento.hpp ${INCLUDE_DIR}/cria_imovel.hpp ${SRC_DIR}/cria_imovel.cpp
-# 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/cria_imovel.cpp -o ${BUILD_DIR}/cria_imovel.o 
-
 ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/Casa.hpp ${INCLUDE_DIR}/Apartamento.hpp ${INCLUDE_DIR}/Cobertura.hpp  ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/cria_cliente.hpp ${INCLUDE_DIR}/cria_imovel.hpp ${INCLUDE_DIR}/Imovel.hpp ${SRC_DIR}/main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/main.cpp -o ${BUILD_DIR}/main.o 
 	
