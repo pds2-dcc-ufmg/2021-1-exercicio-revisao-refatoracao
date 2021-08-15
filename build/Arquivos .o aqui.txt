@@ -1,0 +1,1 @@
+Arquivos .o serão colocados no diretório deste arquivo.
