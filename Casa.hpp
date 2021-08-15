@@ -4,42 +4,23 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Casa : public Imovel {
+
+    /**
+     * \param porcentagem: porcentagem em relação ao valor total da casa, ou seja o corretor receberá 6% do valor
+     *da casa quando esta for vendida.
+     */
+    private:
+
+        double porcentagem = 0.06;
 
     public:
 
-    double valor() {
+        /** \brief método que calcula a comissão que receberá o corretor responsável pela venda de casas.
+         */
+        double comissao() override;
 
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
-
+        void print() override;
 };
 
 #endif
