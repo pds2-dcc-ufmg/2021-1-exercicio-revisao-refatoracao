@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 15 21:07:57 2021
+# Make data base, printed on Mon Aug 16 13:29:27 2021
 
 # Variables
 
@@ -22,8 +20,12 @@ WSLENV = VSCODE_WSL_EXT_LOCATION/up
 .SHELLFLAGS := -c
 # environment
 VSCODE_AGENT_FOLDER = /home/victor/.vscode-server
+# makefile (from 'Makefile', line 7)
+SRC = ./src
 # environment
 VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 8)
+TARGET = program
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -38,8 +40,10 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /home/victor/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/node
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 2)
+CFLAGS = -std=c++11 -Wall
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -55,7 +59,7 @@ PATH = /home/victor/.vscode-server/bin/379476f0e13988d90fab105c5c19e7abc8b1dea8/
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-09c4a8f4-79f6-4af0-8e2d-4c26cfd43a6d.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0b7179c5-e5f3-4b15-8620-15d34aae8934.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -67,7 +71,7 @@ PWD = /home/victor/VPLs/Módulo 5/2021-1-exercicio-revisao-refatoracao
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/15021_interop
+WSL_INTEROP = /run/WSL/72_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
@@ -88,12 +92,14 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 0
+# makefile (from 'Makefile', line 1)
+CC = g++
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = victor
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := all
 # environment
 NAME = VICTORPC
 # automatic
@@ -118,6 +124,8 @@ MFLAGS = -pqrR
 +F = $(notdir $+)
 # default
 MAKEFILES := 
+# makefile (from 'Makefile', line 4)
+BUILD = ./build
 # automatic
 <F = $(notdir $<)
 # environment
@@ -128,6 +136,8 @@ HOSTTYPE = x86_64
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+# makefile (from 'Makefile', line 6)
+INCLUDE_cliente = ./includes/cliente
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
@@ -142,8 +152,10 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
+# makefile (from 'Makefile', line 5)
+INCLUDE_imoveis = ./includes/imoveis
 # variable set hash-table stats:
-# Load=65/1024=6%, Rehash=0, Collisions=4/87=5%
+# Load=72/1024=7%, Rehash=0, Collisions=4/128=3%
 
 # Pattern-specific Variable Values
 
@@ -151,9 +163,11 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Directories
 
-# . (device 2064, inode 50209): 13 files, no impossibilities.
+# includes/imoveis (device 2064, inode 51860): 6 files, no impossibilities.
+# . (device 2064, inode 50209): 11 files, no impossibilities.
+# includes/cliente (device 2064, inode 51822): 3 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -161,26 +175,101 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Files
 
-# Not a target:
-all:
+program: build/main.o build/Cliente.o build/Imovel.o build/Apartamento.o build/Casa.o build/Cobertura.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:50.3499828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 13):
+	${CC} -o ${TARGET} ${BUILD}/*.o
+
+build/main.o: src/main.cpp includes/cliente/Cliente.hpp includes/imoveis/Apartamento.hpp includes/imoveis/Imovel.hpp includes/imoveis/Casa.hpp includes/imoveis/Cobertura.hpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:49.0599828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	${CC} ${CFLAGS} -I ${INCLUDE_imoveis} -I ${INCLUDE_cliente} -c ${SRC}/main.cpp -o ${BUILD}/main.o
+
+all: program
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+includes/imoveis/Apartamento.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 02:49:33.464
+#  File has been updated.
+#  Successfully updated.
+
+build/Apartamento.o: src/entidades/Apartamento.cpp includes/imoveis/Apartamento.hpp includes/cliente/Cliente.hpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:49.7499828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 22):
+	${CC} ${CFLAGS} -I ${INCLUDE_imoveis} -I ${INCLUDE_cliente} -c ${SRC}/entidades/Apartamento.cpp -o ${BUILD}/Apartamento.o
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2021-08-16 03:26:00.0399828
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+build/Cliente.o: includes/cliente/Cliente.hpp src/entidades/Cliente.cpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:49.2599828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 16):
+	${CC} ${CFLAGS} -I ${INCLUDE_cliente} -c ${SRC}/entidades/Cliente.cpp -o ${BUILD}/Cliente.o
 
 # Not a target:
-makefile:
+src/entidades/Apartamento.cpp:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2021-08-16 03:47:53.5199828
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+# Not a target:
+includes/imoveis/Imovel.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:47:58.9099828
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/entidades/Cliente.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:49:57.6599828
+#  File has been updated.
+#  Successfully updated.
+
+build/Imovel.o: src/entidades/Imovel.cpp includes/imoveis/Imovel.hpp includes/cliente/Cliente.hpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:49.4999828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 19):
+	${CC} ${CFLAGS} -I ${INCLUDE_imoveis} -I ${INCLUDE_cliente} -c ${SRC}/entidades/Imovel.cpp -o ${BUILD}/Imovel.o
+
+# Not a target:
+includes/imoveis/Cobertura.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 02:49:43.747
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/entidades/Imovel.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:47:58.9099828
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -188,27 +277,79 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
+clean:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	rm ${TARGET} ${BUILD}/*
+
+build/Cobertura.o: src/entidades/Cobertura.cpp includes/imoveis/Cobertura.hpp includes/cliente/Cliente.hpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:50.2499828
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 28):
+	${CC} ${CFLAGS} -I ${INCLUDE_imoveis} -I ${INCLUDE_cliente} -c ${SRC}/entidades/Cobertura.cpp -o ${BUILD}/Cobertura.o
+
+# Not a target:
+includes/imoveis/Casa.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 02:49:37.575
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:50:46.2699828
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+includes/cliente/Cliente.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:50:31.3399828
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/entidades/Cobertura.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:47:53.5199828
+#  File has been updated.
+#  Successfully updated.
+
+build/Casa.o: src/entidades/Casa.cpp includes/imoveis/Casa.hpp includes/cliente/Cliente.hpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-16 03:50:49.9999828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 25):
+	${CC} ${CFLAGS} -I ${INCLUDE_imoveis} -I ${INCLUDE_cliente} -c ${SRC}/entidades/Casa.cpp -o ${BUILD}/Casa.o
+
+# Not a target:
+src/entidades/Casa.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-16 03:47:53.5199828
+#  File has been updated.
+#  Successfully updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=23/1024=2%, Rehash=0, Collisions=0/68=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 205 B / avg = 9 B
-# current buf: size = 8162 B / used = 205 B / count = 21 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 619 B / avg = 15 B
+# current buf: size = 8162 B / used = 619 B / count = 41 / avg = 15 B
 
-# strcache performance: lookups = 24 / hit rate = 12%
+# strcache performance: lookups = 76 / hit rate = 46%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Sun Aug 15 21:07:57 2021
+# Load=41/8192=1%, Rehash=0, Collisions=3/76=4%
+# Finished Make data base on Mon Aug 16 13:29:27 2021
 
  

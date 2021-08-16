@@ -1,6 +1,11 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/victor/VPLs/Módulo 5/2021-1-exercicio-revisao-refatoracao'
+g++ -std=c++11 -Wall -I ./includes/imoveis -I ./includes/cliente -c ./src/main.cpp -o ./build/main.o
+g++ -std=c++11 -Wall -I ./includes/cliente -c ./src/entidades/Cliente.cpp -o ./build/Cliente.o
+g++ -std=c++11 -Wall -I ./includes/imoveis -I ./includes/cliente -c ./src/entidades/Imovel.cpp -o ./build/Imovel.o
+g++ -std=c++11 -Wall -I ./includes/imoveis -I ./includes/cliente -c ./src/entidades/Apartamento.cpp -o ./build/Apartamento.o
+g++ -std=c++11 -Wall -I ./includes/imoveis -I ./includes/cliente -c ./src/entidades/Casa.cpp -o ./build/Casa.o
+g++ -std=c++11 -Wall -I ./includes/imoveis -I ./includes/cliente -c ./src/entidades/Cobertura.cpp -o ./build/Cobertura.o
+g++ -o program ./build/*.o
 make: Leaving directory '/home/victor/VPLs/Módulo 5/2021-1-exercicio-revisao-refatoracao'
- 
-make: *** No targets specified and no makefile found.  Stop.
  
