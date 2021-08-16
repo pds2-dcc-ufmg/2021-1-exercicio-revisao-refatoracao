@@ -12,7 +12,7 @@ class Apartamento : public Imovel {
 
     public: 
 
-    // Método que calcula a comissão do apartamento 
+    // Método para calcular a comissão do apartamento 
     double comissao() {
 
         double c = area * valor_m2;
