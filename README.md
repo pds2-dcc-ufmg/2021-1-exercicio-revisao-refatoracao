@@ -1,5 +1,8 @@
 # Exercício de Revisão e Refatoração
 
+Comando para compilar: "``make``"
+Comando para deletar arquivos .o: "``make clean``"
+
 O objetivo dessa atividade é praticar a parte de revisão e refatoração utilizando um sistema de controle de versão.
 
 **Considere a seguinte descrição em alto nível da funcionalidade do código:**  

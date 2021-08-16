@@ -6,7 +6,7 @@ BUILD_DIR	:= ./build
 EXECUTABLE  := main.exe
 
 $(EXECUTABLE): $(BUILD_DIR)/Apartamento.o $(BUILD_DIR)/Cartorio.o $(BUILD_DIR)/Casa.o $(BUILD_DIR)/Cliente.o $(BUILD_DIR)/Cobertura.o $(BUILD_DIR)/Imovel.o $(BUILD_DIR)/main.o
-	$(CXX) -o $@  $^ -I $(INCLUDE_DIR) 
+	$(CXX) -o $@  $^ -I $(INCLUDE_DIR)
 
 $(BUILD_DIR)/Apartamento.o : $(ENTIDADES)/Apartamento.cpp $(INCLUDE_DIR)/Apartamento.hpp
 	$(CXX) -I $(INCLUDE_DIR) -c $(ENTIDADES)/Apartamento.cpp -o $(BUILD_DIR)/Apartamento.o
