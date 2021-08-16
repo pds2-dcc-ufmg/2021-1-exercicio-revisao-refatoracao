@@ -28,11 +28,11 @@ class Imovel {
             cout << "  " + corretor << endl;
         }
 
-        virtual double valor() { 
+        virtual double calculaValorDeVenda() { 
             valorDeVenda = area * valorMetroQuadrado;
             return valorDeVenda;
         }
-        virtual double comissao() {};
+        virtual double calculaValorDaComissao() {};
 };
 
 #endif

@@ -11,7 +11,7 @@ class Apartamento : public Imovel {
         static constexpr double taxaDeComissao = 0.04;
 
     public: 
-        double comissao() override {
+        double calculaValorDaComissao() override {
             valorDaComissao = valorDeVenda * taxaDeComissao;
             return valorDaComissao;
         }

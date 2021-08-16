@@ -84,8 +84,8 @@ int main() {
     ap1.banheiros = 1;
     ap1.vagasDeEstacionamento = 0;
     ap1.valorMetroQuadrado = 987.0;
-    ap1.valorDaComissao = ap1.comissao();
-    ap1.valorDeVenda = ap1.valor() + ap1.comissao();
+    ap1.valorDaComissao = ap1.calculaValorDaComissao();
+    ap1.valorDeVenda = ap1.calculaValorDeVenda() + ap1.calculaValorDaComissao();
     ap1.vendedor = cl1;
     quantidadeDeApartamentos++;
 
@@ -96,8 +96,8 @@ int main() {
     ap2.banheiros = 1;
     ap2.vagasDeEstacionamento = 2;
     ap2.valorMetroQuadrado = 1540.0;
-    ap2.valorDaComissao = ap2.comissao();
-    ap2.valorDeVenda = ap2.valor() + ap2.comissao();
+    ap2.valorDaComissao = ap2.calculaValorDaComissao();
+    ap2.valorDeVenda = ap2.calculaValorDeVenda() + ap2.calculaValorDaComissao();
     ap2.vendedor = cl2;
     quantidadeDeApartamentos++;
 
@@ -108,8 +108,8 @@ int main() {
     ap3.banheiros = 2;
     ap3.vagasDeEstacionamento = 2;
     ap3.valorMetroQuadrado = 2354.0;
-    ap3.valorDaComissao = ap3.comissao();
-    ap3.valorDeVenda = ap3.valor() + ap3.comissao();
+    ap3.valorDaComissao = ap3.calculaValorDaComissao();
+    ap3.valorDeVenda = ap3.calculaValorDeVenda() + ap3.calculaValorDaComissao();
     ap3.vendedor = cl3;
     quantidadeDeApartamentos++;
 
@@ -121,8 +121,8 @@ int main() {
     cb1.banheiros = 3;
     cb1.vagasDeEstacionamento = 2;
     cb1.valorMetroQuadrado = 3123.5;
-    cb1.valorDaComissao = cb1.comissao();
-    cb1.valorDeVenda = cb1.valor() + cb1.comissao();
+    cb1.valorDaComissao = cb1.calculaValorDaComissao();
+    cb1.valorDeVenda = cb1.calculaValorDeVenda() + cb1.calculaValorDaComissao();
     cb1.vendedor = cl4;
     quantidadeDeCoberturas++;
     
@@ -133,8 +133,8 @@ int main() {
     cb2.banheiros = 3;
     cb2.vagasDeEstacionamento = 3;
     cb2.valorMetroQuadrado = 3578.2;
-    cb2.valorDaComissao = cb2.comissao();
-    cb2.valorDeVenda = cb2.valor() + cb2.comissao();
+    cb2.valorDaComissao = cb2.calculaValorDaComissao();
+    cb2.valorDeVenda = cb2.calculaValorDeVenda() + cb2.calculaValorDaComissao();
     cb2.vendedor = cl5;
     quantidadeDeCoberturas++;
 
@@ -145,8 +145,8 @@ int main() {
     cb3.banheiros = 4;
     cb3.vagasDeEstacionamento = 4;
     cb3.valorMetroQuadrado = 4165.7;
-    cb3.valorDaComissao = cb3.comissao();
-    cb3.valorDeVenda = cb3.valor() + cb3.comissao();
+    cb3.valorDaComissao = cb3.calculaValorDaComissao();
+    cb3.valorDeVenda = cb3.calculaValorDeVenda() + cb3.calculaValorDaComissao();
     cb3.vendedor = cl6;
     quantidadeDeCoberturas++;
 
@@ -158,8 +158,8 @@ int main() {
     ca1.banheiros = 3;
     ca1.vagasDeEstacionamento = 2;
     ca1.valorMetroQuadrado = 4023.6;
-    ca1.valorDaComissao = ca1.comissao();
-    ca1.valorDeVenda = ca1.valor() + ca1.comissao();
+    ca1.valorDaComissao = ca1.calculaValorDaComissao();
+    ca1.valorDeVenda = ca1.calculaValorDeVenda() + ca1.calculaValorDaComissao();
     ca1.vendedor = cl7;
     quantidadeDeCasas++;
 
@@ -170,8 +170,8 @@ int main() {
     ca2.banheiros = 4;
     ca2.vagasDeEstacionamento = 4;
     ca2.valorMetroQuadrado = 4856.2;
-    ca2.valorDaComissao = ca2.comissao();
-    ca2.valorDeVenda = ca2.valor() + ca2.comissao();
+    ca2.valorDaComissao = ca2.calculaValorDaComissao();
+    ca2.valorDeVenda = ca2.calculaValorDeVenda() + ca2.calculaValorDaComissao();
     ca2.vendedor = cl8;
     quantidadeDeCasas++;
 
@@ -182,46 +182,46 @@ int main() {
     double valorTotalCasas = 0.0;
     double comissaoTotalApartamento = 0.0;
     double comissaoTotalCoberturas = 0.0;
-    double comissaoTotalCasas = 0.0;
+    double comissaoTotalCasass = 0.0;
     
     ap1.print();
-    valorTotalApartamentos += ap1.valor();
-    comissaoTotalApartamento += ap1.comissao();
+    valorTotalApartamentos += ap1.calculaValorDeVenda();
+    comissaoTotalApartamento += ap1.calculaValorDaComissao();
     std::cout << endl;
 
     ap2.print();
-    valorTotalApartamentos += ap2.valor();
-    comissaoTotalApartamento += ap2.comissao();
+    valorTotalApartamentos += ap2.calculaValorDeVenda();
+    comissaoTotalApartamento += ap2.calculaValorDaComissao();
     std::cout << endl;
 
     ap3.print();
-    valorTotalApartamentos += ap3.valor();
-    comissaoTotalApartamento += ap3.comissao();
+    valorTotalApartamentos += ap3.calculaValorDeVenda();
+    comissaoTotalApartamento += ap3.calculaValorDaComissao();
     std::cout << endl;
 
     cb1.print();
-    valorTotalCoberturas += cb1.valor();
-    comissaoTotalCoberturas += cb1.comissao();
+    valorTotalCoberturas += cb1.calculaValorDeVenda();
+    comissaoTotalCoberturas += cb1.calculaValorDaComissao();
     std::cout << endl;
 
     cb2.print();
-    valorTotalCoberturas += cb2.valor();
-    comissaoTotalCoberturas += cb2.comissao();
+    valorTotalCoberturas += cb2.calculaValorDeVenda();
+    comissaoTotalCoberturas += cb2.calculaValorDaComissao();
     std::cout << endl;
 
     cb3.print();
-    valorTotalCoberturas += cb3.valor();
-    comissaoTotalCoberturas += cb3.comissao();
+    valorTotalCoberturas += cb3.calculaValorDeVenda();
+    comissaoTotalCoberturas += cb3.calculaValorDaComissao();
     std::cout << endl;
 
     ca1.print();
-    valorTotalCasas += ca1.valor();
-    comissaoTotalCasas += ca1.comissao();
+    valorTotalCasas += ca1.calculaValorDeVenda();
+    comissaoTotalCasass += ca1.calculaValorDaComissao();
     std::cout << endl;
 
     ca2.print();
-    valorTotalCasas += ca2.valor();
-    comissaoTotalCasas += ca2.comissao();
+    valorTotalCasas += ca2.calculaValorDeVenda();
+    comissaoTotalCasass += ca2.calculaValorDaComissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
@@ -239,6 +239,6 @@ int main() {
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << quantidadeDeCasas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorTotalCasas
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissaoTotalCasas
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissaoTotalCasass
             << endl;
 }

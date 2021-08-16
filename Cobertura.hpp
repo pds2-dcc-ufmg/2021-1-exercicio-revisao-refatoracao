@@ -10,7 +10,7 @@ class Cobertura : public Imovel {
         static constexpr double taxaDeComissao = 0.10;
 
     public: 
-        double comissao() override {
+        double calculaValorDaComissao() override {
             valorDaComissao = valorDeVenda * taxaDeComissao;
             return valorDaComissao;
         }
