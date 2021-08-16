@@ -8,23 +8,20 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
+    public:
+
     
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    string TipoDeImovel(){
+        return "[Apartamento]";
     }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
+    
+    double GetPercentComissao(){
+        //A comissao de venda de um apartamento é 4%
+        return 0.04;
     }
+    
+    Apartamento(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
+    };
 
     void print() {
 
