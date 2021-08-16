@@ -13,6 +13,7 @@ class Imovel {
         int n_vagas;
         double preco_por_m2;
         double preco;
+        double comissao_porcentagem;
         double comissao;
         Cliente vendedor;
         std::string corretor;
@@ -28,6 +29,18 @@ class Imovel {
             comissao = c;
             this->vendedor = vendedor;
             this->corretor = corretor;
+        }
+
+        double get_preco() {
+            return preco
+        }
+
+        double preco() {
+            return area * preco_por_m2;
+        }
+        
+        virtual double comissao() {
+            return comissao_porcentagem * preco();
         }
 
         void print() {
