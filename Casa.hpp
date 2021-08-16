@@ -10,8 +10,9 @@ class Casa : public Imovel {
 
     public:
 
-    Casa() {
-        this->setComissao(0.06);
+    double comissao() {
+        setComissao(0.06);
+        return this->valor() * this->getComissao();
     }
 
     void print() {
