@@ -1,5 +1,4 @@
 CXX       := g++
-
 SRC		:= ./src
 ENTIDADES     := ./src/entidades
 INCLUDE_DIR := ./include
