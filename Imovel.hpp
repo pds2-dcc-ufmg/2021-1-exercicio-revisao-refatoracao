@@ -5,7 +5,7 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
+
 
 class Imovel {
     public:
@@ -17,13 +17,13 @@ class Imovel {
         double _valor;
         double _comissao;
         Cliente _Vendedor;
-        string _corretor;
+        std::string _corretor;
 
         void Print() {
-            cout << "[Vendedor]" << endl;
+           std::cout << "[Vendedor]" << std::endl;
             _Vendedor.Print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + _corretor << endl;
+           std::cout << "[Corretor]" << std::endl;
+           std::cout << "  " + _corretor << std::endl;
         }
 };
 

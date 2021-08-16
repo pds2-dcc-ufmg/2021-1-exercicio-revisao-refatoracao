@@ -175,7 +175,7 @@ int main() {
     ca2._Vendedor = cl8;
     ++qt_casa;
 
-    std::cout << "\n>> Relatório de Imóveis <<" << endl;
+    std::cout << "\n>> Relatório de Imóveis <<" << std::endl;
 
     double valor_apartamento = 0.0;
     double valor_cobertura = 0.0;
@@ -187,58 +187,58 @@ int main() {
     ap1.Print();
     valor_apartamento += ap1.Valor();
     comiss_apartamento += ap1.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     ap2.Print();
     valor_apartamento += ap2.Valor();
     comiss_apartamento += ap2.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     ap3.Print();
     valor_apartamento += ap3.Valor();
     comiss_apartamento += ap3.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     cb1.Print();
     valor_cobertura += cb1.Valor();
     comiss_cobertura += cb1.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     cb2.Print();
     valor_cobertura += cb2.Valor();
     comiss_cobertura += cb2.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     cb3.Print();
     valor_cobertura += cb3.Valor();
     comiss_cobertura += cb3.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     ca1.Print();
     valor_casa += ca1.Valor();
     comiss_casa += ca1.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
     ca2.Print();
     valor_casa += ca2.Valor();
     comiss_casa += ca2.Comissao();
-    std::cout << endl;
+    std::cout << std::endl;
 
-    std::cout << "\n>> Resumo Geral <<" << endl;
+    std::cout << "\n>> Resumo Geral <<" << std::endl;
 
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qt_apartamento
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_apartamento
+            << "\n Valor Total: R$ " <<std::fixed << std::setprecision(2) << valor_apartamento
             << "\n Comissão Total: R$" << comiss_apartamento
-            << endl
+            << std::endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << qt_cobertura
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_cobertura
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_cobertura
-            << endl
+            << "\n Valor Total: R$ " <<std::fixed << std::setprecision(2) << valor_cobertura
+            << "\n Comissão Total: R$ " <<std::fixed << std::setprecision(2) << comiss_cobertura
+            << std::endl
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << qt_casa
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_casa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_casa
-            << endl;
+            << "\n Valor Total: R$ " <<std::fixed << std::setprecision(2) << valor_casa
+            << "\n Comissão Total: R$ " <<std::fixed << std::setprecision(2) << comiss_casa
+            << std::endl;
 }

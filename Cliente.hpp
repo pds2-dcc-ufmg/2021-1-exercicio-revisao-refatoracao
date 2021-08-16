@@ -2,16 +2,16 @@
 #define CLIENTE_HPP
 
 #include <string>
-using namespace std;
+
 
 class Cliente {
     public:
-        string _nome;
-        string _endereco;
-        string _cidade;
-        string _uf;
-        string _cep;
-        string _telefone;
+        std::string _nome;
+        std::string _endereco;
+        std::string _cidade;
+        std::string _uf;
+        std::string _cep;
+        std::string _telefone;
 
         void Print();
 };

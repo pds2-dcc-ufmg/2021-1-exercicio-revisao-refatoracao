@@ -4,7 +4,7 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
+
 
 class Apartamento : public Imovel {
 
@@ -28,15 +28,15 @@ class Apartamento : public Imovel {
 
     void Print() {
 
-        std::cout << "[Apartamento]" << endl;
+        std::cout << "[Apartamento]" << std::endl;
         Imovel::Print();
-        std::cout << "Area: " << _area << endl
-                << "  Q: " << _quartos << endl
-                << "  Banheiros: " << _banheiros << endl
-                << "  Vagas: " <<_vagas<< endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << _comissao << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << _valor << endl;
+        std::cout << "Area: " << _area << std::endl
+                << "  Q: " << _quartos << std::endl
+                << "  Banheiros: " << _banheiros << std::endl
+                << "  Vagas: " <<_vagas<< std::endl
+                << "Taxa de Comissão: " << 4 << "%" << std::endl
+                << "Valor Comissão: R$ " <<std::fixed << std::setprecision(2) << _comissao << std::endl
+                << "Valor de Venda: R$ " <<std::fixed << std::setprecision(2) << _valor << std::endl;
     }
 };
 
