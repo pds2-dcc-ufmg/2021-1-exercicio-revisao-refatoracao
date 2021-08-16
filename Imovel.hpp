@@ -5,8 +5,6 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Imovel {
 
     protected:
@@ -14,33 +12,56 @@ class Imovel {
     int Banheiros;
     int Vagas;
     double Valorm2;
-    double ValorImovel;
+    double PrecoVenda; 
     double Area;
     double Comissao;
+    Cliente InfosCliente;
+    std::string Corretor;
 
     public:
+    Imovel();
+
+    /*Getters e Setters para acessar variáveis*/
+    std::string getCorretor();
+    void setCorretor(std::string Corretor);
+
+    void setArea(double area);
+    double getArea();
+
     int getQuartos();
-    virtual void setQuartos(int quartos);
+    void setQuartos(int quartos);
 
     int getBanheiros();
-    virtual void setBanheiros(int banheiro);
+    void setBanheiros(int banheiro);
 
     int getVagas();
-    virtual void setVagas(int vaga);
+    void setVagas(int vaga);
 
-    virtual void setComissao(int comissao);
-        
-    Cliente infosCliente;
-    string Corretor;
+    void setValorm2(double valorm2);
+    double getValorm2();
 
-    void print() {
-        cout << "[Vendedor]" << endl;
-        infosCliente.print();
-        cout << "[Corretor]" << endl;
-        cout << "  " + Corretor << endl;
-    }
+    Cliente getInfosCliente();
+    void setInfosCliente(Cliente InfosCliente);  
 
+    /*Métodos a serem sobrescritos
+    pelos tipos de imóveis*/
+    virtual double ValorTotalM2() = 0;
+
+    virtual double ValorComissao() = 0;
+
+    virtual double ValorVenda() = 0;
+
+    /* virtual int Quantidade() = 0;
+
+    virtual void IncrementarQuantidade() = 0; */
+
+    virtual void print() = 0;
     
+    /*
+    Destrutor virtual, pois a classe
+    é abstrata
+    */
+    virtual ~Imovel();
 };
 
 #endif

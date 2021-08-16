@@ -93,7 +93,7 @@ int main() {
     cliente8.setCEP("30668-430");
     cliente8.setTelefone("3197317802");
     VetorClientes.push_back(cliente8);
-
+    
     int qtdeA = 0;
     int qtdeCa = 0;
     int qtdeCb = 0;
@@ -106,8 +106,8 @@ int main() {
     ap1.Vagas = 0;
     ap1.Valorm2 = 987.0;
     ap1.Comissao = ap1.comissao();
-    ap1.ValorImovel = ap1.valor() + ap1.comissao();
-    ap1.infosCliente = cliente1;
+    ap1.PrecoVenda = ap1.valor() + ap1.comissao();
+    ap1.InfosCliente = cliente1;
     qtdeA++;
 
     Apartamento ap2;
@@ -118,8 +118,8 @@ int main() {
     ap2.Vagas = 2;
     ap2.Valorm2 = 1540.0;
     ap2.Comissao = ap2.comissao();
-    ap2.ValorImovel = ap2.valor() + ap2.comissao();
-    ap2.infosCliente = cliente2;
+    ap2.PrecoVenda = ap2.valor() + ap2.comissao();
+    ap2.InfosCliente = cliente2;
     qtdeA++;
 
     Apartamento ap3;
@@ -130,8 +130,8 @@ int main() {
     ap3.Vagas = 2;
     ap3.Valorm2 = 2354.0;
     ap3.Comissao = ap3.comissao();
-    ap3.ValorImovel = ap3.valor() + ap3.comissao();
-    ap3.infosCliente = cliente3;
+    ap3.PrecoVenda = ap3.valor() + ap3.comissao();
+    ap3.InfosCliente = cliente3;
     qtdeA++;
 
     // Cobertura
@@ -143,8 +143,8 @@ int main() {
     cb1.Vagas = 2;
     cb1.Valorm2 = 3123.5;
     cb1.Comissao = cb1.comissao();
-    cb1.ValorImovel = cb1.valor() + cb1.comissao();
-    cb1.infosCliente = cliente4;
+    cb1.PrecoVenda = cb1.valor() + cb1.comissao();
+    cb1.InfosCliente = cliente4;
     qtdeCb++;
     
     Cobertura cb2;
@@ -155,8 +155,8 @@ int main() {
     cb2.Vagas = 3;
     cb2.Valorm2 = 3578.2;
     cb2.Comissao = cb2.comissao();
-    cb2.ValorImovel = cb2.valor() + cb2.comissao();
-    cb2.infosCliente = cliente5;
+    cb2.PrecoVenda = cb2.valor() + cb2.comissao();
+    cb2.InfosCliente = cliente5;
     qtdeCb++;
 
     Cobertura cb3;
@@ -167,34 +167,34 @@ int main() {
     cb3.Vagas = 4;
     cb3.Valorm2 = 4165.7;
     cb3.Comissao = cb3.comissao();
-    cb3.ValorImovel = cb3.valor() + cb3.comissao();
-    cb3.infosCliente = cliente6;
+    cb3.PrecoVenda = cb3.valor() + cb3.comissao();
+    cb3.InfosCliente = cliente6;
     qtdeCb++;
 
     // Casas
     Casa ca1;
-    ca1.Corretor = "Beydo";
-    ca1.Area = 145.6;
-    ca1.Quartos = 3;
-    ca1.Banheiros = 3;
-    ca1.Vagas = 2;
-    ca1.Valorm2 = 4023.6;
-    ca1.Comissao = ca1.comissao();
-    ca1.ValorImovel = ca1.valor() + ca1.comissao();
-    ca1.infosCliente = cliente7;
+    ca1.setCorretor("Beydo");
+    ca1.setArea(145.6);
+    ca1.setQuartos(3);
+    ca1.setBanheiros(3);
+    ca1.setVagas(2);
+    ca1.setValorm2(4023.6);
+    ca1.ValorComissao();
+    ca1.ValorVenda();
+    ca1.setInfosCliente(cliente7);
     qtdeCa++;
-
+    
     Casa ca2;
-    ca2.Corretor = "Riuzi";
-    ca2.Area = 245.0;
-    ca2.Quartos = 5;
-    ca2.Banheiros = 4;
-    ca2.Vagas = 4;
-    ca2.Valorm2 = 4856.2;
-    ca2.Comissao = ca2.comissao();
-    ca2.ValorImovel = ca2.valor() + ca2.comissao();
-    ca2.infosCliente = cliente8;
-    qtdeCa++;
+    ca2.setCorretor("Riuzi");
+    ca2.setArea(245.0);
+    ca2.setQuartos(5);
+    ca2.setBanheiros(4);
+    ca2.setVagas(4);
+    ca2.setValorm2(4856.2);
+    ca2.ValorComissao();
+    ca2.ValorVenda(); 
+    ca2.setInfosCliente(cliente8);
+    ca2.IncrementarQuantidade();
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 

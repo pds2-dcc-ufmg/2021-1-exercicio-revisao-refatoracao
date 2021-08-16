@@ -30,7 +30,7 @@ class Apartamento : public Imovel {
             << "  Vagas: " << Vagas << endl
             << "Taxa de Comissão: " << 4 << "%" << endl
             << "Valor Comissão: R$ " << fixed << setprecision(2) << Comissao << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << ValorImovel 
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << PrecoVenda 
         << endl;
     }
 };
