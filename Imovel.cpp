@@ -82,7 +82,7 @@ double Imovel::valor(){
 
 double Imovel::comissao(){
        return -1.0;
-;
+}
   
 
 
