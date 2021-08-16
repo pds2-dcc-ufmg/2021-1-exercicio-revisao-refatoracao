@@ -13,7 +13,6 @@ class Casa : public Imovel {
     double comissao() {
         setComissao(0.06);
         return this->valor() * this->getComissao();
-        
     }
 
     void print() {

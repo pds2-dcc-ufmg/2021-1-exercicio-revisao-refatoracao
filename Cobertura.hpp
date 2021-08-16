@@ -12,7 +12,6 @@ class Cobertura : public Imovel {
     double comissao() {
         setComissao(0.10);
         return this->valor() * this->getComissao();
-        
     }
 
     void print() {

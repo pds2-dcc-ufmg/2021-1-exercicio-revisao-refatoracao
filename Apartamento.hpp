@@ -12,12 +12,10 @@ class Apartamento : public Imovel {
     
     double comissao() {
         setComissao(0.04);
-        return this->valor() * this->getComissao();
-        
+        return this->valor() * this->getComissao();  
     }
 
     void print() {
-
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
     }
