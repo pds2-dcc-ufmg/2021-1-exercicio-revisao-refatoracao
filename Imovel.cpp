@@ -31,7 +31,7 @@ void Imovel::setQt_vagas(int _qt_vagas){
        qt_vagas = _qt_vagas;
 }
 
-int Imovel::getQt_vagas(int _qt_vagas){
+int Imovel::getQt_vagas(){
        return qt_vagas;
 }
 
@@ -72,7 +72,7 @@ void Imovel::setCorretor(string _corretor){
 }
 
 string Imovel::getCorretor(){
-       retrun corretor;
+       return corretor;
 }
 
 // Valor a retornar se o imóvel não for especificado
