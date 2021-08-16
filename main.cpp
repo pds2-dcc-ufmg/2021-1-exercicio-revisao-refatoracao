@@ -3,13 +3,16 @@
 #include <iomanip>
 
 //Incluindo .hpp
-#include "Imovel.hpp"
-#include "Casa.hpp"
-#include "Cobertura.hpp"
 #include "Apartamento.hpp"
+#include "Casa.hpp"
+#include "Cartório.hpp"
 #include "Cliente.hpp"
+#include "Cobertura.hpp"
+#include "Imovel.hpp"
 
 int main() {
+    //Construtor do Cartório:
+    Cartorio cartorio;
     
     //Construtores dos Clientes:
     Cliente cliente1("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", 
