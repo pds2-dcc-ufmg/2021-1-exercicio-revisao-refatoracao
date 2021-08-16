@@ -20,12 +20,12 @@ void Cobertura::print() {
         << "[Cliente]" << std::endl;
         InfosCliente.print();
     std::cout 
-        << "[Corretor]" << std::endl
-        << "  " + getCorretor() << std::endl
+        << "[NomeCorretor]" << std::endl
+        << "  " + getNomeCorretor() << std::endl
         << "Area: " << getArea() << std::endl
-        << "  Quartos: " << getQuartos() << std::endl
-        << "  Banheiros: " << getBanheiros() << std::endl
-        << "  Vagas: " << getVagas() << std::endl
+        << "  QtdQuartos: " << getQtdQuartos() << std::endl
+        << "  QtdBanheiros: " << getQtdBanheiros() << std::endl
+        << "  QtdVagas: " << getQtdVagas() << std::endl
         << "Taxa de Comissão: " << 10 << "%" << std::endl
         << "Valor Comissão: R$ " << std::fixed << std::setprecision(2) << getValorComissao() << std::endl
         << "Valor de Venda: R$ " << std::fixed << std::setprecision(2) << getValorVenda() 

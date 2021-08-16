@@ -2,11 +2,11 @@
 
 Imovel::Imovel() {}
 
-void Imovel::setCorretor(std::string Corretor) {
-    this -> Corretor = Corretor;
+void Imovel::setNomeCorretor(std::string NomeCorretor) {
+    this -> NomeCorretor = NomeCorretor;
 }
-std::string Imovel::getCorretor() {
-	return Corretor;
+std::string Imovel::getNomeCorretor() {
+	return NomeCorretor;
 }
 
 void Imovel::setArea(double area) {
@@ -16,25 +16,25 @@ double Imovel::getArea() {
     return Area;
 }
 
-void Imovel::setQuartos(int quartos) {
-    this -> Quartos = quartos;
+void Imovel::setQtdQuartos(int quartos) {
+    this -> QtdQuartos = quartos;
 }
-int Imovel::getQuartos() {
-    return Quartos;
-}
-
-void Imovel::setBanheiros(int Banheiro) {
-    this -> Banheiros = Banheiro;
-}
-int Imovel::getBanheiros() {
-	return Banheiros;
+int Imovel::getQtdQuartos() {
+    return QtdQuartos;
 }
 
-void Imovel::setVagas(int vaga) {
-    this -> Vagas = vaga;
+void Imovel::setQtdBanheiros(int Banheiro) {
+    this -> QtdBanheiros = Banheiro;
 }
-int Imovel::getVagas() {
-    return Vagas;
+int Imovel::getQtdBanheiros() {
+	return QtdBanheiros;
+}
+
+void Imovel::setQtdVagas(int vaga) {
+    this -> QtdVagas = vaga;
+}
+int Imovel::getQtdVagas() {
+    return QtdVagas;
 }
 
 void Imovel::setValorm2(double valorm2) {

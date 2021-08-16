@@ -5,10 +5,10 @@
 Cliente::Cliente() {}
 
 void Cliente::setNome(std::string Nome){
-	this -> Nome = Nome;
+	this -> NomeCliente = Nome;
 }
 std::string Cliente::getNome(){
-	return Nome;
+	return NomeCliente;
 }
 
 void Cliente::setEndereco(std::string Endereco){
@@ -44,10 +44,6 @@ void Cliente::setTelefone(std::string Telefone){
 }
 std::string Cliente::getTelefone(){
 	return Telefone;
-}
-
-void Cliente::adicionar(Cliente cl) {
-	VetorClientes.push_back(cl);
 }
 
 void Cliente::print(){
