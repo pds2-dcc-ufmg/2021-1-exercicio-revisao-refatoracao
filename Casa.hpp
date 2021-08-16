@@ -9,12 +9,11 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-  //Calcula a comissão do imóvel
-    double comissao() {
-        setComissao(0.06);
-        return this->valor() * this->getComissao();
+ 
+    Casa() {
+        this->setComissao(0.06);
     }
-
+    
     void print() {
         std::cout << "[Casa]" << endl;
         Imovel::print();
