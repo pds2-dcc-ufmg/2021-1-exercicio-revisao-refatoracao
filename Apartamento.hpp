@@ -12,17 +12,17 @@ class Apartamento : public Imovel {
     
     double valor() {
 
-        double v = AREA * VALORm2;
+        double valor = AREA * VALORm2;
 
-        return v;
+        return valor;
 
     }
 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double comissao = AREA * VALORm2;
 
-        return c * 0.04;
+        return comissao * 0.04;
         
     }
 
@@ -35,8 +35,8 @@ class Apartamento : public Imovel {
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
                 << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor << endl;
     }
 };
 
