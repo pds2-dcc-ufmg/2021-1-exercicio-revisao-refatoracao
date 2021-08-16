@@ -109,7 +109,7 @@ int main() {
     ap3.V = 2;
     ap3.VALORm2 = 2354.0;
     ap3.C = ap3.comissao();
-    ap3.Valor = ap1.valor() + ap3.comissao();
+    ap3.Valor = ap3.valor() + ap3.comissao();
     ap3.vendedor = cl3;
     qtdeA++;
 
