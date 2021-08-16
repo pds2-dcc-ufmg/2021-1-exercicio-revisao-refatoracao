@@ -12,7 +12,7 @@ class Casa : public Imovel {
 
     public:
 
-    // Método que calcula a comissão da casa
+    // Método para calcular a comissão da casa
     double comissao() {
 
         double c = area * valor_m2;
