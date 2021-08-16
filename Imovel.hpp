@@ -9,22 +9,27 @@ using namespace std;
 
 class Imovel {
     public:
-        double area;
-        int quartos;
-        int banheiros;
-        int vagas;
-        double valorMetroQuadrado;
-        double valorVenda;
-        double comissao;
-        Cliente vendedor;
-        string corretor;
+        double _area;
+        int _quartos;
+        int _banheiros;
+        int _vagas;
+        double _valorMetroQuadrado;
+        Cliente _vendedor;
+        string _corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+        double calculaValorImovel() {
+
+            double valorImovel = _area * _valorMetroQuadrado;
+
+            return valorImovel;
+
         }
+
+        Imovel(double area, int quartos, int banheiros, 
+                int vagas, double valorMetroQuadrado, 
+                Cliente vendedor, string corretor);
+
+        void print();
 };
 
 #endif

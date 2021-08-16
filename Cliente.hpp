@@ -15,7 +15,7 @@ class Cliente {
 
         Cliente(string nome, string endereco, string cidade, 
         string UF, string CEP, string telefone);
-
+        Cliente() = default;
         void print();
 };
 
