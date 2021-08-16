@@ -42,7 +42,7 @@ class Imovel {
         void setCorretor(string _corretor);
         string getCorretor();
     
-    protect:
+    protected:
         double area, valor_m2, valor_venda, valor_comissao;
         int qt_quartos, qt_banheiros, qt_vagas;
         Cliente vendedor;
