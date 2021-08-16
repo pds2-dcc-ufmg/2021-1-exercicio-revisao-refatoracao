@@ -9,9 +9,11 @@ class Cobertura : public Imovel {
     
     public:
 
-    Cobertura(){
-        this->setComissao(0.10);
+    double comissao() {
+        setComissao(0.10);
+        return this->valor() * this->getComissao();
     }
+
         
     void print() {
         std::cout << "[Cobertura]" << endl;
