@@ -33,6 +33,7 @@ public:
     void print() const;
 
 private:
+    // Informações a respeito do cliente que procura a venda do seu imóvel
     string nome;
     string endereco;
     string cidade;

@@ -19,6 +19,7 @@ public:
 
 
 private: 
+    // Taxa do valor do imóvel a ser paga ao corretor
     const float taxa_comissao = 0.06;
 };
 

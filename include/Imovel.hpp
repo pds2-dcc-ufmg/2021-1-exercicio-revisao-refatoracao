@@ -31,12 +31,18 @@ public:
     virtual double valor_total_venda() = 0;
 
 private:
+    // Dados do vendedor do imóvel, contidos na classe Cliente 
     Cliente vendedor;
+    // Nome do corretor do imóvel
     string corretor;
     double area;
+    // Quantidade de quartos no imóvel
     int quantidade_quartos; 
+    // Quantidade de banheiros no imóvel
     int quantidade_banheiros; 
+    // Quantidade de vagas no imóvel
     int quantidade_vagas; 
+    // Valor do metro quadrado do imóvel
     double valor_metro2;
 };
 
