@@ -12,6 +12,7 @@ class Cobertura : public Imovel {
     
     public:
 
+    // Método para calcular comissão da cobertura
     double comissao() {
 
         double c = area * valor_m2;
@@ -20,6 +21,7 @@ class Cobertura : public Imovel {
         
     }
 
+    // Método que escreve as insformações da cobertura
     void print() {
 
         std::cout << "[Cobertura]" << endl;
