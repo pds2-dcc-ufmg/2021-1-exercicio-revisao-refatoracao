@@ -1,30 +1,39 @@
 #ifndef IMOVEL_HPP
 #define IMOVEL_HPP
 
-#include <iostream>
-#include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
+    private:
+        double area;
+        double valor_m2;
+        int num_quartos;
+        int num_banheiros;
+        int num_vagas;
         Cliente vendedor;
-        string corretor;
+        std::string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+    public:
+        double valor();
+        void print();
+
+        // getters
+        double get_area();
+        double get_valor_m2();
+        int get_num_quartos();
+        int get_num_banheiros();
+        int get_num_vagas();
+        Cliente get_vendedor();
+        std::string get_corretor();
+
+        // setters
+        void set_area(double);
+        void set_valor_m2(double);
+        void set_num_quartos(int);
+        void set_num_banheiros(int);
+        void set_num_vagas(int);
+        void set_vendedor(Cliente);
+        void set_corretor(std::string);
 };
 
 #endif

@@ -2,44 +2,20 @@
 #define CASA_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
 
-using namespace std;
-
-class Casa : public Imovel {
+class Casa: public Imovel {
+    private:
+        const double TAXA_COMISSAO = 0.06;
 
     public:
+        Casa(double _area, double _valor_m2, int _num_quartos, int _num_banheiros, int _num_vagas, 
+            Cliente _vendedor, std::string _corretor);
+            
+        void print();
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
-
+        double get_taxa_comissao();
+        double comissao();
+        double valor_de_venda();
 };
 
 #endif
