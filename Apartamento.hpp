@@ -9,7 +9,7 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-    
+     //Calcula a comissão do imóvel 
     double comissao () {
       setComissao(0.04);
       return this->valor() * this->getComissao();
