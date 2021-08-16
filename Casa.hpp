@@ -9,23 +9,20 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    
+    double GetPercentComissao(){
+        //A comissão da venda de uma casa é 6%;
+        return 0.06;
     }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
+    
+    string TipoDeImovel{
+        return "[Casa]";
+    }
+    
+    
+    Casa(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
+    };
         
-    }
-
     void print() {
 
         std::cout << "[Casa]" << endl;
