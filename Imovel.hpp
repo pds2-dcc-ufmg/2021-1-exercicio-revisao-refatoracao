@@ -24,10 +24,8 @@ class Imovel {
         double valor() {
             return AREA * VALOR_m2;
         }
-    //Calcula a comissão do imóvel
-        double comissao() {
-            return this->valor() * this->getComissao();
-        }
+
+    //Get/Set a comissão
 
         double getComissao() {
             return this->_comissao;
