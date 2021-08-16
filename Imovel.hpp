@@ -18,6 +18,14 @@ class Imovel {
         double valor_comissao;
         Cliente vendedor;
         string corretor;
+    
+    double valor() {
+
+        double v = area * valor_m2;
+
+        return v;
+
+    }
 
         void print() {
             cout << "[Vendedor]" << endl;
