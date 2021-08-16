@@ -4,23 +4,21 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
+#define TAXA_DE_COMISSAO = 0.10;
+
 class Cobertura : public Imovel {
     
+    private:
+
+        static const double _taxa_comissao = 0.10;
+
     public:
 
-    double Valor() {
+    double Cobertura::CalculaComissao() override{
 
-        double v = _area * _valor_m2;
+        _comissao = _valor * _taxa_comissao;
 
-        return v;
-
-    }
-
-    double Comissao() {
-
-        double c = _area * _valor_m2;
-
-        return c * 0.10;
+        return _comissao;
         
     }
 
@@ -28,13 +26,7 @@ class Cobertura : public Imovel {
 
         std::cout << "[Cobertura]" << std::endl;
         Imovel::Print();
-        std::cout << "Area: " << _area << std::endl
-                << "  Quartos: " << _quartos << std::endl
-                << "  Banheiros: " << _banheiros << std::endl
-                << "  Vagas: " << _vagas << std::endl
-                << "Taxa de Comissão: " << 10 << "%" << std::endl
-                << "Valor Comissão: R$ " << std::fixed << std::setprecision(2) << _comissao << std::endl
-                << "Valor de Venda: R$ " << std::fixed << std::setprecision(2) << _valor << std::endl;
+        
     }
 };
 

@@ -84,8 +84,8 @@ int main() {
     ap1._banheiros = 1;
     ap1._vagas = 0;
     ap1. _valor_m2 = 987.0;
-    ap1._comissao= ap1.Comissao();
-    ap1._valor = ap1.Valor() + ap1.Comissao();
+    ap1._comissao= ap1.CalculaComissao();
+    ap1._valor = ap1.CalculaValor() + ap1.CalculaComissao();
     ap1._Vendedor = cl1;
     ++qt_apartamento;
 
@@ -96,8 +96,8 @@ int main() {
     ap2._banheiros = 1;
     ap2._vagas = 2;
     ap2. _valor_m2 = 1540.0;
-    ap2._comissao= ap2.Comissao();
-    ap2._valor = ap2.Valor() + ap2.Comissao();
+    ap2._comissao= ap2.CalculaComissao();
+    ap2._valor = ap2.CalculaValor() + ap2.CalculaComissao();
     ap2._Vendedor = cl2;
     ++qt_apartamento;
 
@@ -108,8 +108,8 @@ int main() {
     ap3._banheiros = 2;
     ap3._vagas = 2;
     ap3. _valor_m2 = 2354.0;
-    ap3._comissao= ap3.Comissao();
-    ap3._valor = ap3.Valor() + ap3.Comissao();
+    ap3._comissao= ap3.CalculaComissao();
+    ap3._valor = ap3.CalculaValor() + ap3.CalculaComissao();
     ap3._Vendedor = cl3;
     ++qt_apartamento;
 
@@ -121,8 +121,8 @@ int main() {
     cb1._banheiros = 3;
     cb1._vagas = 2;
     cb1. _valor_m2 = 3123.5;
-    cb1._comissao= cb1.Comissao();
-    cb1._valor = cb1.Valor() + cb1.Comissao();
+    cb1._comissao= cb1.CalculaComissao();
+    cb1._valor = cb1.CalculaValor() + cb1.CalculaComissao();
     cb1._Vendedor = cl4;
     ++qt_cobertura;
     
@@ -133,8 +133,8 @@ int main() {
     cb2._banheiros = 3;
     cb2._vagas = 3;
     cb2. _valor_m2 = 3578.2;
-    cb2._comissao= cb2.Comissao();
-    cb2._valor = cb2.Valor() + cb2.Comissao();
+    cb2._comissao= cb2.CalculaComissao();
+    cb2._valor = cb2.CalculaValor() + cb2.CalculaComissao();
     cb2._Vendedor = cl5;
     ++qt_cobertura;
 
@@ -145,8 +145,8 @@ int main() {
     cb3._banheiros = 4;
     cb3._vagas = 4;
     cb3. _valor_m2 = 4165.7;
-    cb3._comissao= cb3.Comissao();
-    cb3._valor = cb3.Valor() + cb3.Comissao();
+    cb3._comissao= cb3.CalculaComissao();
+    cb3._valor = cb3.CalculaValor() + cb3.CalculaComissao();
     cb3._Vendedor = cl6;
     ++qt_cobertura;
 
@@ -158,8 +158,8 @@ int main() {
     ca1._banheiros = 3;
     ca1._vagas = 2;
     ca1. _valor_m2 = 4023.6;
-    ca1._comissao= ca1.Comissao();
-    ca1._valor = ca1.Valor() + ca1.Comissao();
+    ca1._comissao= ca1.CalculaComissao();
+    ca1._valor = ca1.CalculaValor() + ca1.CalculaComissao();
     ca1._Vendedor = cl7;
     ++qt_casa;
 
@@ -170,8 +170,8 @@ int main() {
     ca2._banheiros = 4;
     ca2._vagas = 4;
     ca2. _valor_m2 = 4856.2;
-    ca2._comissao= ca2.Comissao();
-    ca2._valor = ca2.Valor() + ca2.Comissao();
+    ca2._comissao= ca2.CalculaComissao();
+    ca2._valor = ca2.CalculaValor() + ca2.CalculaComissao();
     ca2._Vendedor = cl8;
     ++qt_casa;
 
@@ -185,43 +185,43 @@ int main() {
     double comiss_casa = 0.0;
     
     ap1.Print();
-    valor_apartamento += ap1.Valor();
-    comiss_apartamento += ap1.Comissao();
+    valor_apartamento += ap1.CalculaValor();
+    comiss_apartamento += ap1.CalculaComissao();
     std::cout << std::endl;
 
     ap2.Print();
-    valor_apartamento += ap2.Valor();
-    comiss_apartamento += ap2.Comissao();
+    valor_apartamento += ap2.CalculaValor();
+    comiss_apartamento += ap2.CalculaComissao();
     std::cout << std::endl;
 
     ap3.Print();
-    valor_apartamento += ap3.Valor();
-    comiss_apartamento += ap3.Comissao();
+    valor_apartamento += ap3.CalculaValor();
+    comiss_apartamento += ap3.CalculaComissao();
     std::cout << std::endl;
 
     cb1.Print();
-    valor_cobertura += cb1.Valor();
-    comiss_cobertura += cb1.Comissao();
+    valor_cobertura += cb1.CalculaValor();
+    comiss_cobertura += cb1.CalculaComissao();
     std::cout << std::endl;
 
     cb2.Print();
-    valor_cobertura += cb2.Valor();
-    comiss_cobertura += cb2.Comissao();
+    valor_cobertura += cb2.CalculaValor();
+    comiss_cobertura += cb2.CalculaComissao();
     std::cout << std::endl;
 
     cb3.Print();
-    valor_cobertura += cb3.Valor();
-    comiss_cobertura += cb3.Comissao();
+    valor_cobertura += cb3.CalculaValor();
+    comiss_cobertura += cb3.CalculaComissao();
     std::cout << std::endl;
 
     ca1.Print();
-    valor_casa += ca1.Valor();
-    comiss_casa += ca1.Comissao();
+    valor_casa += ca1.CalculaValor();
+    comiss_casa += ca1.CalculaComissao();
     std::cout << std::endl;
 
     ca2.Print();
-    valor_casa += ca2.Valor();
-    comiss_casa += ca2.Comissao();
+    valor_casa += ca2.CalculaValor();
+    comiss_casa += ca2.CalculaComissao();
     std::cout << std::endl;
 
     std::cout << "\n>> Resumo Geral <<" << std::endl;
