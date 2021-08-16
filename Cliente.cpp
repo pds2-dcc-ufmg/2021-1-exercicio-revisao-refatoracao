@@ -6,7 +6,7 @@ void Cliente::print(){
 
 	std::cout << "  Nome: " << nome << endl
 		 << "  Telefone: " << telefone << endl
-		 << "  Endereço: " << endereco << endl
+		 << "  Endereço: " << endereço << endl
 		 << "  Cidade: " << cidade << endl
 		 << "  Estado: " << uf << endl
 		 << "  CEP: " << cep << endl;
@@ -41,7 +41,7 @@ void Cliente::setUf(string _uf){
 	uf = _uf;
 }
 
-string Cilente::getUf(){
+string Cliente::getUf(){
 	return uf;
 }
 
@@ -49,7 +49,7 @@ void Cliente::setCep(string _cep){
        cep = _cep;
 }
 
-string Cliente::setCep(){
+string Cliente::getCep(){
        return cep;
 }
 
