@@ -12,6 +12,7 @@ class Apartamento : public Imovel {
 
     public: 
 
+    // Método que calcula a comissão do apartamento 
     double comissao() {
 
         double c = area * valor_m2;
@@ -20,6 +21,7 @@ class Apartamento : public Imovel {
         
     }
 
+    // Método que escreve as insformações do apartamento
     void print() {
 
         std::cout << "[Apartamento]" << endl;
