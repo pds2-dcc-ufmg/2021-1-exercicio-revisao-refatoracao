@@ -19,6 +19,12 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
+        double valor() {
+            double v = AREA * VALORm2;
+            return v;
+        }
+
+        
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
