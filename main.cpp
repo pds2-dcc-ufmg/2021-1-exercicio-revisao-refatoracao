@@ -9,6 +9,7 @@
 
 int main() {
     
+    //Lista de clientes
     Cliente cl1;
     cl1.NOME = "Xayso Sovon Ziahaka";
     cl1.endereco = "Rua Xangrilá - Braúnas";
@@ -73,10 +74,12 @@ int main() {
     cl8.cep = "30668-430";
     cl8.telefone = "3197317802";
 
+    //Contador para a quatidade de casas,apartamentos e coberturas
     unsigned int quantidade_apartamentos = 0;
     unsigned int quantidade_casas = 0;
     unsigned int quantidade_coberturas = 0;
-
+    
+    // Apartamento
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
     ap1.AREA = 55.4;
@@ -175,12 +178,15 @@ int main() {
     ca2.vendedor = cl8;
     quantidade_casas++;
 
+    // Relatorio geral dos imoveis 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
-
+    
+    //Soma total dos valores de cada tipo de imovel 
     double valor_total_apartamentos = 0.0;
     double valor_total_coberturas = 0.0;
     double valor_total_casas = 0.0;
     
+    //Soma total das comissões de cada tipo de imovel 
     double comissao_total_apartamentos = 0.0;
     double comissao_total_coberturas = 0.0;
     double comissao_total_casas = 0.0;
@@ -226,7 +232,7 @@ int main() {
     comissao_total_casas += ca2.comissao();
     std::cout << endl;
 
-
+//Resumo final
     std::cout << "\n>> Resumo Geral <<" << endl;
 
      std::cout << "\n>>Apartamentos<<\n"
