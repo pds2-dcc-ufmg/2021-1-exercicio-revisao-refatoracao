@@ -10,20 +10,44 @@ using namespace std;
 class Imovel {
     public:
         double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
+        int Qtd_quartos;
+        int Qtd_banheiros;
+        int Qtd_vagas;
+        double VALOR_m2;
         double Valor;
-        double C;
+        double Comissao_valor;
+        double _comissao;
         Cliente vendedor;
         string corretor;
+        
+        double valor() {
+            return AREA * VALOR_m2;
+        }
 
+        double comissao() {
+            return this->valor() * this->getComissao();
+        }
+
+        double getComissao() {
+            return this->_comissao;
+        }
+    
+        void setComissao(double _comissao) {
+            this->_comissao = _comissao;
+        }
+    
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
+            cout << "Area: " << AREA << endl
+                << "  Quartos: " << Qtd_quartos << endl
+                << "  Banheiros: " << Qtd_banheiros << endl
+                << "  Vagas: " << Qtd_vagas << endl
+                << "Taxa de Comissão: " << this->getComissao() * 100 << "%" << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << Comissao_valor << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
         }
 };
 
