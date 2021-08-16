@@ -9,17 +9,17 @@ std::string Imovel::getCorretor() {
 	return Corretor;
 }
 
-void Imovel::setArea(double area){
+void Imovel::setArea(double area) {
     this -> Area = area;
 }
-double Imovel::getArea(){
+double Imovel::getArea() {
     return Area;
 }
 
-void Imovel::setQuartos(int quartos){
+void Imovel::setQuartos(int quartos) {
     this -> Quartos = quartos;
 }
-int Imovel::getQuartos(){
+int Imovel::getQuartos() {
     return Quartos;
 }
 
@@ -30,26 +30,34 @@ int Imovel::getBanheiros() {
 	return Banheiros;
 }
 
-void Imovel::setVagas(int vaga){
+void Imovel::setVagas(int vaga) {
     this -> Vagas = vaga;
 }
-int Imovel::getVagas(){
+int Imovel::getVagas() {
     return Vagas;
 }
 
-void Imovel::setValorm2(double valorm2){
+void Imovel::setValorm2(double valorm2) {
     this -> Valorm2 = valorm2;
 
 }
-double Imovel::getValorm2(){
+double Imovel::getValorm2() {
     return Valorm2;
 }
 
-void Imovel::setInfosCliente(Cliente InfosCliente){
+void Imovel::setInfosCliente(Cliente InfosCliente) {
     this -> InfosCliente = InfosCliente;
 } 
-Cliente Imovel::getInfosCliente(){
+Cliente Imovel::getInfosCliente() {
     return InfosCliente;    
 } 
 
-Imovel::~Imovel(){}
+double Imovel::getValorComissao() {
+    return Comissao;
+}
+
+double Imovel::getValorVenda() {
+    return PrecoVenda;
+}
+
+Imovel::~Imovel() {}

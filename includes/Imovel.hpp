@@ -6,7 +6,6 @@
 #include "Cliente.hpp"
 
 class Imovel {
-
     protected:
     int Quartos;
     int Banheiros;
@@ -47,9 +46,11 @@ class Imovel {
     pelos tipos de imóveis*/
     virtual double ValorTotalM2() = 0;
 
-    virtual double ValorComissao() = 0;
+    virtual void ValorComissao() = 0;
+    double getValorComissao();
 
-    virtual double ValorVenda() = 0;
+    virtual void ValorVenda() = 0;
+    double getValorVenda();
 
     /* virtual int Quantidade() = 0;
 
