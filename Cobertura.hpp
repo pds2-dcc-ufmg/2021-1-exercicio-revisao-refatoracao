@@ -6,16 +6,11 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
     public:
     
-    double comissao() {
-        setComissao(0.10);
-        return this->valor() * this->getComissao();
-    }
+    Cobertura() {this->setComissao(0.10);}
 
     void print() {
-
         std::cout << "[Cobertura]" << endl;
         Imovel::print();
         

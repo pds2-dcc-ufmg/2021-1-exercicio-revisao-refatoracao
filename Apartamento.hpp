@@ -7,13 +7,9 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-
     public: 
     
-    double comissao() {
-        setComissao(0.04);
-        return this->valor() * this->getComissao();  
-    }
+    Apartamento() {this->setComissao(0.04);}
 
     void print() {
         std::cout << "[Apartamento]" << endl;

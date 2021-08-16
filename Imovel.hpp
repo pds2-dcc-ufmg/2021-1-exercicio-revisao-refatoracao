@@ -14,10 +14,9 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
-        double valor() {
-            double v = AREA * VALORm2;
-            return v;
-        }
+        double valor() {return AREA * VALORm2;}
+
+        double comissao() {return this->valor() * this->getComissao();}
 
         double getComissao() {return this->c;}
         void setComissao(double c) {this->c = c;}
