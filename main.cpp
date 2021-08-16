@@ -10,235 +10,235 @@
 int main() {
     
     Cliente cl1;
-    cl1.NOME = "Xayso Sovon Ziahaka";
-    cl1.endereco = "Rua Xangrilá - Braúnas";
-    cl1.CIDADE = "Belo Horizonte";
-    cl1.UF = "MG";
-    cl1.cep = "31365-570";
-    cl1.telefone = "3196007958";
+    cl1._nome = "Xayso Sovon Ziahaka";
+    cl1._endereco = "Rua Xangrilá - _banheirosraúnas";
+    cl1._cidade = "_banheiroselo Horizonte";
+    cl1._uf = "MG";
+    cl1._cep = "31365-570";
+    cl1._telefone = "3196007958";
     
     Cliente cl2;
-    cl2.NOME = "Minia Pasies Kituos";
-    cl2.endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2.CIDADE = "Belo Horizonte";
-    cl2.UF = "MG";
-    cl2.cep = "31870-290";
-    cl2.telefone = "3197627067";
+    cl2._nome = "Minia Pasies Kituos";
+    cl2._endereco = "Rua dos Jacobinos - Ouro Minas";
+    cl2._cidade = "_banheiroselo Horizonte";
+    cl2._uf = "MG";
+    cl2._cep = "31870-290";
+    cl2._telefone = "3197627067";
     
     Cliente cl3;
-    cl3.NOME = "Vuocue Leiur Baonauza";
-    cl3.endereco = "Rua Orminda de Almeida - Tupi B";
-    cl3.CIDADE = "Belo Horizonte";
-    cl3.UF = "MG";
-    cl3.cep = "31842-630";
-    cl3.telefone = "3195949327";
+    cl3._nome = "Vuocue Leiur _banheirosaonauza";
+    cl3._endereco = "Rua Orminda de Almeida - Tupi _banheiros";
+    cl3._cidade = "_banheiroselo Horizonte";
+    cl3._uf = "MG";
+    cl3._cep = "31842-630";
+    cl3._telefone = "3195949327";
     
     Cliente cl4;
-    cl4.NOME = "Zerer Huduy Fyogar";
-    cl4.endereco = "Rua Taquaril - Jonas Veiga";
-    cl4.CIDADE = "Belo Horizonte";
-    cl4.UF = "MG";
-    cl4.cep = "30285-422";
-    cl4.telefone = "3198596327";
+    cl4._nome = "Zerer Huduy Fyogar";
+    cl4._endereco = "Rua Taquaril - Jonas Veiga";
+    cl4._cidade = "_banheiroselo Horizonte";
+    cl4._uf = "MG";
+    cl4._cep = "30285-422";
+    cl4._telefone = "3198596327";
     
     Cliente cl5;
-    cl5.NOME = "Ceziel Mioti Pler";
-    cl5.endereco = "Rua João Gualberto Costa - Serrano";
-    cl5.CIDADE = "Belo Horizonte";
-    cl5.UF = "MG";
-    cl5.cep = "30882-747";
-    cl5.telefone = "3196274465";
+    cl5._nome = "Ceziel Mioti Pler";
+    cl5._endereco = "Rua João Gualberto Costa - Serrano";
+    cl5._cidade = "_banheiroselo Horizonte";
+    cl5._uf = "MG";
+    cl5._cep = "30882-747";
+    cl5._telefone = "3196274465";
     
     Cliente cl6;
-    cl6.NOME = "Esxo Cilal Zyais";
-    cl6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.CIDADE = "Belo Horizonte";
-    cl6.UF = "MG";
-    cl6.cep = "31650-560";
-    cl6.telefone = "3195004414";
+    cl6._nome = "Esxo Cilal Zyais";
+    cl6._endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
+    cl6._cidade = "_banheiroselo Horizonte";
+    cl6._uf = "MG";
+    cl6._cep = "31650-560";
+    cl6._telefone = "3195004414";
     
     Cliente cl7;
-    cl7.NOME = "Leova Wikyecil Neaca";
-    cl7.endereco = "Rua João Arantes - Cidade Nova";
-    cl7.CIDADE = "Belo Horizonte";
-    cl7.UF = "MG";
-    cl7.cep = "31170-240";
-    cl7.telefone = "3198461192";
+    cl7._nome = "Leova Wikyecil Neaca";
+    cl7._endereco = "Rua João Arantes - _cidade Nova";
+    cl7._cidade = "_banheiroselo Horizonte";
+    cl7._uf = "MG";
+    cl7._cep = "31170-240";
+    cl7._telefone = "3198461192";
     
     Cliente cl8;
-    cl8.NOME = "Teas Heimeu Pipe";
-    cl8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.CIDADE = "Belo Horizonte";
-    cl8.UF = "MG";
-    cl8.cep = "30668-430";
-    cl8.telefone = "3197317802";
+    cl8._nome = "Teas Heimeu Pipe";
+    cl8._endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(_banheirosarreiro)";
+    cl8._cidade = "_banheiroselo Horizonte";
+    cl8._uf = "MG";
+    cl8._cep = "30668-430";
+    cl8._telefone = "3197317802";
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
+    int qt_apartamento = 0;
+    int qt_casa = 0;
+    int qt_cobertura = 0;
 
     Apartamento ap1;
-    ap1.corretor = "Tuoruars";
-    ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
-    ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
-    qtdeA++;
+    ap1._corretor = "Tuoruars";
+    ap1._area = 55.4;
+    ap1._quartos = 2;
+    ap1._banheiros = 1;
+    ap1._vagas = 0;
+    ap1._vagas_m2 = 987.0;
+    ap1._comissao= ap1.Comissao();
+    ap1._valor = ap1.Valor() + ap1.Comissao();
+    ap1._Vendedor = cl1;
+    ++qt_apartamento;
 
     Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
-    ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
-    ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
-    qtdeA++;
+    ap2._corretor = "Fyubyeis";
+    ap2._area = 74.5;
+    ap2._quartos = 2;
+    ap2._banheiros = 1;
+    ap2._vagas = 2;
+    ap2._vagas_m2 = 1540.0;
+    ap2._comissao= ap2.Comissao();
+    ap2._valor = ap2.Valor() + ap2.Comissao();
+    ap2._Vendedor = cl2;
+    ++qt_apartamento;
 
     Apartamento ap3;
-    ap3.corretor = "Kelia";
-    ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
-    ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
-    qtdeA++;
+    ap3._corretor = "Kelia";
+    ap3._area = 87.2;
+    ap3._quartos = 3;
+    ap3._banheiros = 2;
+    ap3._vagas = 2;
+    ap3._vagas_m2 = 2354.0;
+    ap3._comissao= ap3.Comissao();
+    ap3._valor = ap3.Valor() + ap3.Comissao();
+    ap3._Vendedor = cl3;
+    ++qt_apartamento;
 
     // Cobertura
     Cobertura cb1;
-    cb1.corretor = "Koci";
-    cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
-    cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
-    cb1.Valor = cb1.valor() + cb1.comissao();
-    cb1.vendedor = cl4;
-    qtdeCb++;
+    cb1._corretor = "Koci";
+    cb1._area = 120.1;
+    cb1._quartos = 3;
+    cb1._banheiros = 3;
+    cb1._vagas = 2;
+    cb1._vagas_m2 = 3123.5;
+    cb1._comissao= cb1.Comissao();
+    cb1._valor = cb1.Valor() + cb1.Comissao();
+    cb1._Vendedor = cl4;
+    ++qt_cobertura;
     
     Cobertura cb2;
-    cb2.corretor = "Wail";
-    cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
-    cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
-    cb2.Valor = cb2.valor() + cb2.comissao();
-    cb2.vendedor = cl5;
-    qtdeCb++;
+    cb2._corretor = "Wail";
+    cb2._area = 134.8;
+    cb2._quartos = 4;
+    cb2._banheiros = 3;
+    cb2._vagas = 3;
+    cb2._vagas_m2 = 3578.2;
+    cb2._comissao= cb2.Comissao();
+    cb2._valor = cb2.Valor() + cb2.Comissao();
+    cb2._Vendedor = cl5;
+    ++qt_cobertura;
 
     Cobertura cb3;
-    cb3.corretor = "Fival";
-    cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
-    cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
-    cb3.Valor = cb3.valor() + cb3.comissao();
-    cb3.vendedor = cl6;
-    qtdeCb++;
+    cb3._corretor = "Fival";
+    cb3._area = 180.0;
+    cb3._quartos = 4;
+    cb3._banheiros = 4;
+    cb3._vagas = 4;
+    cb3._vagas_m2 = 4165.7;
+    cb3._comissao= cb3.Comissao();
+    cb3._valor = cb3.Valor() + cb3.Comissao();
+    cb3._Vendedor = cl6;
+    ++qt_cobertura;
 
     // Casas
     Casa ca1;
-    ca1.corretor = "Beydo";
-    ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
-    ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
-    ca1.Valor = ca1.valor() + ca1.comissao();
-    ca1.vendedor = cl7;
-    qtdeCa++;
+    ca1._corretor = "_banheiroseydo";
+    ca1._area = 145.6;
+    ca1._quartos = 3;
+    ca1._banheiros = 3;
+    ca1._vagas = 2;
+    ca1._vagas_m2 = 4023.6;
+    ca1._comissao= ca1.Comissao();
+    ca1._valor = ca1.Valor() + ca1.Comissao();
+    ca1._Vendedor = cl7;
+    ++qt_casa;
 
     Casa ca2;
-    ca2.corretor = "Riuzi";
-    ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
-    ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
-    ca2.Valor = ca2.valor() + ca2.comissao();
-    ca2.vendedor = cl8;
-    qtdeCa++;
+    ca2._corretor = "Riuzi";
+    ca2._area = 245.0;
+    ca2._quartos = 5;
+    ca2._banheiros = 4;
+    ca2._vagas = 4;
+    ca2._vagas_m2 = 4856.2;
+    ca2._comissao= ca2.Comissao();
+    ca2._valor = ca2.Valor() + ca2.Comissao();
+    ca2._Vendedor = cl8;
+    ++qt_casa;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
+    double valor_apartamento = 0.0;
+    double valor_cobertura = 0.0;
+    double valor_casa = 0.0;
+    double comiss_apartamento = 0.0;
+    double comiss_cobertura = 0.0;
+    double comiss_casa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valor_apartamento += ap1.Valor();
+    comiss_apartamento += ap1.Comissao();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valor_apartamento += ap2.Valor();
+    comiss_apartamento += ap2.Comissao();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valor_apartamento += ap3.Valor();
+    comiss_apartamento += ap3.Comissao();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valor_cobertura += cb1.Valor();
+    comiss_cobertura += cb1.Comissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valor_cobertura += cb2.Valor();
+    comiss_cobertura += cb2.Comissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valor_cobertura += cb3.Valor();
+    comiss_cobertura += cb3.Comissao();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valor_casa += ca1.Valor();
+    comiss_casa += ca1.Comissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valor_casa += ca2.Valor();
+    comiss_casa += ca2.Comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
-    std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+    std::cout << "\n>>apartamentos<<\n"
+            << "\n Quantidade: " << qt_apartamento
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_apartamento
+            << "\n Comissão Total: R$" << comiss_apartamento
             << endl
-            << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n>>coberturas<<\n"
+            << "\n Quantidade: " << qt_cobertura
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_cobertura
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_cobertura
             << endl
-            << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n>>casas<<\n"
+            << "\n Quantidade: " << qt_casa
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_casa
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comiss_casa
             << endl;
 }
