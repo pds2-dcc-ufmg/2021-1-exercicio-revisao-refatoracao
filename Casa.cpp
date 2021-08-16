@@ -1,17 +1,24 @@
+//Incluindo bibliotecas
 #include <iostream>
 #include <string>
+
+//Incluindo .hpp
 #include "Casa.hpp"
 
+//Implementação dos métodos
+//Calcula a comissão da Casa
 double Casa::calculaComissao() {
     double comissao = _area * _valorMetroQuadrado;
     return comissao * TAXA_COMISSAO_CASA;
 }
 
+//Calcula o valor de venda da Casa
 double Casa::calculaValorVenda() {
     double valorVenda = calculaComissao() + calculaValorImovel();
     return valorVenda;  
 }
 
+//Imprime dados da Casa
 void Casa::print() {
     std::cout << "[Casa]" << endl;
     Imovel::print();
@@ -24,6 +31,7 @@ void Casa::print() {
             << "Valor de Venda: R$ " << fixed << setprecision(2) << calculaValorVenda() << endl;
 }
 
+//Construtor de uma Casa
 Casa::Casa(double area, int quartos, int banheiros, int vagas, 
             double valorMetroQuadrado, Cliente vendedor, string corretor): 
     Imovel(area, quartos, banheiros, vagas, valorMetroQuadrado, vendedor, corretor){};

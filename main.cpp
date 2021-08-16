@@ -1,6 +1,8 @@
+//Incluindo bibliotecas
 #include <iostream>
 #include <iomanip>
 
+//Incluindo .hpp
 #include "Imovel.hpp"
 #include "Casa.hpp"
 #include "Cobertura.hpp"
@@ -9,7 +11,7 @@
 
 int main() {
     
-    //Clientes:
+    //Construtores dos Clientes:
     Cliente cliente1("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas", 
                     "Belo Horizonte", "MG", "31365-570", "3196007958");
     
@@ -38,8 +40,7 @@ int main() {
     int quantidadeCasas = 0;
     int quantidadeCoberturas = 0;
 
-    //Apartamentos:
-
+    //Construtores dos Apartamentos:
     Apartamento apartamento1(55.4, 2, 1, 0, 987.0, cliente1, "Tuoruars");
     quantidadeApartamentos++;
 
@@ -49,7 +50,7 @@ int main() {
     Apartamento apartamento3(87.2, 3, 2, 2, 2354.0, cliente3, "Kelia");
     quantidadeApartamentos++;
 
-    // Coberturas:
+    //Construtores das Coberturas:
     Cobertura cobertura1(120.1, 3, 3, 2, 3123.5, cliente4, "Koci");
     quantidadeCoberturas++;
     
@@ -59,13 +60,14 @@ int main() {
     Cobertura cobertura3(180.0, 4, 4, 4, 4165.7, cliente6, "Fival");
     quantidadeCoberturas++;
 
-    // Casas
+    //Construtores das Casas:
     Casa casa1(145.6, 3, 3, 2, 4023.6, cliente7, "Beydo");
     quantidadeCasas++;
 
     Casa casa2(245.0, 5, 4, 4, 4856.2, cliente8, "Riuzi");
     quantidadeCasas++;
 
+    //Relatório de Imóveis
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
     double valorApartamento = 0.0;

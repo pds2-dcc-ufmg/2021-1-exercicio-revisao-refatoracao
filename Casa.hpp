@@ -1,25 +1,33 @@
 #ifndef CASA_HPP
 #define CASA_HPP
 
+//Incluindo .hpp
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
+//Namespace
 using namespace std;
 
+//Contrato .hpp
 class Casa : public Imovel {
 
     public:
-    static constexpr double TAXA_COMISSAO_CASA = 0.06;
+        //Taxa de comissão comum entre todos os objetos de Casa
+        static constexpr double TAXA_COMISSAO_CASA = 0.06;
 
-    double calculaComissao();
+        //Construtor de Casa
+        Casa(double area, int quartos, int banheiros, 
+            int vagas, double valorMetroQuadrado, 
+            Cliente vendedor, string corretor);
 
-    double calculaValorVenda();
+        //Calcula a comissão da Casa
+        double calculaComissao();
 
-    void print();
+        //Calcula o valor de venda da Casa (comissão + valor da Casa)
+        double calculaValorVenda();
 
-    Casa(double area, int quartos, int banheiros, 
-        int vagas, double valorMetroQuadrado, 
-        Cliente vendedor, string corretor);
+        //Imprime os dados da Casa
+        void print();
 
 };
 
