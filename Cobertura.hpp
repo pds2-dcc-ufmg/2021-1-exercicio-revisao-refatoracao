@@ -6,14 +6,15 @@
 using namespace std;
 
 class Cobertura : public Imovel {
+    private:
+
+    const int PCT = 10;
     
     public:
 
     double comissao() {
 
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
+        return valor() * PCT/100;
         
     }
 
@@ -25,7 +26,7 @@ class Cobertura : public Imovel {
                 << "  Quartos: " << Q << endl
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
+                << "Taxa de Comissão: " << PCT << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }

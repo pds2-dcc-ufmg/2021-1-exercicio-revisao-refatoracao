@@ -16,6 +16,7 @@ class Imovel {
         double VALORm2;
         double Valor;
         double C;
+        
         Cliente vendedor;
         string corretor;
 
@@ -24,7 +25,6 @@ class Imovel {
             return v;
         }
 
-        
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
