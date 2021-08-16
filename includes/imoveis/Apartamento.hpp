@@ -9,7 +9,6 @@ using namespace std;
 class Apartamento : public Imovel {
     private:
     const double FatorComissao = 0.04;
-    /* int QuantidadeCasas = 0; */
 
     public: 
     Apartamento();

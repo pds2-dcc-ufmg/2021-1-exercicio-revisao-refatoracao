@@ -7,8 +7,7 @@
 class Casa : public Imovel {
     private:
     const double FatorComissao = 0.06;
-    /* int QuantidadeCasas = 0; */
-
+    
     public:
     Casa();
 
