@@ -12,35 +12,36 @@ class Imovel {
         int n_banheiros;
         int n_vagas;
         double preco_por_m2;
-        double preco;
-        double comissao_porcentagem;
-        double comissao;
+        double comissao_taxa;
         Cliente vendedor;
         std::string corretor;
 
     public:
-        Imovel(double area, int q, int b, int v, double valor_m2, double price, double c, Cliente vendedor, std::string corretor) {
+        Imovel(double area, int q, int b, int v, double valor_m2, double c, Cliente vendedor, std::string corretor) {
             this->area = area;
             n_quartos = q;
             n_banheiros = b;
             n_vagas = v;
             preco_por_m2 = valor_m2;
-            preco = price;
-            comissao = c;
+            comissao_taxa = c;
             this->vendedor = vendedor;
             this->corretor = corretor;
         }
 
-        double get_preco() {
-            return preco
+        double preco() {
+            return valor() + comissao();
         }
 
-        double preco() {
+        void set_comissao_taxa(double comissao) {
+            comissao_taxa = comissao;
+        }
+
+        virtual double valor() {
             return area * preco_por_m2;
         }
         
         virtual double comissao() {
-            return comissao_porcentagem * preco();
+            return comissao_taxa * valor();
         }
 
         void print() {
