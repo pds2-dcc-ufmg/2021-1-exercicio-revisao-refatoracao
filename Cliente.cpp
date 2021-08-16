@@ -21,11 +21,11 @@ string Cliente::getNome(){
        return nome;
 }
 
-void Cliente::setEndereço(string _endereço){
+void Cliente::setEndereco(string _endereço){
        endereço = _endereço;
 }
 
-string Cliente::getEndereço(){
+string Cliente::getEndereco(){
        return endereço;
 }
 
