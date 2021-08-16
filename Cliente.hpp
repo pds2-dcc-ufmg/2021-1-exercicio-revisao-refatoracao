@@ -13,6 +13,13 @@ class Cliente {
         string cep;
         string telefone;
 
+        string getNome();
+        string getEndereco();
+        string getCidade();
+        string getUf();
+        string getCep();
+        string getTelefone();
+        
         void print();
 };
 
