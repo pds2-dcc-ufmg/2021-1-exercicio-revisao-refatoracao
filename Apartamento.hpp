@@ -10,34 +10,26 @@ class Apartamento : public Imovel {
 
     public: 
     
-    double valor() {
+    /*retorna o valor do apartamento calculado pela variavel Valor_apartamento */
 
-        double v = AREA * VALORm2;
+    double valor();
 
-        return v;
+    /*calcula a comissao recebida pelo vendedor ao vender um Apartamento a partir de
+    seu valor definido pela variavel Valor_apartamento e da porcentagem relacionada a 
+    essa venda, de 4% */
 
-    }
+    double comissao();
 
-    double comissao() {
+    /*Imprime os valores relacionados ao Apartamento*/
 
-        double c = AREA * VALORm2;
+    void print();
 
-        return c * 0.04;
-        
-    }
+    private:
 
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
-};
+    /*variavel que calcula o valor do apartamento a partir de sua area e o valor do metro quadrado*/
+    
+    double Valor_apartamento;
+    
+}; 
 
 #endif

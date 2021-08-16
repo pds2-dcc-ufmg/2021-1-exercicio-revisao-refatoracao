@@ -10,35 +10,25 @@ class Casa : public Imovel {
 
     public:
 
-    double valor() {
+    /*retorna o valor da casa calculado pela variavel Valor_casa */
 
-        double v = AREA * VALORm2;
+    double valor();
+ 
+    /*calcula a comissao recebida pelo vendedor ao vender uma Casa a partir de
+    seu valor definido pela variavel Valor_casa e da porcentagem relacionada a 
+    essa venda, de 6% */
 
-        return v;
+    double comissao();
 
-    }
+    /*Imprime os valores relacionados à Casa*/
 
-    double comissao() {
+    void print();
 
-        double c = AREA * VALORm2;
+    private:
 
-        return c * 0.06;
-        
-    }
+    /*variavel que calcula o valor da casa a partir de sua area e o valor do metro quadrado*/
 
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
+    double Valor_casa;
 
 };
 
