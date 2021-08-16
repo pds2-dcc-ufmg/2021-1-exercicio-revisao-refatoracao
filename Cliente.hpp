@@ -2,10 +2,9 @@
 #define CLIENTE_HPP
 
 #include <string>
-using namespace std;
 
 class Cliente {
-    public:
+    private:
         string NOME;
         string endereco;
         string CIDADE;
@@ -13,6 +12,7 @@ class Cliente {
         string cep;
         string telefone;
 
+    public:    
         void print();
 };
 
