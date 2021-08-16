@@ -9,34 +9,25 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
+    /*retorna o valor da Cobertura calculado pela variavel Valor_cobertura */
 
-        double v = AREA * VALORm2;
+    double valor();
 
-        return v;
+    /*calcula a comissao recebida pelo vendedor ao vender uma Cobertura a partir de
+    seu valor definido pela variavel Valor_cobertura e da porcentagem relacionada a 
+    essa venda, de 10% */
 
-    }
+    double comissao();
 
-    double comissao() {
+     /*Imprime os valores relacionados à Cobertura*/
 
-        double c = AREA * VALORm2;
+    void print();
+ 
+    private:
 
-        return c * 0.10;
-        
-    }
+    /*variavel que calcula o valor da cobertura a partir de sua area e o valor do metro quadrado*/
 
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+    double Valor_cobertura;
 };
 
 #endif
