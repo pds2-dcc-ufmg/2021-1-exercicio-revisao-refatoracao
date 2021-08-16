@@ -1,26 +1,14 @@
 #include"Apartamento.hpp"
 
-Apartamento::Apartamento(): Imovel(){}
+Apartamento::Apartamento(): Imovel(){
+    taxa_comissao = comissao_apartamento;
+}
 Apartamento::Apartamento(const int& qq, const int& qb, const int& qv, const double& a, const double& vm, const Cliente& v, const string& c): 
-Imovel(qq, qb, qv, a, vm, v, c){}
-
-double Apartamento::valor_comissao() {
-
-    double valor_comissao = this->get_area() * this->get_valor_metro2();
-    return valor_comissao * taxa_comissao;     
-}
-double Apartamento::valor_imovel_sem_comissao() {
-
-    double valor_comissao = this->get_area() * this->get_valor_metro2();
-    return valor_comissao;    
-}
-double Apartamento::valor_total_venda() {
-   
-    double valor_total = this->valor_imovel_sem_comissao() + this->valor_comissao();
-    return valor_total;
+Imovel(qq, qb, qv, a, vm, v, c){
+    taxa_comissao = comissao_apartamento;
 }
 
-void Apartamento::print() {
+void Apartamento::print() const{
 
     std::cout << "[Apartamento]" << endl;
     Imovel::print();

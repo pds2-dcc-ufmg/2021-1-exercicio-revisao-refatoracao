@@ -1,26 +1,14 @@
 #include"Casa.hpp"
 
-Casa::Casa(): Imovel(){}
+Casa::Casa(): Imovel(){
+    taxa_comissao = comissao_casa;
+}
 Casa::Casa(const int& qq, const int& qb, const int& qv, const double& a, const double& vm, const Cliente& v, const string& c): 
-Imovel(qq, qb, qv, a, vm, v, c){}
-
-double Casa::valor_comissao() {
-
-    double valor_comissao = this->get_area() * this->get_valor_metro2();
-    return valor_comissao * taxa_comissao;     
-}
-double Casa::valor_imovel_sem_comissao() {
-
-    double valor_comissao = this->get_area() * this->get_valor_metro2();
-    return valor_comissao;    
-}
-double Casa::valor_total_venda() {
-   
-    double valor_total = this->valor_imovel_sem_comissao() + this->valor_comissao();
-    return valor_total;
+Imovel(qq, qb, qv, a, vm, v, c){
+    taxa_comissao = comissao_casa;
 }
 
-void Casa::print() {
+void Casa::print() const{
 
     std::cout << "[Casa]" << endl;
     Imovel::print();

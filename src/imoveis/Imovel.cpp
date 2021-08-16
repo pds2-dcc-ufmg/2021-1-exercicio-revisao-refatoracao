@@ -32,7 +32,23 @@ void Imovel::set_valor_metro2(const double& vm) { valor_metro2 = vm; }
 void Imovel::set_vendedor(const Cliente& v) { vendedor = v; }
 void Imovel::set_corretor(const string& cor) { corretor = cor; }
 
-void Imovel::print() {
+double Imovel::valor_comissao() const{
+
+    double valor_comissao = this->get_area() * this->get_valor_metro2();
+    return valor_comissao * taxa_comissao;     
+}
+double Imovel::valor_imovel_sem_comissao() const{
+
+    double valor_comissao = this->get_area() * this->get_valor_metro2();
+    return valor_comissao;    
+}
+double Imovel::valor_total_venda() const{
+   
+    double valor_total = this->valor_imovel_sem_comissao() + this->valor_comissao();
+    return valor_total;
+}
+
+void Imovel::print() const{
     std::cout << "[Vendedor]" << endl;
     vendedor.print();
     std::cout << "[Corretor]" << endl;

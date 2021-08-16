@@ -5,12 +5,12 @@ nome(n), endereco(e), cidade(c), estado(e), CEP(cep), telefone(t){}
 Cliente::Cliente():
 nome(""), endereco(""), cidade(""), estado(""), CEP(""), telefone(""){}
 
-string Cliente::get_nome(){ return nome; };
-string Cliente::get_endereco(){ return endereco; };
-string Cliente::get_cidade(){ return cidade; };
-string Cliente::get_estado(){ return estado; };
-string Cliente::get_CEP(){ return CEP; };
-string Cliente::get_telefone(){ return telefone; };
+string Cliente::get_nome() const{ return nome; };
+string Cliente::get_endereco() const{ return endereco; };
+string Cliente::get_cidade() const{ return cidade; };
+string Cliente::get_estado() const{ return estado; };
+string Cliente::get_CEP() const{ return CEP; };
+string Cliente::get_telefone() const{ return telefone; };
 
 void Cliente::set_nome(const string& n){ nome = n; }
 void Cliente::set_endereco(const string& en){ endereco = en; };
