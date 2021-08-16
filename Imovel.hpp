@@ -19,11 +19,12 @@ class Imovel {
         double _comissao;
         Cliente vendedor;
         string corretor;
-        
+
+    //Calcula o valor do imóvel
         double valor() {
             return AREA * VALOR_m2;
         }
-
+    //Calcula a comissão do imóvel
         double comissao() {
             return this->valor() * this->getComissao();
         }
@@ -36,6 +37,7 @@ class Imovel {
             this->_comissao = _comissao;
         }
     
+//Printa as informações do imovel     
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
