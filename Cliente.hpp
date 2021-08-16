@@ -5,12 +5,12 @@
 
 class Cliente {
     private:
-        string NOME;
-        string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
+        std::string NOME;
+        std::string endereco;
+        std::string CIDADE;
+        std::string UF;
+        std::string cep;
+        std::string telefone;
 
     public:    
         void print();
