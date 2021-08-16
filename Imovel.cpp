@@ -74,15 +74,3 @@ void Imovel::setCorretor(string _corretor){
 string Imovel::getCorretor(){
        return corretor;
 }
-
-// Valor a retornar se o imóvel não for especificado
-double Imovel::valor(){
-       return -1.0;
-}
-
-double Imovel::comissao(){
-       return -1.0;
-}
-  
-
-
