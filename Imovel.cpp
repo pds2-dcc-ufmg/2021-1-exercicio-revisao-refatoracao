@@ -10,7 +10,6 @@
 using namespace std;
 
 //Implementação dos métodos
-
 //Imprime dados do imóvel
 void Imovel::print(){
     cout << "[Vendedor]" << endl;

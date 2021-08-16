@@ -8,7 +8,7 @@ using namespace std;
 
 //Contrato .hpp
 class Cliente {
-    public:
+    protected:
         //Atributos do Cliente
         string _nome;
         string _endereco;
@@ -17,10 +17,11 @@ class Cliente {
         string _CEP;
         string _telefone;
 
+    public:
         //Construtor de um Cliente
         Cliente(string nome, string endereco, string cidade, 
         string UF, string CEP, string telefone);
-        
+
         //Construtor padrão de um Cliente
         Cliente() = default;
 

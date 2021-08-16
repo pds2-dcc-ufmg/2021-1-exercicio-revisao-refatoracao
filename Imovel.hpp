@@ -13,7 +13,7 @@ using namespace std;
 
 //Contrato .hpp
 class Imovel {
-    public:
+	protected:
         //Atributos do Imóvel
         double _area;
         int _quartos;
@@ -23,6 +23,7 @@ class Imovel {
         Cliente _vendedor;
         string _corretor;
 
+    public:
         //Construtor de Imóvel
         Imovel(double area, int quartos, int banheiros, 
                 int vagas, double valorMetroQuadrado, 
