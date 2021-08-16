@@ -8,7 +8,7 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-
+  //Calcula a comissão do imóvel
     double comissao() {
         setComissao(0.10);
         return this->valor() * this->getComissao();
