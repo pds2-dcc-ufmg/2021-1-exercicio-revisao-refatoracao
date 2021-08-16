@@ -12,14 +12,6 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-
-        double v = area * valor_m2;
-
-        return v;
-
-    }
-
     double comissao() {
 
         double c = area * valor_m2;
