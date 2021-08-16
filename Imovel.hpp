@@ -28,7 +28,7 @@ class Imovel {
         }
 
         virtual double comissao(){}
-        
+
         void set_Imovel(string _corretor, double _AREA, int _Q, int _B, int _V,
         double _VALORm2, double _C, double _Valor, Cliente _vendedor){
             corretor = _corretor;
@@ -38,7 +38,7 @@ class Imovel {
             V = _V;
             VALORm2 = _VALORm2;
             C = this->comissao();
-            Valor = this->valor();
+            Valor = this->valor() + C;
             vendedor = _vendedor;
         }
 
