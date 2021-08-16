@@ -8,16 +8,8 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
+    
+    double comissao()override {
 
         double c = AREA * VALORm2;
 
