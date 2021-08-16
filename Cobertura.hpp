@@ -3,39 +3,36 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
+
+#define COMISSAO_COBERTURA 0.10
+
 using namespace std;
 
 class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
+    // Método para calcular comissão da cobertura
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = area * valor_m2;
 
-        return c * 0.10;
+        return c * COMISSAO_COBERTURA;
         
     }
 
+    // Método que escreve as insformações da cobertura
     void print() {
 
         std::cout << "[Cobertura]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
+        std::cout << "Area: " << area << endl
+                << "  Quartos: " << qt_quartos << endl
+                << "  Banheiros: " << qt_banheiros << endl
+                << "  Vagas: " << qt_vagas << endl
                 << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_venda << endl;
     }
 };
 

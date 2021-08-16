@@ -4,39 +4,35 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
+#define COMISSAO_APARTAMENTO 0.04
+
 using namespace std;
 
 class Apartamento : public Imovel {
 
     public: 
-    
-    double valor() {
 
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
+    // Método para calcular a comissão do apartamento 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = area * valor_m2;
 
-        return c * 0.04;
+        return c * COMISSAO_APARTAMENTO;
         
     }
 
+    // Método que escreve as insformações do apartamento
     void print() {
 
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
+        std::cout << "Area: " << area << endl
+                << "  Quartos: " << qt_quartos << endl
+                << "  Banheiros: " << qt_banheiros << endl
+                << "  Vagas: " << qt_vagas << endl
                 << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_venda << endl;
     }
 };
 
