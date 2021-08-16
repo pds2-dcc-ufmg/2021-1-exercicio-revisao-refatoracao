@@ -148,7 +148,7 @@ int main() {
     cb3.valor_comissao = cb3.comissao();
     cb3.valor_venda = cb3.valor() + cb3.comissao();
     cb3.vendedor = cl6;
-    qtdeCb++;
+    qt_cobertura++;
 
     // Casas
     Casa ca1;
@@ -177,7 +177,7 @@ int main() {
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valor_apartamanto = 0.0;
+    double valor_apartamento = 0.0;
     double valor_cobertura= 0.0;
     double valor_casa = 0.0;
     double comiss_apartamento = 0.0;
@@ -229,7 +229,7 @@ int main() {
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qt_apartamento
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_apartamento
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Comissão Total: R$" << comiss_apartamento
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << qt_cobertura
