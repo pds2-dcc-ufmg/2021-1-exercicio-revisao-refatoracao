@@ -27,7 +27,7 @@ class Casa : public Imovel {
         std::cout << "Area: " << area << endl
                 << "  Quartos: " << qt_quartos << endl
                 << "  Banheiros: " << qt_banheiros << endl
-                << "  Vagas: " << V << endl
+                << "  Vagas: " << qt_vagas << endl
                 << "Taxa de Comissão: " << 6 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_venda << endl;
