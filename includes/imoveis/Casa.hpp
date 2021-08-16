@@ -19,10 +19,6 @@ class Casa : public Imovel {
     
     void print() override;
     
-    /* void IncrementarQuantidade() override;
-    
-    int Quantidade() override; */
-
 };
 
 #endif
