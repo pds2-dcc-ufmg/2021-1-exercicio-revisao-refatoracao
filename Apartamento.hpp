@@ -12,12 +12,9 @@ class Apartamento : public Imovel {
 
     const int PCT = 4;
 
-    public: 
-
+    public:
     double comissao() {
-
         return valor() * PCT/100;
-        
     }
 
     void print() {
