@@ -9,13 +9,15 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
+        double area;
+        double valorMetroQuadrado;
+        double valorDeVenda;
+        double valorDaComissao;
+
+        int quartos;
+        int banheiros;
+        int vagasDeEstacionamento;
+
         Cliente vendedor;
         string corretor;
 
@@ -25,6 +27,12 @@ class Imovel {
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
         }
+
+        virtual double calculaValorDeVenda() { 
+            valorDeVenda = area * valorMetroQuadrado;
+            return valorDeVenda;
+        }
+        virtual double calculaValorDaComissao() {};
 };
 
 #endif
