@@ -8,23 +8,22 @@
 using namespace std;
 
 class Imovel {
-    public:
+    protected:
         double AREA;
         int Q;
         int B;
         int V;
-        double VALORm2;
-        double Valor;
+        double VALOR_m2;
+        double VALOR;
         double C;
-        Cliente vendedor;
-        string corretor;
+        Cliente VENDEDOR;
+        string CORRETOR;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+	public:
+		virtual double valor()=0;				//Retorna o valor total do imóvel
+		virtual double comissao()=0;			//Retorna o valor comissionado ao vendedor
+        void print();							//Imprime dados do gerais do vendedor e corretor
+		Imovel(string corret,double a, int q, int b, int v, double valorm2,Cliente vended); //Construtor padrão de imóveis
 };
 
 #endif

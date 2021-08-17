@@ -5,38 +5,16 @@
 #include "Cliente.hpp"
 using namespace std;
 
+const double COMISSAO_COBERTURA_TAXA = 0.10;//taxa de comissão para ganho do vendedor
+const double  COMISSAO_COBERTURA_PERCENT = COMISSAO_COBERTURA_TAXA*100; //comissão percentual para ganho do vendedor
+
 class Cobertura : public Imovel {
-    
     public:
+    double valor() override;
+    double comissao() override;
+    void print();
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+	Cobertura(string corret,double a, int q, int b, int v, double valorm2,Cliente vended);
 };
 
 #endif
