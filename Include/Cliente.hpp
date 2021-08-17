@@ -6,6 +6,7 @@
 using namespace std;
 
 class Cliente {
+    
     public:
         Cliente(){}
         //Método para printar informações relacionadas ao cliente
@@ -39,7 +40,6 @@ class Cliente {
         );
 
     private:
-
         string _nome;
         string _endereco;
         string _cidade;

@@ -10,7 +10,6 @@ using namespace std;
 
 class Imovel {
     public:
-
         Imovel(){}
         //Getters e Setters:
         double getArea();
