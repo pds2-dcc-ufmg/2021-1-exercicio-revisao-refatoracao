@@ -10,8 +10,16 @@ class Apartamento : public Imovel {
 
     public: 
    Apartamento() {
-       this->setComissao(0.04);
+       taxa_comissao = 0.04;
    }
+    
+    double valor() {
+        return AREA * VALORm2;
+    }
+    
+    double comissao() {
+        return valor() * TAXAcomissao;
+    }
     
     void print() {
         std::cout << "[Apartamento]" << endl;
