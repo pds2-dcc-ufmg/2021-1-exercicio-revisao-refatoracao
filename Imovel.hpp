@@ -18,28 +18,11 @@ class Imovel {
         double comissao;
         Cliente vendedor;
         string corretor;
+        int taxa_comissao;
 
-        double getValor() {
-
-            double valor_total = area * valor_m2;
-
-            return valor_total;
-        }
-
-        double getComissao() {
-
-            double comissao = area * valor_m2;
-
-            return comissao * 0.04;
-        
-        }
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        double get_valor();
+        virtual double get_comissao();
+        void print();
 };
 
 #endif
