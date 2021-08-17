@@ -24,37 +24,49 @@ Cliente _vendedor, std::string _corretor) {
 double Historico::somar_valores_casa() {
     double soma = 0;
     for (auto i : this->get_casas())
-        soma += i.valor(); 
+        soma += i.valor();
+
+    return soma;
 }
 
 double Historico::somar_valores_cobertura() {
     double soma = 0;
     for (auto i : this->get_coberturas())
         soma += i.valor(); 
+
+    return soma;
 }
 
 double Historico::somar_valores_apartamento() {
     double soma = 0;
     for (auto i : this->get_apartamentos())
-        soma += i.valor(); 
+        soma += i.valor();
+
+    return soma;
 }
 
 double Historico::somar_comissoes_casa() {
     double soma = 0;
     for (auto i : this->get_casas())
         soma += i.comissao();
+
+    return soma;
 }
 
 double Historico::somar_comissoes_cobertura() {
     double soma = 0;
     for (auto i : this->get_coberturas())
         soma += i.comissao();
+
+    return soma;
 }
 
 double Historico::somar_comissoes_apartamento() {
     double soma = 0;
     for (auto i : this->get_apartamentos())
         soma += i.comissao();
+
+    return soma;
 }
 
 int Historico::num_casas() {
