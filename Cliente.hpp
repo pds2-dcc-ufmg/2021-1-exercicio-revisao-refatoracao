@@ -5,14 +5,14 @@
 using namespace std;
 
 class Cliente {
-    private:
+    public:
         string NOME;
         string endereco;
         string CIDADE;
         string UF;
         string cep;
         string telefone;
-    public:
+
         void print();
 };
 
