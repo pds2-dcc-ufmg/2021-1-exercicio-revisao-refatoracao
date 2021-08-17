@@ -8,6 +8,7 @@
 using namespace std;
 
 class Imovel {
+    //declarando os componentes
     public:
         double AREA;
         int Q;
@@ -20,6 +21,7 @@ class Imovel {
         string corretor;
 
         void print() {
+            // imprimindo 
             cout << "[Vendedor]" << endl;
             vendedor.print();
             cout << "[Corretor]" << endl;
