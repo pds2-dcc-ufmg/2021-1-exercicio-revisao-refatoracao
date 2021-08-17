@@ -6,14 +6,13 @@ using namespace std;
 
 class Cliente {
     public:
-        string NOME;
-        string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
-
-        void print();
+      string NOME;
+      string ENDERECO;
+      string CIDADE;
+      string UF;
+      string CEP;
+      string TELEFONE;
+      void print();
 };
 
 #endif

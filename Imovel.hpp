@@ -9,22 +9,33 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+      double AREA;
+      double VALORm2;
+      double VALOR;
+      double COMISSAO;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+      int QUARTOS;
+      int BANHEIROS;
+      int VAGAS;
+      
+      Cliente VENDEDOR;
+      string CORRETOR;
+
+      void print() {
+        std::cout << "[Vendedor]" << endl;
+        VENDEDOR.print();
+        std::cout << "[Corretor]" << endl;
+        std::cout << "  " + CORRETOR << endl;
+        std::cout << "Area: " << AREA << endl;
+        std::cout << "  Quartos: " << QUARTOS << endl;
+        std::cout << "  Banheiros: " << BANHEIROS << endl;
+        std::cout << "  Vagas: " << VAGAS << endl;
+        std::cout << "Taxa de Comissão: " << TAXAcomissao*100 << "%" << endl;
+        std::cout << "Valor Comissão: R$ " << fixed << setprecision(2) << COMISSAO << endl;
+        std::cout << "Valor de Venda: R$ " << fixed << setprecision(2) << VALOR << endl;
+      }
+    protected:
+      double TAXAcomissao;
 };
 
 #endif
