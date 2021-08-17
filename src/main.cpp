@@ -77,8 +77,16 @@ int main() {
     int qtdeCa = 0;
     int qtdeCb = 0;
 
-    Apartamento ap1;
-    ap1.corretor = "Tuoruars";
+    Apartamento ap1(
+        "Tuoruars",
+        55.4,
+        2,
+        1,
+        0, 
+        987.0,
+        cl1
+    );
+    /*ap1.corretor = "Tuoruars";
     ap1.AREA = 55.4;
     ap1.Q = 2;
     ap1.B = 1;
@@ -86,11 +94,19 @@ int main() {
     ap1.VALORm2 = 987.0;
     ap1.C = ap1.comissao();
     ap1.Valor = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
+    ap1.vendedor = cl1;*/
     qtdeA++;
 
-    Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
+    Apartamento ap2(
+        "Fyubyeis",
+        74.5,
+        2,
+        1,
+        2,
+        1540.0,
+        cl2
+    );
+    /*ap2.corretor = "Fyubyeis";
     ap2.AREA = 74.5;
     ap2.Q = 2;
     ap2.B = 1;
@@ -98,11 +114,19 @@ int main() {
     ap2.VALORm2 = 1540.0;
     ap2.C = ap2.comissao();
     ap2.Valor = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
+    ap2.vendedor = cl2;*/
     qtdeA++;
 
-    Apartamento ap3;
-    ap3.corretor = "Kelia";
+    Apartamento ap3(
+        "Kelia",
+        87.2,
+        3,
+        2,
+        2,
+        2354.0,
+        cl3
+    );
+    /*ap3.corretor = "Kelia";
     ap3.AREA = 87.2;
     ap3.Q = 3;
     ap3.B = 2;
@@ -110,7 +134,7 @@ int main() {
     ap3.VALORm2 = 2354.0;
     ap3.C = ap3.comissao();
     ap3.Valor = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
+    ap3.vendedor = cl3;*/
     qtdeA++;
 
     // Cobertura
@@ -185,18 +209,18 @@ int main() {
     double comissCa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valorAp += ap1.getValorPorArea();
+    comissAp += ap1.getValorCom();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valorAp += ap2.getValorPorArea();
+    comissAp += ap2.getValorCom();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valorAp += ap3.getValorPorArea();
+    comissAp += ap3.getValorCom();
     std::cout << endl;
 
     cb1.print();
