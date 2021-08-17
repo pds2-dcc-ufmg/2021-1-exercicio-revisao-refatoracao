@@ -33,7 +33,7 @@ class Casa : public Imovel {
 
         }
 
-        double getTaxa() override{}
+        double getTaxa() override;
 
     private:
         double taxaCasa = 0.06;

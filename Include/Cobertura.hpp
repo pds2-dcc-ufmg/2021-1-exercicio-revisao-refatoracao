@@ -31,7 +31,7 @@ class Cobertura : public Imovel {
                     << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorTotal() << endl;
         }
 
-        double getTaxa() override {}
+        double getTaxa() override;
 
     private:
         double taxaCobertura = 0.10;

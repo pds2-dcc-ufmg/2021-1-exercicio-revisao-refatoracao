@@ -11,6 +11,7 @@ using namespace std;
 class Imovel {
     public:
 
+        Imovel(){}
         double getArea();
         void setArea(double ar);
 
@@ -38,7 +39,7 @@ class Imovel {
         string getCorretor();
         void setCorretor(string corr);
 
-        virtual double getTaxa(){};
+        virtual double getTaxa() = 0;
 
         void printVendedorCorretor() {
             cout << "[Vendedor]" << endl;
