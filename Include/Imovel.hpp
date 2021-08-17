@@ -36,7 +36,7 @@ class Imovel {
         void setQtdVagas(int qVaga);
 
         double getValorPorArea();
-        void setValorPorArea(double metro);
+        void setValorPorArea(double valorMetro);
 
         double getValorTotal();
         void setValorTotal();
