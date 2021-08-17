@@ -10,20 +10,13 @@ class Apartamento : public Imovel {
 
     public: 
     
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    double getValor() {
+        double valor = AREA * VALORm2;
+        return valor;
     }
 
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
+    double getComissao() {
+        return this->getValor * 0.04;
     }
 
     void print() {
