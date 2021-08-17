@@ -6,38 +6,25 @@
 
 using namespace std;
 
-class Apartamento : public Imovel {
+class Apartamento:public Imovel {
 
-    public: 
-    
-    double valor() {
+    public:
 
-        double v = AREA * VALORm2;
+        Apartamento(double area, int quantQuartos, int quantBanheiros,
+        int quantVagas, double valorm2, Cliente vendedor, string corretor):
+        Imovel(area, quantQuartos, quantBanheiros, quantVagas, valorm2, vendedor, corretor, 0.04) {}
 
-        return v;
+        void print() {
 
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
+        cout << "[Apartamento]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+        cout << "Area: " << _area << endl
+                << "  Quartos: " << _quantQuartos << endl
+                << "  Banheiros: " << _quantBanheiros << endl
+                << "  Vagas: " << _quantVagas << endl
+                << "Taxa de Comissao: " << 4 << "%" << endl
+                << "Valor Comissao: R$ " << fixed << setprecision(2) << _comissao << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << _valor << endl;
+        }
 };
 
-#endif
