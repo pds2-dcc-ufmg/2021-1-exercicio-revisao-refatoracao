@@ -20,18 +20,8 @@ class Imovel {
         string corretor;
     
     public:
-        double valor() {
-            double v = area * VALORm2;
-            return v;
-        }
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
-
+        double valor();
+        void print();
 };
 
 #endif
