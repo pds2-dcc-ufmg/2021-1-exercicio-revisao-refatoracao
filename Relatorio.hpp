@@ -34,6 +34,9 @@ class Relatorio{
     double valorTotalCasa();
     double comissaoTotalCasa();
     int qtCasa();
+
+    /*Metodos para imprimir o relatorio*/
+    void printRelatorio();
 };
 
 

@@ -79,54 +79,56 @@ int main() {
      * Os construtores recebem: (string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor)
     */
 
+    /** Estrutura que vai guardar as informacoes dos imoveis declarados*/
+    Relatorio relatorio;
+
     // Apartamentos
     Apartamento ap1("Tuoruars", 55.4, 2, 1, 0, 987.0, cl1);
+    relatorio.addAp(ap1);
     Apartamento ap2("Fyubyeis", 74.5, 2, 1, 2, 1540.0, cl2);
+    relatorio.addAp(ap2);
     Apartamento ap3("Kelia", 87.2, 3, 2, 2, 2354.0, cl3);
+    relatorio.addAp(ap3);
 
     // Cobertura
-    Cobertura cb1("Koci", 120.1, 3, 3, 2, 3123.5, cl4);    
+    Cobertura cb1("Koci", 120.1, 3, 3, 2, 3123.5, cl4);   
+    relatorio.addCb(cb1);
     Cobertura cb2("Wail", 134.8, 4, 3, 3, 3578.2, cl5);
+    relatorio.addCb(cb2);
     Cobertura cb3("Fival", 180.0, 4, 4, 4, 4165.7, cl6);
+    relatorio.addCb(cb3);
 
     // Casas
     Casa ca1("Beydo", 145.6, 3, 3, 2, 4023.6, cl7);
+    relatorio.addCa(ca1);
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
+    relatorio.addCa(ca2);
 
     /**Montagem do relaorio*/
-    Relatorio relatorio;
-
+    
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
     
-    relatorio.addAp(ap1);
     ap1.print();
     std::cout << endl;
 
-    relatorio.addAp(ap2);
     ap2.print();
     std::cout << endl;
-
-    relatorio.addAp(ap3);
+    
     ap3.print();
     std::cout << endl;
-
-    relatorio.addCb(cb1);
+    
     cb1.print();
     std::cout << endl;
-
-    relatorio.addCb(cb2);
+    
     cb2.print();
     std::cout << endl;
-
-    relatorio.addCb(cb3);
+    
     cb3.print();
     std::cout << endl;
-
-    relatorio.addCa(ca1);
+    
     ca1.print();
     std::cout << endl;
-
-    relatorio.addCa(ca2);
+    
     ca2.print();
     std::cout << endl;
 
