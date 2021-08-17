@@ -2,13 +2,13 @@
 #include <string>
 #include "Casa.hpp"
 
-double comissao() {
+double Casa::comissao() {
         
 double comissao = area * valor_m2;
 	return comissao * 0.06;  
 }
 
-void print() {
+void Casa::print() {
 
 	std::cout << "[Casa]" << endl;
 	Imovel::print();
