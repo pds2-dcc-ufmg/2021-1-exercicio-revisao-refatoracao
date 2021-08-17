@@ -9,7 +9,7 @@ class Cliente {
         Cliente(string nome, string endereco, string cidade, string uf, string cep, string telefone);
 
         void print();
-        
+
         string get_nome();
         string get_endereco();
         string get_cidade();
