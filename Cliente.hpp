@@ -6,23 +6,23 @@ using namespace std;
 
 class Cliente {
     public:
-        string NOME;
-        string getNome();
+        string nome;
+        string get_nome();
     
         string endereco;
-        string getEndereco();
+        string get_endereco();
         
-        string CIDADE;
-        string getCidade();
+        string cidade;
+        string get_cidade();
         
-        string UF;
-        string getUf();
+        string uf;
+        string get_uf();
         
         string cep; 
-        string getCep();
+        string get_cep();
         
         string telefone;
-        string getTelefone();
+        string get_telefone();
         
         void print();
 };
