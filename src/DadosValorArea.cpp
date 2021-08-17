@@ -12,6 +12,6 @@ double DadosValorArea::getValorPorM2(){return _valor_por_m2;}
 
 double DadosValorArea::getValorTotal(){return _valorTotal;}
 
-double DadosValorArea::getPercentageComissao(){return _percentageComissao;}
+double DadosValorArea::getPercentageComissao(){return (_percentageComissao * 100);}
 
 double DadosValorArea::getComissao(){return _comissao;}
