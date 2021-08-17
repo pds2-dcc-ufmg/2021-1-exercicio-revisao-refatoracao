@@ -201,68 +201,55 @@ int main() {
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
+    double valorApto = ap1.getValorPorArea() + ap2.getValorPorArea() + ap3.getValorPorArea();
+    double comissApto = ap1.getValorCom() + ap2.getValorCom() + ap3.getValorCom();
+
+    double valorCob = cb1.getValorPorArea() + cb2.getValorPorArea() + cb3.getValorPorArea();
+    double comissCob = cb1.getValorCom() + cb2.getValorCom() + cb3.getValorCom();
+    
+    double valorCasa = ca1.getValorPorArea() + ca2.getValorPorArea();    
+    double comissCasa = ca1.getValorCom() + ca2.getValorCom();
+    
     
     ap1.print();
-    valorAp += ap1.getValorPorArea();
-    comissAp += ap1.getValorCom();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.getValorPorArea();
-    comissAp += ap2.getValorCom();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.getValorPorArea();
-    comissAp += ap3.getValorCom();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qtdeA
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorApto
+            << "\n Comissão Total: R$" << comissApto
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << qtdeCb
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCob
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCob
             << endl
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << qtdeCa
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCasa
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCasa
             << endl;
 }
