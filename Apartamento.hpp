@@ -8,7 +8,17 @@ class Apartamento : public Imovel {
     
     public:    
     
-    taxa = 4;
+    Apartamento(string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor){
+                                 
+        corretor = _corretor; 
+        AREA = _AREA; 
+        Q = _Q;
+        B = _B; 
+        V = _V;
+        VALORm2 = _VALORm2;
+        vendedor = _vendedor; 
+        taxa = 4;
+    }
     
     double valor() {
 
