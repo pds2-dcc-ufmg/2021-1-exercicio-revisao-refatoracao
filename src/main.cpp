@@ -184,42 +184,42 @@ int main() {
     double comissaoTotalCoberturas = 0.0;
     double comissaoTotalCasas = 0.0;
     
-    apartamento1.print();
+    apartamento1.imprimeApartamento();
     valorTotalApartamentos += apartamento1.valor();
     comissaoTotalApartamentos += apartamento1.comissao();
     std::cout << endl;
 
-    apartamento2.print();
+    apartamento2.imprimeApartamento();
     valorTotalApartamentos += apartamento2.valor();
     comissaoTotalApartamentos += apartamento2.comissao();
     std::cout << endl;
 
-    apartamento3.print();
+    apartamento3.imprimeApartamento();
     valorTotalApartamentos += apartamento3.valor();
     comissaoTotalApartamentos += apartamento3.comissao();
     std::cout << endl;
 
-    cobertura1.print();
+    cobertura1.imprimeCobertura();
     valorTotalCoberturas += cobertura1.valor();
     comissaoTotalCoberturas += cobertura1.comissao();
     std::cout << endl;
 
-    cobertura2.print();
+    cobertura2.imprimeCobertura();
     valorTotalCoberturas += cobertura2.valor();
     comissaoTotalCoberturas += cobertura2.comissao();
     std::cout << endl;
 
-    cobertura3.print();
+    cobertura3.imprimeCobertura();
     valorTotalCoberturas += cobertura3.valor();
     comissaoTotalCoberturas += cobertura3.comissao();
     std::cout << endl;
 
-    casa1.print();
+    casa1.imprimeCasa();
     valorTotalCasas += casa1.valor();
     comissaoTotalCasas += casa1.comissao();
     std::cout << endl;
 
-    casa2.print();
+    casa2.imprimeCasa();
     valorTotalCasas += casa2.valor();
     comissaoTotalCasas += casa2.comissao();
     std::cout << endl;

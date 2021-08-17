@@ -4,6 +4,8 @@
 #include <string>
 using namespace std;
 
+/* Essa classe representa um cliente, que possui alguns atributos que o definem, além de um método
+que imprime seus dados*/
 class Cliente {
     public:
         string nome;
@@ -12,7 +14,9 @@ class Cliente {
         string uf;
         string cep;
         string telefone;
-        void print();
+        
+        /* Imprime os dados do cliente */
+        void imprimeDados();
 };
 
 #endif

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/* Esta subclasse representa um tipo de imóvel, no caso, uma casa.*/
 class Casa : public Imovel {
 
     private:
@@ -17,7 +18,7 @@ class Casa : public Imovel {
 
     double comissao() override;
 
-    void print();
+    void imprimeCasa();
 
 };
 

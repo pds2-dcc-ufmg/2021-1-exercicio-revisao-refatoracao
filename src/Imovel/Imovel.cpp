@@ -1,8 +1,8 @@
 #include "Imovel.hpp"
 
-void Imovel::print(){
+void Imovel::imprimeImovel(){
     cout << "[Vendedor]" << endl;
-    vendedor.print();
+    vendedor.imprimeDados();
     cout << "[Corretor]" << endl;
     cout << "  " + corretor << endl;
 }

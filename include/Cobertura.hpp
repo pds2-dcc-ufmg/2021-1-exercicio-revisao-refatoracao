@@ -5,6 +5,7 @@
 #include "Cliente.hpp"
 using namespace std;
 
+/* Esta subclasse representa um tipo de imóvel, no caso, uma cobertura */
 class Cobertura : public Imovel {
 
     private:
@@ -15,7 +16,7 @@ class Cobertura : public Imovel {
 
     double comissao() override;
 
-    void print();
+    void imprimeCobertura();
 };
 
 #endif

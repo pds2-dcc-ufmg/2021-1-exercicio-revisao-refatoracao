@@ -1,21 +1,21 @@
-#include "Casa.hpp"
+#include "Cobertura.hpp"
 
-double Casa::valor() {
+double Cobertura::valor() {
     return area * valorMetroQuadrado;
 }
 
-double Casa::comissao(){
-    return area * valorMetroQuadrado * COMISSAOCASA;
+double Cobertura::comissao(){
+    return area * valorMetroQuadrado * COMISSAOCOBERTURA;
 }
 
-void Casa::print(){
-    std::cout << "[Casa]" << endl;
-    Imovel::print();
+void Cobertura::imprimeCobertura(){
+    std::cout << "[Cobertura]" << endl;
+    Imovel::imprimeImovel();
     std::cout << "Area: " << area << endl
             << "  Quartos: " << numQuartos << endl
             << "  Banheiros: " << numBanheiros << endl
             << "  Vagas: " << numVagas << endl
-            << "Taxa de Comissão: " << 6 << "%" << endl
+            << "Taxa de Comissão: " << 10 << "%" << endl
             << "Valor Comissão: R$ " << fixed << setprecision(2) << valorComissao << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << valorImovel << endl;
 }

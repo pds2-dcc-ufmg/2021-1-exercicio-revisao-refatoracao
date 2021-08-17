@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/* Esta subclasse representa um tipo de imóvel, no caso, um apartamento */
 class Apartamento : public Imovel {
     private:
     const double COMISSAOAPARTAMENTO = 0.04;
@@ -15,7 +16,7 @@ class Apartamento : public Imovel {
 
     double comissao() override;
 
-    void print();
+    void imprimeApartamento();
     
 };
 
