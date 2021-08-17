@@ -6,9 +6,9 @@ using namespace std;
 
 class Cliente {
     public:
-        string NOME;
+        string nome;
         string endereco;
-        string CIDADE;
+        string cidade;
         string UF;
         string cep;
         string telefone;
