@@ -9,69 +9,60 @@
 
 int main() {
     
-    Cliente cl1;
-    cl1.NOME = "Xayso Sovon Ziahaka";
-    cl1.ENDERECO = "Rua Xangrilá - Braúnas";
-    cl1.CIDADE = "Belo Horizonte";
-    cl1.UF = "MG";
-    cl1.CEP = "31365-570";
-    cl1.TELEFONE = "3196007958";
+    Cliente cl1("Xayso Sovon Ziahaka",
+ 	"Rua Xangrilá - Braúnas",
+ 	"Belo Horizonte",
+ 	"MG","31365-570",
+ 	"3196007958");
     
-    Cliente cl2;
-    cl2.NOME = "Minia Pasies Kituos";
-    cl2.ENDERECO = "Rua dos Jacobinos - Ouro Minas";
-    cl2.CIDADE = "Belo Horizonte";
-    cl2.UF = "MG";
-    cl2.CEP = "31870-290";
-    cl2.TELEFONE = "3197627067";
+    Cliente cl2("Minia Pasies Kituos",
+ 	"Rua dos Jacobinos - Ouro Minas",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"31870-290",
+ 	"3197627067");
     
-    Cliente cl3;
-    cl3.NOME = "Vuocue Leiur Baonauza";
-    cl3.ENDERECO = "Rua Orminda de Almeida - Tupi B";
-    cl3.CIDADE = "Belo Horizonte";
-    cl3.UF = "MG";
-    cl3.CEP = "31842-630";
-    cl3.TELEFONE = "3195949327";
+    Cliente cl3("Vuocue Leiur Baonauza",
+ 	"Rua Orminda de Almeida - Tupi B",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"31842-630",
+ 	"3195949327");
+
+    Cliente cl4("Zerer Huduy Fyogar",
+ 	"Rua Taquaril - Jonas Veiga",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"30285-422",
+ 	"3198596327");
     
-    Cliente cl4;
-    cl4.NOME = "Zerer Huduy Fyogar";
-    cl4.ENDERECO = "Rua Taquaril - Jonas Veiga";
-    cl4.CIDADE = "Belo Horizonte";
-    cl4.UF = "MG";
-    cl4.CEP = "30285-422";
-    cl4.TELEFONE = "3198596327";
+    Cliente cl5("Ceziel Mioti Pler",
+ 	"Rua João Gualberto Costa - Serrano",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"30882-747",
+ 	"3196274465");
     
-    Cliente cl5;
-    cl5.NOME = "Ceziel Mioti Pler";
-    cl5.ENDERECO = "Rua João Gualberto Costa - Serrano";
-    cl5.CIDADE = "Belo Horizonte";
-    cl5.UF = "MG";
-    cl5.CEP = "30882-747";
-    cl5.TELEFONE = "3196274465";
+    Cliente cl6("Esxo Cilal Zyais",
+ 	"Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"31650-560",
+ 	"3195004414");
     
-    Cliente cl6;
-    cl6.NOME = "Esxo Cilal Zyais";
-    cl6.ENDERECO = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.CIDADE = "Belo Horizonte";
-    cl6.UF = "MG";
-    cl6.CEP = "31650-560";
-    cl6.TELEFONE = "3195004414";
+    Cliente cl7("Leova Wikyecil Neaca",
+ 	"Rua João Arantes - Cidade Nova",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"31170-240",
+ 	"3198461192");
     
-    Cliente cl7;
-    cl7.NOME = "Leova Wikyecil Neaca";
-    cl7.ENDERECO = "Rua João Arantes - Cidade Nova";
-    cl7.CIDADE = "Belo Horizonte";
-    cl7.UF = "MG";
-    cl7.CEP = "31170-240";
-    cl7.TELEFONE = "3198461192";
-    
-    Cliente cl8;
-    cl8.NOME = "Teas Heimeu Pipe";
-    cl8.ENDERECO = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.CIDADE = "Belo Horizonte";
-    cl8.UF = "MG";
-    cl8.CEP = "30668-430";
-    cl8.TELEFONE = "3197317802";
+    Cliente cl8("Teas Heimeu Pipe",
+ 	"Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
+ 	"Belo Horizonte",
+ 	"MG",
+ 	"30668-430",
+ 	"3197317802");
 
     int NUM_APARTAMENTOS = 0;
     int NUM_CASAS = 0;
