@@ -6,6 +6,7 @@
 #include "Cobertura.hpp"
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
+#include "string.h"
 
 int main() {
     

@@ -11,6 +11,7 @@ class Cobertura : public Imovel {
     public:
     Cobertura()
     {
+        tipo = "[Cobertura]";
         taxaComissao = TAXA_C_COBERTURA;
     }
     double valor() {
@@ -29,18 +30,6 @@ class Cobertura : public Imovel {
         
     }
 
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << quartos << endl
-                << "  Banheiros: " << banheiros << endl
-                << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << taxaComissao << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
 
 #endif
