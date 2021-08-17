@@ -31,8 +31,6 @@ class Casa : public Imovel {
         Imovel::printImov(taxa);
 
     }
-    
-
 };
 
 #endif
