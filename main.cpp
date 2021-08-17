@@ -104,49 +104,7 @@ int main() {
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
     relatorio.addCa(ca2);
 
-    /**Montagem do relaorio*/
+    /**Montagem do relatorio*/
     
-    std::cout << "\n>> Relatório de Imóveis <<" << endl;
-    
-    ap1.print();
-    std::cout << endl;
-
-    ap2.print();
-    std::cout << endl;
-    
-    ap3.print();
-    std::cout << endl;
-    
-    cb1.print();
-    std::cout << endl;
-    
-    cb2.print();
-    std::cout << endl;
-    
-    cb3.print();
-    std::cout << endl;
-    
-    ca1.print();
-    std::cout << endl;
-    
-    ca2.print();
-    std::cout << endl;
-
-    std::cout << "\n>> Resumo Geral <<" << endl;
-
-    std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << relatorio.qtAp()
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalAp()
-            << "\n Comissão Total: R$" <<  fixed << setprecision(2) << relatorio.comissaoTotalAp()
-            << endl
-            << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << relatorio.qtCb()
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalCb()
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << relatorio.comissaoTotalCb()
-            << endl
-            << "\n>>Casas<<\n"
-            << "\n Quantidade: " << relatorio.qtCasa()
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalCasa()
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << relatorio.comissaoTotalCasa()
-            << endl;
+    relatorio.printRelatorio();
 }
