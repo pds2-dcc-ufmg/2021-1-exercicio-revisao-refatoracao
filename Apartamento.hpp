@@ -3,25 +3,47 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-
-using namespace std;
+#include "CountingFeatures.hpp"
 
 class Apartamento : public Imovel {
-
-    public: 
+  public:
+    Apartamento(std::string corretor, double area, int quartos, int banheiros,
+                int vagas, double valor_por_m2, Cliente vendedor)
+            : Imovel(corretor, area, quartos, banheiros, vagas, valor_por_m2,
+                     vendedor, 0.04, label), Contador(*this) {}
     
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << area << endl
-                << "  Quartos: " << quarto << endl
-                << "  Banheiros: " << banheiros << endl
-                << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << Comissao() << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << ValorPosCorretagem() << endl;
+    static unsigned get_contador_de_instancias() {
+        return CountingFeatures<Apartamento>::get_contador_de_instancias();
     }
+
+    static double get_valor_total() {
+        return CountingFeatures<Apartamento>::get_valor_total();
+    }
+
+    static double get_comissao_total() {
+        return CountingFeatures<Apartamento>::get_comissao_total();
+    }
+
+    inline static const std::string label = "Apartamento";
+
+    void subtract_from_valor_total() override {
+        Contador.subtract_from_valor_total();
+    }
+
+    void subtract_from_comissao_total() override {
+        Contador.subtract_from_comissao_total();
+    }
+
+    void add_to_valor_total() override {
+        Contador.add_to_valor_total();
+    }
+
+    void add_to_comissao_total() override {
+        Contador.add_to_comissao_total();
+    }
+
+  private:
+    CountingFeatures<Apartamento> Contador;
 };
 
 #endif
