@@ -9,6 +9,9 @@ using namespace std;
 
 class Imovel {
     public:
+        void print_imovel();
+
+    protected:
         double AREA;
         int Q;
         int B;
@@ -18,13 +21,6 @@ class Imovel {
         double C;
         Cliente vendedor;
         string corretor;
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
 };
 
 #endif
