@@ -75,97 +75,59 @@ int main() {
                 "30668-430",
                 "3197317802");
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
-
     /**Declaracoes dos Imoveis
      * Os construtores recebem: (string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor)
     */
 
+    // Apartamentos
     Apartamento ap1("Tuoruars", 55.4, 2, 1, 0, 987.0, cl1);
-    qtdeA++;
-
     Apartamento ap2("Fyubyeis", 74.5, 2, 1, 2, 1540.0, cl2);
-    qtdeA++;
-
     Apartamento ap3("Kelia", 87.2, 3, 2, 2, 2354.0, cl3);
-    qtdeA++;
 
     // Cobertura
-    Cobertura cb1("Koci", 120.1, 3, 3, 2, 3123.5, cl4);
-    qtdeCb++;
-    
+    Cobertura cb1("Koci", 120.1, 3, 3, 2, 3123.5, cl4);    
     Cobertura cb2("Wail", 134.8, 4, 3, 3, 3578.2, cl5);
-    qtdeCb++;
-
     Cobertura cb3("Fival", 180.0, 4, 4, 4, 4165.7, cl6);
-    qtdeCb++;
 
     // Casas
     Casa ca1("Beydo", 145.6, 3, 3, 2, 4023.6, cl7);
-    qtdeCa++;
-
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
-    qtdeCa++;
 
+    /**Montagem do relaorio*/
     Relatorio relatorio;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
-
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
     
     relatorio.addAp(ap1);
     ap1.print();
-    //valorAp += ap1.valor();
-    //comissAp += ap1.comissao();
     std::cout << endl;
 
     relatorio.addAp(ap2);
     ap2.print();
-    //valorAp += ap2.valor();
-    //comissAp += ap2.comissao();
     std::cout << endl;
 
     relatorio.addAp(ap3);
     ap3.print();
-    //valorAp += ap3.valor();
-    //comissAp += ap3.comissao();
     std::cout << endl;
 
     relatorio.addCb(cb1);
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
     std::cout << endl;
 
     relatorio.addCb(cb2);
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
     std::cout << endl;
 
     relatorio.addCb(cb3);
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
     std::cout << endl;
 
     relatorio.addCa(ca1);
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
     std::cout << endl;
 
     relatorio.addCa(ca2);
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;

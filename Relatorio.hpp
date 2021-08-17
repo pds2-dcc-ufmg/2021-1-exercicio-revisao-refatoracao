@@ -34,7 +34,6 @@ class Relatorio{
     double valorTotalCasa();
     double comissaoTotalCasa();
     int qtCasa();
-
 };
 
 
