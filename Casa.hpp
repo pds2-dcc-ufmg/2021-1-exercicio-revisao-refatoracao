@@ -4,41 +4,26 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Casa : public Imovel {
 
     public:
 
-    double valor() {
+        double CalculaComissao() override {
 
-        double v = AREA * VALORm2;
+            _taxa_comissao = 0.06;
 
-        return v;
+            _comissao = _valor * _taxa_comissao;
 
-    }
+            return _comissao;
+            
+        }
 
-    double comissao() {
+        void Print() {
 
-        double c = AREA * VALORm2;
+            std::cout << "[Casa]" << std::endl;
+            Imovel::Print();
 
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
+        }
 
 };
 

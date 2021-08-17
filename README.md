@@ -11,3 +11,10 @@ No **título** do seu Pull Request, informe o valor **MD5** obtido a partir da s
 
 Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
 Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+
+
+// TO DO:
+    .criar taxa comissao
+    .unificar metodos Valor() e Comissao()
+    .get/set
+    .private/public

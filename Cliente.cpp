@@ -2,13 +2,13 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::Print(){
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Telefone: " << telefone << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << UF << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "  Nome: " << _nome << std::endl
+		 	<< "  Telefone: " << _telefone << std::endl
+		 	<< "  Endereço: " << _endereco << std::endl
+		 	<< "  Cidade: " << _cidade << std::endl
+		 	<< "  Estado: " << _uf << std::endl
+		 	<< "  CEP: " << _cep << std::endl;
 
 }
