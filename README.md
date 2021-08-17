@@ -1,3 +1,9 @@
+# Finalização
+
+-> Comando usado para compilar(Makefile): **make**
+-> Comando usado para apagar os objetos criados no diretorio /build: **make clean**
+-> Comando usado para apagar todos os produtos da compilação: **make cleanAll**
+
 # Exercício de Revisão e Refatoração
 
 O objetivo dessa atividade é praticar a parte de revisão e refatoração utilizando um sistema de controle de versão.
