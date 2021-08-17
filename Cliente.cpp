@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
 #include "Cliente.hpp"
-
-using namespace std;
 
 void Cliente::print_cliente(){
 	std::cout << "  Nome: " << get_nome() << endl
