@@ -1,10 +1,12 @@
 #include "Cobertura.hpp"
+#include <iostream>
+#include <string>
 
 using namespace std;
 
 
 
-    double valor() {
+double Cobertura::valor() {
 
         double valortotal = AREA * VALORm2;
 
@@ -12,15 +14,15 @@ using namespace std;
 
     }
 
-    double comissao() {
+double Cobertura::comissao() {
 
-        double Comiss = AREA * VALORm2;
+        double c = AREA * VALORm2;
 
-        return Comiss * 0.10;
+        return c * TX_COBERTURA;
         
     }
 
-    void print() {
+void Cobertura::print() {
 
         std::cout << "[Cobertura]" << endl;
         Imovel::print();

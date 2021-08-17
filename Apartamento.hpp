@@ -7,14 +7,19 @@
 using namespace std;
 
 class Apartamento : public Imovel {
+   
+    private:
+
+       double TX_APTO = 0.04;
+
 
     public:
 
-    double valor();
+       double valor() override;
 
-    double comissao();
+       double comissao() override;
 
-    void print();
+       void print() override;
 };
 
 #endif

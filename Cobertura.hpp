@@ -7,14 +7,17 @@
 using namespace std;
 
 class Cobertura : public Imovel {
+    private:
+    
+       double TX_COBERTURA = 0.1;
     
     public:
 
-    double valor();
+       double valor();
 
-    double comissao();
+       double comissao();
 
-    void print();
+       void print();
 };
 
 #endif

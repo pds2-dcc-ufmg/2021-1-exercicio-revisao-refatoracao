@@ -1,5 +1,7 @@
+#include <iostream>
+#include <string>
 #include "Apartamento.hpp"
-#include<iostream>
+
 
 using namespace std;
 
@@ -13,9 +15,9 @@ double Apartamento::valor() {
 
 double Apartamento::comissao() {
 
-        double Comiss = AREA * VALORm2;
+        double c = AREA * VALORm2;
 
-        return Comiss * 0.04;
+        return c * TX_APTO;
         
     }
 

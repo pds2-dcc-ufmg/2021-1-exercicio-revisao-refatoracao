@@ -8,13 +8,17 @@ using namespace std;
 
 class Casa : public Imovel {
 
+    private:
+
+       double TX_CASA = 0.06;
+
     public:
 
-    double valor();
+       double valor();
 
-    double comissao();
+       double comissao();
 
-    void print();
+       void print();
 
 };
 

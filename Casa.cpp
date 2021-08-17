@@ -1,4 +1,7 @@
 #include "Casa.hpp"
+#include <iostream>
+#include <string>
+
 using namespace std;
 
 double Casa::valor() {
@@ -11,9 +14,9 @@ double Casa::valor() {
 
 double Casa::comissao() {
 
-        double Comiss = AREA * VALORm2;
+        double c = AREA * VALORm2;
 
-        return Comiss * 0.06;
+        return c * TX_CASA;
         
     }
 
