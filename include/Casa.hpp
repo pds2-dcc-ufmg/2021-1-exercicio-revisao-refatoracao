@@ -8,10 +8,10 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-
-    double getComissaoCasa();
-
-    void print();
+        //Retorna valor da comissao da casa
+        double getComissaoCasa();
+        //Informações da cobertura
+        void print();
 };
 
 #endif

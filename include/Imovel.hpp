@@ -18,11 +18,12 @@ class Imovel {
         double Comissao;
         double valorVenda;
         double taxa;
-
+        
+        //Retorna valor sem a taxa de comissão
         double getValor();
-
+        //Retorna valor com taxa de comissão
         double getComissao();
-
+        //Vendedor e Corretor do imovel
         void print();
 };
 
