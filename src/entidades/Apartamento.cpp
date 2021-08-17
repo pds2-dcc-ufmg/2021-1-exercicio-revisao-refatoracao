@@ -12,17 +12,11 @@ Apartamento::Apartamento(
     int vagas,
     double valorMetro,
     Cliente vendedor
-){
-    setCorretor(corr);
-    setArea(ar);
-    setQtdQuartos(qrto);
-    setQtdBanheiros(banh);
-    setQtdVagas(vagas);
-    setValorPorArea(valorMetro);
+):
+Imovel(corr, ar, qrto, banh, vagas, valorMetro, vendedor){
     setValorCom();
     setValorTotal();
-    setVendedor(vendedor);
-}
+};
 
 void Apartamento::print(){
     std::cout << "[Apartamento]" << endl;

@@ -10,7 +10,18 @@ using namespace std;
 
 class Imovel {
     public:
+
         Imovel(){}
+
+        Imovel(
+            string corr,
+            double ar,
+            int qrto,
+            int banh,
+            int vagas,
+            double valorMetro,
+            Cliente vendedor
+        );
         //Getters e Setters:
         double getArea();
         void setArea(double ar);

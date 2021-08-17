@@ -70,3 +70,21 @@ void Imovel::printVendedorCorretor(){
     cout << "[Corretor]" << endl;
     cout << "  " + corretor << endl;
 }
+
+Imovel::Imovel(
+    string corr,
+    double ar,
+    int qrto,
+    int banh,
+    int vagas,
+    double valorMetro,
+    Cliente vendedor
+){
+    setCorretor(corr);
+    setArea(ar);
+    setQtdQuartos(qrto);
+    setQtdBanheiros(banh);
+    setQtdVagas(vagas);
+    setValorPorArea(valorMetro);
+    setVendedor(vendedor);
+};
