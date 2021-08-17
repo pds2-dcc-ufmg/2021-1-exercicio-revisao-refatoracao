@@ -9,31 +9,19 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Qtd_quartos;
-        int Qtd_banheiros;
-        int Qtd_vagas;
-        double VALOR_m2;
-        double Valor;
-        double Comissao_valor;
-        double _comissao;
+        double area;
+        double valor_m2;
+        double valor;
+        double comissao_valor;
+    
+        int qtd_quartos;
+        int qtd_banheiros;
+        int qtd_vagas;
+    
         Cliente vendedor;
         string corretor;
 
-    //Calcula o valor do imóvel
-        double valor() {
-            return AREA * VALOR_m2;
-        }
-
-    //Get/Set a comissão
-
-        double getComissao() {
-            return this->_comissao;
-        }
-    
-        void setComissao(double _comissao) {
-            this->_comissao = _comissao;
-        }
+ 
     
 //Printa as informações do imovel     
         void print() {
@@ -41,14 +29,16 @@ class Imovel {
             vendedor.print();
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
-            cout << "Area: " << AREA << endl
-                << "  Quartos: " << Qtd_quartos << endl
-                << "  Banheiros: " << Qtd_banheiros << endl
-                << "  Vagas: " << Qtd_vagas << endl
-                << "Taxa de Comissão: " << this->getComissao() * 100 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << Comissao_valor << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+            cout << "Area: " << area << endl
+                << "  Quartos: " << qtd_quartos << endl
+                << "  Banheiros: " << qtd_banheiros << endl
+                << "  Vagas: " << qtd_vagas << endl
+                << "Taxa de Comissão: " << taxa_comissao * 100 << "%" << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao_valor << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor << endl;
         }
+    protected:
+      double taxa_comissao;
 };
 
 #endif
