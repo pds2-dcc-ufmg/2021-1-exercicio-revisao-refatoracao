@@ -7,6 +7,12 @@
 using namespace std;
 
 class Apartamento : public Imovel {
+    
+    private:
+    
+    double ComissaoTotal=0;
+    
+    double ValorTotal=0;
 
     public:
 
