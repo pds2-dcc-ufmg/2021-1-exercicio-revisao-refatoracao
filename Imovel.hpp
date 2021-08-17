@@ -7,13 +7,13 @@
 
 class Imovel {
     protected:
-        double area;
-        int n_quartos;
-        int n_banheiros;
-        int n_vagas;
-        double preco_por_m2;
-        double comissao_taxa;
-        Cliente vendedor;
+        double area; // area total do imovel
+        int n_quartos; // quantidade de quartos
+        int n_banheiros; // quantidade de banheiros 
+        int n_vagas; // numero de vagas
+        double preco_por_m2; // quanto vale o m2
+        double comissao_taxa; // comissao do corretor, percentual
+        Cliente vendedor; 
         std::string corretor;
 
     public:
@@ -34,6 +34,7 @@ class Imovel {
         {
         }
 
+        // Calcula o preco final do imovel
         virtual double preco() {
             return valor() + comissao();
         }
@@ -42,10 +43,12 @@ class Imovel {
             comissao_taxa = comissao;
         }
 
+        // Calcula quanto vale o imovel, em relação a sua área
         virtual double valor() {
             return area * preco_por_m2;
         }
         
+        // Calcula quanto será a comissao do corretor
         virtual double comissao() {
             return comissao_taxa * valor();
         }
