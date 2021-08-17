@@ -18,7 +18,7 @@
  */
 class DadosValorArea{
     private:
-        double _area , _valor_por_m2 , _valorTotal , _percentageComissao , _comissao;
+        double _area , _valor_por_m2 , _valorVenda , _valorArea, _percentageComissao , _comissao;
     
     public:
         DadosValorArea(double area , double valor_por_m2 , double percentageComissao);
@@ -27,7 +27,9 @@ class DadosValorArea{
 
         double getValorPorM2();
 
-        double getValorTotal();
+        double getValorVenda();
+
+        double getValorArea();
 
         double getPercentageComissao();
 

@@ -63,7 +63,6 @@ int main() {
      *           no momento da declaração do objeto. Assim, além do código ficar mais organizado, o princípio do Encapsulamento agora é respeitado (veja as alterações
      *           feitas na classe Cliente).
      */
-
     std::vector<Cliente> listaClientes;
 
     listaClientes.push_back(Cliente("Xayso Sovon Ziahaka","Rua Xangrilá - Braúnas","Belo Horizonte","MG","31365-570","3196007958"));
