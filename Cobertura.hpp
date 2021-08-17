@@ -8,25 +8,21 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-        return valor_area();
-    }
-
     double comissao() {
-        return valor_area() * 0.10;   
+        return valor() * (double)taxa_comissao_cobertura / 100;
     }
 
     void print() {
 
         std::cout << "[Cobertura]" << std::endl;
         Imovel::print();
-        std::cout << "Area: "              << AREA  << std::endl
-                  << "  Quartos: "         << Q     << std::endl
-                  << "  Banheiros: "       << B     << std::endl
-                  << "  Vagas: "           << V     << std::endl
-                  << "Taxa de Comissão: "  << 10    << "%"             << std::endl
-                  << "Valor Comissão: R$ " << fixed << setprecision(2) << C     << std::endl
-                  << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << std::endl;
+        std::cout << "Area: "              << area        << std::endl
+                  << "  Quartos: "         << quartos     << std::endl
+                  << "  Banheiros: "       << banheiros   << std::endl
+                  << "  Vagas: "           << vagas       << std::endl 
+                  << "Taxa de Comissão: "  << taxa_comissao_cobertura    << "%"                 << std::endl
+                  << "Valor Comissão: R$ " << std::fixed  << std::setprecision(2) << comissao_i << std::endl
+                  << "Valor de Venda: R$ " << std::fixed  << std::setprecision(2) << valor_i    << std::endl;
     }
 };
 

@@ -9,16 +9,19 @@ class Imovel {
 
     public:
 
-        double AREA;
-        double VALORm2;
-        double Valor;
-        double C;
-        int Q;
-        int B;
-        int V;
+        double area;
+        double valor_m2;
+        double valor_i;
+        double comissao_i;
+        int quartos;
+        int banheiros;
+        int vagas;
+        int taxa_comissao_ap = 4;
+        int taxa_comissao_cobertura = 10;
+        int taxa_comissao_casa = 6;
         
         Cliente vendedor;
-        string corretor;
+        std::string corretor;
 
         void print() {
             std::cout << "[Vendedor]"    << std::endl;
@@ -27,9 +30,10 @@ class Imovel {
             std::cout << "  " + corretor << std::endl;
         }
 
-        double valor_area() {
-            return this->AREA * this->VALORm2;
+        double valor() {
+            return this->area * this->valor_m2;
         }
+        
 };
 
 #endif
