@@ -26,7 +26,7 @@ void Apartamento::print() {
             << "  Quartos: " << _quartos << endl
             << "  Banheiros: " << _banheiros << endl
             << "  Vagas: " << _vagas << endl
-            << "Taxa de Comissão: " << TAXA_COMISSAO_APARTAMENTO*100 << "%" << endl
+            << "Taxa de Comissão: " << int(TAXA_COMISSAO_APARTAMENTO*100) << "%" << endl        //int() porque na saída esperada está como inteiro
             << "Valor Comissão: R$ " << fixed << setprecision(2) << calculaComissao() << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << calculaValorVenda() << endl;
 }
