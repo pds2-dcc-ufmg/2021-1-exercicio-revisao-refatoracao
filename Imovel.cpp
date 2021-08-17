@@ -1,79 +1,79 @@
-#include <iostream>
-#include <iomanip>
-
 #include "Imovel.hpp"
 #include "Casa.hpp"
 #include "Cobertura.hpp"
 #include "Apartamento.hpp"
 
 //Imovel
-void Imovel::print_imovel() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print_cliente();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
-
-//Casa
-double Casa::valor() {
-    double v = AREA * VALORm2;
-    return v;
+void Imovel::print_cabecalho() {
+    cout << "[Vendedor]" << endl;
+    vendedor.print_cliente();
+    cout << "[Corretor]" << endl;
+    cout << "  " + corretor << endl;
 }
-double Casa::comissao() {
-    double c = AREA * VALORm2;
-    return c * 0.06;
-    }
-void Casa::print() {
-    std::cout << "[Casa]" << endl;
-    print_imovel();
-    std::cout << "Area: " << AREA << endl
-                    << "  Quartos: " << Q << endl
-                    << "  Banheiros: " << B << endl
-                    << "  Vagas: " << V << endl
-                    << "Taxa de Comissão: " << 6 << "%" << endl
-                    << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                    << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+void Imovel::print_all(){
+    std::cout << get_tipo() << endl;
+    print_cabecalho();
+    std::cout << "Area: " << get_area() << endl
+                << "  Quartos: " << get_quartos() << endl
+                << "  Banheiros: " << get_banheiros() << endl
+                << "  Vagas: " << get_vagas() << endl
+                << "Taxa de Comissão: " << get_taxa() << "%" << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << get_valorComissao() << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << get_valorVenda() << endl;
+}
+double Imovel::valor() {
+    return area * valorMetragem;
+}
+double Imovel::comissao(){
+    return valor() * get_taxa() * 0.01;
 }
 
-//Apartamento
-double Apartamento::valor() {
-    double v = AREA * VALORm2;
-    return v;
+double Imovel::get_area() {
+    return area;
 }
-double Apartamento::comissao() {
-    double c = AREA * VALORm2;
-    return c * 0.04;
+int Imovel::get_quartos() {
+    return quartos;
 }
-void Apartamento::print() {
-    std::cout << "[Apartamento]" << endl;
-    print_imovel();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+int Imovel::get_banheiros() {
+    return banheiros;
+}
+int Imovel::get_vagas() {
+    return vagas;
+}
+double Imovel::get_valorMetragem() {
+    return valorMetragem;
+}
+double Imovel::get_valorVenda() {
+    return valorVenda;
+}
+double Imovel::get_valorComissao() {
+    return valorComissao;
+}
+string Imovel::get_corretor() {
+    return corretor;
 }
 
-
-//Cobertura
-double Cobertura::valor() {
-    double v = AREA * VALORm2;
-    return v;
+void Imovel::set_area(double a) {
+    area = a;
 }
-double Cobertura::comissao() {
-    double c = AREA * VALORm2;
-    return c * 0.10;
+void Imovel::set_quartos(int q) {
+    quartos = q;
 }
-void Cobertura::print() {
-    std::cout << "[Cobertura]" << endl;
-    print_imovel();
-    std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+void Imovel::set_banheiros(int b) {
+    banheiros = b;
+}
+void Imovel::set_vagas(int v) {
+    vagas = v;
+}
+void Imovel::set_valorMetragem(double valorM) {
+    valorMetragem = valorM;
+}
+void Imovel::set_valorVenda(double valorV) {
+    valorVenda = valorV;
+}
+void Imovel::set_valorComissao(double valorC) {
+    valorComissao = valorC;
+}
+void Imovel::set_corretor(string c) {
+    corretor = c;
 }

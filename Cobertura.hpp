@@ -3,13 +3,13 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
 
 class Cobertura : public Imovel {
     public:
-        double valor();
-        double comissao();
-        void print();
+        int get_taxa() override;
+        string get_tipo() override;
 };
 
 #endif

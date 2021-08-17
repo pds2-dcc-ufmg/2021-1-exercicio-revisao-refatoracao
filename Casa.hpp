@@ -8,9 +8,8 @@ using namespace std;
 
 class Casa : public Imovel {
     public:
-        double valor();
-        double comissao();
-        void print();
+        int get_taxa() override;
+        string get_tipo() override;
 };
 
 #endif
