@@ -8,7 +8,7 @@
 using namespace std;
 
 class Imovel {
-    public:
+    protected:
         double AREA;
         int Q;
         int B;
@@ -19,7 +19,8 @@ class Imovel {
 
         Cliente vendedor;
         string corretor;
-
+    
+    public:
         double valor() {
             double v = AREA * VALORm2;
             return v;
