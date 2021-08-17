@@ -17,7 +17,7 @@ class Apartamento : public Imovel {
         return v;
 
     }
-     //valor da comissão para apartamento
+     //valor da comissão para apartamento 
     double comissao() {
 
         double c = AREA * VALORm2;
