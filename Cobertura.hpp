@@ -1,6 +1,5 @@
 #ifndef COBERTURA_HPP
 #define COBERTURA_HPP
-
 #define COMISSAOPERCENT 10
 
 #include "Imovel.hpp"
