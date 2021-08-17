@@ -7,22 +7,18 @@
 using namespace std;
 
 class Apartamento : public Imovel {
+    
+    double taxaComissao = 0.04;
+    double AreaVezesValorM2 = AREA * VALORm2;
 
     public: 
     
     double valor() {
-
-        double v = AREA * VALORm2;
-        return v;
-
+        return AreaVezesValorM2;
     }
 
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
+        return AreaVezesValorM2 * taxaComissao;
     }
 
     void print() {
