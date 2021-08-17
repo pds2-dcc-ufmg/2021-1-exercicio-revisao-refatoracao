@@ -66,42 +66,42 @@ int main() {
     double comissCb = 0.0;
     double comissCa = 0.0;
     
-    ap1.print();
+    ap1.informacoes();
     valorAp += ap1.valor();
     comissAp += ap1.comissao();
     std::cout << std::endl;
 
-    ap2.print();
+    ap2.informacoes();
     valorAp += ap2.valor();
     comissAp += ap2.comissao();
     std::cout << std::endl;
 
-    ap3.print();
+    ap3.informacoes();
     valorAp += ap3.valor();
     comissAp += ap3.comissao();
     std::cout << std::endl;
 
-    cb1.print();
+    cb1.informacoes();
     valorCb += cb1.valor();
     comissCb += cb1.comissao();
     std::cout << std::endl;
 
-    cb2.print();
+    cb2.informacoes();
     valorCb += cb2.valor();
     comissCb += cb2.comissao();
     std::cout << std::endl;
 
-    cb3.print();
+    cb3.informacoes();
     valorCb += cb3.valor();
     comissCb += cb3.comissao();
     std::cout << std::endl;
 
-    ca1.print();
+    ca1.informacoes();
     valorCa += ca1.valor();
     comissCa += ca1.comissao();
     std::cout << std::endl;
 
-    ca2.print();
+    ca2.informacoes();
     valorCa += ca2.valor();
     comissCa += ca2.comissao();
     std::cout << std::endl;

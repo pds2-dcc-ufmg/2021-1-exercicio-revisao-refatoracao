@@ -34,7 +34,7 @@ class Imovel {
         {
         }
 
-        double preco() {
+        virtual double preco() {
             return valor() + comissao();
         }
 
@@ -50,12 +50,27 @@ class Imovel {
             return comissao_taxa * valor();
         }
 
-        void print() {
+        void corretor_e_vendedor_info() {
             std::cout << "[Vendedor]" << std::endl;
             vendedor.print();
             std::cout << "[Corretor]" << std::endl;
             std::cout << "  " + corretor << std::endl;
         }
+
+        virtual void imovel_info() {
+            std::cout << "Area: " << area << std::endl
+                << "  Quartos: " << n_quartos << std::endl
+                << "  Banheiros: " << n_banheiros << std::endl
+                << "  Vagas: " << n_vagas << std::endl;
+        }
+
+        virtual void preco_info() {
+            std::cout << "Taxa de Comissão: " << std::fixed << std::setprecision(0) << comissao_taxa * 100 << "%" << std::endl
+                << "Valor Comissão: R$ " << std::fixed << std::setprecision(2) << comissao() << std::endl
+                << "Valor de Venda: R$ " << std::fixed << std::setprecision(2) << preco() << std::endl;
+        }
+
+        virtual void informacoes() {};
 };
 
 #endif
