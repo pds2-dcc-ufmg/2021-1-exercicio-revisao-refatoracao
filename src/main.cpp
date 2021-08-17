@@ -79,99 +79,107 @@ int main() {
 
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
-    ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
-    ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
+    ap1.Area = 55.4;
+    ap1.Quartos = 2;
+    ap1.Banheiros = 1;
+    ap1.Vagas = 0;
+    ap1.Valor_do_m2 = 987.0;
+    ap1.taxa = 0.04;
+    ap1.Comissao = ap1.getComissaoApartamento();
+    ap1.valorVenda= ap1.getValor() + ap1.Comissao;
     ap1.vendedor = cl1;
     qtdeA++;
 
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
-    ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
-    ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
+    ap2.Area = 74.5;
+    ap2.Quartos = 2;
+    ap2.Banheiros = 1;
+    ap2.Vagas = 2;
+    ap2.Valor_do_m2 = 1540.0;
+    ap2.taxa = 0.04;
+    ap2.Comissao = ap2.getComissaoApartamento();
+    ap2.valorVenda = ap2.getValor() + ap2.Comissao;
     ap2.vendedor = cl2;
     qtdeA++;
 
     Apartamento ap3;
     ap3.corretor = "Kelia";
-    ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
-    ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
+    ap3.Area = 87.2;
+    ap3.Quartos = 3;
+    ap3.Banheiros = 2;
+    ap3.Vagas = 2;
+    ap3.Valor_do_m2 = 2354.0;
+    ap3.taxa = 0.04;
+    ap3.Comissao = ap3.getComissaoApartamento();
+    ap3.valorVenda = ap3.getValor() + ap3.Comissao;
     ap3.vendedor = cl3;
     qtdeA++;
 
     // Cobertura
     Cobertura cb1;
     cb1.corretor = "Koci";
-    cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
-    cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
-    cb1.Valor = cb1.valor() + cb1.comissao();
+    cb1.Area = 120.1;
+    cb1.Quartos = 3;
+    cb1.Banheiros = 3;
+    cb1.Vagas = 2;
+    cb1.Valor_do_m2 = 3123.5;
+    cb1.taxa = 0.10;
+    cb1.Comissao = cb1.getComissaoCobertura();
+    cb1.valorVenda = cb1.getvalor() + cb1.Comissao;
     cb1.vendedor = cl4;
     qtdeCb++;
     
     Cobertura cb2;
     cb2.corretor = "Wail";
-    cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
-    cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
-    cb2.Valor = cb2.valor() + cb2.comissao();
+    cb2.Area = 134.8;
+    cb2.Quartos = 4;
+    cb2.Banheiros = 3;
+    cb2.Vagas = 3;
+    cb2.Valor_do_m2 = 3578.2;
+    cb2.taxa = 0.10;
+    cb2.Comissao = cb2.getComissaoCobertura();
+    cb2.valorVenda = cb2.getvalor() + cb2.Comissao;
     cb2.vendedor = cl5;
     qtdeCb++;
 
     Cobertura cb3;
     cb3.corretor = "Fival";
-    cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
-    cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
-    cb3.Valor = cb3.valor() + cb3.comissao();
+    cb3.Area = 180.0;
+    cb3.Quartos = 4;
+    cb3.Banheiros = 4;
+    cb3.Vagas = 4;
+    cb3.Valor_do_m2 = 4165.7;
+    cb3.taxa = 0.10;
+    cb3.Comissao = cb3.getComissaoCobertura();
+    cb3.valorVenda = cb3.getvalor() + cb3.Comissao;
     cb3.vendedor = cl6;
     qtdeCb++;
 
     // Casas
     Casa ca1;
     ca1.corretor = "Beydo";
-    ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
-    ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
-    ca1.Valor = ca1.valor() + ca1.comissao();
+    ca1.Area = 145.6;
+    ca1.Quartos = 3;
+    ca1.Banheiros = 3;
+    ca1.Vagas = 2;
+    ca1.Valor_do_m2 = 4023.6;
+    ca1.taxa = 0.06;
+    ca1.Comissao = ca1.getComissaoCasa();
+    ca1.valorVenda = ca1.getvalor() + ca1.Comissao;
     ca1.vendedor = cl7;
     qtdeCa++;
 
     Casa ca2;
     ca2.corretor = "Riuzi";
     ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
-    ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
-    ca2.Valor = ca2.valor() + ca2.comissao();
+    ca2.Quartos = 5;
+    ca2.Banheiros = 4;
+    ca2.Vagas = 4;
+    ca2.Valor_do_m2 = 4856.2;
+    ca2.taxa = 0.06;
+    ca2.Comissao = ca2.getComissaoCasa();
+    ca2.valorVenda = ca2.getvalor() + ca2.Comissao;
     ca2.vendedor = cl8;
     qtdeCa++;
 
@@ -185,43 +193,43 @@ int main() {
     double comissCa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valorAp += ap1.getvalor();
+    comissAp += ap1.getComissaoApartamento();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valorAp += ap2.getvalor();
+    comissAp += ap2.getComissaoApartamento();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valorAp += ap3.getvalor();
+    comissAp += ap3.getComissaoApartamento();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valorCb += cb1.getvalor();
+    comissCb += cb1.getComissaoCobertura();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valorCb += cb2.getvalor();
+    comissCb += cb2.getComissaoCobertura();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valorCb += cb3.getvalor();
+    comissCb += cb3.getComissaoCobertura();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valorCa += ca1.getvalor();
+    comissCa += ca1.getComissaoCasa();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valorCa += ca2.getvalor();
+    comissCa += ca2.getComissaoCasa();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
