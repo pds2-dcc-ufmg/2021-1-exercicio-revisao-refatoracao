@@ -14,10 +14,13 @@ class Casa : public Imovel {
 
     public:
 
+       //cálculo da comissão sobre o valor do imóvel
        double valor() override;
 
+       //cálculo do valor do imóvel
        double comissao() override;
 
+       //coloca na saída as informações do imóvel
        void print() override;
 
 };
