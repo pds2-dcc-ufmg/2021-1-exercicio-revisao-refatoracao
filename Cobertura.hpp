@@ -8,17 +8,25 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-  //Calcula a comissão do imóvel
-    double comissao() {
-        setComissao(0.10);
-        return this->valor() * this->getComissao();
+  
+    Cobertura() {
+       taxa_comissao = 0.06;
+   }
+    
+    double valor() {
+        return AREA * VALORm2;
     }
-
-        
+    
+    double comissao() {
+        return valor() * taxa_comissao;
+    }
+    
+  
     void print() {
         std::cout << "[Cobertura]" << endl;
         Imovel::print();
     }
+
 };
 
 #endif
