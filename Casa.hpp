@@ -11,7 +11,15 @@ class Casa : public Imovel {
     public:
  
     Casa() {
-        this->setComissao(0.06);
+       taxa_comissao = 0.06;
+   }
+    
+    double valor() {
+        return AREA * VALORm2;
+    }
+    
+    double comissao() {
+        return valor() * taxa_comissao;
     }
     
     void print() {
