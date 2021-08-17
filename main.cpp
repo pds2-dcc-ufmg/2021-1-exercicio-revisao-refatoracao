@@ -9,28 +9,28 @@
 
 int main() {
         
-    Cliente cl1 = cliente("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas",
+    Cliente *cl1 = new cliente("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas",
                          "Belo Horizonte", "MG", "31365-570", "3196007958");
         
-    Cliente cl2 = cliente("Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
+    Cliente *cl2 = new cliente("Minia Pasies Kituos", "Rua dos Jacobinos - Ouro Minas",
                          "Belo Horizonte", "MG", "31870-290", "3197627067");
       
-    Cliente cl3 = cliente("Vuocue Leiur Baonauza", "Rua Orminda de Almeida - Tupi B",
+    Cliente *cl3 = new cliente("Vuocue Leiur Baonauza", "Rua Orminda de Almeida - Tupi B",
                          "Belo Horizonte", "MG", "31842-630", "3195949327");
         
-    Cliente cl4 = cliente("Zerer Huduy Fyogar", "Rua Taquaril - Jonas Veiga",
+    Cliente *cl4 = new cliente("Zerer Huduy Fyogar", "Rua Taquaril - Jonas Veiga",
                          "Belo Horizonte", "MG", "30285-422", "3198596327");
         
-    Cliente cl5 = cliente("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano",
+    Cliente *cl5 = new cliente("Ceziel Mioti Pler", "Rua João Gualberto Costa - Serrano",
                          "Belo Horizonte", "MG", "30882-747", "3196274465");
         
-    Cliente cl6 = Cliente("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
+    Cliente *cl6 = new Cliente("Esxo Cilal Zyais", "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
                          "Belo Horizonte", "MG", "31650-560", "3195004414");
     
-    Cliente cl7 = Cliente("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova",
+    Cliente *cl7 = new Cliente("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova",
                          "Belo Horizonte", "MG", "31170-240", "3198461192");
     
-    Cliente cl8 = Cliente("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
+    Cliente *cl8 = new Cliente("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
                          "Belo Horizonte", "MG", "30668-430", "3197317802");    
     
     int qtdeA = 0;
@@ -49,6 +49,9 @@ int main() {
     ap1.vendedor = cl1;
     qtdeA++;
 
+    Apa cl8 = Cliente("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
+                         "Belo Horizonte", "MG", "30668-430", "3197317802");
+        
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
     ap2.AREA = 74.5;
