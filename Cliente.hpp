@@ -2,9 +2,11 @@
 #define CLIENTE_HPP
 
 #include <string>
+
 using namespace std;
 
 class Cliente {
+    
     public:
         string NOME;
         string endereco;
