@@ -14,11 +14,11 @@ class Casa : public Imovel {
 
     public:
 
-       double valor();
+       double valor() override;
 
-       double comissao();
+       double comissao() override;
 
-       void print();
+       void print() override;
 
 };
 

@@ -13,11 +13,11 @@ class Cobertura : public Imovel {
     
     public:
 
-       double valor();
+       double valor() override;
 
-       double comissao();
+       double comissao() override;
 
-       void print();
+       void print() override;
 };
 
 #endif
