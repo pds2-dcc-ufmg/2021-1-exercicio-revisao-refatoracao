@@ -17,16 +17,21 @@ class Imovel {
         std::string corretor;
 
     public:
+        Imovel() {};
 
-        Imovel(double area, int q, int b, int v, double valor_m2, double c, Cliente vendedor, std::string corretor) {
-            this->area = area;
-            n_quartos = q;
-            n_banheiros = b;
-            n_vagas = v;
-            preco_por_m2 = valor_m2;
-            comissao_taxa = c;
-            this->vendedor = vendedor;
-            this->corretor = corretor;
+        Imovel(std::string corretor, double area, int q, int b, int v, double valor_m2, Cliente vendedor)
+            : Imovel(corretor, area, q, b, v, valor_m2, vendedor, 0) {}
+
+        Imovel(std::string corretor, double area, int q, int b, int v, double valor_m2, Cliente vendedor, double comissao)
+        : corretor(corretor),
+        area(area),
+        n_quartos(q),
+        n_banheiros(b),
+        n_vagas(v),
+        preco_por_m2(valor_m2),
+        vendedor(vendedor),
+        comissao_taxa(comissao) 
+        {
         }
 
         double preco() {
