@@ -15,6 +15,14 @@ class Apartamento : public Imovel {
     double ValorTotal=0;
 
     public:
+    
+    double GetComissaoTotal(){
+        return this.ComissaoTotal;
+    }
+    
+    double GetValorTotal(){
+        return this.ValorTotal;
+    }
 
     
     string TipoDeImovel(){
@@ -27,6 +35,11 @@ class Apartamento : public Imovel {
     }
     
     Apartamento(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
+        ValorTotal+=this.GetValor();
+    };
+    
+    ~Apartamento(){
+        ValorTotal-=this.GetValor();
     };
 
 };
