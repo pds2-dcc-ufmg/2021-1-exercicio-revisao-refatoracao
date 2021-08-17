@@ -12,7 +12,7 @@ class Apartamento : public Imovel {
     
     double valor() {
 
-        double valorImovel = area * valorM2;
+        double valorImovel = area * valor_m2;
 
         return valorImovel;
 
