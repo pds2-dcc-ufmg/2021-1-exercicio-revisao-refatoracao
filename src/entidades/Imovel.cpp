@@ -46,8 +46,8 @@ void Imovel::setValorTotal(){
 double Imovel::getValorCom(){
     return this->valorComissao;
 }
-void Imovel::setValorCom(double vMetro){
-    this->valorComissao = vMetro * getTaxa();
+void Imovel::setValorCom(){     //Valor total da area (area * preço da area) * taxa
+    this->valorComissao = getValorPorArea() * getTaxa();
 }
 
 Cliente Imovel::getVendedor(){

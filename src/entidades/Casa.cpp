@@ -19,7 +19,7 @@ Casa::Casa(
     setQtdBanheiros(banh);
     setQtdVagas(vagas);
     setValorPorArea(valorMetro);
-    setValorCom(getValorPorArea());
+    setValorCom();
     setValorTotal();
     setVendedor(vendedor);
 }

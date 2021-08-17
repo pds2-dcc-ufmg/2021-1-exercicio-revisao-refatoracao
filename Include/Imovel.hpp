@@ -32,7 +32,7 @@ class Imovel {
         void setValorTotal();
 
         double getValorCom();
-        void setValorCom(double vTotal);
+        void setValorCom();
 
         Cliente getVendedor();
         void setVendedor(Cliente c1);

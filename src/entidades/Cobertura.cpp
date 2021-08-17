@@ -19,7 +19,7 @@ Cobertura::Cobertura(
     setQtdBanheiros(banh);
     setQtdVagas(vagas);
     setValorPorArea(valorMetro);
-    setValorCom(getValorPorArea());
+    setValorCom();
     setValorTotal();
     setVendedor(vendedor);
 }
