@@ -14,8 +14,8 @@ class Imovel {
         int Quartos; // quantidade de quartos
         int Banheiros; // quantidade de banheiros
         int Vagas; // quantidade de vagas
-        double Valor-m2; // valor por metro quadrado
-        double Valor-da-venda;
+        double Valor_m2; // valor por metro quadrado
+        double ValorVenda;
         double Comissao;// valor da comissao
         Cliente vendedor;
         string corretor;
