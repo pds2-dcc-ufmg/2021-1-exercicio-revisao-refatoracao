@@ -14,7 +14,7 @@ class Apartamento : public Imovel {
 
         return Valor_Imovel * Perc_Comissao_Ap;    
     }
-
+    
     void print() {
 
         std::cout << "[Apartamento]" << endl;
@@ -24,7 +24,7 @@ class Apartamento : public Imovel {
                 << "Banheiros: " << Qnt_Banheiros << endl
                 << "Vagas: " << Qnt_Vagas << endl
                 << "Taxa de Comissão: " << (Perc_Comissao_Ap * 100) << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << Valor_Comissao << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor_Venda << endl;
     }
 };
