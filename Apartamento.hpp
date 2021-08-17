@@ -8,36 +8,22 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
-    
-    double valor() {
+    public:
+        Apartamento(Cliente _vendedor, string _corretor, double _area,
+        int _quartos, int _banheiros, int _vagas, double _metro){
 
-        double v = AREA * VALORm2;
+            this->vendedor = _vendedor;
+            this->corretor = _corretor;
+            this->area = _area;
+            this->quant_quartos = _quartos;
+            this->quant_banheiros = _banheiros;
+            this->quant_vagas = _vagas;
+            this->valor_metro_quadrado = _metro;
 
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+            set_tipo_imovel("Apartamento");
+            set_taxa_comissao(0.04);
+            calcular_valores();
+        }
 };
 
 #endif
