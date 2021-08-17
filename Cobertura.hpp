@@ -15,12 +15,12 @@ class Cobertura : public Imovel {
     //CONSTRUTORES
     Cobertura(){};
 
-    Cobertura(string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor){
+    Cobertura(string _corretor, double _area, int _quarto, int _banheiro, int _vaga, double _VALORm2, Cliente _vendedor){
         this->corretor = _corretor;
-        this->AREA = _AREA;
-        this->Q = _Q;
-        this->B = _B;
-        this->V = _V;
+        this->area = _area;
+        this->quarto = _quarto;
+        this->banheiro = _banheiro;
+        this->vaga = _vaga;
         this->VALORm2 = _VALORm2;
         this->C = this->comissao();
         this->Valor = this->valor() + this->comissao();
@@ -36,10 +36,10 @@ class Cobertura : public Imovel {
     void print() {
         std::cout << "[Cobertura]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
+        std::cout << "Area: " << area << endl
+                << "  Quartos: " << quarto << endl
+                << "  Banheiros: " << banheiro << endl
+                << "  Vagas: " << vaga << endl
                 << "Taxa de Comissão: " << PCT << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;

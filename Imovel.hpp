@@ -9,20 +9,19 @@ using namespace std;
 
 class Imovel {
     protected:
-        double AREA;
-        int Q;
-        int B;
-        int V;
+        double area;
+        int quarto;
+        int banheiro;
+        int vaga;
         double VALORm2;
         double Valor;
         double C;
-
         Cliente vendedor;
         string corretor;
     
     public:
         double valor() {
-            double v = AREA * VALORm2;
+            double v = area * VALORm2;
             return v;
         }
 
