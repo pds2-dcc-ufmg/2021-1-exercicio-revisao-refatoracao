@@ -13,9 +13,7 @@ class Apartamento : public Imovel {
     double comissao() {
 
         double comissao = AREA * VALORm2;
-
         return comissao * 0.04;
-        
     }
 
     void print() {
