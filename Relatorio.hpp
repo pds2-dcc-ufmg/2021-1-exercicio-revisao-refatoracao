@@ -15,14 +15,15 @@ class Relatorio{
     std::list<Cobertura> coberturas;
     std::list<Casa> casas;
 
-    double valorTotalAp();
-
     public:
 
     /*Metodos para adicionar nas listas*/
     void addAp(Apartamento ap);
     void addCb(Cobertura cb);
     void addCa(Casa ca);
+
+    double valorTotalAp();
+    double comissaoTotalAp();
 };
 
 

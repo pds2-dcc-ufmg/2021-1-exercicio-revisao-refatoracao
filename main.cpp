@@ -122,20 +122,20 @@ int main() {
     
     relatorio.addAp(ap1);
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    //valorAp += ap1.valor();
+    //comissAp += ap1.comissao();
     std::cout << endl;
 
     relatorio.addAp(ap2);
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    //valorAp += ap2.valor();
+    //comissAp += ap2.comissao();
     std::cout << endl;
 
     relatorio.addAp(ap3);
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    //valorAp += ap3.valor();
+    //comissAp += ap3.comissao();
     std::cout << endl;
 
     relatorio.addCb(cb1);
@@ -172,8 +172,8 @@ int main() {
 
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << qtdeA
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalAp()
+            << "\n Comissão Total: R$" <<  fixed << setprecision(2) << relatorio.comissaoTotalAp()
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << qtdeCb
