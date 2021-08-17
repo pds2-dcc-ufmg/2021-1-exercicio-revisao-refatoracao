@@ -15,7 +15,7 @@ class Cliente {
         string telefone;
     
     public:
-        //CONSTRUCTORS 
+        //CONSTRUTORES
         Cliente(){};
 
         Cliente(string nome, string end, string cid, string uf, string cep, string tel){

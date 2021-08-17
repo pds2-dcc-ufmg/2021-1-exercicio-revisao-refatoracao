@@ -8,7 +8,26 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
+
+
     public:
+
+    //CONSTRUTORES
+    Apartamento(){};
+
+    Apartamento(string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor){
+        this->corretor = _corretor;
+        this->AREA = _AREA;
+        this->Q = _Q;
+        this->B = _B;
+        this->V = _V;
+        this->VALORm2 = _VALORm2;
+        this->C = this->comissao();
+        this->Valor = this->valor() + this->comissao();
+        this->vendedor = _vendedor;
+    }
+
+
     int PCT = 4;
 
     double comissao() {

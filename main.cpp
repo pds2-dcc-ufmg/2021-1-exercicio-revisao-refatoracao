@@ -9,7 +9,15 @@
 
 int main() {
     
-    /*Declaracao dos Clientes*/
+    /**Declaracao dos Clientes
+     * O construtor recebe: (string nome, 
+     *                       string endereco, 
+     *                       string cidade, 
+     *                       string uf, 
+     *                       string cep, 
+     *                       string telefone)
+    */
+
     Cliente cl1("Xayso Sovon Ziahaka", 
                 "Rua Xangrilá - Braúnas",
                 "Belo Horizonte",
@@ -70,40 +78,17 @@ int main() {
     int qtdeCa = 0;
     int qtdeCb = 0;
 
-    Apartamento ap1;
-    ap1.corretor = "Tuoruars";
-    ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
-    ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
-    ap1.vendedor = cl1;
+    /**Declaracoes dos Imoveis
+     * Os construtores recebem: (string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor)
+    */
+
+    Apartamento ap1("Tuoruars", 55.4, 2, 1, 0, 987.0, cl1);
     qtdeA++;
 
-    Apartamento ap2;
-    ap2.corretor = "Fyubyeis";
-    ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
-    ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
-    ap2.vendedor = cl2;
+    Apartamento ap2("Fyubyeis", 74.5, 2, 1, 2, 1540.0, cl2);
     qtdeA++;
 
-    Apartamento ap3;
-    ap3.corretor = "Kelia";
-    ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
-    ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
-    ap3.vendedor = cl3;
+    Apartamento ap3("Kelia", 87.2, 3, 2, 2, 2354.0, cl3);
     qtdeA++;
 
     // Cobertura
