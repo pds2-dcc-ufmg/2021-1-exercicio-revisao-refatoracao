@@ -22,8 +22,19 @@ class Relatorio{
     void addCb(Cobertura cb);
     void addCa(Casa ca);
 
+    /*Metodos que manipulam as listas e retornam informacoes do conjunto*/
     double valorTotalAp();
     double comissaoTotalAp();
+    int qtAp();
+
+    double valorTotalCb();
+    double comissaoTotalCb();
+    int qtCb();
+
+    double valorTotalCasa();
+    double comissaoTotalCasa();
+    int qtCasa();
+
 };
 
 

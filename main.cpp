@@ -171,18 +171,18 @@ int main() {
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
+            << "\n Quantidade: " << relatorio.qtAp()
             << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalAp()
             << "\n Comissão Total: R$" <<  fixed << setprecision(2) << relatorio.comissaoTotalAp()
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n Quantidade: " << relatorio.qtCb()
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalCb()
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << relatorio.comissaoTotalCb()
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n Quantidade: " << relatorio.qtCasa()
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << relatorio.valorTotalCasa()
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << relatorio.comissaoTotalCasa()
             << endl;
 }
