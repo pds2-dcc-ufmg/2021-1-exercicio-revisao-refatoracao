@@ -1,0 +1,16 @@
+{
+    "cSpell.ignoreWords": [
+        "a",
+        "comissao",
+        "imovel",
+        "indenta",
+        "indentação",
+        "o",
+        "qtde",
+        "valorm"
+    ],
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}
