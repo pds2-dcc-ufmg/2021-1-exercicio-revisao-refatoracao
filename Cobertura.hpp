@@ -8,7 +8,7 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-
+//Valor da Cobertura
     double valor() {
 
         double v = AREA * VALORm2;
@@ -16,7 +16,7 @@ class Cobertura : public Imovel {
         return v;
 
     }
-
+//Valor da comissão para Cobertura
     double comissao() {
 
         double c = AREA * VALORm2;
