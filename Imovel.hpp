@@ -19,7 +19,7 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
-        void print() {}
+        void print();
 };
 
 #endif

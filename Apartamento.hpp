@@ -10,11 +10,11 @@ class Apartamento : public Imovel {
 
     public:
 
-    double valor() {}
+    double valor();
 
-    double comissao() {}
+    double comissao();
 
-    void print() {}
+    void print();
 };
 
 #endif
