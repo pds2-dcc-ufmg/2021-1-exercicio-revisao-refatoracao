@@ -6,37 +6,23 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
+
     public:
+        Cobertura(Cliente _vendedor, string _corretor, double _area,
+        int _quartos, int _banheiros, int _vagas, double _metro){
 
-    double valor() {
+            this->vendedor = _vendedor;
+            this->corretor = _corretor;
+            this->area = _area;
+            this->quant_quartos = _quartos;
+            this->quant_banheiros = _banheiros;
+            this->quant_vagas = _vagas;
+            this->valor_metro_quadrado = _metro;
 
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
-};
+            set_tipo_imovel("Cobertura");
+            set_taxa_comissao(0.10);
+            calcular_valores();
+        }
+    };
 
 #endif
