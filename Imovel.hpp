@@ -3,28 +3,51 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "Cliente.hpp"
 
 using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
+        void print_cabecalho();
+        void print_all();
+        double valor();
+        double comissao();
+
+        virtual int get_taxa();
+        virtual string get_tipo();
+
+        double get_area();
+        int get_quartos();
+        int get_banheiros();
+        int get_vagas();
+        double get_valorMetragem();
+        double get_valorVenda();
+        double get_valorComissao();
+        Cliente get_vendedor();
+        string get_corretor();
+
+        void set_area(double a);
+        void set_quartos(int q);
+        void set_banheiros(int b);
+        void set_vagas(int v);
+        void set_valorMetragem(double valorM);
+        void set_valorVenda(double valorV);
+        void set_valorComissao(double valorC);
+        void set_vendedor(Cliente c);
+        void set_corretor(string c);
+
+    private:
+        double area;
+        int quartos;
+        int banheiros;
+        int vagas;
+        double valorMetragem;
+        double valorVenda;
+        double valorComissao;
         Cliente vendedor;
         string corretor;
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
 };
 
 #endif
