@@ -15,12 +15,12 @@ class Cliente {
         string get_cep();
         string get_telefone();
 
-        void set_nome();
-        void set_endereco();
-        void set_cidade();
-        void set_uf();
-        void set_cep();
-        void set_telefone();
+        void set_nome(string n);
+        void set_endereco(string e);
+        void set_cidade(string c);
+        void set_uf(string u);
+        void set_cep(string z);
+        void set_telefone(string t);
 
     private:
         string nome;
