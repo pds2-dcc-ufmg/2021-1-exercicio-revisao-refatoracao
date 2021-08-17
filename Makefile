@@ -18,10 +18,10 @@ ${BUILD_DIR}/Cliente.o: ${INCLUDE_DIR}/Cliente.hpp ${SRC_DIR}/Cliente.cpp
 ${BUILD_DIR}/Apartamento.o: ${INCLUDE_DIR}/Apartamento.hpp ${SRC_DIR}/Apartamento.cpp ${INCLUDE_DIR}/Imovel.hpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/Apartamento.cpp -o ${BUILD_DIR}/Apartamento.o
 
-${BUILD_DIR}/Casa.o: ${INCLUDE_DIR}/Imoveis/Casa.hpp ${SRC_DIR}/Imoveis/Casa.cpp ${INCLUDE_DIR}/Imovel.hpp
+${BUILD_DIR}/Casa.o: ${INCLUDE_DIR}/Casa.hpp ${SRC_DIR}/Casa.cpp ${INCLUDE_DIR}/Imovel.hpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/Casa.cpp -o ${BUILD_DIR}/Casa.o
 
-${BUILD_DIR}/Cobertura.o: ${INCLUDE_DIR}/Imoveis/Cobertura.hpp ${SRC_DIR}/Imoveis/Cobertura.cpp ${INCLUDE_DIR}/Imovel.hpp
+${BUILD_DIR}/Cobertura.o: ${INCLUDE_DIR}/Cobertura.hpp ${SRC_DIR}/Cobertura.cpp ${INCLUDE_DIR}/Imovel.hpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/Cobertura.cpp -o ${BUILD_DIR}/Cobertura.o
 
 ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/Imovel.hpp ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/Apartamento.hpp ${INCLUDE_DIR}/Casa.hpp ${INCLUDE_DIR}/Cobertura.hpp ${SRC_DIR}/main.cpp
