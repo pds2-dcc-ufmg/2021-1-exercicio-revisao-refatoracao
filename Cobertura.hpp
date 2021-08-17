@@ -9,20 +9,10 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-
-        double valor = AREA * VALORm2;
-
-        return valor;
-
-    }
-
     double comissao() {
 
-        double comissao = AREA * VALORm2;
-
+        double comissao = area * valor_m2;
         return comissao * 0.10;
-        
     }
 
     void print() {
@@ -34,7 +24,7 @@ class Cobertura : public Imovel {
                 << "  Banheiros: " << banheiros << endl
                 << "  Vagas: " << vagas << endl
                 << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl;
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
 };
