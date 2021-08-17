@@ -23,7 +23,7 @@ class Cobertura : public Imovel {
                 << "  Banheiros: " << Qnt_Banheiros << endl
                 << "  Vagas: " << Qnt_Vagas << endl
                 << "Taxa de Comissão: " << (Perc_Comissao_Cobert * 100) << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << Valor_Comissao << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor_Venda << endl;
     }
 };
