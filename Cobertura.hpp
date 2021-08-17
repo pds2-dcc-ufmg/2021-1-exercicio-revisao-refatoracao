@@ -11,19 +11,13 @@ class Cobertura : public Imovel {
     public:
 
     double valor() {
-
-        double valor = area * valor_por_m2;
-
-        return valor;
-
+        
+        return (Imovel::valor());
     }
 
     double comissao() {
 
-        double comissao = valor();
-        
-        return  comissao * taxa_de_comissao;
-        
+        return (Imovel:: comissao (taxa_de_comissao)); 
     }
 
     void print() {
