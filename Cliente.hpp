@@ -5,15 +5,17 @@
 using namespace std;
 
 class Cliente {
-    public:
+    private:
         string NOME;
-        string endereco;
+        string ENDERECO;
         string CIDADE;
         string UF;
-        string cep;
-        string telefone;
-
-        void print();
+        string CEP;
+        string TELEFONE;
+	public:
+        void print(); 		//Imprime dados gerais do cliente
+		Cliente();
+		Cliente(string nome,string endereco,string cidade,string uf,string cep,string telefone);
 };
 
 #endif
