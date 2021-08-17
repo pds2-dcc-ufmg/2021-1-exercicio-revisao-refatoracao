@@ -15,6 +15,15 @@ class Cobertura : public Imovel {
     
     public:
     
+        
+    double GetComissaoTotal(){
+        return this.ComissaoTotal;
+    }
+    
+    double GetValorTotal(){
+        return this.ValorTotal;
+    }
+    
     double GetPercentComissao(){
         //A comissão de venda de uma cobertura é 10%
         return 0.10;
@@ -25,6 +34,11 @@ class Cobertura : public Imovel {
     }
     
     Cobertura(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
+        ValorTotal+=this.GetValor();
+    };
+    
+    ~Cobertura(){
+        ValorTotal-=this.GetValor();
     };
     
 };
