@@ -13,6 +13,8 @@ class Cliente {
         string cep;
         string telefone;
 
+        Cliente(string nome, string endereco, string cidade, string uf, string cep, string telefone);
+        Cliente() = default;
         void print();
 };
 
