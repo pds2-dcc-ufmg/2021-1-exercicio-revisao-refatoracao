@@ -104,7 +104,6 @@ int main() {
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
     relatorio.addCa(ca2);
 
-    /**Montagem do relatorio*/
-    
+    /**Imprime o relatorio completo*/
     relatorio.printRelatorio();
 }

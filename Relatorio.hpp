@@ -15,13 +15,6 @@ class Relatorio{
     std::list<Cobertura> coberturas;
     std::list<Casa> casas;
 
-    public:
-
-    /*Metodos para adicionar nas listas*/
-    void addAp(Apartamento ap);
-    void addCb(Cobertura cb);
-    void addCa(Casa ca);
-
     /*Metodos que manipulam as listas e retornam informacoes do conjunto*/
     double valorTotalAp();
     double comissaoTotalAp();
@@ -35,6 +28,13 @@ class Relatorio{
     double comissaoTotalCasa();
     int qtCasa();
 
+    public:
+
+    /*Metodos para adicionar nas listas*/
+    void addAp(Apartamento ap);
+    void addCb(Cobertura cb);
+    void addCa(Casa ca);
+    
     /*Metodos para imprimir o relatorio*/
     void printRelatorio();
 };
