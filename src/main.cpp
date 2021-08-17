@@ -32,7 +32,7 @@ int main() {
     vector<Casa> totalCasas;
     vector<Cobertura> totalCoberturas;
 
-    //Criação dos imóveis e adição em seus respectivos vetores:
+    //Criação dos imóveis e adição em seus respectivos vetores
 
     //Apartamento
     Apartamento ap1("Tuoruars",55.4,987.0,2,1,0,c11);
