@@ -30,9 +30,7 @@ class Casa : public Imovel {
     }
 
     double comissao() {
-
-        return valor() * PCT/100;
-        
+        return valor() * PCT/100;  
     }
 
     void print() {

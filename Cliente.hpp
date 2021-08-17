@@ -7,10 +7,10 @@ using namespace std;
 class Cliente {
     
     private:
-        string NOME;
+        string nome;
         string endereco;
-        string CIDADE;
-        string UF;
+        string cidade;
+        string uf;
         string cep;
         string telefone;
     
@@ -18,14 +18,7 @@ class Cliente {
         //CONSTRUTORES
         Cliente(){};
 
-        Cliente(string nome, string end, string cid, string uf, string cep, string tel){
-            this->NOME = nome;
-            this->endereco = end;
-            this->CIDADE = cid;
-            this->UF = uf;
-            this->cep = cep;
-            this->telefone = tel;
-        }
+        Cliente(string _nome, string _endereco, string _cidade, string _uf, string _cep, string _telefone);
 
         void print();
 };
