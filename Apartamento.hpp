@@ -11,19 +11,13 @@ class Apartamento : public Imovel {
     public: 
     
     double valor() {
-
         double v = AREA * VALORm2;
-
         return v;
-
     }
 
     double comissao() {
-
         double c = AREA * VALORm2;
-
         return c * 0.04;
-        
     }
 
     void print() {
