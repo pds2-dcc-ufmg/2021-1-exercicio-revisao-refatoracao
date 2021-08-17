@@ -15,7 +15,7 @@ class Imovel {
         int vagas;
         double valor_m2;
         double valor;
-        double c;
+        double comissao;
         Cliente vendedor;
         string corretor;
         
