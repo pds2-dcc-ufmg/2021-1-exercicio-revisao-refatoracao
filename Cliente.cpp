@@ -13,7 +13,7 @@ void Cliente::print(){
 		 << "  CEP: " << CEP << endl;
 }
 
-Cliente::Cliente() = 0;
+Cliente::Cliente(){}
 
 Cliente::Cliente(string _NOME, string _ENDERECO, string _CIDADE, string _UF, string _CEP, string _TELEFONE):
  NOME(_NOME), ENDERECO(_ENDERECO), CIDADE(_CIDADE), UF(_UF), CEP(_CEP), TELEFONE(_TELEFONE) {}

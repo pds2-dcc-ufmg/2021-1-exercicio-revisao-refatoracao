@@ -9,55 +9,55 @@
 
 int main() {
     
-    Cliente cl1("Xayso Sovon Ziahaka",
+  Cliente cl1("Xayso Sovon Ziahaka",
  	"Rua Xangrilá - Braúnas",
  	"Belo Horizonte",
  	"MG","31365-570",
  	"3196007958");
     
-    Cliente cl2("Minia Pasies Kituos",
+  Cliente cl2("Minia Pasies Kituos",
  	"Rua dos Jacobinos - Ouro Minas",
  	"Belo Horizonte",
  	"MG",
  	"31870-290",
  	"3197627067");
     
-    Cliente cl3("Vuocue Leiur Baonauza",
+  Cliente cl3("Vuocue Leiur Baonauza",
  	"Rua Orminda de Almeida - Tupi B",
  	"Belo Horizonte",
  	"MG",
  	"31842-630",
  	"3195949327");
 
-    Cliente cl4("Zerer Huduy Fyogar",
+  Cliente cl4("Zerer Huduy Fyogar",
  	"Rua Taquaril - Jonas Veiga",
  	"Belo Horizonte",
  	"MG",
  	"30285-422",
  	"3198596327");
     
-    Cliente cl5("Ceziel Mioti Pler",
+  Cliente cl5("Ceziel Mioti Pler",
  	"Rua João Gualberto Costa - Serrano",
  	"Belo Horizonte",
  	"MG",
  	"30882-747",
  	"3196274465");
     
-    Cliente cl6("Esxo Cilal Zyais",
+  Cliente cl6("Esxo Cilal Zyais",
  	"Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)",
  	"Belo Horizonte",
  	"MG",
  	"31650-560",
  	"3195004414");
     
-    Cliente cl7("Leova Wikyecil Neaca",
+  Cliente cl7("Leova Wikyecil Neaca",
  	"Rua João Arantes - Cidade Nova",
  	"Belo Horizonte",
  	"MG",
  	"31170-240",
  	"3198461192");
     
-    Cliente cl8("Teas Heimeu Pipe",
+  Cliente cl8("Teas Heimeu Pipe",
  	"Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
  	"Belo Horizonte",
  	"MG",

@@ -6,10 +6,10 @@
 using namespace std;
 
 class Cobertura : public Imovel {
+    public:
+
     double taxaComissao = 0.10;
     double AreaVezesValorM2 = AREA * VALORm2;
-    
-    public:
 
     double valor() {
         return AreaVezesValorM2;
