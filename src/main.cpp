@@ -15,7 +15,7 @@ inline void print_estatisticas() {
     std::cout << "\n>>" << T::label << "s" << "<<\n";
     std::cout << "\n Quantidade: " << T::get_contador_de_instancias();
     std::cout << "\n Valor Total: R$ " << T::get_valor_total();
-    std::cout << "\n Comissao Total: R$" << T::get_comissao_total();
+    std::cout << "\n Comissão Total: R$ " << T::get_comissao_total();
     std::cout << std::endl;
 }
 
@@ -37,7 +37,7 @@ int main() {
             Cliente("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova",
                     "Belo Horizonte", "MG", "31170-240", "3198461192"),
             Cliente("Teas Heimeu Pipe",
-                    "Rua Maria Pereira Damasceno - Ernesto do Nascimento (Barreiro)",
+                    "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
                     "Belo Horizonte", "MG", "30668-430", "3197317802")
     };
 

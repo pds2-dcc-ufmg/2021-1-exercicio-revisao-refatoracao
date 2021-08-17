@@ -9,7 +9,7 @@ void Cliente::print() const {
     std::cout << "  Nome: " << nome_ << std::endl;
     std::cout << "  Telefone: " << telefone_ << std::endl;
     std::cout << "  Endereço: " << endereco_ << std::endl;
-    std::cout << "  Cidade: " << nome_ << std::endl;
+    std::cout << "  Cidade: " << cidade_ << std::endl;
     std::cout << "  Estado: " << uf_ << std::endl;
     std::cout << "  CEP: " << cep_ << std::endl;
 }
