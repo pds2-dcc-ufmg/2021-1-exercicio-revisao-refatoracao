@@ -7,6 +7,12 @@ using namespace std;
 
 class Cobertura : public Imovel {
     
+    private:
+    
+    static double ComissaoTotal=0;
+    
+    static double ValorTotal=0;
+    
     public:
     
     double GetPercentComissao(){
