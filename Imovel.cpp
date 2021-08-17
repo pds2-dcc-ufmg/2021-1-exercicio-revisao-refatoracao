@@ -23,4 +23,4 @@ void Imovel :: print() {
         << "Taxa de Comissão: " << taxa_comissao << "%" << endl
         << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
         << "Valor de Venda: R$ " << fixed << setprecision(2) << valor << endl;
-    }
+}
