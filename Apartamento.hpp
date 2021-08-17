@@ -12,17 +12,17 @@ class Apartamento : public Imovel {
     
     double valor() {
 
-        double valorApartamento = area * valorM2;
+        double valorImovel = area * valorM2;
 
-        return valorApartamento;
+        return valorImovel;
 
     }
 
     double comissao() {
 
-        double comissaoCorretor = area * valorM2;
+        double comissaoCorretor = valorImovel * 0.04;
 
-        return comissaoCorretor * 0.04; 
+        return comissaoCorretor; 
         
     }
 
