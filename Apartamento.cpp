@@ -29,7 +29,7 @@ void Apartamento::print(){
             << "  Banheiros: " << numero_banheiros << endl
             << "  Vagas: " << numero_vagas << endl
             << "Taxa de Comissão: " << Taxa_comissao * 100 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+            << "Valor Comissão: R$ " << fixed << setprecision(1) << valor_comissao << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(1) << Valor << endl;
 
 }
