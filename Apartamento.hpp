@@ -9,7 +9,7 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-    
+    //valor da venda para apartamento
     double valor() {
 
         double v = AREA * VALORm2;
@@ -17,7 +17,7 @@ class Apartamento : public Imovel {
         return v;
 
     }
-
+     //valor da comissão para apartamento
     double comissao() {
 
         double c = AREA * VALORm2;
