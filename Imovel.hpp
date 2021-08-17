@@ -25,8 +25,11 @@ class Imovel {
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
         }
-        
-        virtual double valor();
+            
+        double valor() {
+            double v = AREA * VALORm2;
+            return v;
+    }
             
         virtual double comissao();
 };
