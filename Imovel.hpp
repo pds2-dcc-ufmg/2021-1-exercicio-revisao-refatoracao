@@ -27,7 +27,7 @@ class Imovel {
         }
             
         double valor() {
-            double valor = AREA * VALORm2;
+            double valor = area * valor_m2;
             return valor;
     }
             
