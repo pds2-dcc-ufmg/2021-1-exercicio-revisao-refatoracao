@@ -29,7 +29,6 @@ class Casa : public Imovel {
         std::cout << "[Casa]" << endl;
         Imovel::print();
         Imovel::printImov(taxa);
-
     }
 };
 
