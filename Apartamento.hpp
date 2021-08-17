@@ -1,42 +1,41 @@
-#ifndef APARTAMENTO_HPP
-#define APARTAMENTO_HPP
+#ifndef APARTAMENTO_H
+#define APARTAMENTO_H
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
+class Apartamento : public Imovel
+{
 
-class Apartamento : public Imovel {
+public:
+    double valorTotalDaArea()
+    {
+        double valorTotal = area * valor_m2;
 
-    public: 
-    
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+        return valorTotal;
     }
 
-    double comissao() {
+    double comissaoTotal()
+    {
 
-        double c = AREA * VALORm2;
+        double comissao = area * valor_m2;
+        double comissaoTotal = comissao * 0.04;
 
-        return c * 0.04;
-        
+        return comissaoTotal;
     }
 
-    void print() {
+    void print()
+    {
 
-        std::cout << "[Apartamento]" << endl;
+        std::cout << "[Apartamento]" << std::endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        std::cout << "Area: " << area << std::endl
+                  << "  Quartos: " << quartos << std::endl
+                  << "  Banheiros: " << banheiros << std::endl
+                  << "  Vagas: " << vagas << std::endl
+                  << "Taxa de Comissão: " << 4 << "%" << std::endl
+                  << "Valor Comissão: R$ " << std::fixed << std::setprecision(2) << comissão << std::endl
+                  << "Valor de Venda: R$ " << std::fixed << std::setprecision(2) << valor << std::endl;
     }
 };
 
