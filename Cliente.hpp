@@ -9,7 +9,7 @@ class Cliente {
         string nome;
         string endereco;
         string cidade;
-        string UF;
+        string uf;
         string cep;
         string telefone;
 
