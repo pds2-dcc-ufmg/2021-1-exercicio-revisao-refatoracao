@@ -6,23 +6,17 @@
 using namespace std;
 
 class Cobertura : public Imovel {
+    double taxaComissao = 0.10;
+    double AreaVezesValorM2 = AREA * VALORm2;
     
     public:
 
     double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+        return AreaVezesValorM2;
     }
 
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
+        return AreaVezesValorM2 * taxaComissao;
     }
 
     void print() {
