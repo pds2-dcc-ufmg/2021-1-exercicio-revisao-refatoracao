@@ -12,7 +12,7 @@ class Casa : public Imovel {
 
     double comissao() {
         
-        double comissao = AREA * VALORm2;
+        double comissao = area * valor_m2;
         return comissao * 0.06;  
     }
 
