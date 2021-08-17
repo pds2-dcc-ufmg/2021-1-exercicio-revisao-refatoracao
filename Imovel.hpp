@@ -14,12 +14,11 @@ class Imovel {
         int Qnt_Banheiros;
         int Qnt_Vagas;
         double VALORm2;
-        double Valor_Venda;
         double Valor_Imovel = AREA * VALORm2;
-        double Valor_Comissao;
+        double Valor_Venda = Valor_Imovel + comissao;
         double Perc_Comissao_Ap = 0.04;
         double Perc_Comissao_Casa = 0.06;
-        double Perc_Comissao_Cobert = 0.10;
+        double Perc_Comissao_Cobert = 0.1;
         Cliente vendedor;
         string corretor;
 
