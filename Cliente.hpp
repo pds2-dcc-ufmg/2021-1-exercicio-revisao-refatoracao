@@ -2,7 +2,6 @@
 #define CLIENTE_HPP
 
 #include <string>
-using namespace std;
 
 class Cliente {
     public:
