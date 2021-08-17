@@ -57,7 +57,7 @@ class Imovel {
             return this.Area;
         }
     
-        void SetArea(double _Area){
+        void ~SetArea(double _Area){
             this.Area=_Area;
         }
     
@@ -85,7 +85,7 @@ class Imovel {
             this.Vagas=_Vagas;
         }
     
-        double GetValoM2(){
+        double ~GetValoM2(){
             return this.ValorM2;
         }
     
