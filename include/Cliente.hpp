@@ -12,7 +12,7 @@ class Cliente {
         string UF;
         string cep;
         string telefone;
-
+        //Imprimir na tela informações sobre o cliente
         void print();
 };
 
