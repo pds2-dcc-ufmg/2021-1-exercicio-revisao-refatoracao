@@ -8,9 +8,7 @@
 using namespace std;
 
 class Imovel {
-    public:
-        Imovel(string _corretor, double _AREA, int _Q, int _B, int _V, double _VALORm2, Cliente _vendedor);
-    
+    public:    
         double AREA;
         int Q;
         int B;
@@ -23,7 +21,7 @@ class Imovel {
         string corretor;
 
         void print();
-        void printImov(double t);
+        void printImov();
 };
 
 #endif
