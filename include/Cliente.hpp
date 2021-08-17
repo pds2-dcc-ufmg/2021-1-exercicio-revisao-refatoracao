@@ -6,7 +6,7 @@
 using namespace std;
 
 class Cliente {
-    public:
+    private:
         string nome;
         string endereco;
         string cidade;
@@ -14,6 +14,13 @@ class Cliente {
         string cep;
         string telefone;
 
+    public:
+        Cliente(string _nome,
+                string _endereco,
+                string _cidade,
+                string _uf,
+                string _cep,
+                string _telefone);
         void imprimeInformacoes();
 };
 
