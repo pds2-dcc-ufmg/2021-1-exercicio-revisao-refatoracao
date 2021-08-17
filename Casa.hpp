@@ -10,11 +10,19 @@ class Casa : public Imovel {
     
     private:
     
-    double ComissaoTotal=0;
+    double ComissaoTotal;
     
-    double ValorTotal=0;
+    double ValorTotal;
 
     public:
+    
+    double GetComissaoTotal(){
+        return this.ComissaoTotal;
+    }
+    
+    double GetValorTotal(){
+        return this.ValorTotal;
+    }
     
     double GetPercentComissao(){
         //A comissão da venda de uma casa é 6%;
@@ -27,6 +35,11 @@ class Casa : public Imovel {
     
     
     Casa(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
+        ValorTotal+=this.GetValor();
+    };
+    
+    ~Casa(){
+        ValorTotal-=this.GetValor();
     };
 
 };
