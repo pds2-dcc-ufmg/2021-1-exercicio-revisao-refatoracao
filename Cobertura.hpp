@@ -4,11 +4,15 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 using namespace std;
+#define TAXA_C_COBERTURA  10
 
 class Cobertura : public Imovel {
     
     public:
-
+    Cobertura()
+    {
+        taxaComissao = TAXA_C_COBERTURA;
+    }
     double valor() {
 
         double v = AREA * valorMetro2;
@@ -21,7 +25,7 @@ class Cobertura : public Imovel {
 
         double c = AREA * valorMetro2;
 
-        return c * 0.10;
+        return ((c * TAXA_C_COBERTURA)/100);
         
     }
 
@@ -33,7 +37,7 @@ class Cobertura : public Imovel {
                 << "  Quartos: " << quartos << endl
                 << "  Banheiros: " << banheiros << endl
                 << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
+                << "Taxa de Comissão: " << taxaComissao << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }

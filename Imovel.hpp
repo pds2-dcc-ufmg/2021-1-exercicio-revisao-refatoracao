@@ -9,6 +9,7 @@ using namespace std;
 
 class Imovel {
     public:
+        int taxaComissao;    
         double AREA;
         int quartos;
         int banheiros;

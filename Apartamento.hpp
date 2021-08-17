@@ -5,11 +5,15 @@
 #include "Cliente.hpp"
 
 using namespace std;
+#define TAXA_C_APARTAMENTO  4
 
 class Apartamento : public Imovel {
 
     public: 
-    
+    Apartamento()
+    {
+        taxaComissao = TAXA_C_APARTAMENTO;
+    }
     double valor() {
 
         double v = AREA * valorMetro2;
@@ -22,7 +26,7 @@ class Apartamento : public Imovel {
 
         double c = AREA * valorMetro2;
 
-        return c * 0.04;
+        return ((c * TAXA_C_APARTAMENTO)/100);
         
     }
 
@@ -34,7 +38,7 @@ class Apartamento : public Imovel {
                 << "  Quartos: " << quartos << endl
                 << "  Banheiros: " << banheiros << endl
                 << "  Vagas: " << vagas << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
+                << "Taxa de Comissão: " << taxaComissao << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
