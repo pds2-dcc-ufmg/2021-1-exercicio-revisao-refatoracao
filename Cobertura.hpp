@@ -7,7 +7,6 @@
 class Cobertura : public Imovel
 {
 public:
-    static double taxa;
     double valor() override;
     double comissao() override;
     void print() override;

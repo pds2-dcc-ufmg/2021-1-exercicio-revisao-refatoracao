@@ -5,8 +5,6 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Imovel
 {
     double valor() const = 0;

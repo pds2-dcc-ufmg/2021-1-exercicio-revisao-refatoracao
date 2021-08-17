@@ -3,7 +3,6 @@
 class Cobertura : public Imovel
 {
 public:
-    double Cobertura::taxa = 0.10;
     //Retorna valor da cobertura
     double valor() override
     {
@@ -15,7 +14,7 @@ public:
     double comissao() override
     {
         double c = AREA * VALORm2;
-        return c * taxa;
+        return c * 0.10;
     }
 
     void print() override
