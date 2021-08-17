@@ -17,20 +17,9 @@ class Cobertura : public Imovel {
             double valorMetro,
             Cliente vendedor
         );
-
-        void print() {
-
-            std::cout << "[Cobertura]" << endl;
-            Imovel::printVendedorCorretor();
-            std::cout << "Area: " << getArea() << endl
-                    << "  Quartos: " << getQtdQuartos() << endl
-                    << "  Banheiros: " << getQtdBanheiros() << endl
-                    << "  Vagas: " << getQtdVagas() << endl
-                    << "Taxa de Comissão: " << getTaxa() * 100 << "%" << endl
-                    << "Valor Comissão: R$ " << fixed << setprecision(2) << getValorCom() << endl
-                    << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorTotal() << endl;
-        }
-
+        //Método de printar os valores relacionados ao imóvel
+        void print();
+        //Método para utilizar a taxa do tipo Cobertura
         double getTaxa() override;
 
     private:

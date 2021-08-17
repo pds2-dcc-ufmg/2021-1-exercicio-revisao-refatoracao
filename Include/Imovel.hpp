@@ -12,6 +12,7 @@ class Imovel {
     public:
 
         Imovel(){}
+        //Getters e Setters:
         double getArea();
         void setArea(double ar);
 
@@ -38,17 +39,13 @@ class Imovel {
 
         string getCorretor();
         void setCorretor(string corr);
-
+        //Método para as taxas de commissao de cada tipo de imovel,
+        //ja que no calculo do valor da comiss. o que muda eh essa taxa
         virtual double getTaxa() = 0;
-
-        void printVendedorCorretor() {
-            cout << "[Vendedor]" << endl;
-            getVendedor().print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
-
-        ~Imovel(){}
+        
+        //Método de printar vendedor e corretor do imovel,
+        //que ja estava implementado
+        void printVendedorCorretor();
 
     protected:
         double area;

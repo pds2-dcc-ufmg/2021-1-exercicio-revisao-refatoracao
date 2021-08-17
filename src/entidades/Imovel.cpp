@@ -63,3 +63,10 @@ string Imovel::getCorretor(){
 void Imovel::setCorretor(string corr){
     this->corretor = corr;
 }
+
+void Imovel::printVendedorCorretor(){
+    cout << "[Vendedor]" << endl;
+    getVendedor().print();
+    cout << "[Corretor]" << endl;
+    cout << "  " + corretor << endl;
+}

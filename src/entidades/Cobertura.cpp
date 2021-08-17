@@ -23,3 +23,15 @@ Cobertura::Cobertura(
     setValorTotal();
     setVendedor(vendedor);
 }
+
+void Cobertura::print(){
+    std::cout << "[Cobertura]" << endl;
+    Imovel::printVendedorCorretor();
+    std::cout << "Area: " << getArea() << endl
+            << "  Quartos: " << getQtdQuartos() << endl
+            << "  Banheiros: " << getQtdBanheiros() << endl
+            << "  Vagas: " << getQtdVagas() << endl
+            << "Taxa de Comissão: " << int(getTaxa() * 100) << "%" << endl  //Apenas o valor inteiro da porcentagem
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << getValorCom() << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorTotal() << endl;
+}

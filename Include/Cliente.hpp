@@ -8,8 +8,9 @@ using namespace std;
 class Cliente {
     public:
         Cliente(){}
+        //Método para printar informações relacionadas ao cliente
         void print();
-        //
+        //Getters e Setters de Cliente
         string getNome();
         void setNome(string n);
 
