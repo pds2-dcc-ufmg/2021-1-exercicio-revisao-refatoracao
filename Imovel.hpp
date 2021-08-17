@@ -26,9 +26,9 @@ class Imovel {
             cout << "  " + corretor << endl;
         }
         
-        virtual double valor()
+        virtual double valor();
             
-        virtual double comissao() 
+        virtual double comissao();
 };
 
 #endif
