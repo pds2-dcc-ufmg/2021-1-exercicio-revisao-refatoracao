@@ -5,6 +5,7 @@
 #include "Cliente.hpp"
 
 using namespace std;
+double taxa_comissao = 0.04;
 
 class Apartamento : public Imovel {
 
@@ -19,10 +20,11 @@ class Apartamento : public Imovel {
     }
 
     double comissao() {
-
+        
         double c = AREA * VALORm2;
+        double total_comissao = c * taxa_comissao;
 
-        return c * 0.04;
+        return total_comissao;
         
     }
 
@@ -34,7 +36,7 @@ class Apartamento : public Imovel {
                 << "  Quartos: " << Q << endl
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
+                << "Taxa de Comissão: " << taxa_comissao*100 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
