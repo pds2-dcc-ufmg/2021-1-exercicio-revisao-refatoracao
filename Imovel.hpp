@@ -27,8 +27,8 @@ class Imovel {
         }
             
         double valor() {
-            double v = AREA * VALORm2;
-            return v;
+            double valor = AREA * VALORm2;
+            return valor;
     }
             
         virtual double comissao();
