@@ -73,172 +73,172 @@ int main() {
     cl8.cep = "30668-430";
     cl8.telefone = "3197317802";
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
+    int qtdeApartamentos = 0;
+    int qtdeCasas = 0;
+    int qtdeCoberturas = 0;
 
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
     ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
+    ap1.Quartos = 2;
+    ap1.Banheiros = 1;
+    ap1.Vagas = 0;
     ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
+    ap1.Comissao = ap1.comissao();
+    ap1.Valor = ap1.ValorFinal();
     ap1.vendedor = cl1;
-    qtdeA++;
+    qtdeApartamentos++;
 
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
     ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
+    ap2.Quartos = 2;
+    ap2.Banheiros = 1;
+    ap2.Vagas = 2;
     ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
+    ap2.Comissao = ap2.comissao();
+    ap2.Valor = ap2.ValorFinal();
     ap2.vendedor = cl2;
-    qtdeA++;
+    qtdeApartamentos++;
 
     Apartamento ap3;
     ap3.corretor = "Kelia";
     ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
+    ap3.Quartos = 3;
+    ap3.Banheiros = 2;
+    ap3.Vagas = 2;
     ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
+    ap3.Comissao = ap3.comissao();
+    ap3.Valor = ap3.ValorFinal();
     ap3.vendedor = cl3;
-    qtdeA++;
+    qtdeApartamentos++;
 
     // Cobertura
     Cobertura cb1;
     cb1.corretor = "Koci";
     cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
+    cb1.Quartos = 3;
+    cb1.Banheiros = 3;
+    cb1.Vagas = 2;
     cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
-    cb1.Valor = cb1.valor() + cb1.comissao();
+    cb1.Comissao = cb1.comissao();
+    cb1.Valor = cb1.ValorFinal();
     cb1.vendedor = cl4;
-    qtdeCb++;
+    qtdeCoberturas++;
     
     Cobertura cb2;
     cb2.corretor = "Wail";
     cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
+    cb2.Quartos = 4;
+    cb2.Banheiros = 3;
+    cb2.Vagas = 3;
     cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
-    cb2.Valor = cb2.valor() + cb2.comissao();
+    cb2.Comissao = cb2.comissao();
+    cb2.Valor = cb2.ValorFinal();
     cb2.vendedor = cl5;
-    qtdeCb++;
+    qtdeCoberturas++;
 
     Cobertura cb3;
     cb3.corretor = "Fival";
     cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
+    cb3.Quartos = 4;
+    cb3.Banheiros = 4;
+    cb3.Vagas = 4;
     cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
-    cb3.Valor = cb3.valor() + cb3.comissao();
+    cb3.Comissao = cb3.comissao();
+    cb3.Valor = cb3.ValorFinal();
     cb3.vendedor = cl6;
-    qtdeCb++;
+    qtdeCoberturas++;
 
     // Casas
     Casa ca1;
     ca1.corretor = "Beydo";
     ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
+    ca1.Quartos = 3;
+    ca1.Banheiros = 3;
+    ca1.Vagas = 2;
     ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
-    ca1.Valor = ca1.valor() + ca1.comissao();
+    ca1.Comissao = ca1.comissao();
+    ca1.Valor = ca1.ValorFinal();
     ca1.vendedor = cl7;
-    qtdeCa++;
+    qtdeCasas++;
 
     Casa ca2;
     ca2.corretor = "Riuzi";
     ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
+    ca2.Quartos = 5;
+    ca2.Banheiros = 4;
+    ca2.Vagas = 4;
     ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
-    ca2.Valor = ca2.valor() + ca2.comissao();
+    ca2.Comissao = ca2.comissao();
+    ca2.Valor = ca2.ValorFinal();
     ca2.vendedor = cl8;
-    qtdeCa++;
+    qtdeCasas++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
+    double valorApartamento = 0.0;
+    double valorCobertura = 0.0;
+    double valorCasa = 0.0;
+    double comissaoApartamento = 0.0;
+    double comissaoCobertura = 0.0;
+    double comissaoCasa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valorApartamento += ap1.valor();
+    comissaoApartamento += ap1.comissao();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valorApartamento += ap2.valor();
+    comissaoApartamento += ap2.comissao();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valorApartamento += ap3.valor();
+    comissaoApartamento += ap3.comissao();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valorCobertura += cb1.valor();
+    comissaoCobertura += cb1.comissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valorCobertura += cb2.valor();
+    comissaoCobertura += cb2.comissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valorCobertura += cb3.valor();
+    comissaoCobertura += cb3.comissao();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valorCasa += ca1.valor();
+    comissaoCasa += ca1.comissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valorCasa += ca2.valor();
+    comissaoCasa += ca2.comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Quantidade: " << qtdeApartamentos
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorApartamento
+            << "\n Comissão Total: R$" << comissaoApartamento
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n Quantidade: " << qtdeCoberturas
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCobertura
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissaoCobertura
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n Quantidade: " << qtdeCasas
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCasa
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissaoCasa
             << endl;
 }
