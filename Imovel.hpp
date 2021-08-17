@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "Cliente.hpp"
 
 using namespace std;
@@ -37,7 +38,7 @@ class Imovel {
         void set_vendedor(Cliente c);
         void set_corretor(string c);
 
-    protected:
+    private:
         double area;
         int quartos;
         int banheiros;

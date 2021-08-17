@@ -1,9 +1,5 @@
 #include "Imovel.hpp"
-#include "Casa.hpp"
-#include "Cobertura.hpp"
-#include "Apartamento.hpp"
 
-//Imovel
 void Imovel::print_cabecalho() {
     cout << "[Vendedor]" << endl;
     vendedor.print_cliente();
@@ -26,6 +22,13 @@ double Imovel::valor() {
 }
 double Imovel::comissao(){
     return valor() * get_taxa() * 0.01;
+}
+
+int Imovel::get_taxa() {
+    return 1;
+}
+string Imovel::get_tipo() {
+    return "1";
 }
 
 double Imovel::get_area() {
