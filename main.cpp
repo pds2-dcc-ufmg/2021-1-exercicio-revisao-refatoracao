@@ -12,7 +12,7 @@ int main() {
     std::vector<Cliente> Clientes;
     std::vector<Apartamento> Apartamentos;
     std::vector<Cobertura> Coberturas;
-    std::vector<Casa> Casa;
+    std::vector<Casa> Casas;
     
     Cliente Cliente1=Cliente("Xayso Sovon Ziahaka","Rua Xangrilá - Braúnas","Belo Horizonte","MG","31365-570","3196007958");
     
@@ -52,11 +52,9 @@ int main() {
     // Casas
     Casa Casa1=Casa(145.6,3,3,2,4023.6,"Beydo",Cliente7);
     Casas.push_back(Casa1);
-    QuantidadeDeCasas++;
 
     Casa Casa2=Casa(245.0,5,4,4,4856.2,"Riuzi",Cliente8);
-    Casa.push_back(Casa2);
-    QuantidadeDeCasas++;
+    Casas.push_back(Casa2);
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -69,61 +67,41 @@ int main() {
     
     std::Vector<Apartamento>::iterator ItApartamentos=Apartamentos.begin();
     
-    ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
-    std::cout << endl;
-
-    ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
-    std::cout << endl;
-
-    ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
-    std::cout << endl;
-
-    cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
-    std::cout << endl;
-
-    cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
-    std::cout << endl;
-
-    cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
-    std::cout << endl;
-
-    ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
-    std::cout << endl;
-
-    ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
-    std::cout << endl;
+    for(;ItApartamentos!=Apartamentos.end();ItApartamentos++){
+        ItApartamentos->print();
+        std::cout<<endl;
+    }
+    
+    std::Vector<Cobertura>::iterator ItCoberturas=Coberturas.begin();
+    
+    for(;ItCobertura!=Coberturas.end();ItCobertura++){
+        ItCobertura->print();
+        std::cout<<endl;
+    }
+    
+    std::Vector<Casa>::iterador ItCasas=Casas.begin();
+    
+    for(;ItCasas!=Casas.end();ItCasas++){
+        ItCasas->print();
+        std::cout<<endl;
+    }
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << QuantidadeDeApartamentos
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << ValorApartamentos
-            << "\n Comissão Total: R$" << ComissaoApartamentos
+            << "\n Quantidade: " << Apartamentos.size();
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << Apartamento::ValorTotal
+            << "\n Comissão Total: R$" << Apartamento::ComissaoTotal;
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << QuantidadeDeCoberturas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << ValorCoberturas
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << ComissaoCoberturas
+            << "\n Quantidade: " << Coberturas.size()
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << Cobertura::ValorTotal
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << Cobertura::ComissaoTotal
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << QuantidadeDeCasas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << ValorCasas
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << ComissaoCasas
+            << "\n Quantidade: " << Casas.size()
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << Casas::ValorTotal
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << Casas::ComissaoTotal
             << endl;
 }
+    
