@@ -13,9 +13,9 @@ double Apartamento::valor() {
 
 double Apartamento::comissao() {
 
-        double comisao = AREA * VALORm2;
+        double Comiss = AREA * VALORm2;
 
-        return comisao * 0.04;
+        return Comiss * 0.04;
         
     }
 
