@@ -7,37 +7,22 @@
 using namespace std;
 
 class Apartamento : public Imovel {
+   
+    private:
 
-    public: 
-    
-    double valor() {
+       double TX_APTO = 0.04;
 
-        double v = AREA * VALORm2;
 
-        return v;
+    public:
 
-    }
+       //cálculo da comissão sobre o valor do imóvel
+       double valor() override;
 
-    double comissao() {
+       //cálculo do valor do imóvel
+       double comissao() override;
 
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+       //coloca na saída as informações do imóvel
+       void print() override;
 };
 
 #endif
