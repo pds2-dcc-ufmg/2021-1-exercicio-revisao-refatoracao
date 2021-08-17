@@ -18,7 +18,7 @@ class Apartamento : public Imovel {
     }
     
     double comissao() {
-        return valor() * TAXAcomissao;
+        return valor() * taxa_comissao;
     }
     
     void print() {
