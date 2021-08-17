@@ -28,6 +28,15 @@ class Cliente {
         string getTelefone();
         void setTelefone(string tel);
 
+        Cliente(
+            string n,
+            string ender,
+            string cidade,
+            string uf,
+            string cep,
+            string tel
+        );
+
     private:
 
         string _nome;

@@ -1,5 +1,21 @@
 #include "Cliente.hpp"
 
+Cliente::Cliente(
+    string n,
+	string ender,
+    string cidade,
+    string uf,
+    string cep,
+    string tel
+){
+	setNome(n);
+	setEndereco(ender);
+	setCidade(cidade);
+	setUf(uf);
+	setCep(cep);
+	setTelefone(tel);
+}
+
 string Cliente::getNome(){
 	return this->_nome;
 }
