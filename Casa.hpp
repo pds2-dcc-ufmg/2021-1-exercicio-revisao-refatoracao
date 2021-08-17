@@ -3,7 +3,6 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
-
 using namespace std;
 
 class Casa : public Imovel {
