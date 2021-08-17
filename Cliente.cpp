@@ -2,7 +2,16 @@
 #include <string>
 #include "Cliente.hpp"
 
-using namespace std;
+Cliente::Cliente(){}
+
+Cliente::Cliente(string _nome, string _endereco, string _cidade, string _uf,string _cep, string _telefone){
+	NOME = _nome;
+	ENDERECO = _endereco;
+	CIDADE = _cidade;
+	UF = _uf;
+	CEP = _cep;
+	TELEFONE = _telefone;
+}
 
 void Cliente::print(){
 	std::cout << "  Nome: " << NOME << endl
@@ -12,56 +21,3 @@ void Cliente::print(){
 		 << "  Estado: " << UF << endl
 		 << "  CEP: " << CEP << endl;
 }
-
-Cliente::Cliente(){}
-
-Cliente::Cliente(string _NOME, string _ENDERECO, string _CIDADE, string _UF, string _CEP, string _TELEFONE):
- NOME(_NOME), ENDERECO(_ENDERECO), CIDADE(_CIDADE), UF(_UF), CEP(_CEP), TELEFONE(_TELEFONE) {}
-
- void Cliente::setNOME(string _NOME){
- 	NOME = _NOME;
- }
-
- void Cliente::setENDERECO(string _ENDERECO){
- 	ENDERECO = _ENDERECO;
- }
-
- void Cliente::setCIDADE(string _CIDADE){
- 	CIDADE = _CIDADE;
- }
-
- void Cliente::setUF(string _UF){
- 	UF = _UF;
- }
-
- void Cliente::setCEP(string _CEP){
- 	CEP = _CEP;
- }
-
- void Cliente::setTELEFONE(string _TELEFONE){
- 	TELEFONE = _TELEFONE;
- }
-
- string Cliente::getNOME(){
- 	return NOME;
- }
-
- string Cliente::getENDERECO(){
- 	return ENDERECO;
- }
-
- string Cliente::getCIDADE(){
- 	return CIDADE;
- }
-
- string Cliente::getUF(){
- 	return UF;
- }
-
- string Cliente::getCEP(){
- 	return CEP;
- }
-
- string Cliente::getTELEFONE(){
- 	return TELEFONE;
- } 
