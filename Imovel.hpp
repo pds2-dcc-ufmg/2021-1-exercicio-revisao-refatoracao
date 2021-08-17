@@ -5,22 +5,22 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
+class Imovel
+{
+public:
+    double AREA;
+    int Q;
+    int B;
+    int V;
+    double VALORm2;
+    double Valor;
+    double C;
+    Cliente vendedor;
+    string corretor;
 
-class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
-
-        void print();
+    virtual void print();
+    virtual double valor();
+    virtual double comissao();
 };
 
 #endif
-
