@@ -8,7 +8,9 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-
+    private:
+    
+    const int PCT = 4;
 
     public:
 
@@ -26,9 +28,6 @@ class Apartamento : public Imovel {
         this->Valor = this->valor() + this->comissao();
         this->vendedor = _vendedor;
     }
-
-
-    int PCT = 4;
 
     double comissao() {
         return valor() * PCT/100;
