@@ -11,7 +11,7 @@ class Cobertura : public Imovel {
 
     double valor() {
 
-        double valor = area * VALORm2;
+        double valor = area * valor_m2;
 
         return valor;
 
@@ -19,7 +19,7 @@ class Cobertura : public Imovel {
 
     double comissao() {
 
-        double comissao = area * VALORm2;
+        double comissao = area * valor_m2;
 
         return comissao * 0.10;
         
