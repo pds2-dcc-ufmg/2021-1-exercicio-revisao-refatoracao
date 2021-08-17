@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Imovel::void print() {
+void Imovel::print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
             cout << "[Corretor]" << endl;

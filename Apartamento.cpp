@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Apartamento::double valor() {
+double Apartamento::valor() {
 
         double valorfinal = AREA * VALORm2;
 
@@ -11,7 +11,7 @@ Apartamento::double valor() {
 
     }
 
-Apartamento::double comissao() {
+double Apartamento::comissao() {
 
         double comisao = AREA * VALORm2;
 
@@ -19,7 +19,7 @@ Apartamento::double comissao() {
         
     }
 
-Apartamento::void print() {
+void Apartamento::print() {
 
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
