@@ -8,7 +8,7 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-
+    //Valor da comissão para casa
     double getComissao();
 
     void print();

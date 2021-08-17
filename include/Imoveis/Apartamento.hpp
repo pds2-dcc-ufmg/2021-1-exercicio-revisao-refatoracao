@@ -8,8 +8,8 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
-    
-    double getComissao() ;
+    //Valor da comissão para apartamento
+    double getComissao();
 
     void print();
 };
