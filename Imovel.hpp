@@ -24,6 +24,7 @@ class Imovel {
         double get_valorMetragem();
         double get_valorVenda();
         double get_valorComissao();
+        Cliente get_vendedor();
         string get_corretor();
 
         void set_area(double a);
@@ -33,6 +34,7 @@ class Imovel {
         void set_valorMetragem(double valorM);
         void set_valorVenda(double valorV);
         void set_valorComissao(double valorC);
+        void set_vendedor(Cliente c);
         void set_corretor(string c);
 
     protected:

@@ -49,6 +49,9 @@ double Imovel::get_valorVenda() {
 double Imovel::get_valorComissao() {
     return valorComissao;
 }
+Cliente Imovel::get_vendedor() {
+    return vendedor;
+}
 string Imovel::get_corretor() {
     return corretor;
 }
@@ -73,6 +76,9 @@ void Imovel::set_valorVenda(double valorV) {
 }
 void Imovel::set_valorComissao(double valorC) {
     valorComissao = valorC;
+}
+void Imovel::set_vendedor(Cliente c) {
+    vendedor = c;
 }
 void Imovel::set_corretor(string c) {
     corretor = c;
