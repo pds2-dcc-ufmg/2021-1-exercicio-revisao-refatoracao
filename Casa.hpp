@@ -24,11 +24,11 @@ class Casa : public Imovel {
         std::cout << "[Casa]" << endl;
         Imovel::print();
         std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
+                << "  Quartos: " << NUM_QUARTOS << endl
+                << "  Banheiros: " << NUM_BANHEIROS << endl
+                << "  Vagas: " << NUM_VAGAS << endl
                 << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << valorComissao << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
 };
