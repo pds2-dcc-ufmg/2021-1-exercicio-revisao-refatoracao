@@ -45,7 +45,7 @@ class Imovel {
         void setValorCom();
 
         Cliente getVendedor();
-        void setVendedor(Cliente c1);
+        void setVendedor(Cliente vendedor);
 
         string getCorretor();
         void setCorretor(string corr);
