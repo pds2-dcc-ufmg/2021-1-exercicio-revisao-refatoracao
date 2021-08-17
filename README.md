@@ -1,8 +1,10 @@
 # Finalização
 
--> Comando usado para compilar(Makefile): **make**
--> Comando usado para apagar os objetos criados no diretorio /build: **make clean**
--> Comando usado para apagar todos os produtos da compilação: **make cleanAll**
+ - Comando usado para compilar(Makefile): **make**
+
+ - Comando usado para apagar os objetos criados no diretorio /build: **make clean**
+
+ - Comando usado para apagar todos os produtos da compilação: **make cleanAll**
 
 # Exercício de Revisão e Refatoração
 
