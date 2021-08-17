@@ -16,7 +16,7 @@ double Apartamento::comissao(){
 
     comissao = comissao * Taxa_comissao;
 
-	return Taxa_comissao;
+	return comissao;
 
 }
 
