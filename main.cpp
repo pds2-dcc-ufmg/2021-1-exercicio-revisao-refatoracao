@@ -9,6 +9,7 @@
 
 int main() {
     
+    //clientes
     Cliente cl1;
     cl1.NOME = "Xayso Sovon Ziahaka";
     cl1.endereco = "Rua Xangrilá - Braúnas";
@@ -77,14 +78,15 @@ int main() {
     int qtdeCa = 0;
     int qtdeCb = 0;
 
+    //apartamentos
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
     ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
+    ap1.numero_quartos = 2;
+    ap1.numero_banheiros = 1;
+    ap1.numero_vagas = 0;
     ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
+    ap1.valor_comissao = ap1.comissao();
     ap1.Valor = ap1.valor() + ap1.comissao();
     ap1.vendedor = cl1;
     qtdeA++;
@@ -92,11 +94,11 @@ int main() {
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
     ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
+    ap2.numero_quartos = 2;
+    ap2.numero_banheiros = 1;
+    ap2.numero_vagas = 2;
     ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
+    ap2.valor_comissao = ap2.comissao();
     ap2.Valor = ap2.valor() + ap2.comissao();
     ap2.vendedor = cl2;
     qtdeA++;
@@ -104,24 +106,24 @@ int main() {
     Apartamento ap3;
     ap3.corretor = "Kelia";
     ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
+    ap3.numero_quartos = 3;
+    ap3.numero_banheiros = 2;
+    ap3.numero_vagas = 2;
     ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
+    ap3.valor_comissao = ap3.comissao();
     ap3.Valor = ap3.valor() + ap3.comissao();
     ap3.vendedor = cl3;
     qtdeA++;
 
-    // Cobertura
+    // Coberturas
     Cobertura cb1;
     cb1.corretor = "Koci";
     cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
+    cb1.numero_quartos = 3;
+    cb1.numero_banheiros = 3;
+    cb1.numero_vagas = 2;
     cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
+    cb1.valor_comissao = cb1.comissao();
     cb1.Valor = cb1.valor() + cb1.comissao();
     cb1.vendedor = cl4;
     qtdeCb++;
@@ -129,11 +131,11 @@ int main() {
     Cobertura cb2;
     cb2.corretor = "Wail";
     cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
+    cb2.numero_quartos = 4;
+    cb2.numero_banheiros = 3;
+    cb2.numero_vagas = 3;
     cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
+    cb2.valor_comissao = cb2.comissao();
     cb2.Valor = cb2.valor() + cb2.comissao();
     cb2.vendedor = cl5;
     qtdeCb++;
@@ -141,11 +143,11 @@ int main() {
     Cobertura cb3;
     cb3.corretor = "Fival";
     cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
+    cb3.numero_quartos = 4;
+    cb3.numero_banheiros = 4;
+    cb3.numero_vagas = 4;
     cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
+    cb3.valor_comissao = cb3.comissao();
     cb3.Valor = cb3.valor() + cb3.comissao();
     cb3.vendedor = cl6;
     qtdeCb++;
@@ -154,11 +156,11 @@ int main() {
     Casa ca1;
     ca1.corretor = "Beydo";
     ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
+    ca1.numero_quartos = 3;
+    ca1.numero_banheiros = 3;
+    ca1.numero_vagas = 2;
     ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
+    ca1.valor_comissao = ca1.comissao();
     ca1.Valor = ca1.valor() + ca1.comissao();
     ca1.vendedor = cl7;
     qtdeCa++;
@@ -166,11 +168,11 @@ int main() {
     Casa ca2;
     ca2.corretor = "Riuzi";
     ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
+    ca2.numero_quartos = 5;
+    ca2.numero_banheiros = 4;
+    ca2.numero_vagas = 4;
     ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
+    ca2.valor_comissao = ca2.comissao();
     ca2.Valor = ca2.valor() + ca2.comissao();
     ca2.vendedor = cl8;
     qtdeCa++;

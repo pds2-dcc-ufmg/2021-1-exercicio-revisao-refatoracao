@@ -5,7 +5,9 @@
 using namespace std;
 
 class Cliente {
+
     public:
+
         string NOME;
         string endereco;
         string CIDADE;
@@ -14,6 +16,7 @@ class Cliente {
         string telefone;
 
         void print();
+
 };
 
 #endif

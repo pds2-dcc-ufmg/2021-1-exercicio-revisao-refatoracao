@@ -7,17 +7,17 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-    public:
     
-    double Taxa_comissao=0.04;
-
-    protected: 
+    public: 
     
     double valor();
-
     double comissao();
-
     void print();
+
+    protected:
+
+    double Taxa_comissao = 0.04;
+
 };
 
 #endif

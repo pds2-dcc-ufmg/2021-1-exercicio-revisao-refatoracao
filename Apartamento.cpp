@@ -12,9 +12,9 @@ double Apartamento::valor(){
 
 double Apartamento::comissao(){
 
-    double Valor_comissao = AREA * VALORm2;
+    double comissao = AREA * VALORm2;
 
-    Valor_comissao = Valor_comissao * Taxa_comissao;
+    comissao = comissao * Taxa_comissao;
 
 	return Taxa_comissao;
 
@@ -25,11 +25,11 @@ void Apartamento::print(){
     std::cout << "[Apartamento]" << endl;
     Imovel::print();
     std::cout << "Area: " << AREA << endl
-            << "  Quartos: " << Q << endl
-            << "  Banheiros: " << B << endl
-            << "  Vagas: " << V << endl
-            << "Taxa de Comissão: " << 4 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
+            << "  Quartos: " << numero_quartos << endl
+            << "  Banheiros: " << numero_banheiros << endl
+            << "  Vagas: " << numero_vagas << endl
+            << "Taxa de Comissão: " << Taxa_comissao * 100 << "%" << endl
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_comissao << endl
             << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
 
 }
