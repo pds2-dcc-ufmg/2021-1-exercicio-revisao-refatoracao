@@ -17,6 +17,7 @@ class Imovel {
         std::string corretor;
 
     public:
+
         Imovel(double area, int q, int b, int v, double valor_m2, double c, Cliente vendedor, std::string corretor) {
             this->area = area;
             n_quartos = q;
@@ -45,10 +46,10 @@ class Imovel {
         }
 
         void print() {
-            cout << "[Vendedor]" << endl;
+            std::cout << "[Vendedor]" << std::endl;
             vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+            std::cout << "[Corretor]" << std::endl;
+            std::cout << "  " + corretor << std::endl;
         }
 };
 

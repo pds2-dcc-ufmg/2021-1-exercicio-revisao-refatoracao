@@ -17,8 +17,8 @@ class Apartamento : public Imovel {
                 << "  Banheiros: " << n_banheiros << std::endl
                 << "  Vagas: " << n_vagas << std::endl
                 << "Taxa de Comissão: " << comissao_taxa * 100 << "%" << std::endl
-                << "Valor Comissão: R$ " << std::fixed << setprecision(2) << comissao() << std::endl
-                << "Valor de Venda: R$ " << std::fixed << setprecision(2) << preco() << std::endl;
+                << "Valor Comissão: R$ " << std::fixed << std::setprecision(2) << comissao() << std::endl
+                << "Valor de Venda: R$ " << std::fixed << std::setprecision(2) << preco() << std::endl;
     }
 };
 
