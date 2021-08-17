@@ -16,7 +16,7 @@ class Imovel {
         double VALORm2;
         double Valor;
         double C;
-        
+
         Cliente vendedor;
         string corretor;
 
@@ -31,6 +31,7 @@ class Imovel {
             cout << "[Corretor]" << endl;
             cout << "  " + corretor << endl;
         }
+
 };
 
 #endif

@@ -8,11 +8,9 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    private:
-
-    const int PCT = 4;
-
     public:
+    int PCT = 4;
+
     double comissao() {
         return valor() * PCT/100;
     }
@@ -21,13 +19,13 @@ class Apartamento : public Imovel {
 
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << PCT << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+            std::cout << "Area: " << AREA << endl
+            << "  Quartos: " << Q << endl
+            << "  Banheiros: " << B << endl
+            << "  Vagas: " << V << endl
+            << "Taxa de Comissão: " << PCT << "%" << endl
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
 };
 

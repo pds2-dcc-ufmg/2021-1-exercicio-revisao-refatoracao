@@ -9,7 +9,7 @@
 
 int main() {
     
-    
+    /*Declaracao dos Clientes*/
     Cliente cl1("Xayso Sovon Ziahaka", 
                 "Rua Xangrilá - Braúnas",
                 "Belo Horizonte",
@@ -59,7 +59,6 @@ int main() {
                 "31170-240",
                 "3198461192");
 
-    
     Cliente cl8("Teas Heimeu Pipe",
                 "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)",
                 "Belo Horizonte",
