@@ -4,30 +4,26 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-#define TAXA_DE_COMISSAO = 0.10;
-
 class Cobertura : public Imovel {
     
-    private:
-
-        static const double _taxa_comissao = 0.10;
-
     public:
 
-    double Cobertura::CalculaComissao() override{
+        double CalculaComissao() override{
 
-        _comissao = _valor * _taxa_comissao;
+            _taxa_comissao = 0.10;
 
-        return _comissao;
-        
-    }
+            _comissao = _valor * _taxa_comissao;
 
-    void Print() {
+            return _comissao;
+            
+        }
 
-        std::cout << "[Cobertura]" << std::endl;
-        Imovel::Print();
-        
-    }
+        void Print() {
+
+            std::cout << "[Cobertura]" << std::endl;
+            Imovel::Print();
+            
+        }
 };
 
 #endif

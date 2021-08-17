@@ -6,26 +6,25 @@
 
 class Apartamento : public Imovel {
 
-    private:
-
-        static const double _taxa_comissao = 0.04;
-
     public: 
 
-    double Apartamento::CalculaComissao() override{
+        double CalculaComissao() override{
 
-        _comissao = _valor * _taxa_comissao;
+            _taxa_comissao = 0.04;
 
-        return _comissao;
-        
-    }
+            _comissao = _valor * _taxa_comissao;
 
-    void Print() {
+            return _comissao;
+            
+        }
 
-        std::cout << "[Apartamento]" << std::endl;
-        Imovel::Print();
-        
-    }
+        void Print() {
+
+            std::cout << "[Apartamento]" << std::endl;
+            Imovel::Print();
+            
+        }
+
 };
 
 #endif

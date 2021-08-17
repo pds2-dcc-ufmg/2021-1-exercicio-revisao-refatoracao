@@ -11,8 +11,8 @@ int main() {
     
     Cliente cl1;
     cl1._nome = "Xayso Sovon Ziahaka";
-    cl1._endereco = "Rua Xangrilá - _banheirosraúnas";
-    cl1._cidade = "_banheiroselo Horizonte";
+    cl1._endereco = "Rua Xangrilá - Braúnas";
+    cl1._cidade = "Belo Horizonte";
     cl1._uf = "MG";
     cl1._cep = "31365-570";
     cl1._telefone = "3196007958";
@@ -20,15 +20,15 @@ int main() {
     Cliente cl2;
     cl2._nome = "Minia Pasies Kituos";
     cl2._endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2._cidade = "_banheiroselo Horizonte";
+    cl2._cidade = "Belo Horizonte";
     cl2._uf = "MG";
     cl2._cep = "31870-290";
     cl2._telefone = "3197627067";
     
     Cliente cl3;
-    cl3._nome = "Vuocue Leiur _banheirosaonauza";
-    cl3._endereco = "Rua Orminda de Almeida - Tupi _banheiros";
-    cl3._cidade = "_banheiroselo Horizonte";
+    cl3._nome = "Vuocue Leiur Baonauza";
+    cl3._endereco = "Rua Orminda de Almeida - Tupi B";
+    cl3._cidade = "Belo Horizonte";
     cl3._uf = "MG";
     cl3._cep = "31842-630";
     cl3._telefone = "3195949327";
@@ -36,7 +36,7 @@ int main() {
     Cliente cl4;
     cl4._nome = "Zerer Huduy Fyogar";
     cl4._endereco = "Rua Taquaril - Jonas Veiga";
-    cl4._cidade = "_banheiroselo Horizonte";
+    cl4._cidade = "Belo Horizonte";
     cl4._uf = "MG";
     cl4._cep = "30285-422";
     cl4._telefone = "3198596327";
@@ -44,7 +44,7 @@ int main() {
     Cliente cl5;
     cl5._nome = "Ceziel Mioti Pler";
     cl5._endereco = "Rua João Gualberto Costa - Serrano";
-    cl5._cidade = "_banheiroselo Horizonte";
+    cl5._cidade = "Belo Horizonte";
     cl5._uf = "MG";
     cl5._cep = "30882-747";
     cl5._telefone = "3196274465";
@@ -52,23 +52,23 @@ int main() {
     Cliente cl6;
     cl6._nome = "Esxo Cilal Zyais";
     cl6._endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6._cidade = "_banheiroselo Horizonte";
+    cl6._cidade = "Belo Horizonte";
     cl6._uf = "MG";
     cl6._cep = "31650-560";
     cl6._telefone = "3195004414";
     
     Cliente cl7;
     cl7._nome = "Leova Wikyecil Neaca";
-    cl7._endereco = "Rua João Arantes - _cidade Nova";
-    cl7._cidade = "_banheiroselo Horizonte";
+    cl7._endereco = "Rua João Arantes - Cidade Nova";
+    cl7._cidade = "Belo Horizonte";
     cl7._uf = "MG";
     cl7._cep = "31170-240";
     cl7._telefone = "3198461192";
     
     Cliente cl8;
     cl8._nome = "Teas Heimeu Pipe";
-    cl8._endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(_banheirosarreiro)";
-    cl8._cidade = "_banheiroselo Horizonte";
+    cl8._endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
+    cl8._cidade = "Belo Horizonte";
     cl8._uf = "MG";
     cl8._cep = "30668-430";
     cl8._telefone = "3197317802";
@@ -152,7 +152,7 @@ int main() {
 
     // Casas
     Casa ca1;
-    ca1._corretor = "_banheiroseydo";
+    ca1._corretor = "Beydo";
     ca1._area = 145.6;
     ca1._quartos = 3;
     ca1._banheiros = 3;
