@@ -73,9 +73,7 @@ int main() {
     cl8.cep = "30668-430";
     cl8.telefone = "3197317802";
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
+    int qtdeA, qtdeCa, qtdeCb  = 0;
 
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
@@ -177,12 +175,7 @@ int main() {
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
+    double valorAp, valorCb, valorCa, comissAp, comissCb, comissCa = 0.0;
     
     ap1.print();
     valorAp += ap1.valor();
