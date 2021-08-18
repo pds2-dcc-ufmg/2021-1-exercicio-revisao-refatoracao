@@ -7,8 +7,15 @@
 #include "Apartamento.hpp"
 #include "Cliente.hpp"
 
+template <class T> void printAdd(T imv, double &vlImv, double &cmsImv) {
+    imv.print();
+    vlImv += imv.valor();
+    cmsImv += imv.comissao();
+    std::cout << endl;
+}
+
 int main() {
-        
+    
     Cliente cl1("Xayso Sovon Ziahaka", "Rua Xangrilá - Braúnas",
                                "Belo Horizonte", "MG", "31365-570", "3196007958");
         
@@ -41,15 +48,19 @@ int main() {
     Apartamento ap1("Tuoruars", 55.4, 2, 1, 0, 987.0, cl1);
     Apartamento ap2("Fyubyeis", 74.5, 2, 1, 2, 1540.0, cl2);
     Apartamento ap3("Kelia", 87.2, 3, 2, 2, 2354.0, cl3);
+    qtdeA += 3;
 
     // Cobertura
     Cobertura cb1("Koci", 120.1, 3, 3, 2, 3123.5, cl4);
     Cobertura cb2("Wail", 134.8, 4, 3, 3, 3578.2, cl5);
     Cobertura cb3("Fival", 180.0, 4, 4, 4, 4165.7, cl6);
+    qtdeCa += 3;
 
     // Cobertura
     Casa ca1("Beydo", 145.6, 3, 3, 2, 4023.6, cl7);
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
+    qtdeCb += 2;
+    
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -60,45 +71,15 @@ int main() {
     double comissCb = 0.0;
     double comissCa = 0.0;
     
-    ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
-    std::cout << endl;
-
-    ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
-    std::cout << endl;
-
-    ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
-    std::cout << endl;
-
-    cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
-    std::cout << endl;
-
-    cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
-    std::cout << endl;
-
-    cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
-    std::cout << endl;
-
-    ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
-    std::cout << endl;
-
-    ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
-    std::cout << endl;
+    //soma os valores das comissões e printa os valores dos apartamentos:
+    printAdd(ap1, valorAp, comissAp);
+    printAdd(ap2, valorAp, comissAp);
+    printAdd(ap3, valorAp, comissAp);
+    printAdd(cb1, valorCb, comissCb);
+    printAdd(cb2, valorCb, comissCb);
+    printAdd(cb3, valorCb, comissCb);
+    printAdd(ca1, valorCa, comissCa);
+    printAdd(ap1, valorCa, comissCa);
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
