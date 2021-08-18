@@ -10,7 +10,7 @@ class Cliente {
         string Endereco;
         string Cidade;
         string UF;
-        string CEp;
+        string CEP;
         string Telefone;
 
         void print();
