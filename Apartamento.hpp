@@ -12,8 +12,8 @@ class Apartamento : public Imovel {
 
     double comissao();
 
-    void print();
-    
+    void print() override;
+
 };
 
 #endif

@@ -21,7 +21,7 @@ class Imovel {
         string corretor;
 
         double valor();
-        void print();
+        virtual void print();
 
 };
 

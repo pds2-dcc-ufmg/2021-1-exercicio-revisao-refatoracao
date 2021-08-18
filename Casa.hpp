@@ -12,7 +12,7 @@ class Casa : public Imovel {
 
     double comissao();
 
-    void print();
+    void print() override;
 
 };
 
