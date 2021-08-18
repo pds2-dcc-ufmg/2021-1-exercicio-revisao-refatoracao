@@ -9,20 +9,18 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
+   double CUSTOm2;
+   CUSTOm2= AREA * VALORm2; 
     
     double valor() {
 
-        double v = AREA * VALORm2;
-
-        return v;
+        return CUSTOm2;
 
     }
 
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
+        
+        return CUSTOm2 * 0.04;
         
     }
 
