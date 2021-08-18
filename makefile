@@ -3,8 +3,6 @@ CFLAGS=-std=c++11 -Wall
 TARGET=vpl_execution
 
 BUILD_DIR    = ./build
-SRC_DIR    = ./src
-INCLUDE_DIR  = ./include
 
 ${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Apartamento.o ${BUILD_DIR}/Casa.o ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Cobertura.o ${BUILD_DIR}/Imovel.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${TARGET} ${BUILD_DIR}/*.o
