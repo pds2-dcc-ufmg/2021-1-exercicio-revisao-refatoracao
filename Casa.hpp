@@ -7,38 +7,40 @@
 using namespace std;
 
 class Casa : public Imovel {
-
+    
     public:
+    
+    static double ComissaoTotal;
+    
+    static double ValorTotal;
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    
+    double GetComissaoTotal(){
+        return this->ComissaoTotal;
+    };
+    
+    double GetValorTotal(){
+        return this->ValorTotal;
+    };
+    
+    virtual double GetPercentComissao(){
+        //A comissão da venda de uma casa é 6%;
+        return 0.06;
+    };
+    
+    string TipoDeImovel(){
+        return "[Casa]";
     }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
+    
+    Casa(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(_Area,_Quartos,_Banheiros,_Vagas,_VALORm2,_Corretor,_Vendedor){
+        ValorTotal=ValorTotal+this->GetValor();
+        ComissaoTotal=ComissaoTotal+this->GetComissao();
+    };
+    
+    ~Casa(){
+        //ValorTotal=ValorTotal-this->GetValor();
+        //ComissaoTotal=ValorTotal-this->GetComissao();
+    };
 
 };
 
