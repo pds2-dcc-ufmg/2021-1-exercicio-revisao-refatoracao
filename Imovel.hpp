@@ -9,11 +9,11 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
+        double Area;
         int Q;
         int B;
         int V;
-        double VALORm2;
+        double Valorm2;
         double Valor;
         double C;
         Cliente vendedor;
