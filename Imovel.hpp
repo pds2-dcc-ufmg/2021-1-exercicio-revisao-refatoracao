@@ -8,26 +8,21 @@
 using namespace std;
 
 class Imovel {
+    
     public:
-        double AREA;
-        int Qnt_Quartos;
-        int Qnt_Banheiros;
-        int Qnt_Vagas;
-        double VALORm2;
-        double Valor_Imovel = AREA * VALORm2;
-        double Valor_Venda = Valor_Imovel + comissao;
-        double Perc_Comissao_Ap = 0.04;
-        double Perc_Comissao_Casa = 0.06;
-        double Perc_Comissao_Cobert = 0.1;
-        Cliente vendedor;
-        string corretor;
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+    
+    double AREA;
+    int Qnt_Quartos;
+    int Qnt_Banheiros;
+    int Qnt_Vagas;
+    double VALORm2;
+    double Valor;
+    double Valor_Comissao;
+    virtual double valor()=0;
+		virtual double comissao()=0;
+    void print();
+    Cliente vendedor;
+    string corretor;
 };
 
 #endif
