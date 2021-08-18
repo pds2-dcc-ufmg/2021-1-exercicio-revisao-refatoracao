@@ -1,7 +1,7 @@
 #include "Apartamento.hpp"
 
-Apartamento::Apartamento(double area, int quartos, int banheiros, int vagas, double valor_m2, double valor_venda, double valor_comissao, Cliente vendedor, string corretor)
-    :Imovel(area, quartos, banheiros, vagas, valor_m2, area * valor_m2*comissao_taxa, area*valor_m2*comissao_taxa+area * valor_m2, vendedor, corretor){}
+Apartamento::Apartamento(double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor, string corretor)
+    :Imovel(area, quartos, banheiros, vagas, valor_m2, this->valor(), this->comissao(), vendedor, corretor){}
 
 double Apartamento::comissao(){
     double valor_total = this->valor();

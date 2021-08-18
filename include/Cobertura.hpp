@@ -7,6 +7,7 @@ using namespace std;
 
 class Cobertura : public Imovel {
     public:
+        Cobertura(double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor, string corretor);
         double comissao() override;
 
         void print() override;

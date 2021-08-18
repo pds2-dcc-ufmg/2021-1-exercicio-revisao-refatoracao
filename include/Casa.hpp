@@ -5,6 +5,7 @@
 #include "Cliente.hpp"
 
 class Casa : public Imovel {
+    Casa(double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor, string corretor);
     public: 
         double comissao() override;
 

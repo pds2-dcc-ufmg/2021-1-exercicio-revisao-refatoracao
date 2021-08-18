@@ -1,5 +1,8 @@
 #include "Cobertura.hpp"
 
+Cobertura::Cobertura(double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor, string corretor)
+    :Imovel(area, quartos, banheiros, vagas, valor_m2, this->valor(), this->comissao(), vendedor, corretor){}
+
 double Cobertura::comissao(){ 
     double valor_total = this->valor();
 
