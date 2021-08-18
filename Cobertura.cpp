@@ -6,11 +6,6 @@ using namespace std;
     
     Cobertura :: Cobertura () {};
 
-    double Cobertura:: valor() {
-
-        return (Imovel::valor());
-    }
-
     double Cobertura:: comissao() {
 
         return (Imovel:: comissao (taxa_de_comissao)); 

@@ -12,8 +12,6 @@ class Casa : public Imovel {
      
     Casa ();
 
-    double valor();
-
     double comissao();
 
     void print();

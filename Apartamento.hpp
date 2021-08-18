@@ -12,8 +12,6 @@ class Apartamento : public Imovel {
      
     Apartamento ();
 
-    double valor();
-
     double comissao();
 
     void print();

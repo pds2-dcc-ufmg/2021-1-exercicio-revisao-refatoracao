@@ -6,11 +6,6 @@ using namespace std;
     
     Apartamento :: Apartamento () {};
 
-    double Apartamento:: valor() {
-
-        return (Imovel::valor());
-    }
-
     double Apartamento:: comissao() {
 
         return (Imovel:: comissao (taxa_de_comissao)); 

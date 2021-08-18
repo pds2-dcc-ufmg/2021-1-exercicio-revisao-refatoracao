@@ -12,8 +12,6 @@ class Cobertura : public Imovel {
      
     Cobertura ();
 
-    double valor();
-
     double comissao();
 
     void print();
