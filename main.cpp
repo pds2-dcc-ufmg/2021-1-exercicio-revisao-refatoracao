@@ -10,68 +10,68 @@
 int main() {
     
     Cliente cl1;
-    cl1.NOME = "Xayso Sovon Ziahaka";
-    cl1.endereco = "Rua Xangrilá - Braúnas";
-    cl1.CIDADE = "Belo Horizonte";
+    cl1.Nome = "Xayso Sovon Ziahaka";
+    cl1.Endereco = "Rua Xangrilá - Braúnas";
+    cl1.Cidade = "Belo Horizonte";
     cl1.UF = "MG";
-    cl1.cep = "31365-570";
-    cl1.telefone = "3196007958";
+    cl1.CEP = "31365-570";
+    cl1.Telefone = "3196007958";
     
     Cliente cl2;
-    cl2.NOME = "Minia Pasies Kituos";
-    cl2.endereco = "Rua dos Jacobinos - Ouro Minas";
-    cl2.CIDADE = "Belo Horizonte";
+    cl2.Nome = "Minia Pasies Kituos";
+    cl2.Endereco = "Rua dos Jacobinos - Ouro Minas";
+    cl2.Cidade = "Belo Horizonte";
     cl2.UF = "MG";
-    cl2.cep = "31870-290";
-    cl2.telefone = "3197627067";
+    cl2.CEP = "31870-290";
+    cl2.Telefone = "3197627067";
     
     Cliente cl3;
-    cl3.NOME = "Vuocue Leiur Baonauza";
-    cl3.endereco = "Rua Orminda de Almeida - Tupi B";
-    cl3.CIDADE = "Belo Horizonte";
+    cl3.Nome = "Vuocue Leiur Baonauza";
+    cl3.Endereco = "Rua Orminda de Almeida - Tupi B";
+    cl3.Cidade = "Belo Horizonte";
     cl3.UF = "MG";
-    cl3.cep = "31842-630";
-    cl3.telefone = "3195949327";
+    cl3.CEP = "31842-630";
+    cl3.Telefone = "3195949327";
     
     Cliente cl4;
-    cl4.NOME = "Zerer Huduy Fyogar";
-    cl4.endereco = "Rua Taquaril - Jonas Veiga";
-    cl4.CIDADE = "Belo Horizonte";
+    cl4.Nome = "Zerer Huduy Fyogar";
+    cl4.Endereco = "Rua Taquaril - Jonas Veiga";
+    cl4.Cidade = "Belo Horizonte";
     cl4.UF = "MG";
-    cl4.cep = "30285-422";
-    cl4.telefone = "3198596327";
+    cl4.CEP = "30285-422";
+    cl4.Telefone = "3198596327";
     
     Cliente cl5;
-    cl5.NOME = "Ceziel Mioti Pler";
-    cl5.endereco = "Rua João Gualberto Costa - Serrano";
-    cl5.CIDADE = "Belo Horizonte";
+    cl5.Nome = "Ceziel Mioti Pler";
+    cl5.Endereco = "Rua João Gualberto Costa - Serrano";
+    cl5.Cidade = "Belo Horizonte";
     cl5.UF = "MG";
-    cl5.cep = "30882-747";
-    cl5.telefone = "3196274465";
+    cl5.CEP = "30882-747";
+    cl5.Telefone = "3196274465";
     
     Cliente cl6;
-    cl6.NOME = "Esxo Cilal Zyais";
-    cl6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
-    cl6.CIDADE = "Belo Horizonte";
+    cl6.Nome = "Esxo Cilal Zyais";
+    cl6.Endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";
+    cl6.Cidade = "Belo Horizonte";
     cl6.UF = "MG";
-    cl6.cep = "31650-560";
-    cl6.telefone = "3195004414";
+    cl6.CEP = "31650-560";
+    cl6.Telefone = "3195004414";
     
     Cliente cl7;
-    cl7.NOME = "Leova Wikyecil Neaca";
-    cl7.endereco = "Rua João Arantes - Cidade Nova";
-    cl7.CIDADE = "Belo Horizonte";
+    cl7.Nome = "Leova Wikyecil Neaca";
+    cl7.Endereco = "Rua João Arantes - Cidade Nova";
+    cl7.Cidade = "Belo Horizonte";
     cl7.UF = "MG";
-    cl7.cep = "31170-240";
-    cl7.telefone = "3198461192";
+    cl7.CEP = "31170-240";
+    cl7.Telefone = "3198461192";
     
     Cliente cl8;
-    cl8.NOME = "Teas Heimeu Pipe";
-    cl8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
-    cl8.CIDADE = "Belo Horizonte";
+    cl8.Nome = "Teas Heimeu Pipe";
+    cl8.Endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";
+    cl8.Cidade = "Belo Horizonte";
     cl8.UF = "MG";
-    cl8.cep = "30668-430";
-    cl8.telefone = "3197317802";
+    cl8.CEP = "30668-430";
+    cl8.Telefone = "3197317802";
 
     int qtdeA = 0;
     int qtdeCa = 0;
