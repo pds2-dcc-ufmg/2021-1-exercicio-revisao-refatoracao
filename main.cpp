@@ -56,7 +56,7 @@ int main() {
     Cobertura cb3("Fival", 180.0, 4, 4, 4, 4165.7, cl6);
     qtdeCa += 3;
 
-    // Cobertura
+    // Casa
     Casa ca1("Beydo", 145.6, 3, 3, 2, 4023.6, cl7);
     Casa ca2("Riuzi", 245.0, 5, 4, 4, 4856.2, cl8);
     qtdeCb += 2;
