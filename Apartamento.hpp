@@ -7,22 +7,30 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-
+    
+/*
+    ap1.corretor = "Tuoruars";
+    ap1.AREA = 55.4;
+    ap1.Q = 2;
+    ap1.B = 1;
+    ap1.V = 0;
+    ap1.VALORm2 = 987.0;
+*/       
     public: 
+   double CUSTOm2;
+   CUSTOm2= AREA * VALORm2; 
+    
+   Apartamento(corretor, AREA, Q, B, V, VALORm2);
     
     double valor() {
 
-        double v = AREA * VALORm2;
-
-        return v;
+        return CUSTOm2;
 
     }
 
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
+        
+        return CUSTOm2 * 0.04;
         
     }
 

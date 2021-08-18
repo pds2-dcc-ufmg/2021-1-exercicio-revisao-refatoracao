@@ -8,20 +8,17 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-
+    
+    Cobertura (corretor, AREA, Q, B, V, VALORm2);        
     double valor() {
 
-        double v = AREA * VALORm2;
-
-        return v;
+       CUSTOm2;
 
     }
 
     double comissao() {
 
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
+        return CUSTOm2 * 0.10;
         
     }
 
