@@ -7,36 +7,23 @@ using namespace std;
 
 class Cobertura : public Imovel {
     
-    public:
 
-    double valor() {
+        protected:
+    static int _somaQte;
+    static double _somaValor;
+    static double _somaComissao;
 
-        double v = AREA * VALORm2;
 
-        return v;
+     public:
+    static int getSomaQte () { return _somaQte; }
+    static double getSomaValor () { return _somaValor; }
+    static double getSomaComissao () { return _somaComissao; }
 
-    }
+        double getTaxaComissao () const { return 0.1; }
 
-    double comissao() {
+     void print();
 
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+    Cobertura (ImovelProps props);
 };
 
 #endif
