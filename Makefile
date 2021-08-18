@@ -33,5 +33,8 @@ ${BUILD_DIR}/Relatorio.o: ${SRC_DIR}/Relatorio.cpp
 	${CC} -I ${INCLUDE_DIR} -c ${SRC_DIR}/Relatorio.cpp -o ${BUILD_DIR}/Relatorio.o
 
 #Clean
-clean:
+cleanall:
 	rm ${BUILD_DIR}/*.o ${TARGET}
+
+clean:
+	rm ${BUILD_DIR}/*.o
