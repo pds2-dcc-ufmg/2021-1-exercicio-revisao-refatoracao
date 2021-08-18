@@ -4,40 +4,36 @@
 #include "Imovel.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Apartamento : public Imovel {
 
     public: 
     
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    double valor(){
+        return Imovel::valor();
     }
 
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
+        return Imovel::comissao();
         
     }
 
-    void print() {
-
+    void Impressao_Imovel() {
         std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        Imovel::Impressao_Imovel();
     }
+
+    void Inicializar_Nomes(string corretor, Cliente vendedor){
+        Imovel::Inicializar_Nomes(corretor, vendedor);
+    }
+
+    void Inicializar_Inteiros(int Quartos, int Banheiros, int Vagas, int Taxa_Comissao){
+        Imovel::Inicializar_Inteiros(Quartos, Banheiros, Vagas, Taxa_Comissao);
+    }
+
+    void Inicializar_Double(double Area, double Valor_m2, double Valor_Comissao, double Valor_Venda){
+        Imovel::Inicializar_Double(Area, Valor_m2, Valor_Comissao, Valor_Venda);
+    }
+
 };
 
 #endif
