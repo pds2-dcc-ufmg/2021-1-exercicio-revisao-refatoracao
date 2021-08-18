@@ -5,7 +5,8 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
+using std::fixed;
+using std::setprecision;
 
 class Imovel {
 
@@ -21,12 +22,31 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        double calculaValor();
+        virtual double calculaComissao();
+
+        virtual void print() {}
+};
+
+class Cobertura : public Imovel {
+    public:
+
+    double calculaComissao() override {}
+    void print() override {}
+};
+
+class Casa : public Imovel {
+    public:
+
+    double calculaComissao() override {}
+    void print() override {}
+};
+
+class Apartamento : public Imovel {
+    public: 
+
+    double calculaComissao() override {}
+    void print() override {}
 };
 
 #endif

@@ -2,9 +2,6 @@
 #include <iomanip>
 
 #include "Imovel.hpp"
-#include "Casa.hpp"
-#include "Cobertura.hpp"
-#include "Apartamento.hpp"
 #include "Cliente.hpp"
 
 int main() {
