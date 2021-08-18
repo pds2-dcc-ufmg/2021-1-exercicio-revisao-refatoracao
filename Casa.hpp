@@ -25,6 +25,12 @@ class Casa : public Imovel {
         return c * 0.06;
         
     }
+    
+    void procedure (double *v, double *c) {
+        *v += this->valor();
+        *c += this->comissao();
+        cout << endl;
+    }
 
     void print() {
 
