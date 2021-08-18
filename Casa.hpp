@@ -12,6 +12,8 @@ class Casa : public Imovel {
      
     Casa ();
 
+    Casa (string corretor_, double area_, int quartos_, int banheiros_, int vagas_, double valor_por_m2_, Cliente cl);
+
     double comissao();
 
     void print();

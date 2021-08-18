@@ -5,7 +5,18 @@
 
 using namespace std;
 
-       
+    Imovel:: Imovel () {};
+
+    void Imovel:: construtora (string corretor_, double area_, int quartos_, int banheiros_, int vagas_, double valor_por_m2_, Cliente cl){
+        this->corretor = corretor_;
+        this->area = area_;
+        this->quartos = quartos_;
+        this->banheiros = banheiros_;
+        this->vagas = vagas_;
+        this->valor_por_m2 = valor_por_m2_;
+        this->vendedor = cl;
+        
+    }
     double Imovel:: valor () {
 
         double valor = area * valor_por_m2;
