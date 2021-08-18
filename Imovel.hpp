@@ -15,6 +15,7 @@ class Imovel {
             cout << "[Corretor]" << endl;
             cout << "  " + _corretor << endl;
         }
+        //setters
         double getAREA(){
             return this->_AREA;
         }
@@ -41,6 +42,34 @@ class Imovel {
         }
         string getCorretor(){
             return this->_corretor;
+        }
+        //getters
+        void setAREA(double value){
+            _AREA = value;
+        }
+        void setVALORm2(double value){
+            _VALORm2 = value;
+        }
+        void setVALOR(double value){
+            _Valor = value;
+        }
+        void setC(double value){
+            _C = value;
+        }
+        void setQ(int value){
+            _Q = value;
+        }
+        void setB(int value){
+            _B = value;
+        }
+        void setV(int value){
+            _V = value;
+        }
+        void setVendedor(Cliente value){
+            _vendedor = value;
+        }
+        void setCorretor(string value){
+            _corretor = value;
         }
         
     private:
