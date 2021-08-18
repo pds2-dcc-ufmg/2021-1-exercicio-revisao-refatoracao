@@ -8,7 +8,8 @@ using namespace std;
 class Cobertura : public Imovel {
     
     public:
-
+    
+    Cobertura (corretor, AREA, Q, B, V, AREAm2);        
     double valor() {
 
        CUSTOm2;
