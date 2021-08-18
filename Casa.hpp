@@ -8,38 +8,15 @@ using namespace std;
 
 class Casa : public Imovel {
 
-    public:
+	public:
+		void print()
+		{
+			Imovel::print("[Casa]", 6);
+		}
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
-
+		Casa(string corretor, double area, int quartos, int banheiros, int vagas, double valorm2)
+			: Imovel(move(corretor), area, quartos, banheiros, vagas, valorm2, (valorm2 * area), (valorm2 * area)*0.06)
+			{}
 };
 
 #endif
