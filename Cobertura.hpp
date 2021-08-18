@@ -27,7 +27,7 @@ class Cobertura : public Imovel {
 
     void print() {
 
-        std::cout << "[Cobertura]" << endl;
+        std::cout << "Cobertura" << endl;
         Imovel::print();
         std::cout << "Area: " << AREA << endl
                 << "  Quartos: " << Q << endl
