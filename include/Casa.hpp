@@ -12,7 +12,7 @@ class Casa : public Imovel {
 public:
   Casa(double area, int quartos, int banheiros, int vagas, double valorM2,
        Cliente vendedor, std::string corretor);
-  void print();
+  void print() override;
 };
 
 #endif
