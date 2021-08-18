@@ -2,18 +2,23 @@
 #define CLIENTE_HPP
 
 #include <string>
+#include "ClienteProps.hpp"
 using namespace std;
 
-class Cliente {
-    public:
-        string NOME;
-        string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
 
-        void print();
+class Cliente {
+
+    private:
+    ClienteProps _props;
+
+    public:
+    Cliente (ClienteProps props) : _props(props) {};
+
+    ClienteProps getProps () { return _props; }
+
+    Cliente() {}
+
+    void print();
 };
 
 #endif
