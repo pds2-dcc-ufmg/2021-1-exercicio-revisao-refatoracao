@@ -10,35 +10,40 @@ class Casa : public Imovel {
 
     public:
 
-    double valor() {
+        Casa(double _area,  int _numeroQuartos, int _numeroBanheiros, int _vagasGaragem, double _valorM2, Cliente _vendedor, string _corretor): area(_area), numeroQuartos(_numeroQuartos), numeroBanheiros(_numeroBanheiros), vagasGaragem(_vagasGaragem), valorM2(_valorM2), vendedor(_vendedor), corretor(_corretor) {}
 
-        double v = AREA * VALORm2;
+        double getValor() {
 
-        return v;
+            return area * valorM2;
+        }
 
-    }
+        double getComissao() {
 
-    double comissao() {
+            return getValor() * taxaComissao;
+        }
 
-        double c = AREA * VALORm2;
+        void print() {
 
-        return c * 0.06;
-        
-    }
+            std::cout << "[Casa]" << endl;
+            Imovel::print();
+            std::cout << "Area: " << area << endl
+                    << "  Quartos: " << numeroQuartos << endl
+                    << "  Banheiros: " << numeroBanheiros << endl
+                    << "  Vagas: " << vagasGaragem << endl
+                    << "Taxa de Comissão: " << taxaComissao<< endl
+                    << "Valor Comissão: R$ " << fixed << setprecision(2) << getComissao()<< endl
+                    << "Valor de Venda: R$ " << fixed << setprecision(2) << getValor() << endl;
 
-    void print() {
-
-        std::cout << "[Casa]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-
-    }
+        }
+    private:
+        double taxaComissao = 0.06;
+        double area;
+        int numeroQuartos;
+        int numeroBanheiros;
+        int vagasGaragem;
+        double valorM2;
+        Cliente vendedor;
+        string corretor;
 
 };
 
