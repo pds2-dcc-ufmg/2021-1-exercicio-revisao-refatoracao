@@ -12,7 +12,6 @@ class Casa : public Imovel {
 
 	//COMISSAO 6%
         double comissao() override {
-
             double com = AREA * VALORm2;
 
             return com * 0.06;
