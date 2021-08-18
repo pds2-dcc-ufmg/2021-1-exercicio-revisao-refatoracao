@@ -1,6 +1,6 @@
 #ifndef APARTAMENTO_HPP
 #define APARTAMENTO_HPP
-#define COMISSAO 0.4
+#define COMISSAO 0.04
 #define PERCENT 100
 
 #include "Imovel.hpp"
