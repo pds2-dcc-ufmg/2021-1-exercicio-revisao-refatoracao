@@ -80,36 +80,39 @@ int main() {
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
     ap1.AREA = 55.4;
-    ap1.Q = 2;
-    ap1.B = 1;
-    ap1.V = 0;
+    ap1.Quarto = 2;
+    ap1.Banheiro = 1;
+    ap1.Vagas = 0;
     ap1.VALORm2 = 987.0;
-    ap1.C = ap1.comissao();
-    ap1.Valor = ap1.valor() + ap1.comissao();
+    ap1.Comissao = ap1.ValorComissãoApartamento();
+    ap1.Taxa = 0.04;
+    ap1.ValorTotal = ap1.ValorImovel() + ap1.Comissao;
     ap1.vendedor = cl1;
     qtdeA++;
 
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
     ap2.AREA = 74.5;
-    ap2.Q = 2;
-    ap2.B = 1;
-    ap2.V = 2;
+    ap2.Quarto = 2;
+    ap2.Banheiro = 1;
+    ap2.Vagas = 2;
     ap2.VALORm2 = 1540.0;
-    ap2.C = ap2.comissao();
-    ap2.Valor = ap2.valor() + ap2.comissao();
+    ap2.Comissao = ap2.ValorComissãoApartamento();
+    ap2.Taxa = 0.04;
+    ap2.ValorTotal = ap2.ValorImovel() + ap2.Comissao;
     ap2.vendedor = cl2;
     qtdeA++;
 
     Apartamento ap3;
     ap3.corretor = "Kelia";
     ap3.AREA = 87.2;
-    ap3.Q = 3;
-    ap3.B = 2;
-    ap3.V = 2;
+    ap3.Quarto = 3;
+    ap3.Banheiro = 2;
+    ap3.Vagas = 2;
     ap3.VALORm2 = 2354.0;
-    ap3.C = ap3.comissao();
-    ap3.Valor = ap3.valor() + ap3.comissao();
+    ap3.Comissao = ap3.ValorComissãoApartamento();
+    ap3.Taxa = 0.04;
+    ap3.ValorTotal = ap3.ValorImovel() + ap3.Comissao;
     ap3.vendedor = cl3;
     qtdeA++;
 
@@ -117,36 +120,39 @@ int main() {
     Cobertura cb1;
     cb1.corretor = "Koci";
     cb1.AREA = 120.1;
-    cb1.Q = 3;
-    cb1.B = 3;
-    cb1.V = 2;
+    cb1.Quarto = 3;
+    cb1.Banheiro = 3;
+    cb1.Vagas = 2;
     cb1.VALORm2 = 3123.5;
-    cb1.C = cb1.comissao();
-    cb1.Valor = cb1.valor() + cb1.comissao();
+    cb1.Comissao = cb1.ValorComissaoCobertura();
+    cb1.Taxa = 0.1;
+    cb1.ValorTotal = cb1.ValorImovel() + cb1.Comissao;
     cb1.vendedor = cl4;
     qtdeCb++;
     
     Cobertura cb2;
     cb2.corretor = "Wail";
     cb2.AREA = 134.8;
-    cb2.Q = 4;
-    cb2.B = 3;
-    cb2.V = 3;
+    cb2.Quarto = 4;
+    cb2.Banheiro = 3;
+    cb2.Vagas = 3;
     cb2.VALORm2 = 3578.2;
-    cb2.C = cb2.comissao();
-    cb2.Valor = cb2.valor() + cb2.comissao();
+    cb2.Comissao = cb2.ValorComissaoCobertura();
+    cb2.Taxa = 0.1;
+    cb2.ValorTotal = cb2.ValorImovel() + cb2.Comissao;
     cb2.vendedor = cl5;
     qtdeCb++;
 
     Cobertura cb3;
     cb3.corretor = "Fival";
     cb3.AREA = 180.0;
-    cb3.Q = 4;
-    cb3.B = 4;
-    cb3.V = 4;
+    cb3.Quarto = 4;
+    cb3.Banheiro = 4;
+    cb3.Vagas = 4;
     cb3.VALORm2 = 4165.7;
-    cb3.C = cb3.comissao();
-    cb3.Valor = cb3.valor() + cb3.comissao();
+    cb3.Comissao = cb3.ValorComissaoCobertura();
+    cb3.Taxa = 0.1;
+    cb3.ValorTotal = cb3.ValorImovel() + cb3.Comissao;
     cb3.vendedor = cl6;
     qtdeCb++;
 
@@ -154,24 +160,26 @@ int main() {
     Casa ca1;
     ca1.corretor = "Beydo";
     ca1.AREA = 145.6;
-    ca1.Q = 3;
-    ca1.B = 3;
-    ca1.V = 2;
+    ca1.Quarto = 3;
+    ca1.Banheiro = 3;
+    ca1.Vagas = 2;
     ca1.VALORm2 = 4023.6;
-    ca1.C = ca1.comissao();
-    ca1.Valor = ca1.valor() + ca1.comissao();
+    ca1.Comissao = ca1.ValorComissaoCasa();
+    ca1.Taxa = 0.06;
+    ca1.ValorTotal = ca1.ValorImovel() + ca1.Comissao;
     ca1.vendedor = cl7;
     qtdeCa++;
 
     Casa ca2;
     ca2.corretor = "Riuzi";
     ca2.AREA = 245.0;
-    ca2.Q = 5;
-    ca2.B = 4;
-    ca2.V = 4;
+    ca2.Quarto = 5;
+    ca2.Banheiro = 4;
+    ca2.Vagas = 4;
     ca2.VALORm2 = 4856.2;
-    ca2.C = ca2.comissao();
-    ca2.Valor = ca2.valor() + ca2.comissao();
+    ca2.Comissao = ca2.ValorComissaoCasa();
+    ca2.Taxa = 0.06;
+    ca2.ValorTotal = ca2.ValorImovel() + ca2.Comissao;
     ca2.vendedor = cl8;
     qtdeCa++;
 
@@ -185,43 +193,43 @@ int main() {
     double comissCa = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valorAp += ap1.ValorImovel();
+    comissAp += ap1.Comissao;
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valorAp += ap2.ValorImovel();
+    comissAp += ap2.Comissao;
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valorAp += ap3.ValorImovel();
+    comissAp += ap3.Comissao;
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valorCb += cb1.ValorImovel();
+    comissCb += cb1.Comissao;
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valorCb += cb2.ValorImovel();
+    comissCb += cb2.Comissao;
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valorCb += cb3.ValorImovel();
+    comissCb += cb3.Comissao;
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valorCa += ca1.ValorImovel();
+    comissCa += ca1.Comissao;
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valorCa += ca2.ValorImovel();
+    comissCa += ca2.Comissao;
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
