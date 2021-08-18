@@ -1,7 +1,7 @@
 #include "Casa.hpp"
 
 Casa::Casa(double area, int quartos, int banheiros, int vagas, double valor_m2, Cliente vendedor, string corretor)
-    :Imovel(area, quartos, banheiros, vagas, valor_m2, this->valor(), this->comissao(), vendedor, corretor){}
+    :Imovel(area, quartos, banheiros, vagas, valor_m2, this->valor()+this->comissao(), this->comissao(), vendedor, corretor){}
 
 double Casa::comissao(){
     double valor_total = this->valor();
