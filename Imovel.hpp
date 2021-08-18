@@ -7,24 +7,29 @@
 
 using namespace std;
 
-class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
+class Imovel
+{
+    
+public:
+  double area;
+  int num_quarto;
+  int num_banheiro;
+  int num_vaga;
+  double valor_m2;
+  double valor_imovel;
+  double valor_comissao;
+  Cliente vendedor;
+  string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+  //Método para calcular comissao
+  virtual double comissao();
+  
+  //Método para calcular o valor total de venda do imóvel
+  virtual double valor (); 
+  
+  //Método para imprimir as informações do imóvel
+  virtual void print();
+
 };
 
 #endif

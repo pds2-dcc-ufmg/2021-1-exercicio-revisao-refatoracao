@@ -5,38 +5,21 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class Cobertura : public Imovel {
-    
-    public:
+class Cobertura:public Imovel
+{
 
-    double valor() {
+private:
+  //Taxa de comissão para o caso da venda de uma cobertura
+  double tx_com_cob = 0.10;
 
-        double v = AREA * VALORm2;
+public:
+  //Calculo de comissao para o caso de uma cobertura
+  double comissao() override;
+  
+  //Impressao dos dados do imóvel
+  void print () override;
+  
 
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
 };
 
 #endif
