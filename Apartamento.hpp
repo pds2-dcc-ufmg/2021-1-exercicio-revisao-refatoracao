@@ -37,7 +37,7 @@ class Apartamento : public Imovel {
                 << "Taxa de Comissão: " << 4 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
                 << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+    } 
 };
 
 #endif
