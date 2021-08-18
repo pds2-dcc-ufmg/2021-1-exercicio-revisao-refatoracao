@@ -1,0 +1,531 @@
+[1mdiff --git a/Apartamento.hpp b/Apartamento.hpp[m
+[1mindex 4dd5981..a41967c 100644[m
+[1m--- a/Apartamento.hpp[m
+[1m+++ b/Apartamento.hpp[m
+[36m@@ -8,36 +8,24 @@[m [musing namespace std;[m
+ [m
+ class Apartamento : public Imovel {[m
+ [m
+[31m-    public: [m
+[31m-    [m
+[31m-    double valor() {[m
+[32m+[m[32m    public:[m
+ [m
+[31m-        double v = AREA * VALORm2;[m
+[32m+[m	[32m//COMISSÃO DE 4%[m
+[32m+[m[32m        double comissao() override{[m
+ [m
+[31m-        return v;[m
+[32m+[m[32m            double com = AREA * VALOR_m2;[m
+ [m
+[31m-    }[m
+[31m-[m
+[31m-    double comissao() {[m
+[31m-[m
+[31m-        double c = AREA * VALORm2;[m
+[31m-[m
+[31m-        return c * 0.04;[m
+[31m-        [m
+[31m-    }[m
+[32m+[m[32m            return com * 0.04;[m
+[32m+[m[32m        }[m
+ [m
+     void print() {[m
+ [m
+         std::cout << "[Apartamento]" << endl;[m
+         Imovel::print();[m
+[31m-        std::cout << "Area: " << AREA << endl[m
+[31m-                << "  Quartos: " << Q << endl[m
+[31m-                << "  Banheiros: " << B << endl[m
+[31m-                << "  Vagas: " << V << endl[m
+[31m-                << "Taxa de Comissão: " << 4 << "%" << endl[m
+[31m-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl[m
+[31m-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;[m
+[32m+[m[32m        std::cout << "Taxa de Comissão: " << 4 << "%" << endl[m
+[32m+[m[32m                << "Valor Comissão: R$ " << fixed << setprecision(2) << COMISSAO << endl[m
+[32m+[m[32m                << "Valor de Venda: R$ " << fixed << setprecision(2) << VALOR_TOTAL << endl;[m
+     }[m
+ };[m
+ [m
+[31m-#endif[m
+\ No newline at end of file[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/Casa.hpp b/Casa.hpp[m
+[1mindex 88a51d6..cca86c0 100644[m
+[1m--- a/Casa.hpp[m
+[1m+++ b/Casa.hpp[m
+[36m@@ -10,36 +10,24 @@[m [mclass Casa : public Imovel {[m
+ [m
+     public:[m
+ [m
+[31m-    double valor() {[m
+[32m+[m	[32m//COMISSAO 6%[m
+[32m+[m[32m        double comissao() override {[m
+ [m
+[31m-        double v = AREA * VALORm2;[m
+[32m+[m[32m            double com = AREA * VALORm2;[m
+ [m
+[31m-        return v;[m
+[31m-[m
+[31m-    }[m
+[31m-[m
+[31m-    double comissao() {[m
+[31m-[m
+[31m-        double c = AREA * VALORm2;[m
+[31m-[m
+[31m-        return c * 0.06;[m
+[31m-        [m
+[31m-    }[m
+[32m+[m[32m            return com * 0.06;[m
+[32m+[m[32m        }[m
+ [m
+     void print() {[m
+ [m
+         std::cout << "[Casa]" << endl;[m
+         Imovel::print();[m
+[31m-        std::cout << "Area: " << AREA << endl[m
+[31m-                << "  Quartos: " << Q << endl[m
+[31m-                << "  Banheiros: " << B << endl[m
+[31m-                << "  Vagas: " << V << endl[m
+[31m-                << "Taxa de Comissão: " << 6 << "%" << endl[m
+[31m-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl[m
+[31m-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;[m
+[32m+[m[32m        std::cout << "Taxa de Comissão: " << 6 << "%" << endl[m
+[32m+[m[32m                << "Valor Comissão: R$ " << fixed << setprecision(2) << COMISSAO << endl[m
+[32m+[m[32m                << "Valor de Venda: R$ " << fixed << setprecision(2) << VALOR << endl;[m
+ [m
+     }[m
+ [m
+ };[m
+ [m
+[31m-#endif[m
+\ No newline at end of file[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/Cliente.cpp b/Cliente.cpp[m
+[1mindex 14f64f0..4f30a4e 100644[m
+[1m--- a/Cliente.cpp[m
+[1m+++ b/Cliente.cpp[m
+[36m@@ -5,10 +5,10 @@[m
+ void Cliente::print(){[m
+ [m
+ 	std::cout << "  Nome: " << NOME << endl[m
+[31m-		 << "  Telefone: " << telefone << endl[m
+[31m-		 << "  Endereço: " << endereco << endl[m
+[32m+[m		[32m << "  Telefone: " << TELEFONE << endl[m
+[32m+[m		[32m << "  Endereço: " << ENDERECO << endl[m
+ 		 << "  Cidade: " << CIDADE << endl[m
+ 		 << "  Estado: " << UF << endl[m
+[31m-		 << "  CEP: " << cep << endl;[m
+[32m+[m		[32m << "  CEP: " << CEP << endl;[m
+ [m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[1mdiff --git a/Cliente.hpp b/Cliente.hpp[m
+[1mindex f32d122..868804e 100644[m
+[1m--- a/Cliente.hpp[m
+[1m+++ b/Cliente.hpp[m
+[36m@@ -7,13 +7,13 @@[m [musing namespace std;[m
+ class Cliente {[m
+     public:[m
+         string NOME;[m
+[31m-        string endereco;[m
+[32m+[m[32m        string ENDERECO;[m
+         string CIDADE;[m
+         string UF;[m
+[31m-        string cep;[m
+[31m-        string telefone;[m
+[32m+[m[32m        string CEP;[m
+[32m+[m[32m        string TELEFONE;[m
+ [m
+         void print();[m
+ };[m
+ [m
+[31m-#endif[m
+\ No newline at end of file[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/Cobertura.hpp b/Cobertura.hpp[m
+[1mindex e8c4281..001ef85 100644[m
+[1m--- a/Cobertura.hpp[m
+[1m+++ b/Cobertura.hpp[m
+[36m@@ -6,37 +6,25 @@[m
+ using namespace std;[m
+ [m
+ class Cobertura : public Imovel {[m
+[31m-    [m
+[31m-    public:[m
+[31m-[m
+[31m-    double valor() {[m
+[31m-[m
+[31m-        double v = AREA * VALORm2;[m
+[31m-[m
+[31m-        return v;[m
+ [m
+[31m-    }[m
+[32m+[m[32m    public:[m
+ [m
+[31m-    double comissao() {[m
+[32m+[m	[32m//COMISSAO 10%[m
+[32m+[m[32m        double comissao() override{[m
+ [m
+[31m-        double c = AREA * VALORm2;[m
+[32m+[m[32m            double com = AREA * VALOR_m2;[m
+ [m
+[31m-        return c * 0.10;[m
+[31m-        [m
+[31m-    }[m
+[32m+[m[32m            return com * 0.10;[m
+[32m+[m[32m        }[m
+ [m
+     void print() {[m
+ [m
+         std::cout << "[Cobertura]" << endl;[m
+         Imovel::print();[m
+[31m-        std::cout << "Area: " << AREA << endl[m
+[31m-                << "  Quartos: " << Q << endl[m
+[31m-                << "  Banheiros: " << B << endl[m
+[31m-                << "  Vagas: " << V << endl[m
+[31m-                << "Taxa de Comissão: " << 10 << "%" << endl[m
+[31m-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl[m
+[31m-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;[m
+[32m+[m[32m        std::cout << "Taxa de Comissão: " << 10 << "%" << endl[m
+[32m+[m[32m                << "Valor Comissão: R$ " << fixed << setprecision(2) << COMISSAO << endl[m
+[32m+[m[32m                << "Valor de Venda: R$ " << fixed << setprecision(2) << VALOR_TOTAL << endl;[m
+     }[m
+ };[m
+ [m
+[31m-#endif[m
+\ No newline at end of file[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/Imovel.hpp b/Imovel.hpp[m
+[1mindex 6e91cfc..95ed03b 100644[m
+[1m--- a/Imovel.hpp[m
+[1m+++ b/Imovel.hpp[m
+[36m@@ -9,22 +9,53 @@[m [musing namespace std;[m
+ [m
+ class Imovel {[m
+     public:[m
+[31m-        double AREA;[m
+[31m-        int Q;[m
+[31m-        int B;[m
+[31m-        int V;[m
+[31m-        double VALORm2;[m
+[31m-        double Valor;[m
+[31m-        double C;[m
+[31m-        Cliente vendedor;[m
+[31m-        string corretor;[m
+[32m+[m	[32m//NUMERO DE CADA COMODOS NO IMOVEL[m
+[32m+[m[32m        int QUARTO;[m
+[32m+[m[32m        int BANHEIRO;[m
+[32m+[m[32m        int VAGAS;[m
+[32m+[m[41m	[m
+[32m+[m	[32m//INFORMÇÕES DE CUSTO DO IMOVEL[m
+[32m+[m	[32mdouble AREA;[m
+[32m+[m[32m        double VALOR_m2;[m
+[32m+[m[32m        double VALOR_TOTAL;[m
+[32m+[m[32m        double COMISSAO;[m
+[32m+[m
+[32m+[m	[32m//ENVOLVIDOS NA TRANSAÇÃO[m
+[32m+[m[32m        Cliente VENDEDOR;[m
+[32m+[m[32m        string CORRETOR;[m
+[32m+[m
+ [m
+         void print() {[m
+[32m+[m	[32m    //IMPRIME VENDEDOR E CORRETOR[m
+             cout << "[Vendedor]" << endl;[m
+[31m-            vendedor.print();[m
+[32m+[m[32m            VENDEDOR.print();[m
+             cout << "[Corretor]" << endl;[m
+[31m-            cout << "  " + corretor << endl;[m
+[32m+[m[32m            cout << "  " + CORRETOR << endl;[m
+[32m+[m
+[32m+[m[32m            //IMPRIME INFORMAÇÕES DOS COMODOS DO IMOVEL[m
+[32m+[m	[32m    cout << "Area: " << AREA << endl[m
+[32m+[m[32m                 << "  Quartos: " << QUARTO << endl[m
+[32m+[m[32m                 << "  Banheiros: " << BANHEIRO << endl[m
+[32m+[m[32m                 << "  Vagas: " << VAGAS << endl[m
+[32m+[m
+[32m+[m
+         }[m
+[32m+[m
+[32m+[m	[32m//RETORNA O VALOR TOTAL DO IMOVEL[m
+[32m+[m	[32mdouble valor(){[m
+[32m+[m		[32mdouble val = AREA * VALOR_m2;[m
+[32m+[m
+[32m+[m		[32mreturn val;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32m//FUNÇÃO PARA CALCULO DE COMISSAO (VARIA PARA CADA TIPO DE IMOVEL)[m
+[32m+[m	[32mvirtual double comissao(){[m
+[32m+[m		[32mdouble com = AREA * VALOR_m2;[m
+[32m+[m
+[32m+[m	[32m}	return com;[m
+[32m+[m
+[32m+[m
+[32m+[m
+ };[m
+ [m
+[31m-#endif[m
+\ No newline at end of file[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/main.cpp b/main.cpp[m
+[1mindex 2496147..d69e82b 100644[m
+[1m--- a/main.cpp[m
+[1m+++ b/main.cpp[m
+[36m@@ -11,168 +11,168 @@[m [mint main() {[m
+     [m
+     Cliente cl1;[m
+     cl1.NOME = "Xayso Sovon Ziahaka";[m
+[31m-    cl1.endereco = "Rua Xangrilá - Braúnas";[m
+[32m+[m[32m    cl1.ENDERECO = "Rua Xangrilá - Braúnas";[m
+     cl1.CIDADE = "Belo Horizonte";[m
+     cl1.UF = "MG";[m
+[31m-    cl1.cep = "31365-570";[m
+[31m-    cl1.telefone = "3196007958";[m
+[32m+[m[32m    cl1.CEP = "31365-570";[m
+[32m+[m[32m    cl1.TELEFONE = "3196007958";[m
+     [m
+     Cliente cl2;[m
+     cl2.NOME = "Minia Pasies Kituos";[m
+[31m-    cl2.endereco = "Rua dos Jacobinos - Ouro Minas";[m
+[32m+[m[32m    cl2.ENDERECO = "Rua dos Jacobinos - Ouro Minas";[m
+     cl2.CIDADE = "Belo Horizonte";[m
+     cl2.UF = "MG";[m
+[31m-    cl2.cep = "31870-290";[m
+[31m-    cl2.telefone = "3197627067";[m
+[32m+[m[32m    cl2.CEP = "31870-290";[m
+[32m+[m[32m    cl2.TELEFONE = "3197627067";[m
+     [m
+     Cliente cl3;[m
+     cl3.NOME = "Vuocue Leiur Baonauza";[m
+[31m-    cl3.endereco = "Rua Orminda de Almeida - Tupi B";[m
+[32m+[m[32m    cl3.ENDERECO = "Rua Orminda de Almeida - Tupi B";[m
+     cl3.CIDADE = "Belo Horizonte";[m
+     cl3.UF = "MG";[m
+[31m-    cl3.cep = "31842-630";[m
+[31m-    cl3.telefone = "3195949327";[m
+[32m+[m[32m    cl3.CEP = "31842-630";[m
+[32m+[m[32m    cl3.TELEFONE = "3195949327";[m
+     [m
+     Cliente cl4;[m
+     cl4.NOME = "Zerer Huduy Fyogar";[m
+[31m-    cl4.endereco = "Rua Taquaril - Jonas Veiga";[m
+[32m+[m[32m    cl4.ENDERECO = "Rua Taquaril - Jonas Veiga";[m
+     cl4.CIDADE = "Belo Horizonte";[m
+     cl4.UF = "MG";[m
+[31m-    cl4.cep = "30285-422";[m
+[31m-    cl4.telefone = "3198596327";[m
+[32m+[m[32m    cl4.CEP = "30285-422";[m
+[32m+[m[32m    cl4.TELEFONE = "3198596327";[m
+     [m
+     Cliente cl5;[m
+     cl5.NOME = "Ceziel Mioti Pler";[m
+[31m-    cl5.endereco = "Rua João Gualberto Costa - Serrano";[m
+[32m+[m[32m    cl5.ENDERECO = "Rua João Gualberto Costa - Serrano";[m
+     cl5.CIDADE = "Belo Horizonte";[m
+     cl5.UF = "MG";[m
+[31m-    cl5.cep = "30882-747";[m
+[31m-    cl5.telefone = "3196274465";[m
+[32m+[m[32m    cl5.CEP = "30882-747";[m
+[32m+[m[32m    cl5.TELEFONE = "3196274465";[m
+     [m
+     Cliente cl6;[m
+     cl6.NOME = "Esxo Cilal Zyais";[m
+[31m-    cl6.endereco = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";[m
+[32m+[m[32m    cl6.ENDERECO = "Rua Américo Luiz Moreira - Jardim dos Comerciários (Venda Nova)";[m
+     cl6.CIDADE = "Belo Horizonte";[m
+     cl6.UF = "MG";[m
+[31m-    cl6.cep = "31650-560";[m
+[31m-    cl6.telefone = "3195004414";[m
+[32m+[m[32m    cl6.CEP = "31650-560";[m
+[32m+[m[32m    cl6.TELEFONE = "3195004414";[m
+     [m
+     Cliente cl7;[m
+     cl7.NOME = "Leova Wikyecil Neaca";[m
+[31m-    cl7.endereco = "Rua João Arantes - Cidade Nova";[m
+[32m+[m[32m    cl7.ENDERECO = "Rua João Arantes - Cidade Nova";[m
+     cl7.CIDADE = "Belo Horizonte";[m
+     cl7.UF = "MG";[m
+[31m-    cl7.cep = "31170-240";[m
+[31m-    cl7.telefone = "3198461192";[m
+[32m+[m[32m    cl7.CEP = "31170-240";[m
+[32m+[m[32m    cl7.TELEFONE = "3198461192";[m
+     [m
+     Cliente cl8;[m
+     cl8.NOME = "Teas Heimeu Pipe";[m
+[31m-    cl8.endereco = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";[m
+[32m+[m[32m    cl8.ENDERECO = "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)";[m
+     cl8.CIDADE = "Belo Horizonte";[m
+     cl8.UF = "MG";[m
+[31m-    cl8.cep = "30668-430";[m
+[31m-    cl8.telefone = "3197317802";[m
+[32m+[m[32m    cl8.CEP = "30668-430";[m
+[32m+[m[32m    cl8.TELEFONE = "3197317802";[m
+ [m
+     int qtdeA = 0;[m
+     int qtdeCa = 0;[m
+     int qtdeCb = 0;[m
+ [m
+     Apartamento ap1;[m
+[31m-    ap1.corretor = "Tuoruars";[m
+[32m+[m[32m    ap1.CORRETOR = "Tuoruars";[m
+     ap1.AREA = 55.4;[m
+[31m-    ap1.Q = 2;[m
+[31m-    ap1.B = 1;[m
+[31m-    ap1.V = 0;[m
+[31m-    ap1.VALORm2 = 987.0;[m
+[31m-    ap1.C = ap1.comissao();[m
+[31m-    ap1.Valor = ap1.valor() + ap1.comissao();[m
+[31m-    ap1.vendedor = cl1;[m
+[32m+[m[32m    ap1.QUARTO = 2;[m
+[32m+[m[32m    ap1.BANHEIRO = 1;[m
+[32m+[m[32m    ap1.VAGAS = 0;[m
+[32m+[m[32m    ap1.VALOR_m2 = 987.0;[m
+[32m+[m[32m    ap1.COMISSAO = ap1.comissao();[m
+[32m+[m[32m    ap1.VALOR_TOTAL= ap1.valor() + ap1.comissao();[m
+[32m+[m[32m    ap1.VENDEDOR = cl1;[m
+     qtdeA++;[m
+ [m
+     Apartamento ap2;[m
+[31m-    ap2.corretor = "Fyubyeis";[m
+[32m+[m[32m    ap2.CORRETOR = "Fyubyeis";[m
+     ap2.AREA = 74.5;[m
+[31m-    ap2.Q = 2;[m
+[31m-    ap2.B = 1;[m
+[31m-    ap2.V = 2;[m
+[31m-    ap2.VALORm2 = 1540.0;[m
+[31m-    ap2.C = ap2.comissao();[m
+[31m-    ap2.Valor = ap2.valor() + ap2.comissao();[m
+[31m-    ap2.vendedor = cl2;[m
+[32m+[m[32m    ap2.QUARTO = 2;[m
+[32m+[m[32m    ap2.BANHEIRO = 1;[m
+[32m+[m[32m    ap2.VAGAS = 2;[m
+[32m+[m[32m    ap2.VALOR_m2 = 1540.0;[m
+[32m+[m[32m    ap2.COMISSAO = ap2.comissao();[m
+[32m+[m[32m    ap2.VALOR_TOTAL= ap2.valor() + ap2.comissao();[m
+[32m+[m[32m    ap2.VENDEDOR = cl2;[m
+     qtdeA++;[m
+ [m
+     Apartamento ap3;[m
+[31m-    ap3.corretor = "Kelia";[m
+[32m+[m[32m    ap3.CORRETOR = "Kelia";[m
+     ap3.AREA = 87.2;[m
+[31m-    ap3.Q = 3;[m
+[31m-    ap3.B = 2;[m
+[31m-    ap3.V = 2;[m
+[31m-    ap3.VALORm2 = 2354.0;[m
+[31m-    ap3.C = ap3.comissao();[m
+[31m-    ap3.Valor = ap3.valor() + ap3.comissao();[m
+[31m-    ap3.vendedor = cl3;[m
+[32m+[m[32m    ap3.QUARTO = 3;[m
+[32m+[m[32m    ap3.BANHEIRO = 2;[m
+[32m+[m[32m    ap3.VAGAS = 2;[m
+[32m+[m[32m    ap3.VALOR_m2 = 2354.0;[m
+[32m+[m[32m    ap3.COMISSAO = ap3.comissao();[m
+[32m+[m[32m    ap3.VALOR_TOTAL= ap3.valor() + ap3.comissao();[m
+[32m+[m[32m    ap3.VENDEDOR = cl3;[m
+     qtdeA++;[m
+ [m
+     // Cobertura[m
+     Cobertura cb1;[m
+[31m-    cb1.corretor = "Koci";[m
+[32m+[m[32m    cb1.CORRETOR = "Koci";[m
+     cb1.AREA = 120.1;[m
+[31m-    cb1.Q = 3;[m
+[31m-    cb1.B = 3;[m
+[31m-    cb1.V = 2;[m
+[31m-    cb1.VALORm2 = 3123.5;[m
+[31m-    cb1.C = cb1.comissao();[m
+[31m-    cb1.Valor = cb1.valor() + cb1.comissao();[m
+[31m-    cb1.vendedor = cl4;[m
+[32m+[m[32m    cb1.QUARTO = 3;[m
+[32m+[m[32m    cb1.BANHEIRO = 3;[m
+[32m+[m[32m    cb1.VAGAS = 2;[m
+[32m+[m[32m    cb1.VALOR_m2 = 3123.5;[m
+[32m+[m[32m    cb1.COMISSAO = cb1.comissao();[m
+[32m+[m[32m    cb1.VALOR_TOTAL= cb1.valor() + cb1.comissao();[m
+[32m+[m[32m    cb1.VENDEDOR = cl4;[m
+     qtdeCb++;[m
+     [m
+     Cobertura cb2;[m
+[31m-    cb2.corretor = "Wail";[m
+[32m+[m[32m    cb2.CORRETOR = "Wail";[m
+     cb2.AREA = 134.8;[m
+[31m-    cb2.Q = 4;[m
+[31m-    cb2.B = 3;[m
+[31m-    cb2.V = 3;[m
+[31m-    cb2.VALORm2 = 3578.2;[m
+[31m-    cb2.C = cb2.comissao();[m
+[31m-    cb2.Valor = cb2.valor() + cb2.comissao();[m
+[31m-    cb2.vendedor = cl5;[m
+[32m+[m[32m    cb2.QUARTO = 4;[m
+[32m+[m[32m    cb2.BANHEIRO = 3;[m
+[32m+[m[32m    cb2.VAGAS = 3;[m
+[32m+[m[32m    cb2.VALOR_m2 = 3578.2;[m
+[32m+[m[32m    cb2.COMISSAO = cb2.comissao();[m
+[32m+[m[32m    cb2.VALOR_TOTAL= cb2.valor() + cb2.comissao();[m
+[32m+[m[32m    cb2.VENDEDOR = cl5;[m
+     qtdeCb++;[m
+ [m
+     Cobertura cb3;[m
+[31m-    cb3.corretor = "Fival";[m
+[32m+[m[32m    cb3.CORRETOR = "Fival";[m
+     cb3.AREA = 180.0;[m
+[31m-    cb3.Q = 4;[m
+[31m-    cb3.B = 4;[m
+[31m-    cb3.V = 4;[m
+[31m-    cb3.VALORm2 = 4165.7;[m
+[31m-    cb3.C = cb3.comissao();[m
+[31m-    cb3.Valor = cb3.valor() + cb3.comissao();[m
+[31m-    cb3.vendedor = cl6;[m
+[32m+[m[32m    cb3.QUARTO = 4;[m
+[32m+[m[32m    cb3.BANHEIRO = 4;[m
+[32m+[m[32m    cb3.VAGAS = 4;[m
+[32m+[m[32m    cb3.VALOR_m2 = 4165.7;[m
+[32m+[m[32m    cb3.COMISSAO = cb3.comissao();[m
+[32m+[m[32m    cb3.VALOR_TOTAL= cb3.valor() + cb3.comissao();[m
+[32m+[m[32m    cb3.VENDEDOR = cl6;[m
+     qtdeCb++;[m
+ [m
+     // Casas[m
+     Casa ca1;[m
+[31m-    ca1.corretor = "Beydo";[m
+[32m+[m[32m    ca1.CORRETOR = "Beydo";[m
+     ca1.AREA = 145.6;[m
+[31m-    ca1.Q = 3;[m
+[31m-    ca1.B = 3;[m
+[31m-    ca1.V = 2;[m
+[31m-    ca1.VALORm2 = 4023.6;[m
+[31m-    ca1.C = ca1.comissao();[m
+[31m-    ca1.Valor = ca1.valor() + ca1.comissao();[m
+[31m-    ca1.vendedor = cl7;[m
+[32m+[m[32m    ca1.QUARTO = 3;[m
+[32m+[m[32m    ca1.BANHEIRO = 3;[m
+[32m+[m[32m    ca1.VAGAS = 2;[m
+[32m+[m[32m    ca1.VALOR_m2 = 4023.6;[m
+[32m+[m[32m    ca1.COMISSAO = ca1.comissao();[m
+[32m+[m[32m    ca1.VALOR_TOTAL= ca1.valor() + ca1.comissao();[m
+[32m+[m[32m    ca1.VENDEDOR = cl7;[m
+     qtdeCa++;[m
+ [m
+     Casa ca2;[m
+[31m-    ca2.corretor = "Riuzi";[m
+[32m+[m[32m    ca2.CORRETOR = "Riuzi";[m
+     ca2.AREA = 245.0;[m
+[31m-    ca2.Q = 5;[m
+[31m-    ca2.B = 4;[m
+[31m-    ca2.V = 4;[m
+[31m-    ca2.VALORm2 = 4856.2;[m
+[31m-    ca2.C = ca2.comissao();[m
+[31m-    ca2.Valor = ca2.valor() + ca2.comissao();[m
+[31m-    ca2.vendedor = cl8;[m
+[32m+[m[32m    ca2.QUARTO = 5;[m
+[32m+[m[32m    ca2.BANHEIRO = 4;[m
+[32m+[m[32m    ca2.VAGAS = 4;[m
+[32m+[m[32m    ca2.VALOR_m2 = 4856.2;[m
+[32m+[m[32m    ca2.COMISSAO = ca2.comissao();[m
+[32m+[m[32m    ca2.VALOR_TOTAL= ca2.valor() + ca2.comissao();[m
+[32m+[m[32m    ca2.VENDEDOR = cl8;[m
+     qtdeCa++;[m
+ [m
+     std::cout << "\n>> Relatório de Imóveis <<" << endl;[m
