@@ -17,6 +17,8 @@ class Casa : public Imovel {
         V = _V;
         VALORm2 = _VALORm2;
         vendedor = _vendedor;
+        C = comissao();
+        Valor = valor() + comissao();
         taxa = 6;
     }
     
