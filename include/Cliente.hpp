@@ -13,7 +13,7 @@ class Cliente {
         string cep;
         string telefone;
 
-        void print();
+        
 };
 
 #endif
