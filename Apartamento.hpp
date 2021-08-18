@@ -7,21 +7,19 @@
 using namespace std;
 
 class Apartamento : public Imovel {
-    
-    private:
-    
-    double ComissaoTotal=0;
-    
-    double ValorTotal=0;
 
     public:
+
+    static double ComissaoTotal;
+    
+    static double ValorTotal;
     
     double GetComissaoTotal(){
-        return this.ComissaoTotal;
+        return this->ComissaoTotal;
     }
     
     double GetValorTotal(){
-        return this.ValorTotal;
+        return this->ValorTotal;
     }
 
     
@@ -34,12 +32,14 @@ class Apartamento : public Imovel {
         return 0.04;
     }
     
-    Apartamento(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
-        ValorTotal+=this.GetValor();
+    Apartamento(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(_Area,_Quartos,_Banheiros,_Vagas,_VALORm2,_Corretor,_Vendedor){
+        ValorTotal=ValorTotal+this->GetValor();
+        ComissaoTotal=ComissaoTotal+this->GetComissao();
     };
     
     ~Apartamento(){
-        ValorTotal-=this.GetValor();
+        //ValorTotal-=this->GetValor();
+        //ComissaoTotal=ComissaoTotal-this->GetComissao();
     };
 
 };

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdlib>
+#include <vector>
 #include <iomanip>
 
 #include "Imovel.hpp"
@@ -65,21 +65,21 @@ int main() {
     double ComissaoCoberturas = 0.0;
     double ComissaoCasas = 0.0;
     
-    std::Vector<Apartamento>::iterator ItApartamentos=Apartamentos.begin();
+    std::vector<Apartamento>::iterator ItApartamentos=Apartamentos.begin();
     
     for(;ItApartamentos!=Apartamentos.end();ItApartamentos++){
         ItApartamentos->print();
         std::cout<<endl;
     }
     
-    std::Vector<Cobertura>::iterator ItCoberturas=Coberturas.begin();
+    std::vector<Cobertura>::iterator ItCoberturas=Coberturas.begin();
     
-    for(;ItCobertura!=Coberturas.end();ItCobertura++){
-        ItCobertura->print();
+    for(;ItCoberturas!=Coberturas.end();ItCoberturas++){
+        ItCoberturas->print();
         std::cout<<endl;
     }
     
-    std::Vector<Casa>::iterador ItCasas=Casas.begin();
+    std::vector<Casa>::iterator ItCasas=Casas.begin();
     
     for(;ItCasas!=Casas.end();ItCasas++){
         ItCasas->print();
@@ -89,9 +89,9 @@ int main() {
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << Apartamentos.size();
+            << "\n Quantidade: " << Apartamentos.size()
             << "\n Valor Total: R$ " << fixed << setprecision(2) << Apartamento::ValorTotal
-            << "\n Comissão Total: R$" << Apartamento::ComissaoTotal;
+            << "\n Comissão Total: R$" << Apartamento::ComissaoTotal
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << Coberturas.size()
@@ -100,8 +100,8 @@ int main() {
             << endl
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << Casas.size()
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << Casas::ValorTotal
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << Casas::ComissaoTotal
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << Casa::ValorTotal
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << Casa::ComissaoTotal
             << endl;
+            
 }
-    

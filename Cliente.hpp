@@ -15,6 +15,8 @@ class Cliente {
     
         Cliente(string _Nome, string _Endereco, string _Cidade, string _UF, string _Cep, string _Telefone);
     
+        Cliente();
+
         string GetNome();
     
         string GetEndereco();
@@ -39,7 +41,7 @@ class Cliente {
     
         void SetTelefone(string _Telefone);
 
-        void print();
+        const void print();
 };
 
 #endif

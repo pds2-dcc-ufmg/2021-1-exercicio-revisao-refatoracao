@@ -8,38 +8,38 @@ using namespace std;
 
 class Casa : public Imovel {
     
-    private:
-    
-    double ComissaoTotal;
-    
-    double ValorTotal;
-
     public:
     
+    static double ComissaoTotal;
+    
+    static double ValorTotal;
+
+    
     double GetComissaoTotal(){
-        return this.ComissaoTotal;
-    }
+        return this->ComissaoTotal;
+    };
     
     double GetValorTotal(){
-        return this.ValorTotal;
-    }
+        return this->ValorTotal;
+    };
     
-    double GetPercentComissao(){
+    virtual double GetPercentComissao(){
         //A comissão da venda de uma casa é 6%;
         return 0.06;
-    }
+    };
     
-    string TipoDeImovel{
+    string TipoDeImovel(){
         return "[Casa]";
     }
     
-    
-    Casa(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor){
-        ValorTotal+=this.GetValor();
+    Casa(double _Area, int _Quartos, int _Banheiros, int _Vagas, double _VALORm2, string _Corretor, Cliente _Vendedor): Imovel(_Area,_Quartos,_Banheiros,_Vagas,_VALORm2,_Corretor,_Vendedor){
+        ValorTotal=ValorTotal+this->GetValor();
+        ComissaoTotal=ComissaoTotal+this->GetComissao();
     };
     
     ~Casa(){
-        ValorTotal-=this.GetValor();
+        //ValorTotal=ValorTotal-this->GetValor();
+        //ComissaoTotal=ValorTotal-this->GetComissao();
     };
 
 };
