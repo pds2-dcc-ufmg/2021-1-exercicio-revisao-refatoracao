@@ -8,5 +8,5 @@ void Imovel::print() {
 }
 
 double Imovel::valor() {
-    return AREA * VALORm2;
+    return Area * Valorm2;
 }

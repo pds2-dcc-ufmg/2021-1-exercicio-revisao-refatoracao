@@ -79,11 +79,11 @@ int main() {
 
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
-    ap1.AREA = 55.4;
+    ap1.Area = 55.4;
     ap1.Quartos = 2;
     ap1.Banheiros = 1;
     ap1.Vagas = 0;
-    ap1.VALORm2 = 987.0;
+    ap1.Valorm2 = 987.0;
     ap1.Comissao = ap1.comissao();
     ap1.Valor = ap1.valor() + ap1.comissao();
     ap1.vendedor = cl1;
@@ -91,11 +91,11 @@ int main() {
 
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
-    ap2.AREA = 74.5;
+    ap2.Area = 74.5;
     ap2.Quartos = 2;
     ap2.Banheiros = 1;
     ap2.Vagas = 2;
-    ap2.VALORm2 = 1540.0;
+    ap2.Valorm2 = 1540.0;
     ap2.Comissao = ap2.comissao();
     ap2.Valor = ap2.valor() + ap2.comissao();
     ap2.vendedor = cl2;
@@ -103,11 +103,11 @@ int main() {
 
     Apartamento ap3;
     ap3.corretor = "Kelia";
-    ap3.AREA = 87.2;
+    ap3.Area = 87.2;
     ap3.Quartos = 3;
     ap3.Banheiros = 2;
     ap3.Vagas = 2;
-    ap3.VALORm2 = 2354.0;
+    ap3.Valorm2 = 2354.0;
     ap3.Comissao = ap3.comissao();
     ap3.Valor = ap3.valor() + ap3.comissao();
     ap3.vendedor = cl3;
@@ -116,11 +116,11 @@ int main() {
     // Cobertura
     Cobertura cb1;
     cb1.corretor = "Koci";
-    cb1.AREA = 120.1;
+    cb1.Area = 120.1;
     cb1.Quartos = 3;
     cb1.Banheiros = 3;
     cb1.Vagas = 2;
-    cb1.VALORm2 = 3123.5;
+    cb1.Valorm2 = 3123.5;
     cb1.Comissao = cb1.comissao();
     cb1.Valor = cb1.valor() + cb1.comissao();
     cb1.vendedor = cl4;
@@ -128,11 +128,11 @@ int main() {
     
     Cobertura cb2;
     cb2.corretor = "Wail";
-    cb2.AREA = 134.8;
+    cb2.Area = 134.8;
     cb2.Quartos = 4;
     cb2.Banheiros = 3;
     cb2.Vagas = 3;
-    cb2.VALORm2 = 3578.2;
+    cb2.Valorm2 = 3578.2;
     cb2.Comissao = cb2.comissao();
     cb2.Valor = cb2.valor() + cb2.comissao();
     cb2.vendedor = cl5;
@@ -140,11 +140,11 @@ int main() {
 
     Cobertura cb3;
     cb3.corretor = "Fival";
-    cb3.AREA = 180.0;
+    cb3.Area = 180.0;
     cb3.Quartos = 4;
     cb3.Banheiros = 4;
     cb3.Vagas = 4;
-    cb3.VALORm2 = 4165.7;
+    cb3.Valorm2 = 4165.7;
     cb3.Comissao = cb3.comissao();
     cb3.Valor = cb3.valor() + cb3.comissao();
     cb3.vendedor = cl6;
@@ -153,11 +153,11 @@ int main() {
     // Casas
     Casa ca1;
     ca1.corretor = "Beydo";
-    ca1.AREA = 145.6;
+    ca1.Area = 145.6;
     ca1.Quartos = 3;
     ca1.Banheiros = 3;
     ca1.Vagas = 2;
-    ca1.VALORm2 = 4023.6;
+    ca1.Valorm2 = 4023.6;
     ca1.Comissao = ca1.comissao();
     ca1.Valor = ca1.valor() + ca1.comissao();
     ca1.vendedor = cl7;
@@ -165,11 +165,11 @@ int main() {
 
     Casa ca2;
     ca2.corretor = "Riuzi";
-    ca2.AREA = 245.0;
+    ca2.Area = 245.0;
     ca2.Quartos = 5;
     ca2.Banheiros = 4;
     ca2.Vagas = 4;
-    ca2.VALORm2 = 4856.2;
+    ca2.Valorm2 = 4856.2;
     ca2.Comissao = ca2.comissao();
     ca2.Valor = ca2.valor() + ca2.comissao();
     ca2.vendedor = cl8;

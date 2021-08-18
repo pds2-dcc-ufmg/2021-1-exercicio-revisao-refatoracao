@@ -1,7 +1,7 @@
 #include "Casa.hpp"
 
 double Casa::comissao() {
-    double c = AREA * VALORm2;
+    double c = Area * Valorm2;
     return c * 0.06;
         
 }
@@ -10,7 +10,7 @@ void Casa::print() {
 
     std::cout << "[Casa]" << endl;
     Imovel::print();
-    std::cout << "Area: " << AREA << endl
+    std::cout << "Area: " << Area << endl
             << "  Quartos: " << Quartos << endl
             << "  Banheiros: " << Banheiros << endl
             << "  Vagas: " << Vagas << endl

@@ -1,7 +1,7 @@
 #include "Cobertura.hpp"
 
 double Cobertura::comissao() {
-    double c = AREA * VALORm2;
+    double c = Area * Valorm2;
     return c * 0.10;        
 }
 
@@ -9,7 +9,7 @@ void Cobertura::print() {
 
     std::cout << "[Cobertura]" << endl;
     Imovel::print();
-    std::cout << "Area: " << AREA << endl
+    std::cout << "Area: " << Area << endl
             << "  Quartos: " << Quartos << endl
             << "  Banheiros: " << Banheiros << endl
             << "  Vagas: " << Vagas << endl
