@@ -9,7 +9,7 @@ class Cobertura : public Imovel {
     
     public:
     
-    Cobertura (corretor, AREA, Q, B, V, AREAm2);        
+    Cobertura (corretor, AREA, Q, B, V, VALORm2);        
     double valor() {
 
        CUSTOm2;
