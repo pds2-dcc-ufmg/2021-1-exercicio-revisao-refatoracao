@@ -9,34 +9,41 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
 
-        double v = AREA * VALORm2;
+        Cobertura(double _area,  int _numeroQuartos, int _numeroBanheiros, int _vagasGaragem, double _valorM2, Cliente _vendedor, string _corretor): area(_area), numeroQuartos(_numeroQuartos), numeroBanheiros(_numeroBanheiros), vagasGaragem(_vagasGaragem), valorM2(_valorM2), vendedor(_vendedor), corretor(_corretor) {}
 
-        return v;
+        double getValor() {
 
-    }
+            return area * valorM2;
+        }
 
-    double comissao() {
+        double getComissao() {
 
-        double c = AREA * VALORm2;
+            return getValor() * taxaComissao;
+        }
 
-        return c * 0.10;
-        
-    }
+        void print() {
 
-    void print() {
+            std::cout << "[Casa]" << endl;
+            Imovel::print();
+            std::cout << "Area: " << area << endl
+                    << "  Quartos: " << numeroQuartos << endl
+                    << "  Banheiros: " << numeroBanheiros << endl
+                    << "  Vagas: " << vagasGaragem << endl
+                    << "Taxa de Comissão: " << taxaComissao<< endl
+                    << "Valor Comissão: R$ " << fixed << setprecision(2) << getComissao()<< endl
+                    << "Valor de Venda: R$ " << fixed << setprecision(2) << getValor() << endl;
 
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+        }
+    private:
+        double taxaComissao = 0.10;
+        double area;
+        int numeroQuartos;
+        int numeroBanheiros;
+        int vagasGaragem;
+        double valorM2;
+        Cliente vendedor;
+        string corretor;
 };
 
 #endif
