@@ -10,6 +10,7 @@ class Apartamento : public Imovel {
 
     public: 
     
+    //Metodo que calcula o valor de venda do Apartamento
     double valor() {
 
         double v = AREA * VALORm2;
@@ -18,26 +19,31 @@ class Apartamento : public Imovel {
 
     }
 
+    //Metodo que calcula o valor da comissao do corretor sobre a venda do Apartamento
     double comissao() {
 
         double c = AREA * VALORm2;
 
-        return c * 0.04;
+        return c * PercentCOMISSAO;
         
     }
+    //Porcentagem da comissao
+    static constexpr double PercentCOMISSAO = 0.04;
 
+    //Metodo que imprime os detalhes do Imovel a venda
     void print() {
 
-        std::cout << "[Apartamento]" << endl;
+        cout << "[Apartamento]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        cout << "Area: " << AREA << endl;
+        cout << "  Quartos: " << Q << endl;
+        cout << "  Banheiros: " << B << endl;
+        cout << "  Vagas: " << V << endl;
+        cout << "Taxa de Comissão: " << 4 << "%" << endl;
+        cout << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl;
+        cout << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
+
 };
 
 #endif
