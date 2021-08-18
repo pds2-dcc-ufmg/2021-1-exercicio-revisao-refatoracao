@@ -19,7 +19,7 @@ class Cobertura : public Imovel {
 	    void print() {
 
 	        std::cout << "[Cobertura]" << endl;
-	        Imovel::print();
+	        Imovel::print(4);
 	    }
 };
 

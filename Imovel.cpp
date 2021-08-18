@@ -11,7 +11,7 @@ Imovel::Imovel(double area, int quartos, int banheiros, int vagas, double valorm
 	this->valorTotal = valorm2 * area;
 }
 
-void Imovel::print() const {
+void Imovel::print(double porcentagem) const {
 	cout << "[Vendedor]" << endl;
 	vendedor->print();
 	cout << "[Corretor]" << endl;
@@ -20,7 +20,7 @@ void Imovel::print() const {
 	<< "  Quartos: " << quartos << endl
 	<< "  Banheiros: " << banheiros << endl
 	<< "  Vagas: " << vagas << endl
-	<< "Taxa de Comissão: " << 6 << "%" << endl
+	<< "Taxa de Comissão: " << porcentagem << "%" << endl
 	<< "valorVenda Comissão: R$ " << fixed << setprecision(2) << valorComissao << endl
 	<< "valorVenda de Venda: R$ " << fixed << setprecision(2) << valorVenda << endl;
 }

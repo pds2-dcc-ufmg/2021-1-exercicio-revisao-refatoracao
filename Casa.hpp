@@ -18,7 +18,7 @@ class Casa : public Imovel {
 
 	    void print() {
 	        std::cout << "[Casa]" << endl;
-	        Imovel::print();
+	        Imovel::print(6);
     }
 
 };

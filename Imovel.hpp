@@ -22,7 +22,7 @@ class Imovel {
 
 	protected:
 		Imovel(double area, int quartos, int banheiros, int vagas, double valorm2, Cliente *vendedor, string corretor);
-		void print() const;
+		void print(double porcentagem) const;
 };
 
 #endif
