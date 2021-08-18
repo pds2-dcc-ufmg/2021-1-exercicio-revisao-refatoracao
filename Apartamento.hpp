@@ -8,35 +8,19 @@ using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
-    
-    double valor() {
+    public:
+    //comissao da Apartamento 4%
+    double comissao() override{
 
-        double v = AREA * VALORm2;
-
-        return v;
+        double _Comissao = this->get_Area() * this->get_Valor_m2();
+        this->set_Taxa_de_Comissao(4);
+        return _Comissao * (this->get_Taxa_de_Comissao()/100);
 
     }
 
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
+    void print() override{
+        this->set_Taxa_de_Comissao(4);
         std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
     }
 };
 
