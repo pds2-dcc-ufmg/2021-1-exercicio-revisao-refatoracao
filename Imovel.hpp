@@ -5,26 +5,31 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Imovel {
-    public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
+    protected:
+        double area;
+        int quartos;
+        int banheiros;
+        int vagas;
+        double valor_m2;
+        double valor_venda;
+        double valor_comissao;
         Cliente vendedor;
         string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
+    public:
+        virtual void print() {
+            std::cout << "[Vendedor]" << std::endl;
             vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+            std::cout << "[Corretor]" << std::endl;
+            std::cout << "  " + corretor << std::endl;
         }
+        double valor() {
+            double valor = area * valor_m2;
+
+            return valor;
+        }
+        virtual double comissao();
 };
 
 #endif
