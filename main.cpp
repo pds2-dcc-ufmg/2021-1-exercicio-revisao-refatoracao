@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-
 #include "Imovel.hpp"
 #include "Casa.hpp"
 #include "Cobertura.hpp"
