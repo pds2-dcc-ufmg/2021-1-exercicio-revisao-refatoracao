@@ -24,7 +24,13 @@ class Cobertura : public Imovel {
         return c * 0.10;
         
     }
-
+    
+     void procedure (double *v, double *c) {
+        *v += this->valor();
+        *c += this->comissao();
+        cout << endl;
+    }
+    
     void print() {
 
         std::cout << "[Cobertura]" << endl;
