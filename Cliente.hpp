@@ -8,11 +8,13 @@ class Cliente {
     public:
         string NOME, endereco, CIDADE, UF, cep, telefone;
     
+    Cliente(NOME, endereco, CIDADE, UF, cep, telefone);
+    
        /* string endereco;
         //string CIDADE;
         //string UF;
         //string cep;
-        //string telefone;
+        //string telefone;  
        */
     
         void print();
