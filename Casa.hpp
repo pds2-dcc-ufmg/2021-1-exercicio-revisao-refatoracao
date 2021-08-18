@@ -10,33 +10,23 @@ class Casa : public Imovel {
 
     public:
 
-    double valor() {
+    double comissao_casa = 0.06;
 
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.06;
-        
+     double comissao() override {
+        return area * VALORm2 * comissao_casa;
     }
 
     void print() {
 
         std::cout << "[Casa]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 6 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        std::cout << "Area: " << area << endl;
+        std::cout << "  Quartos: " << quartos << endl;
+        std::cout << "  Banheiros: " << banheiros << endl;
+        std::cout << "  Vagas: " << vagas << endl;
+        std::cout << "Taxa de Comissão: " << 6 << "%" << endl;
+        std::cout << "Valor Comissão: R$ " << fixed << setprecision(2) << taxa_comissao << endl;
+        std::cout << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
 
     }
 
