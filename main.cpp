@@ -122,68 +122,68 @@ int main() {
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
-    double valorAp = 0.0;
-    double valorCb = 0.0;
-    double valorCa = 0.0;
-    double comissAp = 0.0;
-    double comissCb = 0.0;
-    double comissCa = 0.0;
+    double valor_total_apartamentos = 0.0;
+    double valor_total_coberturas = 0.0;
+    double valor_total_casas = 0.0;
+    double comissao_total_apartamentos = 0.0;
+    double comissao_total_coberturas = 0.0;
+    double comissao_total_casas = 0.0;
     
     ap1.print();
-    valorAp += ap1.valor();
-    comissAp += ap1.comissao();
+    valor_total_apartamentos += ap1.valor();
+    comissao_total_apartamentos += ap1.comissao();
     std::cout << endl;
 
     ap2.print();
-    valorAp += ap2.valor();
-    comissAp += ap2.comissao();
+    valor_total_apartamentos += ap2.valor();
+    comissao_total_apartamentos += ap2.comissao();
     std::cout << endl;
 
     ap3.print();
-    valorAp += ap3.valor();
-    comissAp += ap3.comissao();
+    valor_total_apartamentos += ap3.valor();
+    comissao_total_apartamentos += ap3.comissao();
     std::cout << endl;
 
     cb1.print();
-    valorCb += cb1.valor();
-    comissCb += cb1.comissao();
+    valor_total_coberturas += cb1.valor();
+    comissao_total_coberturas += cb1.comissao();
     std::cout << endl;
 
     cb2.print();
-    valorCb += cb2.valor();
-    comissCb += cb2.comissao();
+    valor_total_coberturas += cb2.valor();
+    comissao_total_coberturas += cb2.comissao();
     std::cout << endl;
 
     cb3.print();
-    valorCb += cb3.valor();
-    comissCb += cb3.comissao();
+    valor_total_coberturas += cb3.valor();
+    comissao_total_coberturas += cb3.comissao();
     std::cout << endl;
 
     ca1.print();
-    valorCa += ca1.valor();
-    comissCa += ca1.comissao();
+    valor_total_casas += ca1.valor();
+    comissao_total_casas += ca1.comissao();
     std::cout << endl;
 
     ca2.print();
-    valorCa += ca2.valor();
-    comissCa += ca2.comissao();
+    valor_total_casas += ca2.valor();
+    comissao_total_casas += ca2.comissao();
     std::cout << endl;
 
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
             << "\n Quantidade: " << quantidade_apartamentos
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
-            << "\n Comissão Total: R$" << comissAp
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_total_apartamentos
+            << "\n Comissão Total: R$" << comissao_total_apartamentos
             << endl
             << "\n>>Coberturas<<\n"
             << "\n Quantidade: " << quantidade_coberturas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_total_coberturas
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissao_total_coberturas
             << endl
             << "\n>>Casas<<\n"
             << "\n Quantidade: " << quantidade_casas
-            << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
-            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
+            << "\n Valor Total: R$ " << fixed << setprecision(2) << valor_total_casas
+            << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissao_total_casas
             << endl;
 }
