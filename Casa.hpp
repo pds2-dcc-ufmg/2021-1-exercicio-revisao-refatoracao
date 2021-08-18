@@ -9,7 +9,8 @@ using namespace std;
 class Casa : public Imovel {
 
     public:
-
+    
+    Casa(corretor, AREA, Q, B, V, VALORm2);
     double valor() {
 
         return CUSTOm2;
