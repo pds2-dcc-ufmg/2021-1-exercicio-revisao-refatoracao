@@ -13,7 +13,14 @@ class Cliente {
         string cep;
         string telefone;
 
-        void print();
+        void print(){
+            cout << "  Nome: " << NOME << endl
+                << "  Telefone: " << telefone << endl
+                << "  Endereço: " << endereco << endl
+                << "  Cidade: " << CIDADE << endl
+                << "  Estado: " << UF << endl
+                << "  CEP: " << cep << endl;
+        }
 };
 
 #endif
