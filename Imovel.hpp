@@ -9,16 +9,18 @@ using namespace std;
 
 class Imovel {
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
+    	//Instancia de variaveis e objetos que serao utilizados
+        double area;
+        int quartos;
+        int banheiros;
+        int vagas;
+        double valor_m2;
+        double valor_venda;
+        double valor_com;
         string corretor;
+        Cliente vendedor;
 
+		//Dados do vendedor do imovel e nome do corretor
         void print() {
             cout << "[Vendedor]" << endl;
             vendedor.print();
