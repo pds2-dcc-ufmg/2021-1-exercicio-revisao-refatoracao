@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1629219801 source:c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\main.cpp
+	<iostream>
+	<iomanip>
+	"Imovel.hpp"
+	"Casa.hpp"
+	"Cobertura.hpp"
+	"Apartamento.hpp"
+	"Cliente.hpp"
+	"Imovel.cpp"
+	"Casa.cpp"
+	"Cobertura.cpp"
+	"Apartamento.cpp"
+	"Cliente.cpp"
+
+1629243596 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\imovel.hpp
+	"Cliente.hpp"
+
+1629225980 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\cliente.hpp
+
+1629225968 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\casa.hpp
+
+1629225720 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\cobertura.hpp
+
+1629243548 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\apartamento.hpp
+	"Imovel.hpp"
+	"Cliente.hpp"
+
+1629227066 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\cliente.cpp
+	"Cliente.hpp"
+
+1629242312 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\imovel.cpp
+	"Imovel.hpp"
+	"Cliente.hpp"
+
+1629225962 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\casa.cpp
+	"Casa.hpp"
+
+1629242332 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\cobertura.cpp
+	"Cobertura.hpp"
+
+1629243622 c:\projetosprogramação\vpl2_exercicio_revisao_fatoracao\apartamento.cpp
+	"Apartamento.hpp"
+
