@@ -1,0 +1,2 @@
+Este arquivo tem o intuito de fazer com que a pasta build vá para o github,
+evitando assim problemas com o arquivo Makefile.
