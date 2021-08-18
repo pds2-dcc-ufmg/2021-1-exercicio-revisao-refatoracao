@@ -5,8 +5,6 @@
 #include <iomanip>
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Imovel {
     public:
         double AREA;
@@ -17,14 +15,13 @@ class Imovel {
         double Valor;
         double C;
         Cliente vendedor;
-        string corretor;
+        std::string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        virtual double valor() = 0; 
+        virtual double comissao() = 0; 
+        virtual void print();
+        virtual ~Imovel() {}
+
 };
 
 #endif
