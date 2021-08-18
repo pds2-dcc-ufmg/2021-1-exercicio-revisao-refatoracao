@@ -12,12 +12,12 @@ Cliente::Cliente(string nome, string endereco, string cidade, string uf, string 
 }
 
 void Cliente::print(){
-	std::cout << "  Nome: " << get_nome() << endl
-		 << "  Telefone: " << get_telefone() << endl
-		 << "  Endereço: " << get_endereco() << endl
-		 << "  Cidade: " << get_cidade << endl
-		 << "  Estado: " << get_uf << endl
-		 << "  CEP: " << get_cep << endl;
+	std::cout << "  Nome: " << this->get_nome() << endl
+		 << "  Telefone: " << this->get_telefone() << endl
+		 << "  Endereço: " << this->get_endereco() << endl
+		 << "  Cidade: " << this->get_cidade() << endl
+		 << "  Estado: " << this->get_uf() << endl
+		 << "  CEP: " << this->get_cep() << endl;
 }
 
 string Cliente::get_nome(){
