@@ -25,6 +25,12 @@ class Apartamento : public Imovel {
         return c * 0.04;
         
     }
+    
+     void procedure (double *v, double *c) {
+        *v += this->valor();
+        *c += this->comissao();
+        cout << endl;
+    }
 
     void print() {
 
