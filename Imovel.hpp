@@ -8,23 +8,21 @@
 using namespace std;
 
 class Imovel {
+    
     public:
-        double AREA;
-        int Q;
-        int B;
-        int V;
-        double VALORm2;
-        double Valor;
-        double C;
-        Cliente vendedor;
-        string corretor;
-
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+    
+    double AREA;
+    int Qnt_Quartos;
+    int Qnt_Banheiros;
+    int Qnt_Vagas;
+    double VALORm2;
+    double Valor;
+    double Valor_Comissao;
+    virtual double valor()=0;
+		virtual double comissao()=0;
+    void print();
+    Cliente vendedor;
+    string corretor;
 };
 
 #endif
