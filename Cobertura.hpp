@@ -11,7 +11,6 @@ class Cobertura : public Imovel {
 
 	//COMISSAO 10%
         double comissao() override{
-
             double com = AREA * VALOR_m2;
 
             return com * 0.10;
