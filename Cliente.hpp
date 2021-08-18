@@ -2,18 +2,25 @@
 #define CLIENTE_HPP
 
 #include <string>
+
 using namespace std;
 
 class Cliente {
-    public:
+
+    protected:
+
         string NOME;
-        string endereco;
+        string ENDERECO;
         string CIDADE;
         string UF;
-        string cep;
-        string telefone;
+        string CEP;
+        string TELEFONE;
+    
+    public:
 
-        void print();
+        void Impressao_Cliente();
+
+        void Inicializar_Cliente(string NOME, string ENDERECO, string CIDADE, string UF, string CEP, string TELEFONE);
 };
 
 #endif
