@@ -1,9 +1,48 @@
 #include "Imovel.hpp"
 
-double Imovel::calculaValor() {
-    double v = area * valorMetro;
-        return v;
+
+void Imovel::setArea(double input){
+    area = input;
 }
+void Imovel::setNumeroDeQuartos(int input){
+    numeroDeQuartos = input;
+}
+void Imovel::setNumeroDeBanheiros(int input){
+    numeroDeBanheiros = input;
+}
+void Imovel::setNumeroDeVagas(int input){
+    numeroDeVagas = input;
+}
+void Imovel::setValorMetro(double input){
+    valorMetro = input;
+}
+
+
+double Imovel::getArea(){
+    return area;
+}
+int Imovel::getNumeroDeQuartos(){
+    return numeroDeQuartos;
+}
+int Imovel::getNumeroDeBanheiros(){
+    return numeroDeBanheiros;
+}
+int Imovel::getNumeroDeVagas(){
+    return numeroDeVagas;
+}
+double Imovel::getValorMetro(){
+    return valorMetro;
+}
+double Imovel::getComissao(){
+    return comissao;
+}
+double Imovel::calculaComissao(){
+    return (area * valorMetro) * getComissao();
+}
+double Imovel::getValorDeVenda(){
+    return (area * valorMetro) * (1 + getComissao());
+}
+
 
 void Imovel::print() {
     cout << "[Vendedor]" << endl;
@@ -12,10 +51,6 @@ void Imovel::print() {
     cout << "  " + corretor << endl;
 }
 
-double Cobertura::calculaComissao() {
-    double c = area * valorMetro;
-    return c * 0.10;    
-}
 
 void Cobertura::print() {
     std::cout << "[Cobertura]" << endl;
@@ -25,13 +60,8 @@ void Cobertura::print() {
             << "  Banheiros: " << numeroDeBanheiros << endl
             << "  Vagas: " << numeroDeVagas << endl
             << "Taxa de Comissão: " << 10 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << valorDeVenda << endl;
-}
-
-double Casa::calculaComissao() {
-    double c = area * valorMetro;
-    return c * 0.06;    
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << getComissao() << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorDeVenda() << endl;
 }
 
 void Casa::print() {
@@ -42,14 +72,9 @@ void Casa::print() {
             << "  Banheiros: " << numeroDeBanheiros << endl
             << "  Vagas: " << numeroDeVagas << endl
             << "Taxa de Comissão: " << 6 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << valorDeVenda << endl;
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << getComissao() << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorDeVenda() << endl;
 
-}
-
-double Apartamento::calculaComissao() {
-    double c = area * valorMetro;
-    return c * 0.04;
 }
 
 void Apartamento::print() {
@@ -60,6 +85,6 @@ void Apartamento::print() {
             << "  Banheiros: " << numeroDeBanheiros << endl
             << "  Vagas: " << numeroDeVagas << endl
             << "Taxa de Comissão: " << 4 << "%" << endl
-            << "Valor Comissão: R$ " << fixed << setprecision(2) << comissao << endl
-            << "Valor de Venda: R$ " << fixed << setprecision(2) << valorDeVenda << endl;
+            << "Valor Comissão: R$ " << fixed << setprecision(2) << getComissao() << endl
+            << "Valor de Venda: R$ " << fixed << setprecision(2) << getValorDeVenda() << endl;
 }
