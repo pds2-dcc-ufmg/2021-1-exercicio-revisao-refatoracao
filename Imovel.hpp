@@ -15,7 +15,7 @@ class Imovel {
         int n_vagas;
         double valor_m2;
         double valor_total;
-        double comissao;
+        virtual double comissao;
         Cliente vendedor;
         string corretor;
 
