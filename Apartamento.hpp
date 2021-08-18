@@ -12,7 +12,6 @@ class Apartamento : public Imovel {
 
 	//COMISSÃO DE 4%
         double comissao() override{
-
             double com = AREA * VALOR_m2;
 
             return com * 0.04;
