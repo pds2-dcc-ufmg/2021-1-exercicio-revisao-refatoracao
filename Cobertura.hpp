@@ -3,40 +3,51 @@
 
 #include "Imovel.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
+
+/**
+ * \class Cobertura
+ *
+ * \brief Esta eh a classe Cobertura que herda caracteristicas da classe Imovel,
+ * possui metodos que retornam seu valor, a comissao que irá ser recebida e um print de
+ * suas informações
+ */
 
 class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
+    /*Construtor da Classe Cobertura*/
+    Cobertura(double area, double valorM2, double valorVenda, double valorComissao,
+    int quartos, int banheiros, int vagas, Cliente vendedor, string corretor, int taxa)
+    {
+        _area = area;
+        _valorM2 = valorM2;
+        _valorVenda = valorVenda;
+        _valorComissao = valorComissao;
+        _quartos = quartos;
+        _banheiros = banheiros;
+        _vagas = vagas;
+        _vendedor = vendedor;
+        _corretor = corretor; 
+        _taxa = taxa;
     }
 
+    // Valor da Cobertura = area * valor do metro²
+    double valor() {
+        return _area*_valorM2;
+    }
+
+    // Valor da comissao = valor do imovel * taxa de comissão
     double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.10;
-        
+        return this->valor()*(_taxa/100);     
     }
 
     void print() {
-
-        std::cout << "[Cobertura]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 10 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        Imovel::print("Cobertura");
     }
+
 };
 
 #endif
