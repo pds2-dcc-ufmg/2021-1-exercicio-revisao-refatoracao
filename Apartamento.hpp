@@ -9,23 +9,14 @@ using namespace std;
 class Apartamento : public Imovel {
 
     public: 
+     
+    Apartamento ();
 
-    
-    double valor() {
+    double valor();
 
-        return (Imovel::valor());
-    }
+    double comissao();
 
-    double comissao() {
-
-        return (Imovel:: comissao (taxa_de_comissao)); 
-    }
-
-    void print() {
-
-         Imovel::print("[Apartamento]",taxa_de_comissao);
-    }
-
+    void print();
 
     private:
 

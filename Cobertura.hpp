@@ -7,29 +7,21 @@
 using namespace std;
 
 class Cobertura : public Imovel {
-    
-    public:
 
-    double valor() {
-        
-        return (Imovel::valor());
-    }
+    public: 
+     
+    Cobertura ();
 
-    double comissao() {
+    double valor();
 
-        return (Imovel:: comissao (taxa_de_comissao)); 
-    }
+    double comissao();
 
-    void print() {
-
-        Imovel::print("[Cobertura]", taxa_de_comissao);
-       
-    }
+    void print();
 
     private:
 
     double taxa_de_comissao = 0.10;
-    
+
 };
 
 #endif

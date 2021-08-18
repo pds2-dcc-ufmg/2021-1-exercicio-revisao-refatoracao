@@ -8,23 +8,15 @@ using namespace std;
 
 class Casa : public Imovel {
 
-    public:
+    public: 
+     
+    Casa ();
 
-    double valor() {
+    double valor();
 
-        return (Imovel::valor());
-    }
+    double comissao();
 
-    double comissao() {
-        
-        return (Imovel:: comissao (taxa_de_comissao)); 
-
-    }
-
-    void print() {
-
-        Imovel::print("[Casa]", taxa_de_comissao);    
-    }
+    void print();
 
     private:
 
