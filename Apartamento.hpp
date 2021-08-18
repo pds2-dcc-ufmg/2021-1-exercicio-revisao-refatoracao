@@ -2,42 +2,24 @@
 #define APARTAMENTO_HPP
 
 #include "Imovel.hpp"
-#include "Cliente.hpp"
 
 using namespace std;
 
 class Apartamento : public Imovel {
 
-    public: 
-    
-    double valor() {
+    public:
 
-        double v = AREA * VALORm2;
+		Apartamento(double area, int quartos, int banheiros, int vagas, double valorm2, Cliente *vendedor, string corretor)
+				: Imovel(area, quartos, banheiros, vagas, valorm2, vendedor, std::move(corretor)){
 
-        return v;
+			this->valorComissao = valorTotal * 0.04;
+			this->valorVenda = valorTotal + valorComissao;
+		};
 
-    }
-
-    double comissao() {
-
-        double c = AREA * VALORm2;
-
-        return c * 0.04;
-        
-    }
-
-    void print() {
-
-        std::cout << "[Apartamento]" << endl;
-        Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de Comissão: " << 4 << "%" << endl
-                << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
-    }
+	    void print() {
+	        std::cout << "[Apartamento]" << endl;
+	        Imovel::print();
+	    }
 };
 
 #endif
