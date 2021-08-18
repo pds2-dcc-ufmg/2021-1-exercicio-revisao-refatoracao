@@ -16,29 +16,28 @@ class Apartamento : public Imovel {
         B = _B; 
         V = _V;
         VALORm2 = _VALORm2;
-        vendedor = _vendedor; 
+        vendedor = _vendedor;
+        C = comissao();
+        Valor = valor() + comissao();
         taxa = 4;
     }
     
     double valor() {
 
         double v = AREA * VALORm2;
-
         return v;
-
     }
 
     double comissao() {
 
         return valor() * (taxa/100);
-        
     }
 
     void print() {
 
         std::cout << "[Apartamento]" << endl;
         Imovel::print();
-        Imovel::printImov(taxa);
+        Imovel::printImov();
     }
 };
 
