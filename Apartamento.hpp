@@ -28,7 +28,7 @@ class Apartamento : public Imovel {
 
     void print() {
 
-        std::cout << "[Apartamento]" << endl;
+        std::cout << "Apartamento" << endl;
         Imovel::print();
         std::cout << "Area: " << AREA << endl
                 << "  Quartos: " << Q << endl

@@ -20,10 +20,10 @@ class Imovel {
         string corretor;
 
         void print() {
-            cout << "[Vendedor]" << endl;
             vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
+            cout<<"------------"<<endl;
+            cout <<  corretor << endl;
+        
         }
 };
 

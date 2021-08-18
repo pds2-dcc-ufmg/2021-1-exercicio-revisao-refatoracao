@@ -4,8 +4,17 @@
 #include <string>
 using namespace std;
 
-class Cliente {
+class Cliente{
     public:
+
+        // void setName(string name);
+        // void setEnder(string ender);
+        // void setCity(string city);
+        // void setState(string state);
+        // void SetCep(string cep);
+        // void setNumber(string number);
+        // void print();
+
         string NOME;
         string endereco;
         string CIDADE;
@@ -14,6 +23,8 @@ class Cliente {
         string telefone;
 
         void print();
+
+        
 };
 
 #endif
