@@ -12,7 +12,7 @@ class Casa : public Imovel {
 
     double valor() {
 
-        double v = AREA * VALORm2;
+        double v = area * valor_m2;
 
         return v;
 
@@ -20,23 +20,23 @@ class Casa : public Imovel {
 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = this->valor();
 
         return c * 0.06;
         
     }
 
     void print() {
-
+		//Printa dados da casa, mostra taxa, valor comissao e venda
         std::cout << "[Casa]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
-                << "  Quartos: " << Q << endl
-                << "  Banheiros: " << B << endl
-                << "  Vagas: " << V << endl
-                << "Taxa de ComissÃ£o: " << 6 << "%" << endl
-                << "Valor ComissÃ£o: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+        std::cout << "Area: " << area << endl
+                << "  Quartos: " << quartos << endl
+                << "  Banheiros: " << banheiros << endl
+                << "  Vagas: " << vagas << endl
+                << "Taxa de Comissão: " << 6 << "%" << endl
+                << "Valor Comissão: R$ " << fixed << setprecision(2) << valor_com << endl
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor_com << endl;
 
     }
 
