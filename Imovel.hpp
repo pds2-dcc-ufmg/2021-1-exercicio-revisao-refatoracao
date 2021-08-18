@@ -8,6 +8,7 @@
 using namespace std;
 
 class Imovel {
+    
     public:
         double AREA;
         int Q;
@@ -19,16 +20,9 @@ class Imovel {
         Cliente vendedor;
         string corretor;
 
-        double valor() {
-            return AREA * VALORm2;
-        }
+        double valor();
+        void print();
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
 };
 
 #endif
