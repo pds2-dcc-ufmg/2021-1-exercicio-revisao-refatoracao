@@ -9,13 +9,6 @@ class Cobertura : public Imovel {
     
     public:
 
-    double valor() {
-
-        double v = AREA * VALORm2;
-
-        return v;
-
-    }
 
     double comissao() {
 
@@ -35,7 +28,7 @@ class Cobertura : public Imovel {
                 << "  Vagas: " << V << endl
                 << "Taxa de Comissão: " << 10 << "%" << endl
                 << "Valor Comissão: R$ " << fixed << setprecision(2) << C << endl
-                << "Valor de Venda: R$ " << fixed << setprecision(2) << Valor << endl;
+                << "Valor de Venda: R$ " << fixed << setprecision(2) << valor << endl;
     }
 };
 
