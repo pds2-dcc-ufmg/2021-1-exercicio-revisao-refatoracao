@@ -5,13 +5,13 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class Cobertura : public Imovel {
+class Cobertura : private Imovel {
     
-    public:
+    private:
 
     double valor() {
 
-        double v = AREA * VALORm2;
+        double v = Area * Valorm2;
 
         return v;
 
@@ -19,7 +19,7 @@ class Cobertura : public Imovel {
 
     double comissao() {
 
-        double c = AREA * VALORm2;
+        double c = Area * Valorm2;
 
         return c * 0.10;
         
@@ -29,7 +29,7 @@ class Cobertura : public Imovel {
 
         std::cout << "[Cobertura]" << endl;
         Imovel::print();
-        std::cout << "Area: " << AREA << endl
+        std::cout << "Area: " << Area << endl
                 << "  Quartos: " << Q << endl
                 << "  Banheiros: " << B << endl
                 << "  Vagas: " << V << endl
