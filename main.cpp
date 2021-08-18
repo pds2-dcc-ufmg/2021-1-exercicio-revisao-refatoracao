@@ -18,9 +18,9 @@ int main() {
     Cliente cl7("Leova Wikyecil Neaca", "Rua João Arantes - Cidade Nova", "Belo Horizonte", "MG", "31170-240", "3198461192");
     Cliente cl8("Teas Heimeu Pipe", "Rua Maria Pereira Damasceno - Ernesto do Nascimento(Barreiro)", "Belo Horizonte", "MG", "30668-430", "3197317802");
 
-    int qtdeA = 0;
-    int qtdeCa = 0;
-    int qtdeCb = 0;
+    int quantidade_apartamentos = 0;
+    int quantidade_casas = 0;
+    int quantidade_coberturas = 0;
 
     Apartamento ap1;
     ap1.corretor = "Tuoruars";
@@ -32,7 +32,7 @@ int main() {
     ap1.C = ap1.comissao();
     ap1.Valor = ap1.valor() + ap1.comissao();
     ap1.vendedor = cl1;
-    qtdeA++;
+    quantidade_apartamentos++;
 
     Apartamento ap2;
     ap2.corretor = "Fyubyeis";
@@ -44,7 +44,7 @@ int main() {
     ap2.C = ap2.comissao();
     ap2.Valor = ap2.valor() + ap2.comissao();
     ap2.vendedor = cl2;
-    qtdeA++;
+    quantidade_apartamentos++;
 
     Apartamento ap3;
     ap3.corretor = "Kelia";
@@ -56,7 +56,7 @@ int main() {
     ap3.C = ap3.comissao();
     ap3.Valor = ap3.valor() + ap3.comissao();
     ap3.vendedor = cl3;
-    qtdeA++;
+    quantidade_apartamentos++;
 
     // Cobertura
     Cobertura cb1;
@@ -69,7 +69,7 @@ int main() {
     cb1.C = cb1.comissao();
     cb1.Valor = cb1.valor() + cb1.comissao();
     cb1.vendedor = cl4;
-    qtdeCb++;
+    quantidade_coberturas++;
     
     Cobertura cb2;
     cb2.corretor = "Wail";
@@ -81,7 +81,7 @@ int main() {
     cb2.C = cb2.comissao();
     cb2.Valor = cb2.valor() + cb2.comissao();
     cb2.vendedor = cl5;
-    qtdeCb++;
+    quantidade_coberturas++;
 
     Cobertura cb3;
     cb3.corretor = "Fival";
@@ -93,7 +93,7 @@ int main() {
     cb3.C = cb3.comissao();
     cb3.Valor = cb3.valor() + cb3.comissao();
     cb3.vendedor = cl6;
-    qtdeCb++;
+    quantidade_coberturas++;
 
     // Casas
     Casa ca1;
@@ -106,7 +106,7 @@ int main() {
     ca1.C = ca1.comissao();
     ca1.Valor = ca1.valor() + ca1.comissao();
     ca1.vendedor = cl7;
-    qtdeCa++;
+    quantidade_casas++;
 
     Casa ca2;
     ca2.corretor = "Riuzi";
@@ -118,7 +118,7 @@ int main() {
     ca2.C = ca2.comissao();
     ca2.Valor = ca2.valor() + ca2.comissao();
     ca2.vendedor = cl8;
-    qtdeCa++;
+    quantidade_casas++;
 
     std::cout << "\n>> Relatório de Imóveis <<" << endl;
 
@@ -172,17 +172,17 @@ int main() {
     std::cout << "\n>> Resumo Geral <<" << endl;
 
     std::cout << "\n>>Apartamentos<<\n"
-            << "\n Quantidade: " << qtdeA
+            << "\n Quantidade: " << quantidade_apartamentos
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorAp
             << "\n Comissão Total: R$" << comissAp
             << endl
             << "\n>>Coberturas<<\n"
-            << "\n Quantidade: " << qtdeCb
+            << "\n Quantidade: " << quantidade_coberturas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCb
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCb
             << endl
             << "\n>>Casas<<\n"
-            << "\n Quantidade: " << qtdeCa
+            << "\n Quantidade: " << quantidade_casas
             << "\n Valor Total: R$ " << fixed << setprecision(2) << valorCa
             << "\n Comissão Total: R$ " << fixed << setprecision(2) << comissCa
             << endl;
