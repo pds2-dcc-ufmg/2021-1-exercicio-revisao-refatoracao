@@ -5,7 +5,7 @@ using namespace std;
 
 
 double Cobertura::valor(){
-    double v = Area*Valorm2;
+    ValorCobertura = Area*Valorm2;
     return ValorCobertura;
 }
 double Cobertura::comissao() {
