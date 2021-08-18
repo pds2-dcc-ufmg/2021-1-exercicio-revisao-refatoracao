@@ -9,10 +9,10 @@ class Cliente {
         string NOME, endereco, CIDADE, UF, cep, telefone;
     
        /* string endereco;
-        string CIDADE;
-        string UF;
-        string cep;
-        string telefone;
+        //string CIDADE;
+        //string UF;
+        //string cep;
+        //string telefone;
        */
     
         void print();
