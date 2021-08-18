@@ -37,8 +37,6 @@ class Imovel {
                  << "  Quartos: " << QUARTO << endl
                  << "  Banheiros: " << BANHEIRO << endl
                  << "  Vagas: " << VAGAS << endl
-
-
         }
 
 	//RETORNA O VALOR TOTAL DO IMOVEL
@@ -52,10 +50,8 @@ class Imovel {
 	virtual double comissao(){
 		double com = AREA * VALOR_m2;
 
-	}	return com;
-
-
-
+		return com;
+	}
 };
 
 #endif
