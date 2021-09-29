@@ -1,4 +1,5 @@
-# Exercício de Revisão e Refatoração
+# Módulo 5: Boas práticas. Exercício de Revisão e Refatoração
+(Esses exercícios/códigos fazem parte da matéria "Programação e Desenvolvimento de Software II" oferecida pelo DCC/UFMG)
 
 O objetivo dessa atividade é praticar a parte de revisão e refatoração utilizando um sistema de controle de versão.
 
