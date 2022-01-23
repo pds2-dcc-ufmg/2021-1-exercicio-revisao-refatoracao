@@ -10,21 +10,20 @@ using namespace std;
 class Imovel {
     public:
         double AREA;
-        int Q;
-        int B;
-        int V;
+        int Quarto;
+        int Banheiro;
+        int Vagas;
         double VALORm2;
-        double Valor;
-        double C;
+        double ValorTotal;
+        double Comissao;
+        double Taxa;
         Cliente vendedor;
         string corretor;
 
-        void print() {
-            cout << "[Vendedor]" << endl;
-            vendedor.print();
-            cout << "[Corretor]" << endl;
-            cout << "  " + corretor << endl;
-        }
+        double ValorImovel();
+        double ValorComissão();
+
+        void print();
 };
 
 #endif

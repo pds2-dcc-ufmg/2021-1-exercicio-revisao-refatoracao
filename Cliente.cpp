@@ -2,6 +2,8 @@
 #include <string>
 #include "Cliente.hpp"
 
+Cliente::Cliente() {}
+
 void Cliente::print(){
 
 	std::cout << "  Nome: " << NOME << endl
