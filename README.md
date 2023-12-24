@@ -1,5 +1,7 @@
 # Exercício de Revisão e Refatoração
 
+Atividade da matéria Programação e Desenvolvimento de Software II da Universidade Federal de Minas Gerais (UFMG).
+
 O objetivo dessa atividade é praticar a parte de revisão e refatoração utilizando um sistema de controle de versão.
 
 **Considere a seguinte descrição em alto nível da funcionalidade do código:**  
